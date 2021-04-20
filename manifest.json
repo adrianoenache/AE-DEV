@@ -1,6 +1,7 @@
 {
     "name": "\u00c6",
     "short_name": "\u00c6",
+    "description": "Personal website to publish articles related to Front-End development and stuff that I like.",
     "icons": [
         {
             "src": "/favicon/android-chrome-192x192.png",
@@ -13,7 +14,9 @@
             "type": "image/png"
         }
     ],
+    "start_url": "/?source=pwa",
+    "scope": "/",
     "theme_color": "#000000",
     "background_color": "#000000",
-    "display": "standalone"
+    "display": "browser"
 }
