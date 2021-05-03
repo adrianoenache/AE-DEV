@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+    <style>
+        :root {
+            --dash-size: 10px;
+            --dash-gap: 5px;
+        }
+        rect {
+            animation: animate-border 1s infinite linear;
+            fill: none;
+            stroke: black;
+            stroke-dasharray: var(--dash-size) var(--dash-gap);
+            stroke-width: 4px;
+        }
+        @keyframes animate-border {
+            to {
+                stroke-dashoffset: calc((var(--dash-size) + var(--dash-gap)) * -1);
+            }
+        }
+    </style>
+    <rect width="100%" height="100%"/>
+</svg>
