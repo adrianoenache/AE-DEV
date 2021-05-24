@@ -1,0 +1,1792 @@
+<!DOCTYPE html>
+<html class="fcc" lang="en">
+
+<head prefix="og: https://ogp.me/ns#">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="INDEX, FOLLOW">
+
+	<meta name="description"
+		content="Personal website to publish articles related to Front-End development and stuff that I like.">
+	<meta name="keywords"
+		content="Front-End, HTML, CSS, Javascript, UI, UX, DEV, Development, Website, Guideline, Frameworks, Web tools">
+	<meta name="author" content="Adriano Enache - adrianoenache@hotmail.com">
+
+	<title>Adriano Enache</title>
+	<base href="https://adrianoenache.dev.br/">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+	<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#000000">
+	<link rel="shortcut icon" href="/favicon/favicon.ico">
+
+	<meta name="msapplication-TileColor" content="#000000">
+	<meta name="msapplication-TileImage" content="/favicon/mstile-144x144.png">
+	<meta name="msapplication-config" content="/favicon/browserconfig.xml">
+	<meta name="theme-color" content="#000000">
+
+	<meta property="og:title" content="&AElig; (Adriano Enache) =P">
+	<meta property="og:description"
+		content="Personal website to publish articles related to Front-End development and stuff that I like.">
+	<meta property="og:type" content="blog">
+	<meta property="og:locale" content="en" />
+	<meta property="og:url" content="https://adrianoenache.dev.br/">
+
+	<meta property="og:site_name" content="adrianoenache.dev.br" />
+	<meta property="article:published_time" content="2021-04-19T00:00:00+00:00" />
+	<meta property="article:author" content="Adriano Enache" />
+
+	<meta property="og:image" content="https://adrianoenache.dev.br/openGraph/og-image-fb-1200x630.jpg">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@AdrianoEnache" />
+	<meta name="twitter:creator" content="@AdrianoEnache" />
+	<meta name="twitter:title" content="&AElig; (Adriano Enache) =P" />
+	<meta name="twitter:description"
+		content="Personal website to publish articles related to Front-End development and stuff that I like." />
+	<meta name="twitter:image" content="https://adrianoenache.dev.br/openGraph/og-image-twitter-300x150.jpg" />
+	<meta name="twitter:url" content="https://adrianoenache.dev.br/" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:wght@300&family=Sansita+Swashed:wght@500&display=swap"
+		rel="stylesheet">
+	<style>
+		/* CSS variables */
+
+		:root {
+			/* Colors */
+			--main-background-color-tablet: #fff;
+			--main-background-color-mobile: #000;
+			--main-background-color: var(--main-background-color-mobile);
+			--main-text-color-tablet: #000;
+			--main-text-color-mobile: #fff;
+			--main-text-color: var(--main-text-color-mobile);
+			--figure-color-background: #fff;
+			--figcaption-color: #666;
+			--link-hover-color-desktop: blue;
+			--link-hover-color-mobile: red;
+			--link-hover-color: var(--link-hover-color-mobile);
+			--success-color: green;
+			--placeholder-color: gray;
+			--background-radio-checkbox: white;
+			--checked-radio-checkbox: green;
+			--focus-hover-radio-checkbox: black;
+
+			/* Logo */
+			--logo-size: 40px;
+
+			/* Sticky header */
+			--offset-of-sticky-header: 70px;
+			--anchor-position: calc(var(--offset-of-sticky-header) + (var(--gutter) * 1));
+
+			/* Sizes */
+			--max-width-wrapper-tablet: 640px;
+			--max-width-wrapper-mobile: 300px;
+			--max-width-wrapper: var(--max-width-wrapper-mobile);
+			--size-of-contact-buttons-notebook: 25px;
+			--size-of-contact-buttons-tablet: 20px;
+			--size-of-contact-buttons-mobile: 16px;
+			--size-of-contact-buttons: var(--size-of-contact-buttons-mobile);
+			--font-size-form: 1rem;
+			--line-height-form: 1.25em;
+			--font-size-legend-form: 1.25rem;
+			--text-area-row-size: 3;
+			--radio-checkbox-size: 1.1em;
+			--text-area-height-mobile: calc(var(--line-height-form) * var(--text-area-row-size) + 1em);
+			--text-area-height-notebook: 100%;
+			--text-area-height: var(--text-area-height-mobile);
+			--gutter: 10px;
+			--size-of-close-modal-button: calc(var(--gutter) * 3);
+			--dash-size: 10px;
+			--dash-gap: 5px;
+			--ratio-3-4-portrait: calc((4 / 3) * 100%);
+			--ratio-16-9-landscape: calc((9 / 16) * 100%);
+
+			/* Icon from https://icomoon.io/ converted to base64 with https://www.base64-image.de/ */
+			--dropdown-arrow: url('data:image/svg+xml;base64,PCEtLSBHZW5lcmF0ZWQgYnkgSWNvTW9vbi5pbyAtLT4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiB2aWV3Qm94PSIwIDAgMzIgMzIiPgo8dGl0bGU+Y2lyY2xlLWRvd248L3RpdGxlPgo8cGF0aCBkPSJNMzIgMTZjMC04LjgzNy03LjE2My0xNi0xNi0xNnMtMTYgNy4xNjMtMTYgMTYgNy4xNjMgMTYgMTYgMTYgMTYtNy4xNjMgMTYtMTZ6TTMgMTZjMC03LjE4IDUuODItMTMgMTMtMTNzMTMgNS44MiAxMyAxMy01LjgyIDEzLTEzIDEzLTEzLTUuODItMTMtMTN6Ij48L3BhdGg+CjxwYXRoIGQ9Ik05LjkxNCAxMS4wODZsLTIuODI5IDIuODI5IDguOTE0IDguOTE0IDguOTE0LTguOTE0LTIuODI4LTIuODI4LTYuMDg2IDYuMDg2eiI+PC9wYXRoPgo8L3N2Zz4K');
+
+			/* Behaviours */
+			--shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
+			--shadow-opacity: 2px 2px 2px 1px rgba(0, 0, 0, 0);
+			--shadow-hover: 3px 3px 2px 2px rgba(0, 0, 0, 0.2);
+			--shadow-inset: inset 0 0 2px 2px rgba(0, 0, 0, 0.25);
+			--shadow-inset-top-left: inset 2px 2px 2px 1px rgba(0, 0, 0, 0.25);
+			--fix-autofill: 0 0 0 1000px #fff inset;
+			--margin-of-contact-buttons-tablet: 10px 5px;
+			--margin-of-contact-buttons-mobile: 10px;
+			--margin-of-contact-buttons: var(--margin-of-contact-buttons-mobile);
+			--background-contact-buttons: 10px;
+			--color-contact-buttons: black;
+			--color-hover-contact-buttons: red;
+			--color-visited-contact-buttons: purple;
+			--show-notebook-plus-notebook: block;
+			--show-notebook-plus-mobile: none;
+			--show-notebook-plus: var(--show-notebook-plus-mobile);
+
+			/* 
+	Google Fonts
+	  Sansita Swashed - 500
+	  Raleway - 300
+	  Kufam - 400, 400i, 700, 700i
+  */
+			--font-family-text: "Kufam", cursive;
+			--font-family-titles: "Sansita Swashed", cursive;
+			--font-family-detail: "Raleway", sans-serif;
+
+			/* z-index   */
+			--behind: 1;
+			--content: 5;
+			--above: 10;
+			--modal: 15;
+
+			/* Layout */
+			--make-it-bleed: calc((100vw - 100%) / 2);
+			--stop-bleeding: var(--make-it-bleed);
+			--bleed: calc(var(--make-it-bleed) * -1);
+
+			--disclaimer-and-terms-flex-direction-mobile: column;
+			--disclaimer-and-terms-flex-direction-tablet: row;
+			--disclaimer-and-terms-flex-direction: var(--disclaimer-and-terms-flex-direction-mobile);
+
+			--links-to-terms-line-height-mobile: 2em;
+			--links-to-terms-line-height-tablet: 1.5em;
+			--links-to-terms-line-height: var(--links-to-terms-line-height-mobile);
+			--links-to-terms-text-align-mobile: center;
+			--links-to-terms-text-align-tablet: left;
+			--links-to-terms-text-align: var(--links-to-terms-text-align-mobile);
+
+			--disclaimer-margin-mobile: calc(var(--gutter) * 4) 0 0;
+			--disclaimer-margin-tablet: 0;
+			--disclaimer-margin: var(--disclaimer-margin-mobile);
+
+			--modal-background-mobile: #444;
+			--modal-background-tablet: #eee;
+			--modal-background: var(--modal-background-mobile);
+			--modal-max-width-mobile: 320px;
+			--modal-max-width-tablet: 450px;
+			--modal-max-width-notebook: 640px;
+			--modal-max-width: var(--modal-max-width-mobile);
+
+			--scroll-thumb-background-desktop: #ff0000;
+			--scroll-thumb-background-hover-desktop: #cc0000;
+			--scroll-thumb-background-notebook: #00ff00;
+			--scroll-thumb-background-hover-notebook: #00cc00;
+			--scroll-thumb-background-tablet: #0000ff;
+			--scroll-thumb-background-hover-tablet: #0000cc;
+			--scroll-thumb-background-mobile: #ffffff;
+			--scroll-thumb-background-hover-mobile: #cccccc;
+			--scroll-thumb-background: var(--scroll-thumb-background-mobile);
+			--scroll-thumb-background-hover: var(--scroll-thumb-background-hover-mobile);
+
+			--text-cut-out-background-tablet: black;
+			--text-cut-out-background-mobile: white;
+			--text-cut-out-background: var(--text-cut-out-background-mobile);
+			--text-cut-out-color-tablet: white;
+			--text-cut-out-color-mobile: black;
+			--text-cut-out-color: var(--text-cut-out-color-mobile);
+			--text-cut-out-mix-blend-mode-tablet: multiply;
+			--text-cut-out-mix-blend-mode-mobile: screen;
+			--text-cut-out-mix-blend-mode: var(--text-cut-out-mix-blend-mode-mobile);
+
+			--component-title-font-size-desktop: 70px;
+			--component-title-font-size-notebook: 60px;
+			--component-title-font-size-tablet: 50px;
+			--component-title-font-size-mobile: 40px;
+			--component-title-font-size: var(--component-title-font-size-mobile);
+
+			--cards-courses-grid-template-columns-notebook: repeat(auto-fit, minmax(320px, 1fr));
+			--cards-courses-grid-template-columns-tablet: repeat(auto-fit, minmax(260px, 1fr));
+			--cards-courses-grid-template-columns-mobile: repeat(auto-fit, minmax(200px, 1fr));
+			/* :( Variables don't work inside minmax() */
+			--cards-courses-grid-template-columns: var(--cards-courses-grid-template-columns-mobile);
+			--card-icon-size: 64px;
+			--card-icon-top-gap: calc((var(--card-icon-size) / 2) + var(--gutter));
+			--course-card-h3-line-height: 1.25em;
+			--course-card-h3-min-height-tablet: calc(var(--course-card-h3-line-height) * 2);
+			--course-card-h3-min-height-mobile: auto;
+			--course-card-h3-min-height: var(--course-card-h3-min-height-mobile);
+			--slide-size-desktop: calc(100% / 6);
+			--slide-size-notebook: calc(100% / 5);
+			--slide-size-tablet: calc(100% / 4);
+			--slide-size-mobile: calc(100% / 2);
+			--slide-size: var(--slide-size-mobile);
+			--slider-photos-image-ratio: var(--3-4-portrait);
+			--slider-with-mask-image-size-adjustment-desktop: 16px;
+			--slider-with-mask-image-size-adjustment-notebook: 16px;
+			--slider-with-mask-image-size-adjustment-tablet: 14px;
+			--slider-with-mask-image-size-adjustment-mobile: 8px;
+			--slider-with-mask-image-size-adjustment: var(--slider-with-mask-image-size-adjustment-mobile);
+
+			/* Main background configs*/
+			--config-background-texture-color-desktop: 255, 0, 0;
+			--config-background-texture-color-notebook: 0, 255, 0;
+			--config-background-texture-color-tablet: 0, 0, 255;
+			--config-background-texture-color-mobile: 255, 255, 255;
+			--config-background-texture-color: var(--config-background-texture-color-mobile);
+			--config-background-texture-line-opacity: 0.05;
+			--config-background-texture-cell-opacity: 0.1;
+			--config-background-texture-size-start: 0px;
+			--config-background-texture-size-conection: 2px;
+			--config-background-texture-size-end: 10px;
+			/* ** */
+			--config-background-linear-rotation: -45deg;
+			--config-background-linear-opacity-external-tablet: 0.3;
+			--config-background-linear-opacity-external-mobile: 0.15;
+			--config-background-linear-opacity-external: var(--config-background-linear-opacity-external-mobile);
+			--config-background-linear-opacity-internal: 0;
+			--config-background-linear-size-start: 0%;
+			--config-background-linear-size-start-end: 40%;
+			--config-background-linear-size-end-start: 60%;
+			--config-background-linear-size-end: 100%;
+			/* ** */
+			--main-background-texture-vertical: repeating-linear-gradient(to right,
+					rgba(var(--config-background-texture-color), var(--config-background-texture-line-opacity)) var(--config-background-texture-size-start),
+					rgba(var(--config-background-texture-color), var(--config-background-texture-line-opacity)) var(--config-background-texture-size-conection),
+					rgba(var(--config-background-texture-color), var(--config-background-texture-cell-opacity)) var(--config-background-texture-size-conection),
+					rgba(var(--config-background-texture-color), var(--config-background-texture-cell-opacity)) var(--config-background-texture-size-end));
+			--main-background-texture-horizontal: repeating-linear-gradient(0deg,
+					rgba(var(--config-background-texture-color), var(--config-background-texture-line-opacity)) var(--config-background-texture-size-start),
+					rgba(var(--config-background-texture-color), var(--config-background-texture-line-opacity)) var(--config-background-texture-size-conection),
+					rgba(var(--config-background-texture-color), var(--config-background-texture-cell-opacity)) var(--config-background-texture-size-conection),
+					rgba(var(--config-background-texture-color), var(--config-background-texture-cell-opacity)) var(--config-background-texture-size-end));
+			/* ** */
+			--main-background-linear-gradient: linear-gradient(var(--config-background-linear-rotation),
+					rgba(var(--config-background-texture-color), var(--config-background-linear-opacity-external)) var(--config-background-linear-size-start),
+					rgba(var(--config-background-texture-color), var(--config-background-linear-opacity-internal)) var(--config-background-linear-size-start-end),
+					rgba(var(--config-background-texture-color), var(--config-background-linear-opacity-internal)) var(--config-background-linear-size-end-start),
+					rgba(var(--config-background-texture-color), var(--config-background-linear-opacity-external)) var(--config-background-linear-size-end));
+		}
+
+		/* 
+  Media querys
+
+  These values were chosen after analyzing the data from this source https://gs.statcounter.com/
+  
+  All CSS is mobile first
+
+  320-425 Mobile
+  426-1024 Tablet
+  1025-1440 Notebooks
+  1441 Desktops and Notebooks FullHD
+*/
+
+		/* 426-1024 Tablet */
+		@media only screen and (min-width: 426px) {
+			:root {
+				--main-background-color: var(--main-background-color-tablet);
+				--main-text-color: var(--main-text-color-tablet);
+				--max-width-wrapper: var(--max-width-wrapper-tablet);
+				--config-background-texture-color: var(--config-background-texture-color-tablet);
+				--config-background-linear-opacity-external: var(--config-background-linear-opacity-external-tablet);
+				--size-of-contact-buttons: var(--size-of-contact-buttons-tablet);
+				--margin-of-contact-buttons: var(--margin-of-contact-buttons-tablet);
+				--disclaimer-and-terms-flex-direction: var(--disclaimer-and-terms-flex-direction-tablet);
+				--links-to-terms-line-height: var(--links-to-terms-line-height-tablet);
+				--links-to-terms-text-align: var(--links-to-terms-text-align-tablet);
+				--disclaimer-margin: var(--disclaimer-margin-tablet);
+				--modal-background: var(--modal-background-tablet);
+				--modal-max-width: var(--modal-max-width-tablet);
+				--scroll-thumb-background: var(--scroll-thumb-background-tablet);
+				--scroll-thumb-background-hover: var(--scroll-thumb-background-hover-tablet);
+				--card-width: var(--card-width--tablet);
+				--cards-courses-grid-template-columns: var(--cards-courses-grid-template-columns-tablet);
+				--course-card-h3-min-height: var(--course-card-h3-min-height-tablet);
+				--text-cut-out-background: var(--text-cut-out-background-tablet);
+				--text-cut-out-color: var(--text-cut-out-color-tablet);
+				--text-cut-out-mix-blend-mode: var(--text-cut-out-mix-blend-mode-tablet);
+				--component-title-font-size: var(--component-title-font-size-tablet);
+				--slide-size: var(--slide-size-tablet);
+				--slider-with-mask-image-size-adjustment: var(--slider-with-mask-image-size-adjustment-tablet);
+			}
+		}
+
+		/* 1025-1440 Notebooks */
+		@media only screen and (min-width: 1025px) {
+			:root {
+				--config-background-texture-color: var(--config-background-texture-color-notebook);
+				--size-of-contact-buttons: var(--size-of-contact-buttons-notebook);
+				--show-notebook-plus: var(--show-notebook-plus-notebook);
+				--modal-max-width: var(--modal-max-width-notebook);
+				--scroll-thumb-background: var(--scroll-thumb-background-notebook);
+				--scroll-thumb-background-hover: var(--scroll-thumb-background-hover-notebook);
+				--cards-courses-grid-template-columns: var(--cards-courses-grid-template-columns-notebook);
+				--component-title-font-size: var(--component-title-font-size-notebook);
+				--slide-size: var(--slide-size-notebook);
+				--slider-photos-image-ratio: var(--16-9-landscape);
+				--slider-with-mask-image-size-adjustment: var(--slider-with-mask-image-size-adjustment-notebook);
+			}
+		}
+
+		/* 1441 Desktops and Notebooks FullHD */
+		@media only screen and (min-width: 1441px) {
+			:root {
+				--config-background-texture-color: var(--config-background-texture-color-desktop);
+				--link-hover-color: var(--link-hover-color-desktop);
+				--scroll-thumb-background: var(--scroll-thumb-background-desktop);
+				--scroll-thumb-background-hover: var(--scroll-thumb-background-hover-desktop);
+				--component-title-font-size: var(--component-title-font-size-desktop);
+				--slide-size: var(--slide-size-desktop);
+				--slider-with-mask-image-size-adjustment: var(--slider-with-mask-image-size-adjustment-desktop);
+			}
+		}
+
+		/* Rules */
+
+		html {
+			overflow-x: hidden;
+		}
+
+		html,
+		.custom-scroll {
+			/* -moz- Firefox custom scroll */
+			scrollbar-color: var(--scroll-thumb-background) black;
+			scrollbar-width: thin;
+		}
+
+		/* -webkit- Edge, Chrome, Opera, Safari custom scroll */
+		html::-webkit-scrollbar,
+		.custom-scroll::-webkit-scrollbar {
+			background: black;
+			width: 8px;
+			height: 8px;
+		}
+
+		html::-webkit-scrollbar-thumb,
+		.custom-scroll::-webkit-scrollbar-thumb {
+			background: var(--scroll-thumb-background);
+			border: solid 1px black;
+		}
+
+		html::-webkit-scrollbar-thumb:hover,
+		.custom-scroll::-webkit-scrollbar-thumb:hover {
+			background: var(--scroll-thumb-background-hover);
+		}
+
+		body {
+			color: var(--main-text-color);
+			font-family: var(--font-family-text);
+			font-weight: 400;
+			margin: 0 0 50px;
+			max-width: var(--max-width-wrapper);
+			position: relative;
+			padding-top: var(--anchor-position);
+			width: 100%;
+			z-index: var(--content);
+		}
+
+		section {
+			position: relative;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		legend {
+			font-family: var(--font-family-titles);
+			font-weight: 500;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			margin-top: 0;
+		}
+
+		a {
+			color: inherit;
+			font-family: var(--font-family-text);
+			font-weight: 400;
+			transition: color 0.25s ease-in;
+		}
+
+		a:hover,
+		a:focus {
+			color: var(--link-hover-color);
+		}
+
+		a:focus {
+			outline: 0;
+		}
+
+		abbr {
+			text-decoration: underline double gray;
+		}
+
+		abbr:hover {
+			text-decoration: underline double black;
+		}
+
+		mark {
+			background: var(--main-background-color);
+			color: var(--main-text-color);
+		}
+
+		hr {
+			border: 0;
+			border-top: 10px solid;
+			color: var(--main-text-color);
+			/* Fix for Firefox */
+			margin: calc(var(--gutter) * 5) auto;
+		}
+
+		hr.top {
+			margin-top: calc(var(--gutter) * 3);
+		}
+
+		hr.bottom {
+			margin-bottom: calc(var(--gutter) * 3);
+		}
+
+		.show-notebook-plus {
+			display: var(--show-notebook-plus);
+		}
+
+		.animate-border {
+			pointer-events: none;
+		}
+
+		.animate-border rect {
+			animation: animate-border 1s infinite linear;
+			fill: none;
+			stroke: var(--main-text-color);
+			stroke-dasharray: var(--dash-size) var(--dash-gap);
+			stroke-width: 4px;
+		}
+
+		@keyframes animate-border {
+			to {
+				stroke-dashoffset: calc((var(--dash-size) + var(--dash-gap)) * -1);
+			}
+		}
+
+		.bleed {
+			margin-left: var(--bleed);
+			margin-right: var(--bleed);
+		}
+
+		.bleed.left {
+			margin-right: 0;
+		}
+
+		.bleed.right {
+			margin-left: 0;
+		}
+
+		.bleed.less-the-content {
+			padding-left: var(--stop-bleeding);
+			padding-right: var(--stop-bleeding);
+		}
+
+		.bleed.left.less-the-content {
+			padding-right: 0;
+		}
+
+		.bleed.right.less-the-content {
+			padding-left: 0;
+		}
+
+		/* Text cut out */
+		.text-cut-out {
+			background: var(--text-cut-out-background);
+			color: var(--text-cut-out-color);
+			display: inline;
+			padding: 0.25em;
+			line-height: 1.5em;
+			mix-blend-mode: var(--text-cut-out-mix-blend-mode);
+		}
+
+		/* Go to top */
+		.go-to-top {
+			--size: 20px;
+			align-items: center;
+			background: var(--main-background-color);
+			border: solid 1px;
+			border-right: 0;
+			border-bottom-left-radius: var(--size);
+			border-top-left-radius: var(--size);
+			bottom: calc(var(--size) * 0.5);
+			box-shadow: var(--shadow);
+			display: flex;
+			font-size: var(--size);
+			height: calc(var(--size) * 1.5);
+			justify-content: center;
+			position: fixed;
+			right: 0;
+			text-decoration: none;
+			transition: box-shadow 0.3s ease;
+			width: calc(var(--size) * 1.5);
+			z-index: var(--above);
+		}
+
+		.go-to-top:hover {
+			box-shadow: var(--shadow-hover);
+		}
+
+		/* Logo */
+		.logo-link {
+			border-radius: 50%;
+			box-shadow: var(--shadow-inset);
+			display: block;
+			height: var(--logo-size);
+			overflow: hidden;
+			padding: 5px;
+			position: relative;
+			margin-right: var(--gutter);
+			width: var(--logo-size);
+		}
+
+		.logo-link:hover .header-img,
+		.logo-link:focus .header-img {
+			transform: rotateY(180deg);
+		}
+
+		.logo-link:hover .avatar,
+		.logo-link:focus .avatar {
+			transform: rotateY(0deg);
+		}
+
+		.header-img {
+			backface-visibility: hidden;
+			transform: rotateY(0deg);
+			transition: transform 0.5s ease;
+		}
+
+		.avatar {
+			backface-visibility: hidden;
+			border-radius: 50%;
+			height: var(--logo-size);
+			position: absolute;
+			left: 5px;
+			top: 5px;
+			object-fit: cover;
+			transform: rotateY(180deg);
+			transition: transform 0.5s ease;
+			width: var(--logo-size);
+		}
+
+		.logo-link~.name span {
+			display: inline-flex;
+			overflow: hidden;
+		}
+
+		.logo-link~.name .first {
+			transition: width 0.25s ease;
+			width: 75px;
+		}
+
+		.logo-link~.name .last {
+			margin-left: 5px;
+			transition: margin-left 0.25s ease, width 0.25s ease;
+			width: 71px;
+		}
+
+		.logo-link:hover~.name .first,
+		.logo-link:focus~.name .first {
+			width: 11px;
+		}
+
+		.logo-link:hover~.name .last,
+		.logo-link:focus~.name .last {
+			margin-left: -3px;
+			width: 11px;
+		}
+
+		/* sticky header */
+		.wrapper-sticky-header {
+			box-sizing: border-box;
+			left: 0;
+			padding: 0 var(--gutter);
+			position: fixed;
+			top: 0;
+			width: 100%;
+			z-index: var(--above);
+		}
+
+		.sticky-header {
+			color: black;
+			align-items: center;
+			background: white;
+			box-sizing: border-box;
+			box-shadow: var(--shadow);
+			border-bottom-left-radius: calc(var(--offset-of-sticky-header) / 2);
+			border-bottom-right-radius: var(--gutter);
+			display: flex;
+			margin: 0 auto;
+			max-width: var(--max-width-wrapper);
+			padding: var(--gutter);
+			position: relative;
+			width: 100%;
+		}
+
+		.sticky-header .name {
+			font-size: 20px;
+		}
+
+		.open-mobile-menu {
+			appearance: none;
+			background: white;
+			border: 0;
+			border-bottom-right-radius: var(--gutter);
+			border-top-left-radius: var(--gutter);
+			bottom: 0;
+			box-sizing: border-box;
+			box-shadow: var(--shadow-inset-top-left);
+			cursor: pointer;
+			font-family: var(--font-family-text);
+			font-size: 14px;
+			padding: calc(var(--gutter) / 2) var(--gutter) calc(var(--gutter) / 4);
+			position: absolute;
+			right: 0;
+		}
+
+		.open-mobile-menu:focus {
+			outline: none;
+			pointer-events: none;
+		}
+
+		.open-mobile-menu:focus::after {
+			border-bottom: solid calc(var(--gutter) + 5px) white;
+		}
+
+		.open-mobile-menu:focus::before {
+			opacity: 1;
+		}
+
+		.open-mobile-menu:focus~.main-navigation,
+		.main-navigation:focus,
+		.main-navigation:focus-within {
+			transform: translateY(100%);
+			box-shadow: var(--shadow);
+		}
+
+		.open-mobile-menu:focus span {
+			opacity: 0;
+		}
+
+		.open-mobile-menu span {
+			display: block;
+			position: relative;
+			opacity: 1;
+			transition: opacity 0.3s ease;
+			z-index: 1;
+		}
+
+		.open-mobile-menu::before {
+			content: attr(data-label);
+			display: block;
+			position: absolute;
+			left: 50%;
+			opacity: 0;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			transition: opacity 0.3s ease;
+			z-index: 1;
+		}
+
+		.open-mobile-menu::after {
+			border-bottom: solid 0 white;
+			content: "";
+			display: block;
+			height: 0;
+			position: absolute;
+			right: 0;
+			top: calc(100% - var(--gutter));
+			transition: border-bottom 0.1s ease;
+			transition-delay: 0.15s;
+			width: calc(100% - 3px);
+		}
+
+		.main-navigation {
+			background: white;
+			box-shadow: var(--shadow-opacity);
+			border-bottom-left-radius: var(--gutter);
+			border-bottom-right-radius: var(--gutter);
+			bottom: 0;
+			display: flex;
+			flex-direction: column;
+			font-size: 14px;
+			line-height: calc(var(--gutter) * 2);
+			padding: calc(var(--gutter) * 2) var(--gutter) calc(var(--gutter) / 4) calc(var(--gutter) * 2);
+			pointer-events: none;
+			position: absolute;
+			right: 0;
+			transform: translateY(0);
+			transition: transform 0.3s ease, box-shadow 0.15s ease;
+			transition-delay: 0.15s;
+			z-index: -1;
+		}
+
+		.main-navigation:focus {
+			outline: none;
+		}
+
+		.menu-label {
+			text-align: right;
+		}
+
+		.menu-label:before {
+			bottom: 0;
+			color: white;
+			content: "\261B";
+			font-size: 20px;
+			left: 1px;
+			position: absolute;
+			transition: color 0.3s ease, bottom 0.3s ease;
+		}
+
+		.nav-link {
+			color: gray;
+			pointer-events: all;
+			text-decoration: none;
+			transition: color 0.3s ease;
+		}
+
+		.nav-link:hover,
+		.nav-link:focus,
+		.nav-link:active {
+			color: black;
+		}
+
+		.nav-link:nth-child(1):hover~.menu-label:before,
+		.nav-link:nth-child(1):focus~.menu-label:before,
+		.nav-link:nth-child(1):active~.menu-label:before {
+			bottom: 43px;
+			color: inherit;
+		}
+
+		.nav-link:nth-child(2):hover~.menu-label:before,
+		.nav-link:nth-child(2):focus~.menu-label:before,
+		.nav-link:nth-child(2):active~.menu-label:before {
+			bottom: 23px;
+			color: inherit;
+		}
+
+		/* Anchor positions */
+		#anchor-go-to-top {
+			left: 0;
+			position: absolute;
+			top: 0;
+		}
+
+		.section-anchor {
+			left: 0;
+			position: absolute;
+			top: calc(var(--anchor-position) * -1);
+		}
+
+		/* Disclaimer and terms */
+
+		.disclaimer-and-terms {
+			align-items: center;
+			display: flex;
+			flex-direction: var(--disclaimer-and-terms-flex-direction);
+		}
+
+		.links-to-terms {
+			display: flex;
+			flex-direction: column;
+			flex-grow: 1;
+			line-height: var(--links-to-terms-line-height);
+			margin: 0;
+			text-align: var(--links-to-terms-text-align);
+		}
+
+		.disclaimer {
+			margin: var(--disclaimer-margin);
+			text-align: center;
+		}
+
+		.disclaimer svg {
+			display: inline-block;
+			height: var(--logo-size);
+			vertical-align: middle;
+			width: var(--logo-size);
+		}
+
+		/* Modal */
+		#close-modal {
+			position: fixed;
+			top: 0;
+		}
+
+		.modal {
+			background: rgba(0, 0, 0, 0);
+			-webkit-backdrop-filter: blur(20px);
+			backdrop-filter: blur(20px);
+			box-sizing: border-box;
+			height: 100%;
+			left: 0;
+			opacity: 0;
+			pointer-events: none;
+			position: fixed;
+			top: 0;
+			width: 100%;
+			transition: background .3s ease, opacity .3s ease;
+			z-index: var(--modal);
+		}
+
+		.modal:target {
+			background: rgba(0, 0, 0, 0.25);
+			opacity: 1;
+			pointer-events: all;
+		}
+
+		.modal-content {
+			background: var(--modal-background);
+			border-top-left-radius: var(--gutter);
+			border-bottom-left-radius: var(--gutter);
+			box-shadow: var(--shadow);
+			box-sizing: border-box;
+			height: 90vh;
+			left: 50%;
+			line-height: 1.5em;
+			max-width: var(--modal-max-width);
+			padding: var(--gutter) var(--size-of-close-modal-button) var(--gutter) var(--gutter);
+			position: absolute;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			overflow-x: hidden;
+			overflow-y: auto;
+			width: 100%;
+			/* -moz- Firefox custom scroll */
+			scrollbar-color: #cccccc var(--modal-background);
+			scrollbar-width: thin;
+		}
+
+		/* -webkit- Edge, Chrome, Opera, Safari custom scroll */
+		.modal-content::-webkit-scrollbar {
+			background: var(--modal-background);
+			width: 8px;
+			height: 8px;
+		}
+
+		.modal-content::-webkit-scrollbar-thumb {
+			background: #cccccc;
+			border: solid 1px var(--modal-background);
+		}
+
+		.modal-content::-webkit-scrollbar-thumb:hover {
+			background: #aaaaaa;
+		}
+
+		.close-modal {
+			align-items: center;
+			display: flex;
+			height: var(--size-of-close-modal-button);
+			justify-content: center;
+			line-height: 1em;
+			position: absolute;
+			right: calc((100vw - var(--modal-max-width)) / 2);
+			text-decoration: none;
+			top: 5vh;
+			width: var(--size-of-close-modal-button);
+			z-index: 1;
+		}
+
+		.modal-overlay {
+			display: block;
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+
+		/* Hero */
+
+		.hero,
+		.projects {
+			background: radial-gradient(circle, rgba(0, 0, 0, 0) 35%, rgba(var(--config-background-texture-color), 1) 100%);
+			box-sizing: border-box;
+			clip-path: polygon(10% 0%, 100% var(--anchor-position), 100% 90%, 90% 100%, 0% calc(100% - var(--anchor-position)), 0% 10%);
+			display: flex;
+			flex-direction: column;
+			padding-bottom: var(--anchor-position);
+			padding-top: var(--anchor-position);
+		}
+
+		.hero {
+			height: 100vh;
+			justify-content: center;
+		}
+
+		.hero.first {
+			margin-top: calc(var(--anchor-position) * -1);
+		}
+
+		.projects {
+			justify-content: space-around;
+			margin-top: calc((var(--anchor-position) - (var(--gutter) * 3)) * -1);
+			min-height: 100vh;
+		}
+
+		.component-title {
+			font-size: var(--component-title-font-size);
+			margin-bottom: 0;
+		}
+
+		.component-title+p {
+			margin-top: 1.5em;
+		}
+
+		/* Slider */
+
+		.slider {
+			margin-top: calc(var(--gutter) * 3);
+		}
+
+		.slides-wrapper {
+			font-size: 0;
+			overflow-x: auto;
+			scroll-behavior: smooth;
+			white-space: nowrap;
+			scroll-snap-type: x mandatory;
+		}
+
+		.slide {
+			display: inline-block;
+			font-size: 1rem;
+			margin-bottom: var(--gutter);
+			position: relative;
+			scroll-snap-align: start;
+			width: 100%;
+		}
+
+		.slider .mask {
+			clip-path: polygon(30px 0%, 100% 0%, 100% 25%, calc(100% - 30px) 25%, calc(100% - 30px) 100%, 0% 100%, 0% calc(25% + 10px), 30px calc(25% + 10px));
+			margin-left: -20px;
+		}
+
+		.slider .mask:first-of-type {
+			clip-path: polygon(0% 0%, 100% 0%, 100% 25%, calc(100% - 30px) 25%, calc(100% - 30px) 100%, 0% 100%);
+			margin-left: 0;
+		}
+
+		.slider .mask:last-of-type {
+			clip-path: polygon(30px 0%, 100% 0%, 100% 100%, 0% 100%, 0% calc(25% + 10px), 30px calc(25% + 10px));
+		}
+
+		.slider.responsive-pagination .slide.mask {
+			width: calc(var(--slide-size) + var(--slider-with-mask-image-size-adjustment));
+		}
+
+		.slider.responsive-pagination .slide {
+			width: var(--slide-size);
+		}
+
+		/* Image */
+
+		figure.image {
+			margin: 0;
+		}
+
+		.image {
+			box-sizing: border-box;
+			height: 0;
+			overflow: hidden;
+			position: relative;
+			padding-top: var(--slider-photos-image-ratio);
+		}
+
+		.image img {
+			display: block;
+			height: 100%;
+			left: 0;
+			object-fit: cover;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+
+		/* Cards Languages */
+
+		.holder-cards-list {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.holder-cards-list>p {
+			cursor: pointer;
+			margin-bottom: 0;
+		}
+
+		.holder-cards-list>p:first-child {
+			margin-top: calc(var(--gutter) * 2);
+		}
+
+		.html-css:hover~.cards.features:before {
+			opacity: 1;
+		}
+
+		.html-css:hover~.cards.features .card .holder-icon.red:after {
+			box-shadow: 0 0 0 0 rgba(255, 0, 0, 1) inset;
+		}
+
+		.html-css:hover~.cards.features .card .holder-icon.green:after {
+			box-shadow: 0 0 0 0 rgba(0, 255, 0, 1) inset;
+		}
+
+		.html-css-javascript:hover~.cards.features:after {
+			opacity: 1;
+		}
+
+		.html-css-javascript:hover~.cards.features .card .holder-icon.red:after {
+			box-shadow: 0 0 0 0 rgba(255, 0, 0, 1) inset;
+		}
+
+		.html-css-javascript:hover~.cards.features .card .holder-icon.green:after {
+			box-shadow: 0 0 0 0 rgba(0, 255, 0, 1) inset;
+		}
+
+		.html-css-javascript:hover~.cards.features .card .holder-icon.blue:after {
+			box-shadow: 0 0 0 0 rgba(0, 0, 255, 1) inset;
+		}
+
+		.cards {
+			display: grid;
+			grid-column-gap: var(--gutter);
+			grid-row-gap: var(--gutter);
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			/* :( Variables don't work inside minmax() */
+			list-style: none;
+			margin-bottom: 0;
+			margin-top: 0;
+			padding: 0;
+		}
+
+		.cards.bleed {
+			box-sizing: border-box;
+			padding-left: calc(var(--gutter) * 2);
+			padding-right: calc(var(--gutter) * 2);
+		}
+
+		.cards.courses {
+			grid-template-columns: var(--cards-courses-grid-template-columns);
+		}
+
+		.cards.features {
+			grid-row-gap: var(--card-icon-top-gap);
+			order: -1;
+			padding: var(--card-icon-top-gap) 0 0;
+			position: relative;
+		}
+
+		.cards.features:before,
+		.cards.features:after {
+			box-sizing: border-box;
+			content: "";
+			display: block;
+			height: calc(100% + var(--gutter));
+			left: calc(var(--gutter) * -0.5);
+			position: absolute;
+			pointer-events: none;
+			opacity: 0;
+			top: 0;
+			transition: opacity 0.3s ease;
+		}
+
+		.cards.features:after {
+			background: url('https://adrianoenache.dev.br/fcc-assets/animate-border-rgb.svg');
+			width: calc(100% + var(--gutter));
+		}
+
+		.cards.features:before {
+			background: url('https://adrianoenache.dev.br/fcc-assets/animate-border-rg.svg');
+			width: calc((100% / 3) * 2 + var(--gutter) * 0.75);
+		}
+
+		.card {
+			background: white;
+			border-radius: var(--gutter);
+			box-shadow: var(--shadow);
+			color: var(--main-text-color-tablet);
+			padding: var(--gutter) var(--gutter);
+			position: relative;
+		}
+
+		.card:hover .animate-border {
+			opacity: 1;
+		}
+
+		.card .animate-border {
+			box-sizing: border-box;
+			display: block;
+			height: calc(100% + var(--gutter));
+			left: calc(var(--gutter) * -0.5);
+			opacity: 0;
+			position: absolute;
+			top: calc(var(--gutter) * -0.5);
+			width: calc(100% + var(--gutter));
+			transition: opacity 0.3s ease;
+		}
+
+		.features .card .animate-border {
+			height: calc(100% + var(--card-icon-top-gap));
+			top: calc((var(--card-icon-top-gap) - var(--gutter) * 0.5) * -1);
+		}
+
+		.courses .card {
+			padding-bottom: calc(var(--gutter) * 6);
+		}
+
+		.courses .card p:last-child {
+			bottom: var(--gutter);
+			left: var(--gutter);
+			margin-top: 0;
+			position: absolute;
+			right: var(--gutter);
+		}
+
+		.card h3 {
+			font-size: 30px;
+			text-align: center;
+			margin: 0.5em 0;
+		}
+
+		.courses .card h3 {
+			line-height: var(--course-card-h3-line-height);
+			min-height: var(--course-card-h3-min-height);
+		}
+
+		.card p.highlight {
+			color: red;
+			font-weight: 700;
+			text-align: center;
+		}
+
+		.card p.description,
+		.card p:last-child {
+			margin-bottom: 0;
+		}
+
+		.card .call-to-action {
+			background: red;
+			border-radius: var(--gutter);
+			box-shadow: var(--shadow);
+			box-sizing: border-box;
+			color: white;
+			display: block;
+			margin: 0 auto;
+			max-width: 300px;
+			padding: 0.5em 1em;
+			text-align: center;
+			text-decoration: none;
+			transition: box-shadow 0.3s ease;
+			width: 100%;
+		}
+
+		.card .call-to-action:hover {
+			box-shadow: var(--shadow-hover);
+		}
+
+		.holder-icon {
+			border-radius: 50%;
+			box-shadow: var(--shadow);
+			font-size: 0;
+			height: var(--card-icon-size);
+			margin: calc(var(--card-icon-top-gap) * -1) auto 0;
+			position: relative;
+			width: var(--card-icon-size);
+		}
+
+		.holder-icon:after {
+			border-radius: 50%;
+			content: "";
+			display: block;
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			transition: box-shadow 0.5s ease;
+			width: 100%;
+		}
+
+		.holder-icon.red:after {
+			box-shadow: 0 0 0 64px rgba(255, 0, 0, 1) inset;
+		}
+
+		.card:hover .holder-icon.red:after {
+			box-shadow: 0 0 0 0 rgba(255, 0, 0, 1) inset;
+		}
+
+		.holder-icon.green:after {
+			box-shadow: 0 0 0 64px rgba(0, 255, 0, 1) inset;
+		}
+
+		.card:hover .holder-icon.green:after {
+			box-shadow: 0 0 0 0 rgba(0, 255, 0, 1) inset;
+		}
+
+		.holder-icon.blue:after {
+			box-shadow: 0 0 0 64px rgba(0, 0, 255, 1) inset;
+		}
+
+		.card:hover .holder-icon.blue:after {
+			box-shadow: 0 0 0 0 rgba(0, 0, 255, 1) inset;
+		}
+
+		/*  */
+
+		.fcc {
+			background-color: var(--main-background-color);
+			background-image: var(--main-background-texture-vertical);
+			display: flex;
+			justify-content: center;
+			min-width: 320px;
+			padding: 0 10px;
+			position: relative;
+			scroll-behavior: smooth;
+		}
+
+		.fcc::before,
+		.fcc::after {
+			content: "";
+			display: block;
+			height: 100vh;
+			left: 0;
+			position: fixed;
+			pointer-events: none;
+			top: 0;
+			width: 100vw;
+			z-index: var(--behind);
+		}
+
+		.fcc::before {
+			background-image: var(--main-background-texture-horizontal);
+		}
+
+		.fcc::after {
+			background-image: var(--main-background-linear-gradient);
+		}
+
+		.shadown {
+			box-shadow: var(--shadow);
+			transition: box-shadow 0.3s ease-in-out;
+		}
+
+		.reset-list {
+			list-style: none;
+			padding: 0;
+		}
+
+		.shadown:hover {
+			box-shadow: var(--shadow-hover);
+		}
+
+		.wrapper-lists {
+			display: flex;
+			flex-direction: var(--list-wrapper-direction);
+			justify-content: space-between;
+		}
+
+		.contact-links {
+			display: flex;
+			justify-content: space-around;
+			flex-wrap: wrap;
+			margin: calc(var(--gutter) * 2) auto 0;
+		}
+
+		.contact-links li {
+			font-size: var(--size-of-contact-buttons);
+			margin: var(--margin-of-contact-buttons);
+		}
+
+		.contact-links li a {
+			align-items: center;
+			border-radius: 0.25em;
+			background: white;
+			color: black;
+			display: flex;
+			justify-content: center;
+			height: 2em;
+			width: 2em;
+			text-decoration: none;
+			transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+		}
+
+		.contact-links li a:visited {
+			color: purple;
+		}
+
+		.contact-links li a:hover,
+		.contact-links li a:focus {
+			color: red;
+		}
+
+		/* Font from icomoon.io the CSS have some little of customizations */
+
+		/* Using font woff converted to base64 */
+		@font-face {
+			font-family: 'fcc-icons';
+			src: url('data:font/woff;charset=utf-8;base64,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') format('woff');
+			font-weight: normal;
+			font-style: normal;
+			font-display: block;
+		}
+
+		/* It was added ::before */
+		[class^="icon-"]::before,
+		[class*=" icon-"]::before {
+			/* use !important to prevent issues with browser extensions that change fonts */
+			font-family: 'fcc-icons' !important;
+			speak: never;
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
+
+			/* Better Font Rendering =========== */
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+
+		.icon-camera::before {
+			content: "\e90f";
+			margin-right: 0.25em;
+			/* This is custom */
+		}
+
+		.icon-link::before {
+			content: "\e9cb";
+		}
+
+		.icon-facebook::before {
+			content: "\ea90";
+		}
+
+		.icon-instagram::before {
+			content: "\ea92";
+		}
+
+		.icon-twitter::before {
+			content: "\ea96";
+		}
+
+		.icon-youtube::before {
+			content: "\ea9d";
+		}
+
+		.icon-github::before {
+			content: "\eab0";
+		}
+
+		.icon-reddit::before {
+			content: "\eac6";
+		}
+
+		.icon-linkedin2::before {
+			content: "\eaca";
+		}
+
+		.icon-codepen::before {
+			content: "\eae8";
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="wrapper-sticky-header">
+		<header class="sticky-header" id="header">
+			<a class="logo-link" href="#anchor-go-to-top" tabindex="1">
+				<img class="header-img" id="header-img" src='https://adrianoenache.dev.br/logo-ae-adrianoenache.svg'
+					alt="Logo - Adriano Enache">
+				<img class="avatar" src="https://adrianoenache.dev.br/avatar-adrianoenache-67x50.jpg"
+					alt="Photo - Adriano Enache">
+			</a>
+			<span class="name"><span class="first">Adriano</span><span class="last">Enache</span></span>
+			<button class="open-mobile-menu" type="button" data-label="&#88;" tabindex="2"><span>Menu</span></button>
+			<nav class="main-navigation" id="navbar" tabindex="2">
+				<a href="#projects" class="nav-link" tabindex="3">Projects</a>
+				<a href="https://www.freecodecamp.org/adrianoenache" class="nav-link" id="profile-link" tabindex="4"
+					target="_blank" rel="noopener">My profile</a>
+				<span class="menu-label">Menu</span>
+			</nav>
+		</header>
+	</div>
+	<a id="anchor-go-to-top"></a>
+	<a class="go-to-top" href="#anchor-go-to-top">&#8613;</a>
+
+	<section class="hero first bleed less-the-content" id="welcome-section">
+		<h1 class="component-title bleed left">
+			<span class="text-cut-out">
+				&nbsp;freeCodeCamp&nbsp;
+			</span><br>
+			<span class="text-cut-out">
+				&nbsp;Projects&nbsp;
+			</span>
+		</h1>
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, quos temporibus impedit quibusdam assumenda,
+			ducimus voluptatem doloremque fuga iusto dolore aliquid, sit ad id? Voluptatum praesentium illo dolores
+			eveniet cum.
+		</p>
+	</section>
+	<section class="projects bleed less-the-content" id="projects">
+		<h2 class="project-tile component-title">
+			<span class="text-cut-out">
+				&nbsp;Projects&nbsp;
+			</span>
+		</h2>
+		<div class="slider">
+			<div class="slides-wrapper custom-scroll">
+				<div class="slide">
+					1
+				</div>
+				<div class="slide">
+					2
+				</div>
+				<div class="slide">
+					3
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<h2>
+			Slider responsive
+		</h2>
+		<div class="slider responsive-pagination bleed">
+			<div class="slides-wrapper custom-scroll">
+				<div class="slide mask">
+					<figure class="image">
+						<img src="https://adrianoenache.dev.br/adr-fotos/adr-foto-r-00.jpg"
+							alt="Photo of Adriano Enache taken from notebook cam." loading="lazy">
+					</figure>
+				</div>
+				<div class="slide mask">
+					<figure class="image">
+						<img src="https://adrianoenache.dev.br/adr-fotos/adr-foto-r-01.jpg"
+							alt="Photo of Adriano Enache taken from notebook cam." loading="lazy">
+					</figure>
+				</div>
+				<div class="slide mask">
+					<figure class="image">
+						<img src="https://adrianoenache.dev.br/adr-fotos/adr-foto-r-02.jpg"
+							alt="Photo of Adriano Enache taken from notebook cam." loading="lazy">
+					</figure>
+				</div>
+				<div class="slide mask">
+					<figure class="image">
+						<img src="https://adrianoenache.dev.br/adr-fotos/adr-foto-r-03.jpg"
+							alt="Photo of Adriano Enache taken from notebook cam." loading="lazy">
+					</figure>
+				</div>
+				<div class="slide mask">
+					<figure class="image">
+						<img src="https://adrianoenache.dev.br/adr-fotos/adr-foto-r-04.jpg"
+							alt="Photo of Adriano Enache taken from notebook cam." loading="lazy">
+					</figure>
+				</div>
+				<div class="slide mask">
+					<figure class="image">
+						<img src="https://adrianoenache.dev.br/adr-fotos/adr-foto-r-05.jpg"
+							alt="Photo of Adriano Enache taken from notebook cam." loading="lazy">
+					</figure>
+				</div>
+				<div class="slide mask">
+					<figure class="image">
+						<img src="https://adrianoenache.dev.br/adr-fotos/adr-foto-r-06.jpg"
+							alt="Photo of Adriano Enache taken from notebook cam." loading="lazy">
+					</figure>
+				</div>
+				<div class="slide mask">
+					<figure class="image">
+						<img src="https://adrianoenache.dev.br/adr-fotos/adr-foto-r-07.jpg"
+							alt="Photo of Adriano Enache taken from notebook cam." loading="lazy">
+					</figure>
+				</div>
+				<div class="slide mask">
+					<figure class="image">
+						<img src="https://adrianoenache.dev.br/adr-fotos/adr-foto-r-08.jpg"
+							alt="Photo of Adriano Enache taken from notebook cam." loading="lazy">
+					</figure>
+				</div>
+				<div class="slide mask">
+					<figure class="image">
+						<img src="https://adrianoenache.dev.br/adr-fotos/adr-foto-r-09.jpg"
+							alt="Photo of Adriano Enache taken from notebook cam." loading="lazy">
+					</figure>
+				</div>
+				<div class="slide mask">
+					<figure class="image">
+						<img src="https://adrianoenache.dev.br/adr-fotos/adr-foto-r-10.jpg"
+							alt="Photo of Adriano Enache taken from notebook cam." loading="lazy">
+					</figure>
+				</div>
+				<div class="slide mask">
+					<figure class="image">
+						<img src="https://adrianoenache.dev.br/adr-fotos/adr-foto-r-11.jpg"
+							alt="Photo of Adriano Enache taken from notebook cam." loading="lazy">
+					</figure>
+				</div>
+				<div class="slide mask">
+					<figure class="image">
+						<img src="https://adrianoenache.dev.br/adr-fotos/adr-foto-r-12.jpg"
+							alt="Photo of Adriano Enache taken from notebook cam." loading="lazy">
+					</figure>
+				</div>
+				<div class="slide mask">
+					<figure class="image">
+						<img src="https://adrianoenache.dev.br/adr-fotos/adr-foto-r-13.jpg"
+							alt="Photo of Adriano Enache taken from notebook cam." loading="lazy">
+					</figure>
+				</div>
+				<div class="slide mask">
+					<figure class="image">
+						<img src="https://adrianoenache.dev.br/adr-fotos/adr-foto-r-14.jpg"
+							alt="Photo of Adriano Enache taken from notebook cam." loading="lazy">
+					</figure>
+				</div>
+				<div class="slide mask">
+					<figure class="image">
+						<img src="https://adrianoenache.dev.br/adr-fotos/adr-foto-r-15.jpg"
+							alt="Photo of Adriano Enache taken from notebook cam." loading="lazy">
+					</figure>
+				</div>
+				<div class="slide mask">
+					<figure class="image">
+						<img src="https://adrianoenache.dev.br/adr-fotos/adr-foto-r-16.jpg"
+							alt="Photo of Adriano Enache taken from notebook cam." loading="lazy">
+					</figure>
+				</div>
+				<div class="slide mask">
+					<figure class="image">
+						<img src="https://adrianoenache.dev.br/adr-fotos/adr-foto-r-17.jpg"
+							alt="Photo of Adriano Enache taken from notebook cam." loading="lazy">
+					</figure>
+				</div>
+				<div class="slide mask">
+					<figure class="image">
+						<img src="https://adrianoenache.dev.br/adr-fotos/adr-foto-r-18.jpg"
+							alt="Photo of Adriano Enache taken from notebook cam." loading="lazy">
+					</figure>
+				</div>
+				<div class="slide mask">
+					<figure class="image">
+						<img src="https://adrianoenache.dev.br/adr-fotos/adr-foto-r-19.jpg"
+							alt="Photo of Adriano Enache taken from notebook cam." loading="lazy">
+					</figure>
+				</div>
+				<div class="slide mask">
+					<figure class="image">
+						<img src="https://adrianoenache.dev.br/adr-fotos/adr-foto-r-20.jpg"
+							alt="Photo of Adriano Enache taken from notebook cam." loading="lazy">
+					</figure>
+				</div>
+				<div class="slide mask">
+					<figure class="image">
+						<img src="https://adrianoenache.dev.br/adr-fotos/adr-foto-r-21.jpg"
+							alt="Photo of Adriano Enache taken from notebook cam." loading="lazy">
+					</figure>
+				</div>
+				<div class="slide mask">
+					<figure class="image">
+						<img src="https://adrianoenache.dev.br/adr-fotos/adr-foto-r-22.jpg"
+							alt="Photo of Adriano Enache taken from notebook cam." loading="lazy">
+					</figure>
+				</div>
+				<div class="slide mask">
+					<figure class="image">
+						<img src="https://adrianoenache.dev.br/adr-fotos/adr-foto-r-23.jpg"
+							alt="Photo of Adriano Enache taken from notebook cam." loading="lazy">
+					</figure>
+				</div>
+				<div class="slide mask">
+					<figure class="image">
+						<img src="https://adrianoenache.dev.br/adr-fotos/adr-foto-r-24.jpg"
+							alt="Photo of Adriano Enache taken from notebook cam." loading="lazy">
+					</figure>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<ul class="contact-links reset-list">
+			<li>
+				<a class="icon-link shadown" href="https://adrianoenache.dev.br" target="_blank" rel="noopener"></a>
+			</li>
+			<li>
+				<a class="icon-link shadown" href="https://www.freecodecamp.org/adrianoenache" target="_blank"
+					rel="noopener"></a>
+			</li>
+			<li>
+				<a class="icon-codepen shadown" href="https://codepen.io/adrianoenache" target="_blank"
+					rel="noopener"></a>
+			</li>
+			<li>
+				<a class="icon-github shadown" href="https://github.com/adrianoenache" target="_blank"
+					rel="noopener"></a>
+			</li>
+			<li>
+				<a class="icon-facebook shadown" href="https://www.facebook.com/adrianoenache" target="_blank"
+					rel="noopener"></a>
+			</li>
+			<li>
+				<a class="icon-linkedin2 shadown" href="https://www.linkedin.com/in/adrianoenache" target="_blank"
+					rel="noopener"></a>
+			</li>
+			<li>
+				<a class="icon-reddit shadown" href="https://www.reddit.com/user/adrianoenache" target="_blank"
+					rel="noopener"></a>
+			</li>
+			<li>
+				<a class="icon-twitter shadown" href="https://twitter.com/AdrianoEnache" target="_blank"
+					rel="noopener"></a>
+			</li>
+			<li>
+				<a class="icon-instagram shadown" href="https://www.instagram.com/adrianoenache" target="_blank"
+					rel="noopener"></a>
+			</li>
+			<li>
+				<a class="icon-youtube shadown" href="https://www.youtube.com/channel/UC53UwM0XGPL0WdC5q3XExPA"
+					target="_blank" rel="noopener"></a>
+			</li>
+		</ul>
+		<hr class="top">
+		<div class="disclaimer-and-terms">
+			<ul class="links-to-terms reset-list">
+				<li>
+					<a href="#modal-politic-of-privacy">Politic of privacy</a>
+				</li>
+				<li>
+					<a href="#modal-terms-of-use">Terms of use</a>
+				</li>
+				<li>
+					<a href="https://www.linkedin.com/in/adrianoenache/" target="_blank" rel="noopener">Contact with
+						me</a>
+				</li>
+			</ul>
+			<p class="disclaimer">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 702 704">
+					<path fill="currentColor"
+						d="M336 702A347 347 0 0111 432 350 350 0 01551 65a351 351 0 0145 36c2 3 2 4 0 6l-30 30c-2 3-4 2-6 0a175 175 0 00-27-25c-21-14-42-27-65-37a331 331 0 00-48-16 281 281 0 00-34-6l-40-2a406 406 0 00-42 4 303 303 0 00-59 16 269 269 0 00-50 24 322 322 0 00-37 27 344 344 0 00-35 34 285 285 0 00-62 116 331 331 0 00-8 117 287 287 0 0053 137 334 334 0 0094 86 298 298 0 0068 29 267 267 0 0058 10l30 2a327 327 0 00122-28 305 305 0 0052-31l31-27c2-3 3-2 5 0l30 29c2 3 2 4 0 6a349 349 0 01-121 77c-40 15-82 23-139 23z" />
+					<path fill="currentColor"
+						d="M144 516l8-20 121-303c1-3 3-4 6-4h275c4 0 5 1 5 5v29c0 4-1 5-5 5H400c-5 0-6 1-6 6v78c0 4 1 5 5 5h154c5 0 6 1 6 6v28c0 4-1 5-5 5H399c-4 0-5 1-5 5v111c0 4 1 5 5 5h154c5 0 6 1 6 6v28c0 4-1 5-5 5H356c-4 0-5-1-5-5V400c0-4-1-5-5-5H240c-3 0-5 1-6 4l-43 113c-1 3-3 4-6 4h-41zm107-159h97c3 0 3-1 3-4V229c0-3 0-4-4-4h-40c-3 0-4 1-5 4l-18 43-33 85zm369-229c2-1 2 1 2 1l15 18c8 11 14 22 21 34a362 362 0 0118 39l10 27c1 2 1 2-1 3l-45 14c-2 1-2-1-2-2l-5-15a124 124 0 00-5-12 371 371 0 00-44-71c-2-3-3-6 1-8 5-2 8-7 12-10l20-17a9 9 0 013-1zm81 202v44a349 349 0 01-5 42c-1 3-1 5-6 4l-41-8c-3 0-3-2-3-4 5-20 6-39 6-59 0-18-2-36-6-53 0-3 0-4 3-4l43-9c2 0 3 0 3 2a231 231 0 015 31l1 14zM581 545a414 414 0 0028-40 277 277 0 0025-54l3-8c1-2 2-3 5-2l16 5 26 7c3 1 3 2 2 4l-9 26c-5 14-12 27-19 39a260 260 0 01-19 30l-16 23h-4c-13-9-24-20-36-29l-2-1z" />
+				</svg>
+				&#169; 2021
+			</p>
+		</div>
+	</footer>
+	<a id="close-modal"></a>
+	<section class="modal" id="modal-politic-of-privacy">
+		<a class="modal-overlay" href="#close-modal"></a>
+		<a href="#close-modal" class="close-modal">&#10008;</a>
+		<div class="modal-content">
+			<h2>Politic of privacy</h2>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+				dolore magna aliqua. Amet nulla facilisi morbi tempus iaculis urna. Facilisis volutpat est velit egestas
+				dui id ornare. Sed blandit libero volutpat sed cras. Fames ac turpis egestas maecenas pharetra convallis
+				posuere. Sodales ut eu sem integer vitae justo eget. Dolor purus non enim praesent elementum. Eget sit
+				amet tellus cras adipiscing enim eu. In dictum non consectetur a erat nam. Quam elementum pulvinar etiam
+				non. Ut tortor pretium viverra suspendisse potenti nullam. Eget nunc scelerisque viverra mauris in.
+				Dictum non consectetur a erat. Eu non diam phasellus vestibulum. Lorem sed risus ultricies tristique
+				nulla aliquet enim. Orci a scelerisque purus semper eget duis at tellus. Gravida quis blandit turpis
+				cursus in hac habitasse platea. Gravida neque convallis a cras semper auctor neque. Elementum facilisis
+				leo vel fringilla est ullamcorper eget nulla.
+			</p>
+			<p>
+				Lobortis scelerisque fermentum dui faucibus in ornare quam viverra orci. Consectetur a erat nam at
+				lectus. Varius morbi enim nunc faucibus a. Vitae aliquet nec ullamcorper sit amet. Nisl vel pretium
+				lectus quam id leo in vitae turpis. Nunc vel risus commodo viverra maecenas accumsan lacus. Arcu odio ut
+				sem nulla pharetra diam sit amet. Ac turpis egestas maecenas pharetra convallis posuere morbi leo.
+				Scelerisque viverra mauris in aliquam. Id interdum velit laoreet id donec. Metus aliquam eleifend mi in
+				nulla posuere sollicitudin aliquam ultrices. Quis viverra nibh cras pulvinar mattis nunc. Neque viverra
+				justo nec ultrices dui sapien eget mi proin. Blandit cursus risus at ultrices mi tempus. Fermentum et
+				sollicitudin ac orci phasellus. Laoreet id donec ultrices tincidunt arcu non sodales.
+			</p>
+			<p>
+				Diam in arcu cursus euismod quis viverra nibh. Vel pretium lectus quam id leo in vitae turpis. Et tortor
+				consequat id porta nibh venenatis cras. Elit sed vulputate mi sit amet mauris commodo. Vitae congue eu
+				consequat ac felis. Nibh cras pulvinar mattis nunc sed blandit libero volutpat sed. Lacinia at quis
+				risus sed vulputate. Faucibus in ornare quam viverra orci. Augue interdum velit euismod in pellentesque
+				massa. Mauris augue neque gravida in.
+			</p>
+			<p>
+				Mauris ultrices eros in cursus turpis massa tincidunt. Placerat orci nulla pellentesque dignissim. Ut
+				aliquam purus sit amet luctus. Vel pretium lectus quam id leo in vitae turpis. Rhoncus est pellentesque
+				elit ullamcorper dignissim cras tincidunt lobortis feugiat. Nunc pulvinar sapien et ligula. Non arcu
+				risus quis varius quam quisque id diam vel. In arcu cursus euismod quis viverra nibh cras pulvinar
+				mattis. Quis eleifend quam adipiscing vitae proin sagittis nisl. Mauris augue neque gravida in fermentum
+				et sollicitudin ac orci.
+			</p>
+			<p>
+				Praesent elementum facilisis leo vel fringilla est ullamcorper eget nulla. Convallis convallis tellus id
+				interdum velit. Turpis massa sed elementum tempus egestas sed sed risus. Venenatis lectus magna
+				fringilla urna porttitor rhoncus. Dictumst vestibulum rhoncus est pellentesque elit ullamcorper
+				dignissim cras tincidunt. Purus non enim praesent elementum facilisis leo vel fringilla est. Facilisi
+				morbi tempus iaculis urna id volutpat lacus laoreet non. Est ante in nibh mauris cursus mattis. At augue
+				eget arcu dictum. Tempor commodo ullamcorper a lacus vestibulum sed arcu non odio.
+			</p>
+		</div>
+	</section>
+	<section class="modal" id="modal-terms-of-use">
+		<a class="modal-overlay" href="#close-modal"></a>
+		<a href="#close-modal" class="close-modal">&#10008;</a>
+		<div class="modal-content">
+			<h2>Terms of use</h2>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+				dolore magna aliqua. Amet nulla facilisi morbi tempus iaculis urna. Facilisis volutpat est velit egestas
+				dui id ornare. Sed blandit libero volutpat sed cras. Fames ac turpis egestas maecenas pharetra convallis
+				posuere. Sodales ut eu sem integer vitae justo eget. Dolor purus non enim praesent elementum. Eget sit
+				amet tellus cras adipiscing enim eu. In dictum non consectetur a erat nam. Quam elementum pulvinar etiam
+				non. Ut tortor pretium viverra suspendisse potenti nullam. Eget nunc scelerisque viverra mauris in.
+				Dictum non consectetur a erat. Eu non diam phasellus vestibulum. Lorem sed risus ultricies tristique
+				nulla aliquet enim. Orci a scelerisque purus semper eget duis at tellus. Gravida quis blandit turpis
+				cursus in hac habitasse platea. Gravida neque convallis a cras semper auctor neque. Elementum facilisis
+				leo vel fringilla est ullamcorper eget nulla.
+			</p>
+			<p>
+				Lobortis scelerisque fermentum dui faucibus in ornare quam viverra orci. Consectetur a erat nam at
+				lectus. Varius morbi enim nunc faucibus a. Vitae aliquet nec ullamcorper sit amet. Nisl vel pretium
+				lectus quam id leo in vitae turpis. Nunc vel risus commodo viverra maecenas accumsan lacus. Arcu odio ut
+				sem nulla pharetra diam sit amet. Ac turpis egestas maecenas pharetra convallis posuere morbi leo.
+				Scelerisque viverra mauris in aliquam. Id interdum velit laoreet id donec. Metus aliquam eleifend mi in
+				nulla posuere sollicitudin aliquam ultrices. Quis viverra nibh cras pulvinar mattis nunc. Neque viverra
+				justo nec ultrices dui sapien eget mi proin. Blandit cursus risus at ultrices mi tempus. Fermentum et
+				sollicitudin ac orci phasellus. Laoreet id donec ultrices tincidunt arcu non sodales.
+			</p>
+			<p>
+				Diam in arcu cursus euismod quis viverra nibh. Vel pretium lectus quam id leo in vitae turpis. Et tortor
+				consequat id porta nibh venenatis cras. Elit sed vulputate mi sit amet mauris commodo. Vitae congue eu
+				consequat ac felis. Nibh cras pulvinar mattis nunc sed blandit libero volutpat sed. Lacinia at quis
+				risus sed vulputate. Faucibus in ornare quam viverra orci. Augue interdum velit euismod in pellentesque
+				massa. Mauris augue neque gravida in.
+			</p>
+			<p>
+				Mauris ultrices eros in cursus turpis massa tincidunt. Placerat orci nulla pellentesque dignissim. Ut
+				aliquam purus sit amet luctus. Vel pretium lectus quam id leo in vitae turpis. Rhoncus est pellentesque
+				elit ullamcorper dignissim cras tincidunt lobortis feugiat. Nunc pulvinar sapien et ligula. Non arcu
+				risus quis varius quam quisque id diam vel. In arcu cursus euismod quis viverra nibh cras pulvinar
+				mattis. Quis eleifend quam adipiscing vitae proin sagittis nisl. Mauris augue neque gravida in fermentum
+				et sollicitudin ac orci.
+			</p>
+			<p>
+				Praesent elementum facilisis leo vel fringilla est ullamcorper eget nulla. Convallis convallis tellus id
+				interdum velit. Turpis massa sed elementum tempus egestas sed sed risus. Venenatis lectus magna
+				fringilla urna porttitor rhoncus. Dictumst vestibulum rhoncus est pellentesque elit ullamcorper
+				dignissim cras tincidunt. Purus non enim praesent elementum facilisis leo vel fringilla est. Facilisi
+				morbi tempus iaculis urna id volutpat lacus laoreet non. Est ante in nibh mauris cursus mattis. At augue
+				eget arcu dictum. Tempor commodo ullamcorper a lacus vestibulum sed arcu non odio.
+			</p>
+		</div>
+	</section>
+
+	<!-- Scripts -->
+	<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
