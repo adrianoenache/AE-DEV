@@ -2,43 +2,43 @@
 <html class="fcc" lang="en">
 
 <head prefix="og: https://ogp.me/ns#">
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="robots" content="INDEX, FOLLOW">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="INDEX, FOLLOW" />
 
 	<meta name="description"
-		content="Personal website to publish articles related to Front-End development and stuff that I like.">
+		content="Personal website to publish articles related to Front-End development and stuff that I like." />
 	<meta name="keywords"
-		content="Front-End, HTML, CSS, Javascript, UI, UX, DEV, Development, Website, Guideline, Frameworks, Web tools">
-	<meta name="author" content="Adriano Enache - adrianoenache@hotmail.com">
+		content="Front-End, HTML, CSS, Javascript, UI, UX, DEV, Development, Website, Guideline, Frameworks, Web tools" />
+	<meta name="author" content="Adriano Enache - adrianoenache@hotmail.com" />
 
 	<title>Adriano Enache</title>
 
-	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-	<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#000000">
-	<link rel="shortcut icon" href="/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+	<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#000000" />
+	<link rel="shortcut icon" href="/favicon/favicon.ico" />
 
-	<meta name="msapplication-TileColor" content="#000000">
-	<meta name="msapplication-TileImage" content="/favicon/mstile-144x144.png">
-	<meta name="msapplication-config" content="/favicon/browserconfig.xml">
-	<meta name="theme-color" content="#000000">
+	<meta name="msapplication-TileColor" content="#000000" />
+	<meta name="msapplication-TileImage" content="/favicon/mstile-144x144.png" />
+	<meta name="msapplication-config" content="/favicon/browserconfig.xml" />
+	<meta name="theme-color" content="#000000" />
 
-	<meta property="og:title" content="&AElig; (Adriano Enache) =P">
+	<meta property="og:title" content="&AElig; (Adriano Enache) =P" />
 	<meta property="og:description"
-		content="Personal website to publish articles related to Front-End development and stuff that I like.">
-	<meta property="og:type" content="blog">
+		content="Personal website to publish articles related to Front-End development and stuff that I like." />
+	<meta property="og:type" content="blog" />
 	<meta property="og:locale" content="en" />
-	<meta property="og:url" content="https://adrianoenache.dev.br/">
+	<meta property="og:url" content="https://adrianoenache.dev.br/" />
 
 	<meta property="og:site_name" content="adrianoenache.dev.br" />
 	<meta property="article:published_time" content="2021-04-19T00:00:00+00:00" />
 	<meta property="article:author" content="Adriano Enache" />
 
-	<meta property="og:image" content="https://adrianoenache.dev.br/openGraph/og-image-fb-1200x630.jpg">
-	<meta property="og:image:width" content="1200">
-	<meta property="og:image:height" content="630">
+	<meta property="og:image" content="https://adrianoenache.dev.br/openGraph/og-image-fb-1200x630.jpg" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
 
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:site" content="@AdrianoEnache" />
@@ -48,488 +48,143 @@
 		content="Personal website to publish articles related to Front-End development and stuff that I like." />
 	<meta name="twitter:image" content="https://adrianoenache.dev.br/openGraph/og-image-twitter-300x150.jpg" />
 	<meta name="twitter:url" content="https://adrianoenache.dev.br/" />
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link
-		href="https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:wght@300&family=Sansita+Swashed:wght@500&display=swap"
-		rel="stylesheet">
-	<style>
-		/* CSS variables */
 
-		:root {
-			/* Colors */
-			--main-background-color: #000;
-			--main-text-color: #fff;
-			--figure-color-background: #fff;
-			--figcaption-color: #666;
-			--link-hover-color: red;
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
 
-			/* Sizes */
-			--max-width-wrapper: 300px;
-			--size-of-contact-buttons: 16px;
+	<link rel="stylesheet" type="text/css"
+		href="https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:wght@300&family=Sansita+Swashed:wght@500&display=swap" />
 
-			/* Behaviours */
-			--list-wrapper-direction: column;
-			--card-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
-			--card-shadow-hover: 5px 5px 2px 2px rgba(0, 0, 0, 0.2);
-			--margin-of-contact-buttons: 10px;
-			--background-contact-buttons: 10px;
-			--color-contact-buttons: black;
-			--color-hover-contact-buttons: red;
-			--color-visited-contact-buttons: purple;
-			/* 
-				Google Fonts
-				Sansita Swashed - 500
-				Raleway - 300
-				Kufam - 400, 400i, 700, 700i
-			*/
-			--font-family-text: "Kufam", cursive;
-			--font-family-titles: "Sansita Swashed", cursive;
-			--font-family-detail: "Raleway", sans-serif;
-
-			/* z-index   */
-			--behind: 1;
-			--content: 5;
-			--above: 10;
-			--modal: 15;
-
-			/* Main background configs*/
-			--config-background-texture-color: 255, 255, 255;
-			--config-background-texture-line-opacity: 0.05;
-			--config-background-texture-cell-opacity: 0.1;
-			--config-background-texture-size-start: 0px;
-			--config-background-texture-size-conection: 2px;
-			--config-background-texture-size-end: 10px;
-			/* ** */
-			--config-background-linear-rotation: -45deg;
-			--config-background-linear-opacity-external: 0.15;
-			--config-background-linear-opacity-internal: 0;
-			--config-background-linear-size-start: 0%;
-			--config-background-linear-size-start-end: 40%;
-			--config-background-linear-size-end-start: 60%;
-			--config-background-linear-size-end: 100%;
-			/* ** */
-			--main-background-texture-vertical: repeating-linear-gradient(to right,
-					rgba(var(--config-background-texture-color), var(--config-background-texture-line-opacity)) var(--config-background-texture-size-start),
-					rgba(var(--config-background-texture-color), var(--config-background-texture-line-opacity)) var(--config-background-texture-size-conection),
-					rgba(var(--config-background-texture-color), var(--config-background-texture-cell-opacity)) var(--config-background-texture-size-conection),
-					rgba(var(--config-background-texture-color), var(--config-background-texture-cell-opacity)) var(--config-background-texture-size-end));
-			--main-background-texture-horizontal: repeating-linear-gradient(0deg,
-					rgba(var(--config-background-texture-color), var(--config-background-texture-line-opacity)) var(--config-background-texture-size-start),
-					rgba(var(--config-background-texture-color), var(--config-background-texture-line-opacity)) var(--config-background-texture-size-conection),
-					rgba(var(--config-background-texture-color), var(--config-background-texture-cell-opacity)) var(--config-background-texture-size-conection),
-					rgba(var(--config-background-texture-color), var(--config-background-texture-cell-opacity)) var(--config-background-texture-size-end));
-			/* ** */
-			--main-background-linear-gradient: linear-gradient(var(--config-background-linear-rotation),
-					rgba(var(--config-background-texture-color), var(--config-background-linear-opacity-external)) var(--config-background-linear-size-start),
-					rgba(var(--config-background-texture-color), var(--config-background-linear-opacity-internal)) var(--config-background-linear-size-start-end),
-					rgba(var(--config-background-texture-color), var(--config-background-linear-opacity-internal)) var(--config-background-linear-size-end-start),
-					rgba(var(--config-background-texture-color), var(--config-background-linear-opacity-external)) var(--config-background-linear-size-end));
-		}
-
-		/* Media querys */
-
-		/* 
-  All CSS is mobile first
-  320-414 Mobile
-  415-1024 Tablet
-  1025-1440 Notebooks
-  1441 Desktops and Notebooks FullHD
-*/
-
-		@media only screen and (min-width: 415px) {
-			:root {
-				--main-background-color: #fff;
-				--main-text-color: #000;
-				--max-width-wrapper: 640px;
-				--config-background-texture-color: 0, 0, 255;
-				--config-background-linear-opacity-external: 0.3;
-				--list-wrapper-direction: row;
-				--size-of-contact-buttons: 20px;
-				--margin-of-contact-buttons: 10px 5px;
-			}
-		}
-
-		@media only screen and (min-width: 1025px) {
-			:root {
-				--config-background-texture-color: 0, 255, 0;
-				--size-of-contact-buttons: 25px;
-			}
-		}
-
-		@media only screen and (min-width: 1441px) {
-			:root {
-				--config-background-texture-color: 255, 0, 0;
-				--link-hover-color: blue;
-			}
-		}
-
-		/* Rules */
-
-		body {
-			color: var(--main-text-color);
-			font-family: var(--font-family-text);
-			font-weight: 400;
-			margin: 50px 0;
-			max-width: var(--max-width-wrapper);
-			position: relative;
-			width: 100%;
-			z-index: var(--content);
-		}
-
-		h1,
-		h2,
-		h3,
-		h4,
-		h5,
-		h6 {
-			font-family: var(--font-family-titles);
-			font-weight: 500;
-			margin-top: 0;
-		}
-
-		a {
-			color: inherit;
-			font-family: var(--font-family-text);
-			font-weight: 400;
-			transition: color 0.25s ease-in;
-		}
-
-		a:hover,
-		a:focus {
-			color: var(--link-hover-color);
-		}
-
-		a:focus {
-			outline: 0;
-		}
-
-		figure {
-			background: var(--figure-color-background);
-			border: 10px solid var(--figure-color-background);
-			margin: 1em 0;
-		}
-
-		figcaption {
-			color: var(--figcaption-color);
-			font-family: var(--font-family-detail);
-			font-weight: 300;
-			line-height: 1.5em;
-			margin-top: 10px;
-		}
-
-		figcaption .detail {
-			font-size: .75em;
-		}
-
-		img {
-			display: block;
-			height: auto;
-			margin: 0 auto;
-			max-width: 100%;
-		}
-
-		.fcc {
-			background-color: var(--main-background-color);
-			background-image: var(--main-background-texture-vertical);
-			display: flex;
-			justify-content: center;
-			padding: 0 10px;
-			position: relative;
-		}
-
-		.fcc::before,
-		.fcc::after {
-			content: "";
-			display: block;
-			height: 100vh;
-			left: 0;
-			position: fixed;
-			pointer-events: none;
-			top: 0;
-			width: 100vw;
-			z-index: var(--behind);
-		}
-
-		.fcc::before {
-			background-image: var(--main-background-texture-horizontal);
-		}
-
-		.fcc::after {
-			background-image: var(--main-background-linear-gradient);
-		}
-
-		.shadown {
-			box-shadow: var(--card-shadow);
-			transition: box-shadow 0.3s ease-in-out;
-		}
-
-		.shadown:hover {
-			box-shadow: var(--card-shadow-hover);
-		}
-
-		.wrapper-lists {
-			display: flex;
-			flex-direction: var(--list-wrapper-direction);
-			justify-content: space-between;
-		}
-
-		.contact-links {
-			display: flex;
-			justify-content: space-around;
-			flex-wrap: wrap;
-			list-style: none;
-			margin: 20px auto 0;
-			padding: 0;
-		}
-
-		.contact-links li {
-			font-size: var(--size-of-contact-buttons);
-			margin: var(--margin-of-contact-buttons);
-		}
-
-		.contact-links li a {
-			align-items: center;
-			border-radius: 0.25em;
-			background: white;
-			color: black;
-			display: flex;
-			justify-content: center;
-			height: 2em;
-			width: 2em;
-			text-decoration: none;
-			transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-		}
-
-		.contact-links li a:visited {
-			color: purple;
-		}
-
-		.contact-links li a:hover,
-		.contact-links li a:focus {
-			color: red;
-		}
-
-
-		/* Font from icomoon.io the CSS have some little of customizations */
-
-		/* Using font woff converted to base64 */
-		@font-face {
-			font-family: 'fcc-icons';
-			src: url('data:font/woff;charset=utf-8;base64,d09GRgABAAAAAA+8AAsAAAAAD3AAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABPUy8yAAABCAAAAGAAAABgDxIH42NtYXAAAAFoAAAAnAAAAJyVIJTaZ2FzcAAAAgQAAAAIAAAACAAAABBnbHlmAAACDAAACxwAAAscdTQADGhlYWQAAA0oAAAANgAAADYa+J89aGhlYQAADWAAAAAkAAAAJAfCA89obXR4AAANhAAAADgAAAA4LgABXmxvY2EAAA28AAAAHgAAAB4RpA4MbWF4cAAADdwAAAAgAAAAIAAXAMluYW1lAAAN/AAAAZ4AAAGehysi53Bvc3QAAA+cAAAAIAAAACAAAwAAAAMD0QGQAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAA6ugDwP/AAEADwABAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAwAAAAMAAAAcAAEAAwAAABwAAwABAAAAHAAEAIAAAAAcABAAAwAMAAEAIOkP6cvqkOqS6pbqneqw6sbqyuro//3//wAAAAAAIOkP6cvqkOqS6pbqneqw6sbqyuro//3//wAB/+MW9RY6FXYVdRVyFWwVWhVFFUIVJQADAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAf//AA8AAQAAAAAAAAAAAAIAADc5AQAAAAABAAAAAAAAAAAAAgAANzkBAAAAAAEAAAAAAAAAAAACAAA3OQEAAAAABAAAAAAEAANAABsAMwBPAFMAAAEUFx4BFxYzMjc+ATc2NTQnLgEnJiMiBw4BBwYBIy4BIyEiBgcjIgYVERQWMyEyNjURNCYBIicuAScmNTQ3PgE3NjMyFx4BFxYVFAcOAQcGASM1MwEwEBE4JiYrKyYmOBEQEBE4JiYrKyYmOBEQApDgDCQw/wAwJAzgGiYmGgOAGiYm/iY7NDNNFxYWF00zNDs7NDNNFxYWF00zNAGFgIABYCsmJjgREBAROCYmKysmJjgREBAROCYmATUwUFAwJhr9wBomJhoCQBom/YQWF00zNDs7NDNNFxYWF00zNDs7NDNNFxYBvEAAAgAe/8wD4gO0ADMAZAAAASImJyYnJjQ3Nj8BPgEzMhYXFhcWFAcGDwEGIicmND8BNjQnLgEjIgYPAQYUFxYUBw4BIwMiJicmJyY0NzY/ATYyFxYUDwEGFBceATMyNj8BNjQnJjQ3NjIXFhcWFAcGDwEOASMBuAoTCCMSEhISI8AjWTExWSMjEhISEiNYDywPDw9YKSkUMxwcMxTAKSkPDwgTCrgxWSMjEhISEiNYDywPDw9YKSkUMxwcMxTAKSkPDw8rECMSEhISI8AjWTEBRAgHJC0tXi0tJMAiJSUiJC0tXi0tJFcQEA8rD1gpdCkUFRUUwCl0KQ8rEAcI/oglIiQtLV4tLSRXEBAPKw9YKXQpFBUVFMApdCkPKxAPDyQtLV4tLSTAIiUAAAAAAQEA/8ADAAPAABcAAAEzNSMiBw4BBwYdASMVMxEzETM3IzU0NgJgoKAuKSk9ERKAgMCgIMATAwDAEhE9KSkuYMD+AAIAwGANEwAAAAUAAP/AA/8DwABIAJIArgC6AMYAAAEyFhceARceARceARceARceARUUBgcOAQcOAQcOAQcOAQcOASMiJicuAScuAScuAScuAScuATU0Njc+ATc+ATc+ATc+ATc+ATM1IgYHDgEHDgEHDgEHDgEHDgEVFBYXHgEXHgEXHgEXHgEXHgEzMjY3PgE3PgE3PgE3PgE3PgE1NCYnLgEnLgEnLgEnLgEnLgEjMRUiBw4BBwYVFBceARcWMzI3PgE3NjU0Jy4BJyYDIiY1NDYzMhYVFAYBFAYjIiY1NDYzMhYCAGc/KSUsDhIbDg0SBwULAgECAgECCwUHEg0OGxIOLCUpP2dmQCklLA4RHA0OEgcFCwECAQECAQsFBxINDhsSDiwlKT9naEIpKTsYGiwVFRwKCgwCAgEBAgIMCgocFRUsGhg7KSlCaGhCKSk7GBksFhUcCgkNAQIBAQIBDQkKHBUVLBoYOykpQmg2MDBIFBUVFEgwMDY2MDBIFBUVFEgwMDZHZGRHR2RkAQgkGhkkJBkaJANkAQICCwUHEg0NHBINLCYoQGdmQCgmLA0SHA0OEgcFCwECAQECAQsFBxIODRwRDiwlKUBmZ0AoJSwOEhsODRIHBQsCAgFcAQICDAoKHBUVLBoYOykpQmhoQikpOxgaLBUVHAoJDQICAQECAg0JChwVFSwaGDspKUJoaEIpKTsYGS0VFRwKCQ0CAgH5FRRIMDA2NjAwSBQVFRRIMDA2NjAwSBQV/k5kR0dkZEdHZAG8GSQkGRokJAAAAQAAAAAEAANAAE8AAAEOAQc+ATcOAQcuASMiBw4BBwYVFBYXJicuAScmJw4BFRQWFy4BJxwBFRQWFw4BIyImJx4BFw4BIyImJxYXHgEXFjMyNz4BNzY1NCY1PgE3BAAcPSAhMAwfQyQcUC0rJyY5EBEDAkE9Pm4wMCcNDzMqGTEVYUgNHA8KEwoUa0U2hUoNGQwjJiZRKysskW9wmCcnAR81FQLeDREDEzwlEhoHHiQQETkmJiwMGAwDERE5JycwFzYdNlwdAQ4MAQEBTHQOBAMCAT5SAiowAgEWEhEYBwY2N6xqa2gHDQcWNyAAAAAAAgAAAFgEAAMoAEMARwAAATAmJy4BJyYnLgEjIjkBMCMiBgcGBw4BBw4BMTAGHQEUFjEwFhceARcWFx4BFzIxMDMyNjc2Nz4BNz4BMTA2PQE0JjEBEQ0BA/YSFx07DzU/P2skJCQkaz8/NQ87HRcSCgoSFx1DER86OnMrKyQkaz8/Ng86HRcSCgr9oAEV/usCjU4XHwsCBAICAgICAgQCCx8XTmg+Tj5nTxcfCgMDAgICAQMCAgQBCx8XT2c+Tj5o/q4BIJCQAAABAAD/zgQAA7MAYwAAASIHDgEHBhUUFx4BFxYXFjY1PAEnBiYxLgExJjYxHgExFjY3PgE3JicuAScmNTQ2Ny4BNzAWFz4BMzIWFz4BMRYGBx4BFRQHDgEHBgceARUUBhUUFjc2Nz4BNzY1NCcuAScmIwIAal1eiygoGhpdQUBMExABakISJyMnJigiXRYEEgsrKipCFBUcGQQMFUNKHkEhIUEeSkMVDAQZHBUUQyopKw4VARATTEFAXRoaKCiLXl1qA7MoKItdXmpUTU2ALy8ZBBIKCTYgF1QsHxgHAzI7BwoYIgoFDA04Ly9JKkUbCUk1AzEICQkIMQM1SQkbRSpKLy44DA0FCzAjNEwNChIEGS8wf01NVGpeXYsoKAAAAAAIAAD/wAQAA0AACwAXADAAbwB7AIcAowCvAAABNDYzMhYVFAYjIiYlNDYzMhYVFAYjIiYXNhYXFgYHDgEjIiYnLgE3PgEXHgEzMjY3ATQmIyIGBy4BJzcXHgEzMjY1NCYjIgYHJyYGDwEOAQcuASMiBhUUFhcOARUUFx4BFxYzMjc+ATc2NTQmJz4BAzIWFRQGIyImNTQ2ATQ2MzIWFw4BBy4BASInLgEnJjU0Nz4BNzYzMhceARcWFRQHDgEHBgEuASc+ATMyFhUUBgEAJRsbJSUbGyUBgCUbGyUlGxslAwwgCQoDDSJhLy9hIg0DCgkgDBRIJydIFAF9SzUkOxExd0FMkgoyHyg4OCgbLQ2iDhoGZ0B0MBE7JDVLKyEGBiMjelJRXV1RUnojIwYGISugDxUVDw8VFfzvJhoTHwgZKRARFwHATUREZR0dHR1lRERNTUREZR0dHR1lREQBSxApGQgfExomFwFAGyUlGxslJRsbJSUbGyUlbgoEDAwgCRwgIBwJIAwMBAoPHBwPAQk1SyQeGyIEqyocJDgoKDgcFzADDA3pBCEbHiRLNSc/DxImE0I7OlcZGRkZVzo7QhMmEg8/AWsVDw8VFQ8PFf68GiYUERMrGAcg/mATE0MsLDMzLCxDExMTE0MsLDMzLCxDExMBeRgrExEUJhoUIAAAAAMAQAAAA8ADQAAZAB0AKQAAATMVMz4BMzIXHgEXFhURIxE0JiMiBhURIxEhMxEjExQGIyImNTQ2MzIWAYCxAxJZQ0crKzAJCLkZR0gmuf7AwMDAOCgoODgoKDgCQFshOhUUSDExOf7MARExZFk3/uoCQP3AAuAoODgoKDg4AAAACAAA/8ADwAN7ABsAHwAkACkALAAxADUAOAAACQEmIgcBDgEVERQWFwEeATMyNjcBPgE1ETQmJwEnNxcnNQUHJyMHJyUVDwE1HwEVJTcFNxcFEzcVA7L+QAgUCP5ABggIBgHABAkFBQkEAcAGCAgG/i6mpqaGAWamwEDApgFm+obAwP6apgEAwKb+mvqGAlABKwUF/tUEDwj+1ggPBP7VAgMDAgErBA8IASoIDwT+4W9vb6be72+AgG/v3qZatICA3u9vgIBv7wGEWrQAAQAAAAEAADgg4IdfDzz1AAsEAAAAAADb7K1gAAAAANvsrWAAAP/ABAADwAAAAAgAAgAAAAAAAAABAAADwP/AAAAEAAAAAAAEAAABAAAAAAAAAAAAAAAAAAAADgQAAAAAAAAAAAAAAAIAAAAEAAAABAAAHgQAAQAEAAAABAAAAAQAAAAEAAAABAAAAAQAAEAEAAAAAAAAAAAKABQAHgCcATIBWAJ8AvQDWAPoBOgFKAWOAAAAAQAAAA4AxwAIAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA4ArgABAAAAAAABAAkAAAABAAAAAAACAAcAcgABAAAAAAADAAkAPAABAAAAAAAEAAkAhwABAAAAAAAFAAsAGwABAAAAAAAGAAkAVwABAAAAAAAKABoAogADAAEECQABABIACQADAAEECQACAA4AeQADAAEECQADABIARQADAAEECQAEABIAkAADAAEECQAFABYAJgADAAEECQAGABIAYAADAAEECQAKADQAvGZjYy1pY29ucwBmAGMAYwAtAGkAYwBvAG4Ac1ZlcnNpb24gMS4wAFYAZQByAHMAaQBvAG4AIAAxAC4AMGZjYy1pY29ucwBmAGMAYwAtAGkAYwBvAG4Ac2ZjYy1pY29ucwBmAGMAYwAtAGkAYwBvAG4Ac1JlZ3VsYXIAUgBlAGcAdQBsAGEAcmZjYy1pY29ucwBmAGMAYwAtAGkAYwBvAG4Ac0ZvbnQgZ2VuZXJhdGVkIGJ5IEljb01vb24uAEYAbwBuAHQAIABnAGUAbgBlAHIAYQB0AGUAZAAgAGIAeQAgAEkAYwBvAE0AbwBvAG4ALgAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=') format('woff');
-			font-weight: normal;
-			font-style: normal;
-			font-display: block;
-		}
-
-		/* It was added ::before */
-		[class^="icon-"]::before,
-		[class*=" icon-"]::before {
-			/* use !important to prevent issues with browser extensions that change fonts */
-			font-family: 'fcc-icons' !important;
-			speak: never;
-			font-style: normal;
-			font-weight: normal;
-			font-variant: normal;
-			text-transform: none;
-			line-height: 1;
-
-			/* Better Font Rendering =========== */
-			-webkit-font-smoothing: antialiased;
-			-moz-osx-font-smoothing: grayscale;
-		}
-
-		.icon-camera::before {
-			content: "\e90f";
-			margin-right: 0.25em;
-			/* This is custom */
-		}
-
-		.icon-link::before {
-			content: "\e9cb";
-		}
-
-		.icon-facebook::before {
-			content: "\ea90";
-		}
-
-		.icon-instagram::before {
-			content: "\ea92";
-		}
-
-		.icon-twitter::before {
-			content: "\ea96";
-		}
-
-		.icon-youtube::before {
-			content: "\ea9d";
-		}
-
-		.icon-github::before {
-			content: "\eab0";
-		}
-
-		.icon-reddit::before {
-			content: "\eac6";
-		}
-
-		.icon-linkedin2::before {
-			content: "\eaca";
-		}
-
-		.icon-codepen::before {
-			content: "\eae8";
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="../fcc-assets/css/tribute-page.css" />
 </head>
 
 <body>
 	<main id="main">
 		<header>
-			<h1 id="title">
-				Lorem ipsum dolor sit amet
-			</h1>
+			<h1 id="title">Lorem ipsum dolor sit amet</h1>
 			<p>
-				Possimus enim laudantium obcaecati maiores doloribus velit quos. Lorem ipsum dolor sit, amet consectetur
-				adipisicing elit.
+				Possimus enim laudantium obcaecati maiores doloribus velit quos. Lorem
+				ipsum dolor sit, amet consectetur adipisicing elit.
 			</p>
 		</header>
 		<article>
-			<h2>
-				Consectetur adipisicing elit
-			</h2>
-			<figure id="img-div" class="shadown">
-				<img src="https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?auto=compress&w=640" alt=""
-					id="image">
+			<h2>Consectetur adipisicing elit</h2>
+			<figure id="img-div" class="photo-card shadown">
+					<img class="block" src="https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?auto=compress&w=640"
+						alt="Photo of a calm lake with snowy mountains at behind." id="image" />
 				<figcaption id="img-caption">
-					Calm Body of Lake Between Mountains -
+					Calm body of lake between snowy mountains -
 					<a class="icon-camera" href="https://www.pexels.com/@bri-schneiter-28802" target="_blank" rel="noopener">Bri
-						Schneiter</a><br>
+						Schneiter</a><br />
 					<span class="detail">
-						power by <a href="https://www.pexels.com/photo/blue-sky-clear-sky-cold-fog-346529/" target="_blank"
+						power by
+						<a href="https://www.pexels.com/photo/blue-sky-clear-sky-cold-fog-346529/" target="_blank"
 							rel="noopener">Pexels</a>
 					</span>
 				</figcaption>
 			</figure>
-			<h2>
-				Adipisci consequatur error aspernatur assumenda
-			</h2>
+			<h2>Adipisci consequatur error aspernatur assumenda</h2>
 			<p>
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus enim laudantium obcaecati maiores
-				doloribus velit quos. Nobis, adipisci consequatur error aspernatur assumenda facere impedit earum nisi
-				pariatur a corrupti reprehenderit!
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus
+				enim laudantium obcaecati maiores doloribus velit quos. Nobis,
+				adipisci consequatur error aspernatur assumenda facere impedit earum
+				nisi pariatur a corrupti reprehenderit!
 			</p>
 			<p>
-				Possimus enim laudantium obcaecati maiores doloribus velit quos. Nobis, adipisci consequatur error
-				aspernatur assumenda facere impedit earum nisi pariatur aLorem ipsum dolor corrupti reprehenderit!
+				Possimus enim laudantium obcaecati maiores doloribus velit quos.
+				Nobis, adipisci consequatur error aspernatur assumenda facere impedit
+				earum nisi pariatur aLorem ipsum dolor corrupti reprehenderit!
 			</p>
 			<section>
 				<h3>Obcaecati maiores doloribus velit quos</h3>
 				<p>
-					Doloribus velit quos. Nobis, adipisci consequatur error aspernatur assumenda facere impedit earum
-					nisi pariatur aLorem ipsum dolor corrupti reprehenderit!
+					Doloribus velit quos. Nobis, adipisci consequatur error aspernatur
+					assumenda facere impedit earum nisi pariatur aLorem ipsum dolor
+					corrupti reprehenderit!
 				</p>
 				<div class="wrapper-lists">
 					<section>
-						<h4>
-							Unordered list
-						</h4>
+						<h4>Unordered list</h4>
 						<ul>
-							<li>
-								Lorem ipsum dolor sit
-							</li>
+							<li>Lorem ipsum dolor sit</li>
 							<li>
 								Damet ipsum
 								<ul>
-									<li>
-										Ipsum dolor corrupti
-									</li>
-									<li>
-										Dolor corrupti
-									</li>
+									<li>Ipsum dolor corrupti</li>
+									<li>Dolor corrupti</li>
 								</ul>
 							</li>
-							<li>
-								Alorem ipsum dolor
-							</li>
+							<li>Alorem ipsum dolor</li>
 						</ul>
 					</section>
 					<section>
-						<h4>
-							Ordered list
-						</h4>
+						<h4>Ordered list</h4>
 						<ol>
-							<li>
-								Lorem ipsum dolor sit
-							</li>
-							<li>
-								Damet ipsum
-							</li>
-							<li>
-								Alorem ipsum dolor
-							</li>
-							<li>
-								Doloribus velit quos
-							</li>
-							<li>
-								Impedit earum nisi
-							</li>
+							<li>Lorem ipsum dolor sit</li>
+							<li>Damet ipsum</li>
+							<li>Alorem ipsum dolor</li>
+							<li>Doloribus velit quos</li>
+							<li>Impedit earum nisi</li>
 						</ol>
 					</section>
 				</div>
 			</section>
-			<h2>
-				Nobis, adipisci consequatur error
-			</h2>
+			<h2>Nobis, adipisci consequatur error</h2>
 			<p>
-				Explicabo commodi ullam voluptates accusamus nihil provident neque eum nemo, ea aliquid voluptatum
-				mollitia laudantium similique suscipit itaque, dolor adipisci esse numquam.
+				Explicabo commodi ullam voluptates accusamus nihil provident neque eum
+				nemo, ea aliquid voluptatum mollitia laudantium similique suscipit
+				itaque, dolor adipisci esse numquam.
 			</p>
 		</article>
 		<footer id="tribute-info">
 			<p>
-				Explicabo commodi ullam voluptates accusamus nihil provident neque eum nemo, <a
-					href="https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-tribute-page"
+				Explicabo commodi ullam voluptates accusamus nihil provident neque eum
+				nemo,
+				<a href="https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-tribute-page"
 					id="tribute-link" target="_blank" rel="noopener">Tribute link</a>.
 			</p>
 		</footer>
 	</main>
 	<footer>
-		<ul class="contact-links">
+		<ul class="contact-links reset-list">
 			<li>
-				<a class="icon-link shadown" href="https://adrianoenache.dev.br" target="_blank" rel="noopener"></a>
+				<a class="icon-link shadown" href="https://adrianoenache.dev.br" target="_blank" rel="noopener">Link to my
+					website adrianoenache.dev.br</a>
 			</li>
 			<li>
 				<a class="icon-link shadown" href="https://www.freecodecamp.org/adrianoenache" target="_blank"
-					rel="noopener"></a>
+					rel="noopener">Link to my profile in the freecodecamp</a>
 			</li>
 			<li>
-				<a class="icon-codepen shadown" href="https://codepen.io/adrianoenache" target="_blank" rel="noopener"></a>
+				<a class="icon-codepen shadown" href="https://codepen.io/adrianoenache" target="_blank" rel="noopener">Link to
+					my profile in the codepen</a>
 			</li>
 			<li>
-				<a class="icon-github shadown" href="https://github.com/adrianoenache" target="_blank" rel="noopener"></a>
+				<a class="icon-github shadown" href="https://github.com/adrianoenache" target="_blank" rel="noopener">Link to my
+					profile in the github</a>
 			</li>
 			<li>
 				<a class="icon-facebook shadown" href="https://www.facebook.com/adrianoenache" target="_blank"
-					rel="noopener"></a>
+					rel="noopener">Link to my profile in the facebook</a>
 			</li>
 			<li>
 				<a class="icon-linkedin2 shadown" href="https://www.linkedin.com/in/adrianoenache" target="_blank"
-					rel="noopener"></a>
+					rel="noopener">Link to my profile in the linkedin</a>
 			</li>
 			<li>
 				<a class="icon-reddit shadown" href="https://www.reddit.com/user/adrianoenache" target="_blank"
-					rel="noopener"></a>
+					rel="noopener">Link to my profile in the reddit</a>
 			</li>
 			<li>
-				<a class="icon-twitter shadown" href="https://twitter.com/AdrianoEnache" target="_blank" rel="noopener"></a>
+				<a class="icon-twitter shadown" href="https://twitter.com/AdrianoEnache" target="_blank" rel="noopener">Link to
+					my profile in the twitter</a>
 			</li>
 			<li>
 				<a class="icon-instagram shadown" href="https://www.instagram.com/adrianoenache" target="_blank"
-					rel="noopener"></a>
+					rel="noopener">Link to my profile in the instagram</a>
 			</li>
 			<li>
 				<a class="icon-youtube shadown" href="https://www.youtube.com/channel/UC53UwM0XGPL0WdC5q3XExPA" target="_blank"
-					rel="noopener"></a>
+					rel="noopener">Link to my profile in the youtube</a>
 			</li>
 		</ul>
 	</footer>

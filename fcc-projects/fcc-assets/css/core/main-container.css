@@ -1,0 +1,181 @@
+html {
+  /**/
+  --main-background-color-tablet: var(--brand-color-2-hex);
+  --main-background-color-mobile: var(--brand-color-1-hex);
+  --main-background-color: var(--main-background-color-mobile);
+  --config-background-texture-color-desktop: var(--brand-color-3-rgb);
+  --config-background-texture-color-notebook: var(--brand-color-4-rgb);
+  --config-background-texture-color-tablet: var(--brand-color-5-rgb);
+  --config-background-texture-color-mobile: var(--brand-color-2-rgb);
+  --config-background-texture-color: var(
+    --config-background-texture-color-mobile
+  );
+  --config-background-texture-line-opacity: 0.05;
+  --config-background-texture-cell-opacity: 0.1;
+  --config-background-texture-size-start: 0px;
+  --config-background-texture-size-conection: 2px;
+  --config-background-texture-size-end: 10px;
+  --config-background-linear-rotation: -45deg;
+  --config-background-linear-opacity-external-tablet: 0.3;
+  --config-background-linear-opacity-external-mobile: 0.15;
+  --config-background-linear-opacity-external: var(
+    --config-background-linear-opacity-external-mobile
+  );
+  --config-background-linear-opacity-internal: 0;
+  --config-background-linear-size-start: 0%;
+  --config-background-linear-size-start-end: 40%;
+  --config-background-linear-size-end-start: 60%;
+  --config-background-linear-size-end: 100%;
+  --main-background-texture-vertical: repeating-linear-gradient(
+    to right,
+    rgba(
+        var(--config-background-texture-color),
+        var(--config-background-texture-line-opacity)
+      )
+      var(--config-background-texture-size-start),
+    rgba(
+        var(--config-background-texture-color),
+        var(--config-background-texture-line-opacity)
+      )
+      var(--config-background-texture-size-conection),
+    rgba(
+        var(--config-background-texture-color),
+        var(--config-background-texture-cell-opacity)
+      )
+      var(--config-background-texture-size-conection),
+    rgba(
+        var(--config-background-texture-color),
+        var(--config-background-texture-cell-opacity)
+      )
+      var(--config-background-texture-size-end)
+  );
+  --main-background-texture-horizontal: repeating-linear-gradient(
+    0deg,
+    rgba(
+        var(--config-background-texture-color),
+        var(--config-background-texture-line-opacity)
+      )
+      var(--config-background-texture-size-start),
+    rgba(
+        var(--config-background-texture-color),
+        var(--config-background-texture-line-opacity)
+      )
+      var(--config-background-texture-size-conection),
+    rgba(
+        var(--config-background-texture-color),
+        var(--config-background-texture-cell-opacity)
+      )
+      var(--config-background-texture-size-conection),
+    rgba(
+        var(--config-background-texture-color),
+        var(--config-background-texture-cell-opacity)
+      )
+      var(--config-background-texture-size-end)
+  );
+  /**/
+  --main-background-linear-gradient: linear-gradient(
+    var(--config-background-linear-rotation),
+    rgba(
+        var(--config-background-texture-color),
+        var(--config-background-linear-opacity-external)
+      )
+      var(--config-background-linear-size-start),
+    rgba(
+        var(--config-background-texture-color),
+        var(--config-background-linear-opacity-internal)
+      )
+      var(--config-background-linear-size-start-end),
+    rgba(
+        var(--config-background-texture-color),
+        var(--config-background-linear-opacity-internal)
+      )
+      var(--config-background-linear-size-end-start),
+    rgba(
+        var(--config-background-texture-color),
+        var(--config-background-linear-opacity-external)
+      )
+      var(--config-background-linear-size-end)
+  );
+  /* Rules */
+  background-color: var(--main-background-color);
+  background-image: var(--main-background-texture-vertical);
+  display: flex;
+  font-size: var(--main-font-size);
+  justify-content: center;
+  padding: 0 10px;
+  position: relative;
+}
+
+html::before,
+html::after {
+  content: "";
+  display: block;
+  height: 100vh;
+  left: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: var(--behind);
+}
+
+html::before {
+  background-image: var(--main-background-texture-horizontal);
+}
+
+html::after {
+  background-image: var(--main-background-linear-gradient);
+}
+
+body {
+  --main-text-color-tablet: var(--brand-color-1-hex);
+  --main-text-color-mobile: var(--brand-color-2-hex);
+  --main-text-color: var(--main-text-color-mobile);
+  --grid-tablet: calc((var(--column) + var(--gutter)) * 8);
+  --grid-mobile: calc((var(--column) + var(--gutter)) * 4);
+  --grid: var(--grid-mobile);
+  --sticky-header-offset: calc(var(--sticky-header-height) + var(--gutter));
+  /* Rules */
+  color: var(--main-text-color);
+  font-family: var(--font-family-text);
+  font-weight: 400;
+  margin: 0 0 50px;
+  max-width: var(--grid);
+  overflow-x: hidden;
+  padding-top: var(--sticky-header-offset);
+  position: relative;
+  width: 100%;
+  z-index: var(--content);
+}
+
+@media only screen and (min-width: 415px) {
+  html {
+    --main-background-color: var(--main-background-color-tablet);
+    --config-background-texture-color: var(
+      --config-background-texture-color-tablet
+    );
+    --config-background-linear-opacity-external: var(
+      --config-background-linear-opacity-external-tablet
+    );
+  }
+  body {
+    --main-text-color: var(--main-text-color-tablet);
+    --grid: var(--grid-tablet);
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  html {
+    --config-background-texture-color: var(
+      --config-background-texture-color-notebook
+    );
+  }
+}
+
+@media only screen and (min-width: 1441px) {
+  html {
+    --config-background-texture-color: var(
+      --config-background-texture-color-desktop
+    );
+  }
+}

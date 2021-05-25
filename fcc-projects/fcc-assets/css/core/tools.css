@@ -1,0 +1,49 @@
+.block {
+  display: block;
+}
+
+.center-block {
+  margin: 0 auto;
+}
+
+.relative {
+  position: relative;
+}
+
+.shadown {
+  box-shadow: var(--shadow);
+  transition: box-shadow var(--transition-1);
+}
+
+.shadown:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.reset-list {
+  list-style: none;
+  padding: 0;
+}
+
+.aspect-ratio {
+  box-sizing: border-box;
+  height: 0;
+  overflow: hidden;
+  padding-top: var(--slider-photos-image-ratio);
+}
+
+.aspect-ratio {
+  box-sizing: border-box;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  padding-top: var(--aspect-ratio);
+}
+
+.aspect-ratio img {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}

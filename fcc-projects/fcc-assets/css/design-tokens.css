@@ -1,0 +1,54 @@
+:root {
+  /* Colors */
+  --brand-color-1-hex: #000;
+  --brand-color-1-rgb: 0, 0, 0;
+  --brand-color-2-hex: #fff;
+  --brand-color-2-rgb: 255, 255, 255;
+  --brand-color-3-hex: #f00;
+  --brand-color-3-rgb: 255, 0, 0;
+  --brand-color-4-hex: #0f0;
+  --brand-color-4-rgb: 0, 255, 0;
+  --brand-color-5-hex: #00f;
+  --brand-color-5-rgb: 0, 0, 255;
+  --brand-color-6-hex: #444;
+  --brand-color-6-rgb: 68, 68, 68;
+  --brand-color-7-hex: #666;
+  --brand-color-7-rgb: 102, 102, 102;
+  --brand-color-8-hex: #ccc;
+  --brand-color-8-rgb: 204, 204, 204;
+  --brand-color-9-hex: #eee;
+  --brand-color-9-rgb: 238, 238, 238;
+  --brand-color-10-hex: #808;
+  --brand-color-10-rgb: 136, 0, 136;
+  /* Z-index */
+  --behind: 1;
+  --content: 5;
+  --above: 10;
+  --modal: 15;
+  /*
+		Font Family - Google Fonts
+		Sansita Swashed - 500
+		Raleway - 300
+		Kufam - 400, 400i, 700, 700i
+	*/
+  --font-family-text: "Kufam", cursive;
+  --font-family-titles: "Sansita Swashed", cursive;
+  --font-family-detail: "Raleway", sans-serif;
+  /* Base units */
+  --main-font-size: 16px;
+  --gutter: 10px;
+  --column: 70px;
+	/* Aspect ratio */
+	--ratio-3-4-portrait: calc((4 / 3) * 100%);
+	--ratio-16-9-landscape: calc((9 / 16) * 100%);
+	/* Shadows */
+	--shadow: 2px 2px 2px 1px rgba(var(--brand-color-1-rgb), 0.5);
+	--shadow-hover: 3px 3px 2px 2px rgba(var(--brand-color-1-rgb), 0.2);
+	/* Transition type and timing */
+	--transition-1: 0.3s ease-in-out;
+	--transition-2: 0.25s ease-in;
+  /* Component global vars */
+  --sticky-header-height: 70px;
+  /* mover para component anchor */
+  --anchor-position: calc(var(--sticky-header-height) + var(--gutter));
+}
