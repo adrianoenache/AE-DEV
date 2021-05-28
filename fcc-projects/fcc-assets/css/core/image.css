@@ -1,6 +1,6 @@
 figcaption {
   font-family: var(--font-family-detail);
-  font-weight: 300;
+  font-weight: 500;
   line-height: 1.5em;
 }
 
@@ -11,4 +11,5 @@ picture {
 img {
   height: auto;
   max-width: 100%;
+  width: 100%;
 }

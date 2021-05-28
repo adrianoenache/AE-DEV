@@ -1,0 +1,17 @@
+p,
+li {
+  line-height: 1.5em;
+}
+
+abbr {
+  text-decoration: underline double var(--brand-color-10-hex);
+}
+
+abbr:hover {
+  text-decoration: underline double var(--brand-color-1-hex);
+}
+
+mark {
+  background: var(--brand-color-2-hex);
+  color: var(--brand-color-1-hex);
+}

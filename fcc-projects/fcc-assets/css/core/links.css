@@ -2,12 +2,18 @@ a {
   --link-hover-color-desktop: var(--brand-color-5-hex);
   --link-hover-color-mobile: var(--brand-color-3-hex);
   --link-hover-color: var(--link-hover-color-mobile);
-  --link-visited: var(--brand-color-10-hex);
+  --link-visited-tablet: var(--brand-color-10-hex);
+  --link-visited-mobile: var(--brand-color-11-hex);
+  --link-visited: var(--link-visited-mobile);
   --link-active: inherit;
+  --text-decoration-color-tablet: var(--brand-color-1-hex);
+  --text-decoration-color-mobile: var(--brand-color-2-hex);
+  --text-decoration-color: var(--text-decoration-color-mobile);
   /* Rules */
   color: inherit;
   font-family: var(--font-family-text);
   font-weight: 400;
+  text-decoration-color: var(--text-decoration-color);
   transition: color var(--transition-2);
 }
 
@@ -30,6 +36,13 @@ a:visited:focus,
 a:active:hover,
 a:active:focus {
   color: var(--link-hover-color);
+}
+
+@media only screen and (min-width: 415px) {
+  a {
+    --link-visited: var(--link-visited-tablet);
+    --text-decoration-color: var(--text-decoration-color-tablet);
+  }
 }
 
 @media only screen and (min-width: 1441px) {

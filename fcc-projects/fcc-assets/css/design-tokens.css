@@ -20,20 +20,17 @@
   --brand-color-9-rgb: 238, 238, 238;
   --brand-color-10-hex: #808;
   --brand-color-10-rgb: 136, 0, 136;
+  --brand-color-11-hex: #ff0;
+  --brand-color-11-rgb: 255, 255, 0;
   /* Z-index */
   --behind: 1;
   --content: 5;
   --above: 10;
   --modal: 15;
-  /*
-		Font Family - Google Fonts
-		Sansita Swashed - 500
-		Raleway - 300
-		Kufam - 400, 400i, 700, 700i
-	*/
-  --font-family-text: "Kufam", cursive;
-  --font-family-titles: "Sansita Swashed", cursive;
-  --font-family-detail: "Raleway", sans-serif;
+  /* Fonts */
+  --font-family-text: 'Raleway', sans-serif; /* 500, 500i, 700, 700i */
+  --font-family-titles: "Darker Grotesque", sans-serif; /* 500, 700 */
+  --font-family-detail: "Darker Grotesque", sans-serif; /* 500, 700 */
   /* Base units */
   --main-font-size: 16px;
   --gutter: 10px;
