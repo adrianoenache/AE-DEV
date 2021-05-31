@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html class="fcc" lang="en">
+
+<head prefix="og: https://ogp.me/ns#">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="INDEX, FOLLOW">
+
+	<meta name="description"
+		content="Personal website to publish articles related to Front-End development and stuff that I like.">
+	<meta name="keywords"
+		content="Front-End, HTML, CSS, Javascript, UI, UX, DEV, Development, Website, Guideline, Frameworks, Web tools">
+	<meta name="author" content="Adriano Enache - adrianoenache@hotmail.com">
+
+	<title>Adriano Enache</title>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+	<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#000000">
+	<link rel="shortcut icon" href="/favicon/favicon.ico">
+
+	<meta name="msapplication-TileColor" content="#000000">
+	<meta name="msapplication-TileImage" content="/favicon/mstile-144x144.png">
+	<meta name="msapplication-config" content="/favicon/browserconfig.xml">
+	<meta name="theme-color" content="#000000">
+
+	<meta property="og:title" content="&AElig; (Adriano Enache) =P">
+	<meta property="og:description"
+		content="Personal website to publish articles related to Front-End development and stuff that I like.">
+	<meta property="og:type" content="blog">
+	<meta property="og:locale" content="en" />
+	<meta property="og:url" content="https://adrianoenache.dev.br/">
+
+	<meta property="og:site_name" content="adrianoenache.dev.br" />
+	<meta property="article:published_time" content="2021-04-19T00:00:00+00:00" />
+	<meta property="article:author" content="Adriano Enache" />
+
+	<meta property="og:image" content="https://adrianoenache.dev.br/openGraph/og-image-fb-1200x630.jpg">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@AdrianoEnache" />
+	<meta name="twitter:creator" content="@AdrianoEnache" />
+	<meta name="twitter:title" content="&AElig; (Adriano Enache) =P" />
+	<meta name="twitter:description"
+		content="Personal website to publish articles related to Front-End development and stuff that I like." />
+	<meta name="twitter:image" content="https://adrianoenache.dev.br/openGraph/og-image-twitter-300x150.jpg" />
+	<meta name="twitter:url" content="https://adrianoenache.dev.br/" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:wght@300&family=Sansita+Swashed:wght@500&display=swap"
+		rel="stylesheet">
+	<style>
+		/* CSS variables */
+
+		:root {
+			/* Colors */
+			--main-background-color: #000;
+			--main-text-color: #fff;
+			--figure-color-background: #fff;
+			--figcaption-color: #666;
+			--link-hover-color: red;
+			--success-color: green;
+			--placeholder-color: gray;
+			--background-radio-checkbox: white;
+			--checked-radio-checkbox: green;
+			--focus-hover-radio-checkbox: black;
+
+			/* Sizes */
+			--max-width-wrapper: 300px;
+			--size-of-contact-buttons: 16px;
+			--font-size-form: 1rem;
+			--line-height-form: 1.25em;
+			--font-size-legend-form: 1.25rem;
+			--text-area-row-size: 3;
+			--radio-checkbox-size: 1.1em;
+			--text-area-height-mobile: calc(var(--line-height-form) * var(--text-area-row-size) + 1em);
+			--text-area-height-notebook: 100%;
+			--text-area-height: var(--text-area-height-mobile);
+
+			/* HTML icon http://htmlarrows.com/ */
+			--required-icon: "\2731";
+			--valid-icon: "\2714";
+			--submit-icon: "\27A4";
+			--recycling-icon: "\267B";
+
+			/* Icon from https://icomoon.io/ converted to base64 with https://www.base64-image.de/ */
+			--dropdown-arrow: url('data:image/svg+xml;base64,PCEtLSBHZW5lcmF0ZWQgYnkgSWNvTW9vbi5pbyAtLT4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiB2aWV3Qm94PSIwIDAgMzIgMzIiPgo8dGl0bGU+Y2lyY2xlLWRvd248L3RpdGxlPgo8cGF0aCBkPSJNMzIgMTZjMC04LjgzNy03LjE2My0xNi0xNi0xNnMtMTYgNy4xNjMtMTYgMTYgNy4xNjMgMTYgMTYgMTYgMTYtNy4xNjMgMTYtMTZ6TTMgMTZjMC03LjE4IDUuODItMTMgMTMtMTNzMTMgNS44MiAxMyAxMy01LjgyIDEzLTEzIDEzLTEzLTUuODItMTMtMTN6Ij48L3BhdGg+CjxwYXRoIGQ9Ik05LjkxNCAxMS4wODZsLTIuODI5IDIuODI5IDguOTE0IDguOTE0IDguOTE0LTguOTE0LTIuODI4LTIuODI4LTYuMDg2IDYuMDg2eiI+PC9wYXRoPgo8L3N2Zz4K');
+
+			/* Behaviours */
+			--shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
+			--shadow-hover: 3px 3px 2px 2px rgba(0, 0, 0, 0.2);
+			--fix-autofill: 0 0 0 1000px #fff inset;
+			--margin-of-contact-buttons: 10px;
+			--background-contact-buttons: 10px;
+			--color-contact-buttons: black;
+			--color-hover-contact-buttons: red;
+			--color-visited-contact-buttons: purple;
+
+			/*
+	Google Fonts
+	  Sansita Swashed - 500
+	  Raleway - 300
+	  Kufam - 400, 400i, 700, 700i
+  */
+			--font-family-text: "Kufam", cursive;
+			--font-family-titles: "Sansita Swashed", cursive;
+			--font-family-detail: "Raleway", sans-serif;
+
+			/* z-index   */
+			--behind: 1;
+			--content: 5;
+			--above: 10;
+			--modal: 15;
+
+			/* Layout */
+			--form-template-columns-mobile: 1fr 1fr;
+			--form-layout-mobile:
+				"grid-area-name grid-area-name"
+				"grid-area-email grid-area-email"
+				"grid-area-select grid-area-age"
+				"grid-area-comment grid-area-comment"
+				"grid-area-list-1 grid-area-list-1"
+				"grid-area-list-2 grid-area-list-2";
+
+			--form-template-columns-tablet: 1fr 1fr 1fr;
+			--form-layout-tablet:
+				"grid-area-name grid-area-name grid-area-name"
+				"grid-area-email grid-area-select grid-area-age"
+				"grid-area-comment grid-area-comment grid-area-comment"
+				"grid-area-list-1 grid-area-list-2 grid-area-list-2";
+
+			--form-template-columns-notebook: 1fr 1fr 1fr 1fr;
+			--form-layout-notebook:
+				"grid-area-name grid-area-name grid-area-select grid-area-age"
+				"grid-area-email grid-area-email grid-area-list-1 grid-area-list-1 "
+				"grid-area-comment grid-area-comment grid-area-list-1 grid-area-list-1"
+				"grid-area-comment grid-area-comment grid-area-list-2 grid-area-list-2"
+				"grid-area-comment grid-area-comment grid-area-list-2 grid-area-list-2";
+
+			--form-template-columns: var(--form-template-columns-mobile);
+			--form-layout: var(--form-layout-mobile);
+
+			/* Main background configs*/
+			--config-background-texture-color: 255, 255, 255;
+			--config-background-texture-line-opacity: 0.05;
+			--config-background-texture-cell-opacity: 0.1;
+			--config-background-texture-size-start: 0px;
+			--config-background-texture-size-conection: 2px;
+			--config-background-texture-size-end: 10px;
+			/* ** */
+			--config-background-linear-rotation: -45deg;
+			--config-background-linear-opacity-external: 0.15;
+			--config-background-linear-opacity-internal: 0;
+			--config-background-linear-size-start: 0%;
+			--config-background-linear-size-start-end: 40%;
+			--config-background-linear-size-end-start: 60%;
+			--config-background-linear-size-end: 100%;
+			/* ** */
+			--main-background-texture-vertical: repeating-linear-gradient(to right,
+					rgba(var(--config-background-texture-color), var(--config-background-texture-line-opacity)) var(--config-background-texture-size-start),
+					rgba(var(--config-background-texture-color), var(--config-background-texture-line-opacity)) var(--config-background-texture-size-conection),
+					rgba(var(--config-background-texture-color), var(--config-background-texture-cell-opacity)) var(--config-background-texture-size-conection),
+					rgba(var(--config-background-texture-color), var(--config-background-texture-cell-opacity)) var(--config-background-texture-size-end));
+			--main-background-texture-horizontal: repeating-linear-gradient(0deg,
+					rgba(var(--config-background-texture-color), var(--config-background-texture-line-opacity)) var(--config-background-texture-size-start),
+					rgba(var(--config-background-texture-color), var(--config-background-texture-line-opacity)) var(--config-background-texture-size-conection),
+					rgba(var(--config-background-texture-color), var(--config-background-texture-cell-opacity)) var(--config-background-texture-size-conection),
+					rgba(var(--config-background-texture-color), var(--config-background-texture-cell-opacity)) var(--config-background-texture-size-end));
+			/* ** */
+			--main-background-linear-gradient: linear-gradient(var(--config-background-linear-rotation),
+					rgba(var(--config-background-texture-color), var(--config-background-linear-opacity-external)) var(--config-background-linear-size-start),
+					rgba(var(--config-background-texture-color), var(--config-background-linear-opacity-internal)) var(--config-background-linear-size-start-end),
+					rgba(var(--config-background-texture-color), var(--config-background-linear-opacity-internal)) var(--config-background-linear-size-end-start),
+					rgba(var(--config-background-texture-color), var(--config-background-linear-opacity-external)) var(--config-background-linear-size-end));
+		}
+
+		/* Media querys */
+
+		/*
+  These values were chosen after analyzing the data from this source https://gs.statcounter.com/
+  All CSS is mobile first
+  320-425 Mobile
+  426-1024 Tablet
+  1025-1440 Notebooks
+  1441 Desktops and Notebooks FullHD
+*/
+
+		@media only screen and (min-width: 426px) {
+			:root {
+				--main-background-color: #fff;
+				--main-text-color: #000;
+				--max-width-wrapper: 640px;
+				--config-background-texture-color: 0, 0, 255;
+				--config-background-linear-opacity-external: 0.3;
+				--size-of-contact-buttons: 20px;
+				--margin-of-contact-buttons: 10px 5px;
+				--form-template-columns: var(--form-template-columns-tablet);
+				--form-layout: var(--form-layout-tablet);
+			}
+		}
+
+		@media only screen and (min-width: 1025px) {
+			:root {
+				--config-background-texture-color: 0, 255, 0;
+				--size-of-contact-buttons: 25px;
+				--form-layout: var(--form-layout-notebook);
+				--form-template-columns: var(--form-template-columns-notebook);
+				--text-area-height: var(--text-area-height-notebook);
+			}
+		}
+
+		@media only screen and (min-width: 1441px) {
+			:root {
+				--config-background-texture-color: 255, 0, 0;
+				--link-hover-color: blue;
+			}
+		}
+
+		/* Rules */
+
+		body {
+			color: var(--main-text-color);
+			font-family: var(--font-family-text);
+			font-weight: 400;
+			margin: 50px 0;
+			max-width: var(--max-width-wrapper);
+			position: relative;
+			width: 100%;
+			z-index: var(--content);
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		legend {
+			font-family: var(--font-family-titles);
+			font-weight: 500;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			margin-top: 0;
+		}
+
+		a {
+			color: inherit;
+			font-family: var(--font-family-text);
+			font-weight: 400;
+			transition: color 0.25s ease-in;
+		}
+
+		a:hover,
+		a:focus {
+			color: var(--link-hover-color);
+		}
+
+		a:focus {
+			outline: 0;
+		}
+
+		hr {
+			border: 0;
+			border-top: 10px solid;
+			color: var(--main-text-color);
+			/* Fix for Firefox */
+			margin: 40px auto;
+		}
+
+		hr.top {
+			margin-top: 20px;
+		}
+
+		hr.bottom {
+			margin-bottom: 20px;
+		}
+
+		form:invalid .submit-form,
+		form:valid .validate-form {
+			box-shadow: none;
+			pointer-events: none;
+		}
+
+		form:valid .holder-validate-submit {
+			transition: transform 0.3s ease-in-out;
+			transform: rotateX(180deg);
+		}
+
+		form:valid .holder-validate-submit .submit-form {
+			transform: rotateX(-180deg);
+			z-index: var(--content);
+		}
+
+		form:valid .holder-validate-submit .validate-form {
+			opacity: 0;
+		}
+
+		form:invalid .holder-validate-submit {
+			transition: transform 0.3s ease-in-out;
+			transform: rotateX(0deg);
+		}
+
+		form:invalid .holder-validate-submit .submit-form {
+			opacity: 0;
+			z-index: var(--behind);
+		}
+
+		fieldset {
+			border: solid 5px;
+			margin-bottom: 40px;
+		}
+
+		legend {
+			font-size: var(--font-size-legend-form);
+			line-height: 1em;
+			padding: 0 0.5em;
+		}
+
+		fieldset:valid>legend .required:after {
+			content: var(--valid-icon);
+		}
+
+		:required:hover+label:first-letter,
+		:required:focus+label:first-letter {
+			text-decoration: overline underline double;
+		}
+
+		label,
+		::placeholder,
+		.fields {
+			font-size: var(--font-size-form);
+			line-height: var(--line-height-form);
+		}
+
+		::placeholder {
+			color: var(--placeholder-color);
+			opacity: 1;
+			/* Fix for Firefox */
+		}
+
+		label {
+			margin-bottom: 0.25em;
+		}
+
+		.fields {
+			border: 0.5em solid white;
+			border-right-color: inherit;
+			border-radius: 0;
+			box-sizing: border-box;
+			box-shadow: var(--shadow), var(--fix-autofill);
+			padding: 0 0.25em;
+			transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+		}
+
+		.fields:hover,
+		.fields:focus {
+			border-left-color: inherit;
+			box-shadow: var(--shadow-hover), var(--fix-autofill);
+			outline: 0;
+		}
+
+		.fields:valid {
+			border-right-color: var(--success-color);
+			transition: border-color 0.3s ease-in-out;
+		}
+
+		span.required:after,
+		:required+label:after {
+			content: var(--required-icon);
+			margin-left: 0.25em;
+		}
+
+		.fields:valid+label:after {
+			content: var(--valid-icon);
+		}
+
+		.field-dropdown {
+			appearance: none;
+			background-image: var(--dropdown-arrow);
+			background-repeat: no-repeat;
+			background-size: 16px 16px;
+			background-position: right -15px top 2px;
+			transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-position ease-in 0.15s;
+		}
+
+		.field-dropdown:hover,
+		.field-dropdown:focus {
+			background-position: right 3px top 2px;
+		}
+
+		/* Fix for webkit autofill */
+
+		input:-webkit-autofill {
+			border: 0.5em solid white;
+			border-right-color: inherit;
+			border-radius: 0;
+			box-sizing: border-box;
+			box-shadow: var(--shadow), var(--fix-autofill);
+			padding: 0 0.25em;
+			transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+		}
+
+		input:-webkit-autofill:hover,
+		input:-webkit-autofill:focus {
+			border-left-color: inherit;
+			box-shadow: var(--shadow-hover), var(--fix-autofill);
+			outline: 0;
+		}
+
+		.group>.field-radio,
+		.group>.field-checkbox,
+		.group>label,
+		button,
+		.field-dropdown {
+			cursor: pointer;
+		}
+
+		.group>.fields-radio-checkbox {
+			appearance: none;
+			background: var(--background-radio-checkbox);
+			border: 0;
+			box-shadow: var(--shadow);
+			font-size: var(--font-size-form);
+			height: var(--radio-checkbox-size);
+			padding: 0;
+			text-align: center;
+			transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+			width: var(--radio-checkbox-size);
+		}
+
+		.group>.field-radio {
+			border-radius: 50%;
+		}
+
+		.group>.field-checkbox {
+			border-radius: 0;
+		}
+
+		.group>.fields-radio-checkbox:focus,
+		.group>.fields-radio-checkbox:hover {
+			box-shadow: var(--shadow-hover);
+			outline: 0;
+		}
+
+		.group>.fields-radio-checkbox:focus:after,
+		.group>.fields-radio-checkbox:hover:after {
+			color: var(--focus-hover-radio-checkbox);
+		}
+
+		.group>.fields-radio-checkbox:after {
+			color: var(--background-radio-checkbox);
+			content: var(--valid-icon);
+			display: inline-block;
+			line-height: var(--radio-checkbox-size);
+			transition: color 0.25s ease-in-out;
+		}
+
+		.group>.fields-radio-checkbox:checked:after {
+			color: var(--checked-radio-checkbox);
+		}
+
+		.field-comment {
+			box-sizing: content-box;
+			height: var(--text-area-height);
+			resize: none;
+		}
+
+		button {
+			appearance: none;
+			background: white;
+			border: 0;
+			border-radius: 0.5em;
+			box-shadow: var(--shadow);
+			font-size: 1rem;
+			line-height: 1.35em;
+			padding: 0 0.75em;
+		}
+
+		button:focus,
+		button:hover {
+			box-shadow: var(--shadow-hover);
+			transition: box-shadow 0.3s ease-in-out;
+			outline: 0;
+		}
+
+		.submit-form:after,
+		.reset-form:before,
+		.validate-form>span {
+			display: inline-block;
+		}
+
+		.submit-form,
+		.validate-form {
+			width: 100px;
+		}
+
+		.reset-form:before,
+		.validate-form>span {
+			margin-right: 0.25em;
+		}
+
+		.submit-form {
+			left: 0;
+			position: absolute;
+			top: 2px;
+		}
+
+		.submit-form:after {
+			content: var(--submit-icon);
+			margin-left: 0.25em;
+		}
+
+		.reset-form:before {
+			content: var(--recycling-icon);
+		}
+
+		.validate-form {
+			position: relative;
+			z-index: var(--content);
+		}
+
+		.validate-form>span:before {
+			content: var(--valid-icon);
+		}
+
+		.holder-field {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.holder-field>label {
+			order: 0;
+		}
+
+		.form-buttons {
+			font-size: 0;
+			text-align: right;
+		}
+
+		.holder-validate-submit {
+			display: inline-block;
+			font-size: 1rem;
+			margin-left: 0.5em;
+			position: relative;
+		}
+
+		.holder-field>.fields {
+			order: 1;
+		}
+
+		.grid-area-name {
+			grid-area: grid-area-name;
+		}
+
+		.grid-area-email {
+			grid-area: grid-area-email;
+		}
+
+		.grid-area-age {
+			grid-area: grid-area-age;
+		}
+
+		.grid-area-select {
+			grid-area: grid-area-select;
+		}
+
+		.grid-area-comment {
+			grid-area: grid-area-comment;
+		}
+
+		.grid-area-list-1 {
+			grid-area: grid-area-list-1;
+		}
+
+		.grid-area-list-2 {
+			grid-area: grid-area-list-2;
+		}
+
+		.form-layout {
+			display: grid;
+			column-gap: 10px;
+			row-gap: 10px;
+			grid-template-columns: var(--form-template-columns);
+			grid-template-rows: auto;
+			grid-template-areas: var(--form-layout);
+		}
+
+		.list-of-fields {
+			display: grid;
+			grid-column-gap: 10px;
+			grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+		}
+
+		.list-of-fields .group {
+			white-space: nowrap;
+		}
+
+		.fcc {
+			background-color: var(--main-background-color);
+			background-image: var(--main-background-texture-vertical);
+			display: flex;
+			justify-content: center;
+			padding: 0 10px;
+			position: relative;
+		}
+
+		.fcc::before,
+		.fcc::after {
+			content: "";
+			display: block;
+			height: 100vh;
+			left: 0;
+			position: fixed;
+			pointer-events: none;
+			top: 0;
+			width: 100vw;
+			z-index: var(--behind);
+		}
+
+		.fcc::before {
+			background-image: var(--main-background-texture-horizontal);
+		}
+
+		.fcc::after {
+			background-image: var(--main-background-linear-gradient);
+		}
+
+		.shadown {
+			box-shadow: var(--shadow);
+			transition: box-shadow 0.3s ease-in-out;
+		}
+
+		.shadown:hover {
+			box-shadow: var(--shadow-hover);
+		}
+
+		.wrapper-lists {
+			display: flex;
+			flex-direction: var(--list-wrapper-direction);
+			justify-content: space-between;
+		}
+
+		.contact-links {
+			display: flex;
+			justify-content: space-around;
+			flex-wrap: wrap;
+			list-style: none;
+			margin: 20px auto 0;
+			padding: 0;
+		}
+
+		.contact-links li {
+			font-size: var(--size-of-contact-buttons);
+			margin: var(--margin-of-contact-buttons);
+		}
+
+		.contact-links li a {
+			align-items: center;
+			border-radius: 0.25em;
+			background: white;
+			color: black;
+			display: flex;
+			justify-content: center;
+			height: 2em;
+			width: 2em;
+			text-decoration: none;
+			transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+		}
+
+		.contact-links li a:visited {
+			color: purple;
+		}
+
+		.contact-links li a:hover,
+		.contact-links li a:focus {
+			color: red;
+		}
+
+		/* Font from icomoon.io the CSS have some little of customizations */
+
+		/* Using font woff converted to base64 */
+		@font-face {
+			font-family: 'fcc-icons';
+			src: url('data:font/woff;charset=utf-8;base64,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') format('woff');
+			font-weight: normal;
+			font-style: normal;
+			font-display: block;
+		}
+
+		/* It was added ::before */
+		[class^="icon-"]::before,
+		[class*=" icon-"]::before {
+			/* use !important to prevent issues with browser extensions that change fonts */
+			font-family: 'fcc-icons' !important;
+			speak: never;
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
+
+			/* Better Font Rendering =========== */
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+
+		.icon-camera::before {
+			content: "\e90f";
+			margin-right: 0.25em;
+			/* This is custom */
+		}
+
+		.icon-link::before {
+			content: "\e9cb";
+		}
+
+		.icon-facebook::before {
+			content: "\ea90";
+		}
+
+		.icon-instagram::before {
+			content: "\ea92";
+		}
+
+		.icon-twitter::before {
+			content: "\ea96";
+		}
+
+		.icon-youtube::before {
+			content: "\ea9d";
+		}
+
+		.icon-github::before {
+			content: "\eab0";
+		}
+
+		.icon-reddit::before {
+			content: "\eac6";
+		}
+
+		.icon-linkedin2::before {
+			content: "\eaca";
+		}
+
+		.icon-codepen::before {
+			content: "\eae8";
+		}
+	</style>
+</head>
+
+<body>
+	<main id="main">
+		<header>
+			<h1 id="title">
+				Lorem ipsum dolor sit amet
+			</h1>
+			<p id="description">
+				Possimus enim laudantium obcaecati maiores doloribus velit quos. Lorem ipsum dolor sit, amet consectetur
+				adipisicing elit. <a
+					href="https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-survey-form"
+					target="_blank" rel="noopener">About this</a>.
+			</p>
+		</header>
+		<hr class="top">
+		<form action="#" id="survey-form">
+			<fieldset>
+				<legend>Basic form itens (<span class="required">required</span>)</legend>
+				<div class="warpper-fields form-layout">
+					<div class="holder-field grid-area-name">
+						<input class="fields field-name" id="name" type="text" placeholder="Fill with your full name"
+							maxlength="140" minlength="3" spellcheck="true" required>
+						<label id="name-label" for="name" accesskey="n">Name</label>
+					</div>
+					<div class="holder-field grid-area-email">
+						<input class="fields field-email" id="email" type="email" placeholder="user@provider.com" maxlength="140"
+							required>
+						<label id="email-label" for="email" accesskey="e">E-mail</label>
+					</div>
+					<div class="holder-field grid-area-age">
+						<input class="fields field-age" id="number" type="number" placeholder="18+" min="18" max="120" required>
+						<label id="number-label" for="number" accesskey="Y">Your age</label>
+					</div>
+					<div class="holder-field grid-area-select">
+						<select class="fields field-dropdown" name="dropdown" id="dropdown" required>
+							<option value="">-</option>
+							<option value="BackEnd">Back-End</option>
+							<option value="FrontEnd">Front-End</option>
+							<option value="FullStack">FullStack</option>
+						</select>
+						<label for="dropdown" accesskey="s">Select one</label>
+					</div>
+					<div class="holder-field grid-area-comment">
+						<textarea class="fields field-comment" name="comments" id="comments"
+							placeholder="Fill with a minimum of 15 characters and a maximum of 280." minlength="15" maxlength="280"
+							spellcheck="true" required></textarea>
+						<label for="comments" accesskey="w">Write some comment about</label>
+					</div>
+					<div class="holder-field grid-area-list-1">
+						<label>Choose one kind of developer:</label>
+						<div class="list-of-fields">
+							<div class="group">
+								<input class="fields-radio-checkbox field-radio" type="radio" id="backend" name="programer-type"
+									value="backend">
+								<label for="backend">Back End</label>
+							</div>
+							<div class="group">
+								<input class="fields-radio-checkbox field-radio" type="radio" id="frontend" name="programer-type"
+									value="frontend">
+								<label for="frontend">Front End</label>
+							</div>
+							<div class="group">
+								<input class="fields-radio-checkbox field-radio" type="radio" id="fullstack" name="programer-type"
+									value="fullstack">
+								<label for="fullstack">Full Stack</label>
+							</div>
+						</div>
+					</div>
+					<div class="holder-field grid-area-list-2">
+						<label>You like to coding in:</label>
+						<div class="list-of-fields">
+							<div class="group">
+								<input class="fields-radio-checkbox field-checkbox" type="checkbox" id="code-1" name="code-1"
+									value="HTML">
+								<label for="code-1">HTML</label>
+							</div>
+							<div class="group">
+								<input class="fields-radio-checkbox field-checkbox" type="checkbox" id="code-2" name="code-2"
+									value="CSS">
+								<label for="code-2">CSS</label>
+							</div>
+							<div class="group">
+								<input class="fields-radio-checkbox field-checkbox" type="checkbox" id="code-3" name="code-3"
+									value="Javascript">
+								<label for="code-3">Javascript</label>
+							</div>
+							<div class="group">
+								<input class="fields-radio-checkbox field-checkbox" type="checkbox" id="code-4" name="code-4"
+									value="Java">
+								<label for="code-4">Java</label>
+							</div>
+							<div class="group">
+								<input class="fields-radio-checkbox field-checkbox" type="checkbox" id="code-5" name="code-5"
+									value="PHP">
+								<label for="code-5">PHP</label>
+							</div>
+							<div class="group">
+								<input class="fields-radio-checkbox field-checkbox" type="checkbox" id="code-6" name="code-6"
+									value="Python">
+								<label for="code-6">Python</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</fieldset>
+			<div class="form-buttons">
+				<button class="reset-form" type="reset">fields</button>
+				<span class="holder-validate-submit">
+					<button class="validate-form"><span></span>fields</button>
+					<button class="submit-form" type="submit" id="submit">Submit</button>
+				</span>
+			</div>
+		</form>
+		<hr class="bottom">
+	</main>
+	<footer>
+		<ul class="contact-links reset-list">
+			<li>
+				<a class="icon-link shadown" href="https://adrianoenache.dev.br" target="_blank" rel="noopener">Link to my
+					website adrianoenache.dev.br</a>
+			</li>
+			<li>
+				<a class="icon-link shadown" href="https://www.freecodecamp.org/adrianoenache" target="_blank"
+					rel="noopener">Link to my profile in the freecodecamp</a>
+			</li>
+			<li>
+				<a class="icon-codepen shadown" href="https://codepen.io/adrianoenache" target="_blank" rel="noopener">Link to
+					my profile in the codepen</a>
+			</li>
+			<li>
+				<a class="icon-github shadown" href="https://github.com/adrianoenache" target="_blank" rel="noopener">Link to my
+					profile in the github</a>
+			</li>
+			<li>
+				<a class="icon-facebook shadown" href="https://www.facebook.com/adrianoenache" target="_blank"
+					rel="noopener">Link to my profile in the facebook</a>
+			</li>
+			<li>
+				<a class="icon-linkedin2 shadown" href="https://www.linkedin.com/in/adrianoenache" target="_blank"
+					rel="noopener">Link to my profile in the linkedin</a>
+			</li>
+			<li>
+				<a class="icon-reddit shadown" href="https://www.reddit.com/user/adrianoenache" target="_blank"
+					rel="noopener">Link to my profile in the reddit</a>
+			</li>
+			<li>
+				<a class="icon-twitter shadown" href="https://twitter.com/AdrianoEnache" target="_blank" rel="noopener">Link to
+					my profile in the twitter</a>
+			</li>
+			<li>
+				<a class="icon-instagram shadown" href="https://www.instagram.com/adrianoenache" target="_blank"
+					rel="noopener">Link to my profile in the instagram</a>
+			</li>
+			<li>
+				<a class="icon-youtube shadown" href="https://www.youtube.com/channel/UC53UwM0XGPL0WdC5q3XExPA" target="_blank"
+					rel="noopener">Link to my profile in the youtube</a>
+			</li>
+		</ul>
+	</footer>
+
+	<!-- Scripts -->
+	<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>

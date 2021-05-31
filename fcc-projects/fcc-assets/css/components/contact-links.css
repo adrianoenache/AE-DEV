@@ -1,0 +1,60 @@
+.contact-links {
+  --size-of-contact-buttons-notebook: 25px;
+  --size-of-contact-buttons-tablet: 20px;
+  --size-of-contact-buttons-mobile: 16px;
+  --size-of-contact-buttons: var(--size-of-contact-buttons-mobile);
+  --margin-of-contact-buttons-tablet: 10px 5px;
+  --margin-of-contact-buttons-mobile: 10px;
+  --margin-of-contact-buttons: var(--margin-of-contact-buttons-mobile);
+  /* Rules */
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: calc(var(--gutter) * 2) auto 0;
+}
+
+.contact-links li {
+  margin: var(--margin-of-contact-buttons);
+}
+
+.contact-links li a {
+  align-items: center;
+  border-radius: calc(var(--size-of-contact-buttons) * 0.25);
+  background: var(--brand-color-2-hex);
+  color: var(--brand-color-1-hex);
+  display: flex;
+  font-size: 0;
+  justify-content: center;
+  height: calc(var(--size-of-contact-buttons) * 2);
+  width: calc(var(--size-of-contact-buttons) * 2);
+  text-decoration: none;
+  transition: color var(--transition-1), box-shadow var(--transition-1);
+}
+
+.contact-links li a:before {
+  font-size: var(--size-of-contact-buttons);
+}
+
+.contact-links li a:visited {
+  color: var(--brand-color-10-hex);
+}
+
+.contact-links li a:hover,
+.contact-links li a:focus,
+.contact-links li a:visited:hover,
+.contact-links li a:visited:focus {
+  color: var(--brand-color-3-hex);
+}
+
+@media only screen and (min-width: 415px) {
+  .contact-links {
+    --size-of-contact-buttons: var(--size-of-contact-buttons-tablet);
+    --margin-of-contact-buttons: var(--margin-of-contact-buttons-tablet);
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .contact-links {
+    --size-of-contact-buttons: var(--size-of-contact-buttons-notebook);
+  }
+}

@@ -1,0 +1,1842 @@
+<!DOCTYPE html>
+<html class="fcc" lang="en">
+
+<head prefix="og: https://ogp.me/ns#">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="INDEX, FOLLOW">
+
+	<meta name="description"
+		content="Personal website to publish articles related to Front-End development and stuff that I like.">
+	<meta name="keywords"
+		content="Front-End, HTML, CSS, Javascript, UI, UX, DEV, Development, Website, Guideline, Frameworks, Web tools">
+	<meta name="author" content="Adriano Enache - adrianoenache@hotmail.com">
+
+	<title>Adriano Enache</title>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+	<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#000000">
+	<link rel="shortcut icon" href="/favicon/favicon.ico">
+
+	<meta name="msapplication-TileColor" content="#000000">
+	<meta name="msapplication-TileImage" content="/favicon/mstile-144x144.png">
+	<meta name="msapplication-config" content="/favicon/browserconfig.xml">
+	<meta name="theme-color" content="#000000">
+
+	<meta property="og:title" content="&AElig; (Adriano Enache) =P">
+	<meta property="og:description"
+		content="Personal website to publish articles related to Front-End development and stuff that I like.">
+	<meta property="og:type" content="blog">
+	<meta property="og:locale" content="en" />
+	<meta property="og:url" content="https://adrianoenache.dev.br/">
+
+	<meta property="og:site_name" content="adrianoenache.dev.br" />
+	<meta property="article:published_time" content="2021-04-19T00:00:00+00:00" />
+	<meta property="article:author" content="Adriano Enache" />
+
+	<meta property="og:image" content="https://adrianoenache.dev.br/openGraph/og-image-fb-1200x630.jpg">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@AdrianoEnache" />
+	<meta name="twitter:creator" content="@AdrianoEnache" />
+	<meta name="twitter:title" content="&AElig; (Adriano Enache) =P" />
+	<meta name="twitter:description"
+		content="Personal website to publish articles related to Front-End development and stuff that I like." />
+	<meta name="twitter:image" content="https://adrianoenache.dev.br/openGraph/og-image-twitter-300x150.jpg" />
+	<meta name="twitter:url" content="https://adrianoenache.dev.br/" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:wght@300&family=Sansita+Swashed:wght@500&display=swap"
+		rel="stylesheet">
+	<style>
+		/* CSS variables */
+
+		:root {
+			/* Colors */
+			--main-background-color-tablet: #fff;
+			--main-background-color-mobile: #000;
+			--main-background-color: var(--main-background-color-mobile);
+			--main-text-color-tablet: #000;
+			--main-text-color-mobile: #fff;
+			--main-text-color: var(--main-text-color-mobile);
+			--figure-color-background: #fff;
+			--figcaption-color: #666;
+			--link-hover-color-desktop: blue;
+			--link-hover-color-mobile: red;
+			--link-hover-color: var(--link-hover-color-mobile);
+			--success-color: green;
+			--placeholder-color: gray;
+			--background-radio-checkbox: white;
+			--checked-radio-checkbox: green;
+			--focus-hover-radio-checkbox: black;
+
+			/* Logo */
+			--logo-size: 40px;
+
+			/* Sticky header */
+			--offset-of-sticky-header: 70px;
+			--anchor-position: calc(var(--offset-of-sticky-header) + (var(--gutter) * 1));
+
+			/* Sizes */
+			--max-width-wrapper-tablet: 640px;
+			--max-width-wrapper-mobile: 300px;
+			--max-width-wrapper: var(--max-width-wrapper-mobile);
+			--size-of-contact-buttons-notebook: 25px;
+			--size-of-contact-buttons-tablet: 20px;
+			--size-of-contact-buttons-mobile: 16px;
+			--size-of-contact-buttons: var(--size-of-contact-buttons-mobile);
+			--font-size-form: 1rem;
+			--line-height-form: 1.25em;
+			--font-size-legend-form: 1.25rem;
+			--text-area-row-size: 3;
+			--radio-checkbox-size: 1.1em;
+			--text-area-height-mobile: calc(var(--line-height-form) * var(--text-area-row-size) + 1em);
+			--text-area-height-notebook: 100%;
+			--text-area-height: var(--text-area-height-mobile);
+			--gutter: 10px;
+			--size-of-close-modal-button: calc(var(--gutter) * 3);
+			--dash-size: 10px;
+			--dash-gap: 5px;
+
+			/* Icon from https://icomoon.io/ converted to base64 with https://www.base64-image.de/ */
+			--dropdown-arrow: url('data:image/svg+xml;base64,PCEtLSBHZW5lcmF0ZWQgYnkgSWNvTW9vbi5pbyAtLT4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiB2aWV3Qm94PSIwIDAgMzIgMzIiPgo8dGl0bGU+Y2lyY2xlLWRvd248L3RpdGxlPgo8cGF0aCBkPSJNMzIgMTZjMC04LjgzNy03LjE2My0xNi0xNi0xNnMtMTYgNy4xNjMtMTYgMTYgNy4xNjMgMTYgMTYgMTYgMTYtNy4xNjMgMTYtMTZ6TTMgMTZjMC03LjE4IDUuODItMTMgMTMtMTNzMTMgNS44MiAxMyAxMy01LjgyIDEzLTEzIDEzLTEzLTUuODItMTMtMTN6Ij48L3BhdGg+CjxwYXRoIGQ9Ik05LjkxNCAxMS4wODZsLTIuODI5IDIuODI5IDguOTE0IDguOTE0IDguOTE0LTguOTE0LTIuODI4LTIuODI4LTYuMDg2IDYuMDg2eiI+PC9wYXRoPgo8L3N2Zz4K');
+
+			/* Behaviours */
+			--shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
+			--shadow-opacity: 2px 2px 2px 1px rgba(0, 0, 0, 0);
+			--shadow-hover: 3px 3px 2px 2px rgba(0, 0, 0, 0.2);
+			--shadow-inset: inset 0 0 2px 2px rgba(0, 0, 0, 0.25);
+			--shadow-inset-top-left: inset 2px 2px 2px 1px rgba(0, 0, 0, 0.25);
+			--fix-autofill: 0 0 0 1000px #fff inset;
+			--margin-of-contact-buttons-tablet: 10px 5px;
+			--margin-of-contact-buttons-mobile: 10px;
+			--margin-of-contact-buttons: var(--margin-of-contact-buttons-mobile);
+			--background-contact-buttons: 10px;
+			--color-contact-buttons: black;
+			--color-hover-contact-buttons: red;
+			--color-visited-contact-buttons: purple;
+			--show-notebook-plus-notebook: block;
+			--show-notebook-plus-mobile: none;
+			--show-notebook-plus: var(--show-notebook-plus-mobile);
+
+			/*
+	Google Fonts
+	  Sansita Swashed - 500
+	  Raleway - 300
+	  Kufam - 400, 400i, 700, 700i
+  */
+			--font-family-text: "Kufam", cursive;
+			--font-family-titles: "Sansita Swashed", cursive;
+			--font-family-detail: "Raleway", sans-serif;
+
+			/* z-index   */
+			--behind: 1;
+			--content: 5;
+			--above: 10;
+			--modal: 15;
+
+			/* Layout */
+			--make-it-bleed: calc((100vw - 100%) / 2);
+			--stop-bleeding: var(--make-it-bleed);
+			--bleed: calc(var(--make-it-bleed) * -1);
+
+			--disclaimer-and-terms-flex-direction-mobile: column;
+			--disclaimer-and-terms-flex-direction-tablet: row;
+			--disclaimer-and-terms-flex-direction: var(--disclaimer-and-terms-flex-direction-mobile);
+
+			--links-to-terms-line-height-mobile: 2em;
+			--links-to-terms-line-height-tablet: 1.5em;
+			--links-to-terms-line-height: var(--links-to-terms-line-height-mobile);
+			--links-to-terms-text-align-mobile: center;
+			--links-to-terms-text-align-tablet: left;
+			--links-to-terms-text-align: var(--links-to-terms-text-align-mobile);
+
+			--disclaimer-margin-mobile: calc(var(--gutter) * 4) 0 0;
+			--disclaimer-margin-tablet: 0;
+			--disclaimer-margin: var(--disclaimer-margin-mobile);
+
+			--modal-background-mobile: #444;
+			--modal-background-tablet: #eee;
+			--modal-background: var(--modal-background-mobile);
+			--modal-max-width-mobile: 320px;
+			--modal-max-width-tablet: 450px;
+			--modal-max-width-notebook: 640px;
+			--modal-max-width: var(--modal-max-width-mobile);
+
+			--forms-contact-and-submit-flex-direction-tablet: row;
+			--forms-contact-and-submit-flex-direction-mobile: column;
+			--forms-contact-and-submit-flex-direction: var(--forms-contact-and-submit-flex-direction-mobile);
+			--forms-contact-and-submit-button-margin-tablet: 0 0 0 calc(var(--gutter) * 2);
+			--forms-contact-and-submit-button-margin-mobile: calc(var(--gutter) * 2) 0 0;
+			--forms-contact-and-submit-button-margin: var(--forms-contact-and-submit-button-margin-mobile);
+			--forms-contact-and-submit-button-width-tablet: auto;
+			--forms-contact-and-submit-button-width-mobile: 100%;
+			--forms-contact-and-submit-button-width: var(--forms-contact-and-submit-button-width-mobile);
+
+			--cards-courses-grid-template-columns-notebook: repeat(auto-fit, minmax(320px, 1fr));
+			--cards-courses-grid-template-columns-tablet: repeat(auto-fit, minmax(260px, 1fr));
+			--cards-courses-grid-template-columns-mobile: repeat(auto-fit, minmax(200px, 1fr));
+			/* :( Variables don't work inside minmax() */
+			--cards-courses-grid-template-columns: var(--cards-courses-grid-template-columns-mobile);
+			--card-icon-size: 64px;
+			--card-icon-top-gap: calc((var(--card-icon-size) / 2) + var(--gutter));
+			--course-card-h3-line-height: 1.25em;
+			--course-card-h3-min-height-tablet: calc(var(--course-card-h3-line-height) * 2);
+			--course-card-h3-min-height-mobile: auto;
+			--course-card-h3-min-height: var(--course-card-h3-min-height-mobile);
+
+			/* Main background configs*/
+			--config-background-texture-color-desktop: 255, 0, 0;
+			--config-background-texture-color-notebook: 0, 255, 0;
+			--config-background-texture-color-tablet: 0, 0, 255;
+			--config-background-texture-color-mobile: 255, 255, 255;
+			--config-background-texture-color: var(--config-background-texture-color-mobile);
+			--config-background-texture-line-opacity: 0.05;
+			--config-background-texture-cell-opacity: 0.1;
+			--config-background-texture-size-start: 0px;
+			--config-background-texture-size-conection: 2px;
+			--config-background-texture-size-end: 10px;
+			/* ** */
+			--config-background-linear-rotation: -45deg;
+			--config-background-linear-opacity-external-tablet: 0.3;
+			--config-background-linear-opacity-external-mobile: 0.15;
+			--config-background-linear-opacity-external: var(--config-background-linear-opacity-external-mobile);
+			--config-background-linear-opacity-internal: 0;
+			--config-background-linear-size-start: 0%;
+			--config-background-linear-size-start-end: 40%;
+			--config-background-linear-size-end-start: 60%;
+			--config-background-linear-size-end: 100%;
+			/* ** */
+			--main-background-texture-vertical: repeating-linear-gradient(to right,
+					rgba(var(--config-background-texture-color), var(--config-background-texture-line-opacity)) var(--config-background-texture-size-start),
+					rgba(var(--config-background-texture-color), var(--config-background-texture-line-opacity)) var(--config-background-texture-size-conection),
+					rgba(var(--config-background-texture-color), var(--config-background-texture-cell-opacity)) var(--config-background-texture-size-conection),
+					rgba(var(--config-background-texture-color), var(--config-background-texture-cell-opacity)) var(--config-background-texture-size-end));
+			--main-background-texture-horizontal: repeating-linear-gradient(0deg,
+					rgba(var(--config-background-texture-color), var(--config-background-texture-line-opacity)) var(--config-background-texture-size-start),
+					rgba(var(--config-background-texture-color), var(--config-background-texture-line-opacity)) var(--config-background-texture-size-conection),
+					rgba(var(--config-background-texture-color), var(--config-background-texture-cell-opacity)) var(--config-background-texture-size-conection),
+					rgba(var(--config-background-texture-color), var(--config-background-texture-cell-opacity)) var(--config-background-texture-size-end));
+			/* ** */
+			--main-background-linear-gradient: linear-gradient(var(--config-background-linear-rotation),
+					rgba(var(--config-background-texture-color), var(--config-background-linear-opacity-external)) var(--config-background-linear-size-start),
+					rgba(var(--config-background-texture-color), var(--config-background-linear-opacity-internal)) var(--config-background-linear-size-start-end),
+					rgba(var(--config-background-texture-color), var(--config-background-linear-opacity-internal)) var(--config-background-linear-size-end-start),
+					rgba(var(--config-background-texture-color), var(--config-background-linear-opacity-external)) var(--config-background-linear-size-end));
+		}
+
+		/*
+  Media querys
+
+  These values were chosen after analyzing the data from this source https://gs.statcounter.com/
+
+  All CSS is mobile first
+
+  320-425 Mobile
+  426-1024 Tablet
+  1025-1440 Notebooks
+  1441 Desktops and Notebooks FullHD
+*/
+
+		/* 426-1024 Tablet */
+		@media only screen and (min-width: 426px) {
+			:root {
+				--main-background-color: var(--main-background-color-tablet);
+				--main-text-color: var(--main-text-color-tablet);
+				--max-width-wrapper: var(--max-width-wrapper-tablet);
+				--config-background-texture-color: var(--config-background-texture-color-tablet);
+				--config-background-linear-opacity-external: var(--config-background-linear-opacity-external-tablet);
+				--size-of-contact-buttons: var(--size-of-contact-buttons-tablet);
+				--margin-of-contact-buttons: var(--margin-of-contact-buttons-tablet);
+				--disclaimer-and-terms-flex-direction: var(--disclaimer-and-terms-flex-direction-tablet);
+				--links-to-terms-line-height: var(--links-to-terms-line-height-tablet);
+				--links-to-terms-text-align: var(--links-to-terms-text-align-tablet);
+				--disclaimer-margin: var(--disclaimer-margin-tablet);
+				--modal-background: var(--modal-background-tablet);
+				--modal-max-width: var(--modal-max-width-tablet);
+				--forms-contact-and-submit-flex-direction: var(--forms-contact-and-submit-flex-direction-tablet);
+				--forms-contact-and-submit-button-margin: var(--forms-contact-and-submit-button-margin-tablet);
+				--forms-contact-and-submit-button-width: var(--forms-contact-and-submit-button-width-tablet);
+				--card-width: var(--card-width--tablet);
+				--cards-courses-grid-template-columns: var(--cards-courses-grid-template-columns-tablet);
+				--course-card-h3-min-height: var(--course-card-h3-min-height-tablet);
+			}
+		}
+
+		/* 1025-1440 Notebooks */
+		@media only screen and (min-width: 1025px) {
+			:root {
+				--config-background-texture-color: var(--config-background-texture-color-notebook);
+				--size-of-contact-buttons: var(--size-of-contact-buttons-notebook);
+				--show-notebook-plus: var(--show-notebook-plus-notebook);
+				--modal-max-width: var(--modal-max-width-notebook);
+				--cards-courses-grid-template-columns: var(--cards-courses-grid-template-columns-notebook);
+			}
+		}
+
+		/* 1441 Desktops and Notebooks FullHD */
+		@media only screen and (min-width: 1441px) {
+			:root {
+				--config-background-texture-color: var(--config-background-texture-color-desktop);
+				--link-hover-color: var(--link-hover-color-desktop);
+			}
+		}
+
+		/* Rules */
+
+		html {
+			overflow-x: hidden;
+		}
+
+		body {
+			color: var(--main-text-color);
+			font-family: var(--font-family-text);
+			font-weight: 400;
+			margin: 0 0 50px;
+			max-width: var(--max-width-wrapper);
+			position: relative;
+			padding-top: var(--anchor-position);
+			width: 100%;
+			z-index: var(--content);
+		}
+
+		section {
+			position: relative;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		legend {
+			font-family: var(--font-family-titles);
+			font-weight: 500;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			margin-top: 0;
+		}
+
+		a {
+			color: inherit;
+			font-family: var(--font-family-text);
+			font-weight: 400;
+			transition: color 0.25s ease-in;
+		}
+
+		a:hover,
+		a:focus {
+			color: var(--link-hover-color);
+		}
+
+		a:focus {
+			outline: 0;
+		}
+
+		abbr {
+			text-decoration: underline double gray;
+		}
+
+		abbr:hover {
+			text-decoration: underline double black;
+		}
+
+		mark {
+			background: var(--main-background-color);
+			color: var(--main-text-color);
+		}
+
+		hr {
+			border: 0;
+			border-top: 10px solid;
+			color: var(--main-text-color);
+			/* Fix for Firefox */
+			margin: calc(var(--gutter) * 5) auto;
+		}
+
+		hr.top {
+			margin-top: calc(var(--gutter) * 3);
+		}
+
+		hr.bottom {
+			margin-bottom: calc(var(--gutter) * 3);
+		}
+
+		.show-notebook-plus {
+			display: var(--show-notebook-plus);
+		}
+
+		.animate-border {
+			pointer-events: none;
+		}
+
+		.animate-border rect {
+			animation: animate-border 1s infinite linear;
+			fill: none;
+			stroke: var(--main-text-color);
+			stroke-dasharray: var(--dash-size) var(--dash-gap);
+			stroke-width: 4px;
+		}
+
+		@keyframes animate-border {
+			to {
+				stroke-dashoffset: calc((var(--dash-size) + var(--dash-gap)) * -1);
+			}
+		}
+
+		.bleed {
+			margin-left: var(--bleed);
+			margin-right: var(--bleed);
+		}
+
+		.bleed.left {
+			margin-right: 0;
+		}
+
+		.bleed.right {
+			margin-left: 0;
+		}
+
+		.bleed.less-the-content {
+			padding-left: var(--stop-bleeding);
+			padding-right: var(--stop-bleeding);
+		}
+
+		.bleed.left.less-the-content {
+			padding-right: 0;
+		}
+
+		.bleed.right.less-the-content {
+			padding-left: 0;
+		}
+
+		/* Go to top */
+		.go-to-top {
+			--size: 20px;
+			align-items: center;
+			background: var(--main-background-color);
+			border: solid 1px;
+			border-right: 0;
+			border-bottom-left-radius: var(--size);
+			border-top-left-radius: var(--size);
+			bottom: calc(var(--size) * 0.5);
+			box-shadow: var(--shadow);
+			display: flex;
+			font-size: var(--size);
+			height: calc(var(--size) * 1.5);
+			justify-content: center;
+			position: fixed;
+			right: 0;
+			text-decoration: none;
+			transition: box-shadow 0.3s ease;
+			width: calc(var(--size) * 1.5);
+			z-index: var(--above);
+		}
+
+		.go-to-top:hover {
+			box-shadow: var(--shadow-hover);
+		}
+
+		/* Logo */
+		.logo-link {
+			border-radius: 50%;
+			box-shadow: var(--shadow-inset);
+			display: block;
+			height: var(--logo-size);
+			overflow: hidden;
+			padding: 5px;
+			position: relative;
+			margin-right: var(--gutter);
+			width: var(--logo-size);
+		}
+
+		.logo-link:hover .header-img,
+		.logo-link:focus .header-img {
+			transform: rotateY(180deg);
+		}
+
+		.logo-link:hover .avatar,
+		.logo-link:focus .avatar {
+			transform: rotateY(0deg);
+		}
+
+		.header-img {
+			backface-visibility: hidden;
+			transform: rotateY(0deg);
+			transition: transform 0.5s ease;
+		}
+
+		.avatar {
+			backface-visibility: hidden;
+			border-radius: 50%;
+			height: var(--logo-size);
+			position: absolute;
+			left: 5px;
+			top: 5px;
+			object-fit: cover;
+			transform: rotateY(180deg);
+			transition: transform 0.5s ease;
+			width: var(--logo-size);
+		}
+
+		.logo-link~.name span {
+			display: inline-flex;
+			overflow: hidden;
+		}
+
+		.logo-link~.name .first {
+			transition: width 0.25s ease;
+			width: 75px;
+		}
+
+		.logo-link~.name .last {
+			margin-left: 5px;
+			transition: margin-left 0.25s ease, width 0.25s ease;
+			width: 71px;
+		}
+
+		.logo-link:hover~.name .first,
+		.logo-link:focus~.name .first {
+			width: 11px;
+		}
+
+		.logo-link:hover~.name .last,
+		.logo-link:focus~.name .last {
+			margin-left: -3px;
+			width: 11px;
+		}
+
+		/* sticky header */
+		.wrapper-sticky-header {
+			box-sizing: border-box;
+			left: 0;
+			padding: 0 var(--gutter);
+			position: fixed;
+			top: 0;
+			width: 100%;
+			z-index: var(--above);
+		}
+
+		.sticky-header {
+			color: black;
+			align-items: center;
+			background: white;
+			box-sizing: border-box;
+			box-shadow: var(--shadow);
+			border-bottom-left-radius: calc(var(--offset-of-sticky-header) / 2);
+			border-bottom-right-radius: var(--gutter);
+			display: flex;
+			margin: 0 auto;
+			max-width: var(--max-width-wrapper);
+			padding: var(--gutter);
+			position: relative;
+			width: 100%;
+		}
+
+		.sticky-header .name {
+			font-size: 20px;
+		}
+
+		.open-mobile-menu {
+			appearance: none;
+			background: white;
+			border: 0;
+			border-bottom-right-radius: var(--gutter);
+			border-top-left-radius: var(--gutter);
+			bottom: 0;
+			box-sizing: border-box;
+			box-shadow: var(--shadow-inset-top-left);
+			cursor: pointer;
+			font-family: var(--font-family-text);
+			font-size: 14px;
+			padding: calc(var(--gutter) / 2) var(--gutter) calc(var(--gutter) / 4);
+			position: absolute;
+			right: 0;
+		}
+
+		.open-mobile-menu:focus {
+			outline: none;
+			pointer-events: none;
+		}
+
+		.open-mobile-menu:focus::after {
+			border-bottom: solid calc(var(--gutter) + 5px) white;
+		}
+
+		.open-mobile-menu:focus::before {
+			opacity: 1;
+		}
+
+		.open-mobile-menu:focus~.main-navigation,
+		.main-navigation:focus,
+		.main-navigation:focus-within {
+			transform: translateY(100%);
+			box-shadow: var(--shadow);
+		}
+
+		.open-mobile-menu:focus span {
+			opacity: 0;
+		}
+
+		.open-mobile-menu span {
+			display: block;
+			position: relative;
+			opacity: 1;
+			transition: opacity 0.3s ease;
+			z-index: 1;
+		}
+
+		.open-mobile-menu::before {
+			content: attr(data-label);
+			display: block;
+			position: absolute;
+			left: 50%;
+			opacity: 0;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			transition: opacity 0.3s ease;
+			z-index: 1;
+		}
+
+		.open-mobile-menu::after {
+			border-bottom: solid 0 white;
+			content: "";
+			display: block;
+			height: 0;
+			position: absolute;
+			right: 0;
+			top: calc(100% - var(--gutter));
+			transition: border-bottom 0.1s ease;
+			transition-delay: 0.15s;
+			width: calc(100% - 3px);
+		}
+
+		.main-navigation {
+			background: white;
+			box-shadow: var(--shadow-opacity);
+			border-bottom-left-radius: var(--gutter);
+			border-bottom-right-radius: var(--gutter);
+			bottom: 0;
+			display: flex;
+			flex-direction: column;
+			font-size: 14px;
+			line-height: calc(var(--gutter) * 2);
+			padding: calc(var(--gutter) * 2) var(--gutter) calc(var(--gutter) / 4) calc(var(--gutter) * 2);
+			pointer-events: none;
+			position: absolute;
+			right: 0;
+			transform: translateY(0);
+			transition: transform 0.3s ease, box-shadow 0.15s ease;
+			transition-delay: 0.15s;
+			z-index: -1;
+		}
+
+		.main-navigation:focus {
+			outline: none;
+		}
+
+		.menu-label {
+			text-align: right;
+		}
+
+		.menu-label:before {
+			bottom: 0;
+			color: white;
+			content: "\261B";
+			font-size: 20px;
+			left: 1px;
+			position: absolute;
+			transition: color 0.3s ease, bottom 0.3s ease;
+		}
+
+		.nav-link {
+			color: gray;
+			pointer-events: all;
+			text-decoration: none;
+			transition: color 0.3s ease;
+		}
+
+		.nav-link:hover,
+		.nav-link:focus,
+		.nav-link:active {
+			color: black;
+		}
+
+		.nav-link:nth-child(1):hover~.menu-label:before,
+		.nav-link:nth-child(1):focus~.menu-label:before,
+		.nav-link:nth-child(1):active~.menu-label:before {
+			bottom: 83px;
+			color: inherit;
+		}
+
+		.nav-link:nth-child(2):hover~.menu-label:before,
+		.nav-link:nth-child(2):focus~.menu-label:before,
+		.nav-link:nth-child(2):active~.menu-label:before {
+			bottom: 63px;
+			color: inherit;
+		}
+
+		.nav-link:nth-child(3):hover~.menu-label:before,
+		.nav-link:nth-child(3):focus~.menu-label:before,
+		.nav-link:nth-child(3):active~.menu-label:before {
+			bottom: 43px;
+			color: inherit;
+		}
+
+		.nav-link:nth-child(4):hover~.menu-label:before,
+		.nav-link:nth-child(4):focus~.menu-label:before,
+		.nav-link:nth-child(4):active~.menu-label:before {
+			bottom: 23px;
+			color: inherit;
+		}
+
+		/* Anchor positions */
+		#anchor-go-to-top,
+		#form-contact {
+			left: 0;
+			position: absolute;
+			top: 0;
+		}
+
+		.section-anchor {
+			left: 0;
+			position: absolute;
+			top: calc(var(--anchor-position) * -1);
+		}
+
+		/*
+  Video
+  (height / width) * 100% =  height% (landscape)
+  (width / height) * 100% =  height% (portrait)
+  Ratio 16:9
+*/
+		.holder-video {
+			height: 0;
+			overflow: hidden;
+			padding-top: calc((9 / 16) * 100%);
+			position: relative;
+			width: 100%;
+		}
+
+		.video {
+			border: 0;
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+
+		/* Disclaimer and terms */
+
+		.disclaimer-and-terms {
+			align-items: center;
+			display: flex;
+			flex-direction: var(--disclaimer-and-terms-flex-direction);
+		}
+
+		.links-to-terms {
+			display: flex;
+			flex-direction: column;
+			flex-grow: 1;
+			line-height: var(--links-to-terms-line-height);
+			margin: 0;
+			text-align: var(--links-to-terms-text-align);
+		}
+
+		.disclaimer {
+			margin: var(--disclaimer-margin);
+			text-align: center;
+		}
+
+		.disclaimer svg {
+			display: inline-block;
+			height: var(--logo-size);
+			vertical-align: middle;
+			width: var(--logo-size);
+		}
+
+		/* Modal */
+
+		#close-modal {
+			position: fixed;
+			top: 0;
+		}
+
+		.modal {
+			background: rgba(0, 0, 0, 0);
+			-webkit-backdrop-filter: blur(20px);
+			backdrop-filter: blur(20px);
+			box-sizing: border-box;
+			height: 100%;
+			left: 0;
+			opacity: 0;
+			pointer-events: none;
+			position: fixed;
+			top: 0;
+			width: 100%;
+			transition: background .3s ease, opacity .3s ease;
+			z-index: var(--modal);
+		}
+
+		.modal:target {
+			background: rgba(0, 0, 0, 0.25);
+			opacity: 1;
+			pointer-events: all;
+		}
+
+		.modal-content {
+			background: var(--modal-background);
+			border-radius: var(--gutter);
+			box-shadow: var(--shadow);
+			box-sizing: border-box;
+			height: 90vh;
+			left: 50%;
+			line-height: 1.5em;
+			max-width: var(--modal-max-width);
+			padding: var(--gutter) var(--size-of-close-modal-button) var(--gutter) var(--gutter);
+			position: absolute;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			overflow-x: hidden;
+			overflow-y: auto;
+			width: 100%;
+		}
+
+		.close-modal {
+			align-items: center;
+			display: flex;
+			height: var(--size-of-close-modal-button);
+			justify-content: center;
+			line-height: 1em;
+			position: absolute;
+			right: calc((100vw - var(--modal-max-width)) / 2);
+			text-decoration: none;
+			top: 5vh;
+			width: var(--size-of-close-modal-button);
+			z-index: 1;
+		}
+
+		.modal-overlay {
+			display: block;
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+
+		/* Forms subscribe and contact */
+
+		#form-contact:target~.main .wrapper-forms {
+			transform: rotateX(180deg);
+		}
+
+		#form-contact:target~.main .wrapper-forms .form.contact {
+			backface-visibility: visible;
+			pointer-events: all;
+			transform: rotateX(-180deg);
+		}
+
+		#form-contact:target~.main .wrapper-forms .form.subcribe {
+			pointer-events: none;
+			transform: rotateX(-180deg);
+		}
+
+		.wrapper-forms {
+			background: rgba(var(--config-background-texture-color), 0.3);
+			transform: rotateX(0deg);
+			transition: transform 0.5s ease;
+		}
+
+		.holder-forms {
+			position: relative;
+		}
+
+		.form {
+			align-items: center;
+			box-sizing: border-box;
+			display: flex;
+			flex-direction: var(--forms-contact-and-submit-flex-direction);
+			font-size: 0;
+			padding: calc(var(--gutter) * 5) calc(var(--gutter) * 2);
+			width: 100%;
+		}
+
+		.form.contact {
+			backface-visibility: hidden;
+			left: 0;
+			position: absolute;
+			pointer-events: none;
+			transform: rotateX(180deg);
+			top: 0;
+		}
+
+		.form.subcribe {
+			backface-visibility: hidden;
+			transform: rotateX(0deg);
+		}
+
+		.fields {
+			border: 0.5em solid white;
+			border-right-color: inherit;
+			border-radius: 0;
+			box-sizing: border-box;
+			box-shadow: var(--shadow), var(--fix-autofill);
+			padding: 0 0.25em;
+			transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+			width: 100%;
+		}
+
+		.fields:hover,
+		.fields:focus {
+			border-left-color: inherit;
+			box-shadow: var(--shadow-hover), var(--fix-autofill);
+			outline: 0;
+		}
+
+		.fields:valid {
+			border-right-color: var(--success-color);
+			transition: border-color 0.3s ease-in-out;
+		}
+
+		::placeholder,
+		.fields {
+			font-size: var(--font-size-form);
+			line-height: var(--line-height-form);
+		}
+
+		::placeholder {
+			color: var(--placeholder-color);
+			opacity: 1;
+			/* Fix for Firefox */
+		}
+
+		.contact .email,
+		.subcribe .email {
+			flex-grow: 1;
+		}
+
+		.contact .submit,
+		.subcribe .submit {
+			appearance: none;
+			background: rgba(255, 255, 255, 0.25);
+			border: 0;
+			border-radius: var(--gutter);
+			box-shadow: var(--shadow);
+			cursor: pointer;
+			font-family: Arial, sans-serif;
+			font-size: var(--font-size-form);
+			font-weight: 700;
+			line-height: var(--line-height-form);
+			padding: 0.5em;
+			margin: var(--forms-contact-and-submit-button-margin);
+			transition: background 0.3s ease, box-shadow 0.3s ease;
+			white-space: nowrap;
+			width: var(--forms-contact-and-submit-button-width);
+		}
+
+		.contact .submit:focus,
+		.subcribe .submit:focus {
+			outline: none;
+		}
+
+		.subcribe .submit span {
+			display: inline-flex;
+			overflow: hidden;
+			transition: width 0.3s ease;
+			width: 0;
+		}
+
+		.subcribe:valid .submit span {
+			width: 75px;
+		}
+
+		.contact:valid .submit {
+			background: rgba(255, 255, 0, 1);
+		}
+
+		.subcribe:valid .submit {
+			background: rgba(0, 255, 0, 1);
+		}
+
+		.contact:valid .submit,
+		.subcribe:valid .submit {
+			animation-name: pulse-outline;
+			animation-duration: 0.7s;
+			animation-iteration-count: 3;
+			animation-timing-function: cubic-bezier(0.46, 0.09, 0.55, 1.51);
+		}
+
+		.contact:valid .submit:hover,
+		.contact:valid .submit:focus,
+		.subcribe:valid .submit:hover,
+		.subcribe:valid .submit:focus {
+			background: white;
+			box-shadow: var(--shadow-hover);
+		}
+
+		@keyframes pulse-outline {
+			0% {
+				outline: 1px solid rgba(255, 255, 255, 1);
+				outline-offset: 0;
+			}
+
+			100% {
+				outline: 1px solid rgba(255, 255, 255, 0);
+				outline-offset: calc(var(--gutter) * 1.5);
+			}
+		}
+
+		/* Cards Languages */
+
+		.holder-cards-list {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.holder-cards-list>p {
+			cursor: pointer;
+			margin-bottom: 0;
+		}
+
+		.holder-cards-list>p:first-child {
+			margin-top: calc(var(--gutter) * 2);
+		}
+
+		.html-css:hover~.cards.features:before {
+			opacity: 1;
+		}
+
+		.html-css:hover~.cards.features .card .holder-icon.red:after {
+			box-shadow: 0 0 0 0 rgba(255, 0, 0, 1) inset;
+		}
+
+		.html-css:hover~.cards.features .card .holder-icon.green:after {
+			box-shadow: 0 0 0 0 rgba(0, 255, 0, 1) inset;
+		}
+
+		.html-css-javascript:hover~.cards.features:after {
+			opacity: 1;
+		}
+
+		.html-css-javascript:hover~.cards.features .card .holder-icon.red:after {
+			box-shadow: 0 0 0 0 rgba(255, 0, 0, 1) inset;
+		}
+
+		.html-css-javascript:hover~.cards.features .card .holder-icon.green:after {
+			box-shadow: 0 0 0 0 rgba(0, 255, 0, 1) inset;
+		}
+
+		.html-css-javascript:hover~.cards.features .card .holder-icon.blue:after {
+			box-shadow: 0 0 0 0 rgba(0, 0, 255, 1) inset;
+		}
+
+		.cards {
+			display: grid;
+			grid-column-gap: var(--gutter);
+			grid-row-gap: var(--gutter);
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			/* :( Variables don't work inside minmax() */
+			list-style: none;
+			margin-bottom: 0;
+			margin-top: 0;
+			padding: 0;
+		}
+
+		.cards.bleed {
+			box-sizing: border-box;
+			padding-left: calc(var(--gutter) * 2);
+			padding-right: calc(var(--gutter) * 2);
+		}
+
+		.cards.courses {
+			grid-template-columns: var(--cards-courses-grid-template-columns);
+		}
+
+		.cards.features {
+			grid-row-gap: var(--card-icon-top-gap);
+			order: -1;
+			padding: var(--card-icon-top-gap) 0 0;
+			position: relative;
+		}
+
+		.cards.features:before,
+		.cards.features:after {
+			box-sizing: border-box;
+			content: "";
+			display: block;
+			height: calc(100% + var(--gutter));
+			left: calc(var(--gutter) * -0.5);
+			position: absolute;
+			pointer-events: none;
+			opacity: 0;
+			top: 0;
+			transition: opacity 0.3s ease;
+		}
+
+		.cards.features:after {
+			background: url('https://adrianoenache.dev.br/fcc-assets/animate-border-rgb.svg');
+			width: calc(100% + var(--gutter));
+		}
+
+		.cards.features:before {
+			background: url('https://adrianoenache.dev.br/fcc-assets/animate-border-rg.svg');
+			width: calc((100% / 3) * 2 + var(--gutter) * 0.75);
+		}
+
+		.card {
+			background: white;
+			border-radius: var(--gutter);
+			box-shadow: var(--shadow);
+			color: var(--main-text-color-tablet);
+			padding: var(--gutter) var(--gutter);
+			position: relative;
+		}
+
+		.card:hover .animate-border {
+			opacity: 1;
+		}
+
+		.card .animate-border {
+			box-sizing: border-box;
+			display: block;
+			height: calc(100% + var(--gutter));
+			left: calc(var(--gutter) * -0.5);
+			opacity: 0;
+			position: absolute;
+			top: calc(var(--gutter) * -0.5);
+			width: calc(100% + var(--gutter));
+			transition: opacity 0.3s ease;
+		}
+
+		.features .card .animate-border {
+			height: calc(100% + var(--card-icon-top-gap));
+			top: calc((var(--card-icon-top-gap) - var(--gutter) * 0.5) * -1);
+		}
+
+		.courses .card {
+			padding-bottom: calc(var(--gutter) * 6);
+		}
+
+		.courses .card p:last-child {
+			bottom: var(--gutter);
+			left: var(--gutter);
+			margin-top: 0;
+			position: absolute;
+			right: var(--gutter);
+		}
+
+		.card h3 {
+			font-size: 30px;
+			text-align: center;
+			margin: 0.5em 0;
+		}
+
+		.courses .card h3 {
+			line-height: var(--course-card-h3-line-height);
+			min-height: var(--course-card-h3-min-height);
+		}
+
+		.card p.highlight {
+			color: red;
+			font-weight: 700;
+			text-align: center;
+		}
+
+		.card p.description,
+		.card p:last-child {
+			margin-bottom: 0;
+		}
+
+		.card .call-to-action {
+			background: red;
+			border-radius: var(--gutter);
+			box-shadow: var(--shadow);
+			box-sizing: border-box;
+			color: white;
+			display: block;
+			margin: 0 auto;
+			max-width: 300px;
+			padding: 0.5em 1em;
+			text-align: center;
+			text-decoration: none;
+			transition: box-shadow 0.3s ease;
+			width: 100%;
+		}
+
+		.card .call-to-action:hover {
+			box-shadow: var(--shadow-hover);
+		}
+
+		.holder-icon {
+			border-radius: 50%;
+			box-shadow: var(--shadow);
+			font-size: 0;
+			height: var(--card-icon-size);
+			margin: calc(var(--card-icon-top-gap) * -1) auto 0;
+			position: relative;
+			width: var(--card-icon-size);
+		}
+
+		.holder-icon:after {
+			border-radius: 50%;
+			content: "";
+			display: block;
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			transition: box-shadow 0.5s ease;
+			width: 100%;
+		}
+
+		.holder-icon.red:after {
+			box-shadow: 0 0 0 64px rgba(255, 0, 0, 1) inset;
+		}
+
+		.card:hover .holder-icon.red:after {
+			box-shadow: 0 0 0 0 rgba(255, 0, 0, 1) inset;
+		}
+
+		.holder-icon.green:after {
+			box-shadow: 0 0 0 64px rgba(0, 255, 0, 1) inset;
+		}
+
+		.card:hover .holder-icon.green:after {
+			box-shadow: 0 0 0 0 rgba(0, 255, 0, 1) inset;
+		}
+
+		.holder-icon.blue:after {
+			box-shadow: 0 0 0 64px rgba(0, 0, 255, 1) inset;
+		}
+
+		.card:hover .holder-icon.blue:after {
+			box-shadow: 0 0 0 0 rgba(0, 0, 255, 1) inset;
+		}
+
+		/*  */
+
+		.fcc {
+			background-color: var(--main-background-color);
+			background-image: var(--main-background-texture-vertical);
+			display: flex;
+			justify-content: center;
+			min-width: 320px;
+			padding: 0 10px;
+			position: relative;
+			scroll-behavior: smooth;
+		}
+
+		.fcc::before,
+		.fcc::after {
+			content: "";
+			display: block;
+			height: 100vh;
+			left: 0;
+			position: fixed;
+			pointer-events: none;
+			top: 0;
+			width: 100vw;
+			z-index: var(--behind);
+		}
+
+		.fcc::before {
+			background-image: var(--main-background-texture-horizontal);
+		}
+
+		.fcc::after {
+			background-image: var(--main-background-linear-gradient);
+		}
+
+		.shadown {
+			box-shadow: var(--shadow);
+			transition: box-shadow 0.3s ease-in-out;
+		}
+
+		.reset-list {
+			list-style: none;
+			padding: 0;
+		}
+
+		.shadown:hover {
+			box-shadow: var(--shadow-hover);
+		}
+
+		.wrapper-lists {
+			display: flex;
+			flex-direction: var(--list-wrapper-direction);
+			justify-content: space-between;
+		}
+
+		.contact-links {
+			display: flex;
+			justify-content: space-around;
+			flex-wrap: wrap;
+			margin: calc(var(--gutter) * 2) auto 0;
+		}
+
+		.contact-links li {
+			font-size: var(--size-of-contact-buttons);
+			margin: var(--margin-of-contact-buttons);
+		}
+
+		.contact-links li a {
+			align-items: center;
+			border-radius: 0.25em;
+			background: white;
+			color: black;
+			display: flex;
+			justify-content: center;
+			height: 2em;
+			width: 2em;
+			text-decoration: none;
+			transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+		}
+
+		.contact-links li a:visited {
+			color: purple;
+		}
+
+		.contact-links li a:hover,
+		.contact-links li a:focus {
+			color: red;
+		}
+
+		/* Font from icomoon.io the CSS have some little of customizations */
+
+		/* Using font woff converted to base64 */
+		@font-face {
+			font-family: 'fcc-icons';
+			src: url('data:font/woff;charset=utf-8;base64,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') format('woff');
+			font-weight: normal;
+			font-style: normal;
+			font-display: block;
+		}
+
+		/* It was added ::before */
+		[class^="icon-"]::before,
+		[class*=" icon-"]::before {
+			/* use !important to prevent issues with browser extensions that change fonts */
+			font-family: 'fcc-icons' !important;
+			speak: never;
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
+
+			/* Better Font Rendering =========== */
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+
+		.icon-camera::before {
+			content: "\e90f";
+			margin-right: 0.25em;
+			/* This is custom */
+		}
+
+		.icon-link::before {
+			content: "\e9cb";
+		}
+
+		.icon-facebook::before {
+			content: "\ea90";
+		}
+
+		.icon-instagram::before {
+			content: "\ea92";
+		}
+
+		.icon-twitter::before {
+			content: "\ea96";
+		}
+
+		.icon-youtube::before {
+			content: "\ea9d";
+		}
+
+		.icon-github::before {
+			content: "\eab0";
+		}
+
+		.icon-reddit::before {
+			content: "\eac6";
+		}
+
+		.icon-linkedin2::before {
+			content: "\eaca";
+		}
+
+		.icon-codepen::before {
+			content: "\eae8";
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="wrapper-sticky-header">
+		<header class="sticky-header" id="header">
+			<a class="logo-link" href="#anchor-go-to-top" tabindex="1">
+				<img class="header-img" id="header-img" src='https://adrianoenache.dev.br/logo-ae-adrianoenache.svg'
+					alt="Logo - Adriano Enache">
+				<img class="avatar" src="https://adrianoenache.dev.br/avatar-adrianoenache-67x50.jpg"
+					alt="Photo - Adriano Enache">
+			</a>
+			<span class="name"><span class="first">Adriano</span><span class="last">Enache</span></span>
+			<button class="open-mobile-menu" type="button" data-label="&#88;" tabindex="2"><span>Menu</span></button>
+			<nav class="main-navigation" id="nav-bar" tabindex="2">
+				<a href="#section-cards" class="nav-link" tabindex="3">Section cards</a>
+				<a href="#section-video" class="nav-link" tabindex="4">Section video</a>
+				<a href="#section-actions" class="nav-link" tabindex="5">Section actions</a>
+				<a href="#form-contact" class="nav-link" tabindex="6">Contact</a>
+				<span class="menu-label">Menu</span>
+			</nav>
+		</header>
+	</div>
+	<a id="anchor-go-to-top"></a>
+	<a class="go-to-top" href="#anchor-go-to-top">&#8613;</a>
+	<a id="form-contact"></a>
+	<main class="main" id="main">
+		<header>
+			<h1 id="title">
+				Lorem ipsum dolor sit amet
+			</h1>
+			<p id="description">
+				Special thanks to <a href="https://www.iconfinder.com/Erik_Rgnr" target="_blank" rel="noopener">Erik
+					Ragnar Eliasson</a> for these language <a href="https://www.iconfinder.com/iconsets/designer-skills"
+					target="_blank" rel="noopener">icons</a>, and to <a href="https://jakearchibald.github.io/svgomg/"
+					target="_blank" rel="noopener">SVGOMG</a> that reduced the size of them by half. <a
+					href="https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-product-landing-page"
+					target="_blank" rel="noopener">About this page</a>.
+			</p>
+			<div class="wrapper-forms bleed less-the-content">
+				<div class="holder-forms">
+					<form class="form contact" id="form" action="https://www.freecodecamp.com/email-submit" method="post">
+						<input class="fields email" id="email" type="email" name="email" placeholder="Type your email to"
+							maxlength="140" accesskey="e" required>
+						<input class="submit" id="submit" type="submit" value="Contact with me" />
+					</form>
+					<form class="form subcribe" id="subcribe" action="https://www.freecodecamp.com/email-submit" method="post">
+						<input class="fields email" id="subcribe-email" type="email" name="email" placeholder="Type your email to"
+							maxlength="140" accesskey="e" required>
+						<button class="submit" type="submit">Subscribe<span>, please!!!</span></button>
+					</form>
+				</div>
+			</div>
+		</header>
+		<hr class="top">
+		<section>
+			<a class="section-anchor" id="section-cards"></a>
+			<h2>Section cards</h2>
+			<div class="holder-cards-list">
+				<p class="show-notebook-plus html-css">
+					Everything you need to build a cool page is <mark>&nbsp;two things&nbsp;</mark>.
+				</p>
+				<p class="show-notebook-plus html-css-javascript">
+					But with <mark>&nbsp;these three&nbsp;</mark> it can be even better.
+				</p>
+				<ul class="cards features">
+					<li class="card">
+						<svg class="animate-border" xmlns="http://www.w3.org/2000/svg">
+							<rect width="100%" height="100%" />
+						</svg>
+						<div class="holder-icon red">
+							<svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="64" cy="64" r="64" fill="#f0652a" />
+								<path
+									d="M40 39l5 49 19 5 19-5 5-49H40zm38 16H56v6h22l-2 18-12 4-12-4-1-9h6v5l7 1 6-1 1-8H51l-2-18h30l-1 6z"
+									fill="#fff" />
+							</svg>
+						</div>
+						<h3>&lt;html&gt;</h3>
+						<p>
+							Hypertext markup language <abbr title="Hypertext Markup Language">HTML</abbr> is the major
+							markup language used to display Web pages on the Internet. In other words, Web pages are
+							composed of HTML, which is used to display text, images, or other resources through a Web
+							browser.
+						</p>
+					</li>
+					<li class="card">
+						<svg class="animate-border" xmlns="http://www.w3.org/2000/svg">
+							<rect width="100%" height="100%" />
+						</svg>
+						<div class="holder-icon green">
+							<svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="64" cy="64" r="64" fill="#33a9dc" />
+								<path d="M90 42l-8 40-24 8-21-8 2-11h9l-1 5 13 5 14-5 2-10H40l2-9h36l1-6H43l2-9h45z" fill="#fff" />
+							</svg>
+						</div>
+						<h3>.css{}</h3>
+						<p>
+							Cascading Style Sheets <abbr title="Cascading Style Sheets">CSS</abbr> is a standard (or
+							language) that describes the formatting of markup language pages. It enables developers to
+							separate content and visual elements for greater page control and flexibility.
+						</p>
+					</li>
+					<li class="card">
+						<svg class="animate-border" xmlns="http://www.w3.org/2000/svg">
+							<rect width="100%" height="100%" />
+						</svg>
+						<div class="holder-icon blue">
+							<svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="64" cy="64" r="64" fill="#f0db4f" />
+								<g fill="#323330">
+									<path
+										d="M48 45h9v24c0 11-5 15-14 15l-6-1 1-7 4 1c4 0 6-2 6-8V45zM65 74c2 2 6 3 9 3 5 0 7-2 7-4 0-3-2-4-7-6-6-2-11-6-11-11 0-7 6-12 15-12l10 2-2 7-8-2c-4 0-6 2-6 4s3 4 8 5c6 3 10 7 10 12 0 7-5 12-16 12l-11-2 2-8z" />
+								</g>
+							</svg>
+						</div>
+						<h3>javaScript();</h3>
+						<p>
+							Javascript <abbr title="Javascript">JS</abbr> is a scripting interpreted language, that
+							means not compiled, commonly used to enhance HTML markup. With it the web pages can be more
+							interactive and dynamic, allowing the pages to react to events, create cookies, and much
+							more.
+						</p>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<hr>
+		<section>
+			<a class="section-anchor" id="section-video"></a>
+			<h2>Section video</h2>
+			<div class="holder-video">
+				<iframe class="video" id=video src="https://www.youtube.com/embed/8hly31xKli0" title="YouTube video player"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen></iframe>
+			</div>
+		</section>
+		<hr>
+		<section>
+			<a class="section-anchor" id="section-actions"></a>
+			<h2>Section actions</h2>
+			<ul class="cards courses bleed">
+				<li class="card">
+					<svg class="animate-border" xmlns="http://www.w3.org/2000/svg">
+						<rect width="100%" height="100%" />
+					</svg>
+					<h3>Responsive Web Design</h3>
+					<p class="highlight">$? It's free \o/</p>
+					<p class="description">
+						In this Responsive Web Design Certification, you'll learn the languages that developers use to
+						build webpages: HTML (Hypertext Markup Language) for content, and CSS (Cascading Style Sheets)
+						for design.
+					</p>
+					<p>
+						<a class="call-to-action" href="https://www.freecodecamp.org/learn/responsive-web-design/" target="_blank"
+							rel="noopener">Go to study!</a>
+					</p>
+				</li>
+				<li class="card">
+					<svg class="animate-border" xmlns="http://www.w3.org/2000/svg">
+						<rect width="100%" height="100%" />
+					</svg>
+					<h3>JavaScript Algorithms and Data Structures</h3>
+					<p class="highlight">$? It's free \o/</p>
+					<p class="description">
+						In the JavaScript Algorithm and Data Structures Certification, you'll learn the fundamentals of
+						JavaScript including variables, arrays, objects, loops, and functions.
+					</p>
+					<p>
+						<a class="call-to-action"
+							href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/" target="_blank"
+							rel="noopener">Go to study!</a>
+					</p>
+				</li>
+				<li class="card">
+					<svg class="animate-border" xmlns="http://www.w3.org/2000/svg">
+						<rect width="100%" height="100%" />
+					</svg>
+					<h3>Front End Development Libraries</h3>
+					<p class="highlight">$? It's free \o/</p>
+					<p class="description">
+						Now that you're familiar with HTML, CSS, and JavaScript, level up your skills by learning some
+						of the most popular front end libraries in the industry.
+					</p>
+					<p>
+						<a class="call-to-action" href="https://www.freecodecamp.org/learn/front-end-libraries/" target="_blank"
+							rel="noopener">Go to study!</a>
+					</p>
+				</li>
+				<li class="card">
+					<svg class="animate-border" xmlns="http://www.w3.org/2000/svg">
+						<rect width="100%" height="100%" />
+					</svg>
+					<h3>Data Visualization</h3>
+					<p class="highlight">$? It's free \o/</p>
+					<p class="description">
+						Data is all around us, but it doesn't mean much without shape or context. In the Data
+						Visualization Certification, you'll build charts, graphs, and maps to present different types of
+						data with the D3.js library.
+					</p>
+					<p>
+						<a class="call-to-action" href="https://www.freecodecamp.org/learn/data-visualization/" target="_blank"
+							rel="noopener">Go to study!</a>
+					</p>
+				</li>
+				<li class="card">
+					<svg class="animate-border" xmlns="http://www.w3.org/2000/svg">
+						<rect width="100%" height="100%" />
+					</svg>
+					<h3>APIs and Microservices</h3>
+					<p class="highlight">$? It's free \o/</p>
+					<p class="description">
+						Until this point, you've only used JavaScript on the front end to add interactivity to a page,
+						solve algorithm challenges, or build an SPA. But JavaScript can also be used on the back end, or
+						server, to build entire web applications.
+					</p>
+					<p>
+						<a class="call-to-action" href="https://www.freecodecamp.org/learn/apis-and-microservices/" target="_blank"
+							rel="noopener">Go to study!</a>
+					</p>
+				</li>
+				<li class="card">
+					<svg class="animate-border" xmlns="http://www.w3.org/2000/svg">
+						<rect width="100%" height="100%" />
+					</svg>
+					<h3>Quality Assurance</h3>
+					<p class="highlight">$? It's free \o/</p>
+					<p class="description">
+						As your programs or web applications become more complex, you'll want to test them to make sure
+						that new changes don't break their original functionality.
+					</p>
+					<p>
+						<a class="call-to-action" href="https://www.freecodecamp.org/learn/quality-assurance/" target="_blank"
+							rel="noopener">Go to study!</a>
+					</p>
+				</li>
+				<li class="card">
+					<svg class="animate-border" xmlns="http://www.w3.org/2000/svg">
+						<rect width="100%" height="100%" />
+					</svg>
+					<h3>Scientific Computing with Python</h3>
+					<p class="highlight">$? It's free \o/</p>
+					<p class="description">
+						Python is one of the most popular, flexible programming languages today. You can use it for
+						everything from basic scripting to machine learning.
+					</p>
+					<p>
+						<a class="call-to-action" href="https://www.freecodecamp.org/learn/scientific-computing-with-python/"
+							target="_blank" rel="noopener">Go to study!</a>
+					</p>
+				</li>
+				<li class="card">
+					<svg class="animate-border" xmlns="http://www.w3.org/2000/svg">
+						<rect width="100%" height="100%" />
+					</svg>
+					<h3>Data Analysis with Python</h3>
+					<p class="highlight">$? It's free \o/</p>
+					<p class="description">
+						Data Analysis has been around for a long time. But up until a few years ago, developers
+						practiced it using expensive, closed-source tools like Tableau. But recently, Python, SQL, and
+						other open libraries have changed Data Analysis forever.
+					</p>
+					<p>
+						<a class="call-to-action" href="https://www.freecodecamp.org/learn/data-analysis-with-python/"
+							target="_blank" rel="noopener">Go to study!</a>
+					</p>
+				</li>
+				<li class="card">
+					<svg class="animate-border" xmlns="http://www.w3.org/2000/svg">
+						<rect width="100%" height="100%" />
+					</svg>
+					<h3>Information Security</h3>
+					<p class="highlight">$? It's free \o/</p>
+					<p class="description">
+						With everything we do online, there's a vast amount of sensitive information at risk: email
+						addresses, passwords, phone numbers, and much more.
+					</p>
+					<p>
+						<a class="call-to-action" href="https://www.freecodecamp.org/learn/information-security/" target="_blank"
+							rel="noopener">Go to study!</a>
+					</p>
+				</li>
+				<li class="card">
+					<svg class="animate-border" xmlns="http://www.w3.org/2000/svg">
+						<rect width="100%" height="100%" />
+					</svg>
+					<h3>Machine Learning with Python</h3>
+					<p class="highlight">$? It's free \o/</p>
+					<p class="description">
+						Machine learning has many practical applications that you can use in your projects or on the
+						job.
+					</p>
+					<p>
+						<a class="call-to-action" href="https://www.freecodecamp.org/learn/machine-learning-with-python/"
+							target="_blank" rel="noopener">Go to study!</a>
+					</p>
+				</li>
+			</ul>
+		</section>
+		<hr class="bottom">
+	</main>
+	<footer>
+		<ul class="contact-links reset-list">
+			<li>
+				<a class="icon-link shadown" href="https://adrianoenache.dev.br" target="_blank" rel="noopener">Link to my
+					website adrianoenache.dev.br</a>
+			</li>
+			<li>
+				<a class="icon-link shadown" href="https://www.freecodecamp.org/adrianoenache" target="_blank"
+					rel="noopener">Link to my profile in the freecodecamp</a>
+			</li>
+			<li>
+				<a class="icon-codepen shadown" href="https://codepen.io/adrianoenache" target="_blank" rel="noopener">Link to
+					my profile in the codepen</a>
+			</li>
+			<li>
+				<a class="icon-github shadown" href="https://github.com/adrianoenache" target="_blank" rel="noopener">Link to my
+					profile in the github</a>
+			</li>
+			<li>
+				<a class="icon-facebook shadown" href="https://www.facebook.com/adrianoenache" target="_blank"
+					rel="noopener">Link to my profile in the facebook</a>
+			</li>
+			<li>
+				<a class="icon-linkedin2 shadown" href="https://www.linkedin.com/in/adrianoenache" target="_blank"
+					rel="noopener">Link to my profile in the linkedin</a>
+			</li>
+			<li>
+				<a class="icon-reddit shadown" href="https://www.reddit.com/user/adrianoenache" target="_blank"
+					rel="noopener">Link to my profile in the reddit</a>
+			</li>
+			<li>
+				<a class="icon-twitter shadown" href="https://twitter.com/AdrianoEnache" target="_blank" rel="noopener">Link to
+					my profile in the twitter</a>
+			</li>
+			<li>
+				<a class="icon-instagram shadown" href="https://www.instagram.com/adrianoenache" target="_blank"
+					rel="noopener">Link to my profile in the instagram</a>
+			</li>
+			<li>
+				<a class="icon-youtube shadown" href="https://www.youtube.com/channel/UC53UwM0XGPL0WdC5q3XExPA" target="_blank"
+					rel="noopener">Link to my profile in the youtube</a>
+			</li>
+		</ul>
+	</footer>
+	<a id="close-modal"></a>
+	<section class="modal" id="modal-politic-of-privacy">
+		<a class="modal-overlay" href="#close-modal"></a>
+		<a href="#close-modal" class="close-modal">&#10008;</a>
+		<div class="modal-content">
+			<h2>Politic of privacy</h2>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+				dolore magna aliqua. Amet nulla facilisi morbi tempus iaculis urna. Facilisis volutpat est velit egestas
+				dui id ornare. Sed blandit libero volutpat sed cras. Fames ac turpis egestas maecenas pharetra convallis
+				posuere. Sodales ut eu sem integer vitae justo eget. Dolor purus non enim praesent elementum. Eget sit
+				amet tellus cras adipiscing enim eu. In dictum non consectetur a erat nam. Quam elementum pulvinar etiam
+				non. Ut tortor pretium viverra suspendisse potenti nullam. Eget nunc scelerisque viverra mauris in.
+				Dictum non consectetur a erat. Eu non diam phasellus vestibulum. Lorem sed risus ultricies tristique
+				nulla aliquet enim. Orci a scelerisque purus semper eget duis at tellus. Gravida quis blandit turpis
+				cursus in hac habitasse platea. Gravida neque convallis a cras semper auctor neque. Elementum facilisis
+				leo vel fringilla est ullamcorper eget nulla.
+			</p>
+			<p>
+				Lobortis scelerisque fermentum dui faucibus in ornare quam viverra orci. Consectetur a erat nam at
+				lectus. Varius morbi enim nunc faucibus a. Vitae aliquet nec ullamcorper sit amet. Nisl vel pretium
+				lectus quam id leo in vitae turpis. Nunc vel risus commodo viverra maecenas accumsan lacus. Arcu odio ut
+				sem nulla pharetra diam sit amet. Ac turpis egestas maecenas pharetra convallis posuere morbi leo.
+				Scelerisque viverra mauris in aliquam. Id interdum velit laoreet id donec. Metus aliquam eleifend mi in
+				nulla posuere sollicitudin aliquam ultrices. Quis viverra nibh cras pulvinar mattis nunc. Neque viverra
+				justo nec ultrices dui sapien eget mi proin. Blandit cursus risus at ultrices mi tempus. Fermentum et
+				sollicitudin ac orci phasellus. Laoreet id donec ultrices tincidunt arcu non sodales.
+			</p>
+			<p>
+				Diam in arcu cursus euismod quis viverra nibh. Vel pretium lectus quam id leo in vitae turpis. Et tortor
+				consequat id porta nibh venenatis cras. Elit sed vulputate mi sit amet mauris commodo. Vitae congue eu
+				consequat ac felis. Nibh cras pulvinar mattis nunc sed blandit libero volutpat sed. Lacinia at quis
+				risus sed vulputate. Faucibus in ornare quam viverra orci. Augue interdum velit euismod in pellentesque
+				massa. Mauris augue neque gravida in.
+			</p>
+			<p>
+				Mauris ultrices eros in cursus turpis massa tincidunt. Placerat orci nulla pellentesque dignissim. Ut
+				aliquam purus sit amet luctus. Vel pretium lectus quam id leo in vitae turpis. Rhoncus est pellentesque
+				elit ullamcorper dignissim cras tincidunt lobortis feugiat. Nunc pulvinar sapien et ligula. Non arcu
+				risus quis varius quam quisque id diam vel. In arcu cursus euismod quis viverra nibh cras pulvinar
+				mattis. Quis eleifend quam adipiscing vitae proin sagittis nisl. Mauris augue neque gravida in fermentum
+				et sollicitudin ac orci.
+			</p>
+			<p>
+				Praesent elementum facilisis leo vel fringilla est ullamcorper eget nulla. Convallis convallis tellus id
+				interdum velit. Turpis massa sed elementum tempus egestas sed sed risus. Venenatis lectus magna
+				fringilla urna porttitor rhoncus. Dictumst vestibulum rhoncus est pellentesque elit ullamcorper
+				dignissim cras tincidunt. Purus non enim praesent elementum facilisis leo vel fringilla est. Facilisi
+				morbi tempus iaculis urna id volutpat lacus laoreet non. Est ante in nibh mauris cursus mattis. At augue
+				eget arcu dictum. Tempor commodo ullamcorper a lacus vestibulum sed arcu non odio.
+			</p>
+		</div>
+	</section>
+	<section class="modal" id="modal-terms-of-use">
+		<a class="modal-overlay" href="#close-modal"></a>
+		<a href="#close-modal" class="close-modal">&#10008;</a>
+		<div class="modal-content">
+			<h2>Terms of use</h2>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+				dolore magna aliqua. Amet nulla facilisi morbi tempus iaculis urna. Facilisis volutpat est velit egestas
+				dui id ornare. Sed blandit libero volutpat sed cras. Fames ac turpis egestas maecenas pharetra convallis
+				posuere. Sodales ut eu sem integer vitae justo eget. Dolor purus non enim praesent elementum. Eget sit
+				amet tellus cras adipiscing enim eu. In dictum non consectetur a erat nam. Quam elementum pulvinar etiam
+				non. Ut tortor pretium viverra suspendisse potenti nullam. Eget nunc scelerisque viverra mauris in.
+				Dictum non consectetur a erat. Eu non diam phasellus vestibulum. Lorem sed risus ultricies tristique
+				nulla aliquet enim. Orci a scelerisque purus semper eget duis at tellus. Gravida quis blandit turpis
+				cursus in hac habitasse platea. Gravida neque convallis a cras semper auctor neque. Elementum facilisis
+				leo vel fringilla est ullamcorper eget nulla.
+			</p>
+			<p>
+				Lobortis scelerisque fermentum dui faucibus in ornare quam viverra orci. Consectetur a erat nam at
+				lectus. Varius morbi enim nunc faucibus a. Vitae aliquet nec ullamcorper sit amet. Nisl vel pretium
+				lectus quam id leo in vitae turpis. Nunc vel risus commodo viverra maecenas accumsan lacus. Arcu odio ut
+				sem nulla pharetra diam sit amet. Ac turpis egestas maecenas pharetra convallis posuere morbi leo.
+				Scelerisque viverra mauris in aliquam. Id interdum velit laoreet id donec. Metus aliquam eleifend mi in
+				nulla posuere sollicitudin aliquam ultrices. Quis viverra nibh cras pulvinar mattis nunc. Neque viverra
+				justo nec ultrices dui sapien eget mi proin. Blandit cursus risus at ultrices mi tempus. Fermentum et
+				sollicitudin ac orci phasellus. Laoreet id donec ultrices tincidunt arcu non sodales.
+			</p>
+			<p>
+				Diam in arcu cursus euismod quis viverra nibh. Vel pretium lectus quam id leo in vitae turpis. Et tortor
+				consequat id porta nibh venenatis cras. Elit sed vulputate mi sit amet mauris commodo. Vitae congue eu
+				consequat ac felis. Nibh cras pulvinar mattis nunc sed blandit libero volutpat sed. Lacinia at quis
+				risus sed vulputate. Faucibus in ornare quam viverra orci. Augue interdum velit euismod in pellentesque
+				massa. Mauris augue neque gravida in.
+			</p>
+			<p>
+				Mauris ultrices eros in cursus turpis massa tincidunt. Placerat orci nulla pellentesque dignissim. Ut
+				aliquam purus sit amet luctus. Vel pretium lectus quam id leo in vitae turpis. Rhoncus est pellentesque
+				elit ullamcorper dignissim cras tincidunt lobortis feugiat. Nunc pulvinar sapien et ligula. Non arcu
+				risus quis varius quam quisque id diam vel. In arcu cursus euismod quis viverra nibh cras pulvinar
+				mattis. Quis eleifend quam adipiscing vitae proin sagittis nisl. Mauris augue neque gravida in fermentum
+				et sollicitudin ac orci.
+			</p>
+			<p>
+				Praesent elementum facilisis leo vel fringilla est ullamcorper eget nulla. Convallis convallis tellus id
+				interdum velit. Turpis massa sed elementum tempus egestas sed sed risus. Venenatis lectus magna
+				fringilla urna porttitor rhoncus. Dictumst vestibulum rhoncus est pellentesque elit ullamcorper
+				dignissim cras tincidunt. Purus non enim praesent elementum facilisis leo vel fringilla est. Facilisi
+				morbi tempus iaculis urna id volutpat lacus laoreet non. Est ante in nibh mauris cursus mattis. At augue
+				eget arcu dictum. Tempor commodo ullamcorper a lacus vestibulum sed arcu non odio.
+			</p>
+		</div>
+	</section>
+
+	<!-- Scripts -->
+	<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>

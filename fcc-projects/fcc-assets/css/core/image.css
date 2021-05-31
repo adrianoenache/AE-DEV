@@ -1,0 +1,17 @@
+figcaption {
+  font-family: var(--font-family-detail);
+  font-weight: 500;
+  line-height: 1.5em;
+}
+
+picture {
+  display: block;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}

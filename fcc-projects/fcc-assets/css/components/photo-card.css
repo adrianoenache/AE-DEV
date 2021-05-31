@@ -1,0 +1,17 @@
+.photo-card {
+  --figure-color-background: var(--brand-color-2-hex);
+  --figcaption-color: var(--brand-color-6-hex);
+  /* Rules */
+  background: var(--figure-color-background);
+  border: 10px solid var(--figure-color-background);
+  margin: 1em 0;
+}
+
+.photo-card figcaption {
+  color: var(--figcaption-color);
+  margin-top: 10px;
+}
+
+.photo-card .detail {
+  font-size: 0.75em;
+}
