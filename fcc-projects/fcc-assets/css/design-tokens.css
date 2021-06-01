@@ -35,6 +35,13 @@
   --main-font-size: 16px;
   --gutter: 10px;
   --column: 70px;
+  /* Font sizes */
+  --font-size-xs: calc(var(--main-font-size) * 0.75);
+  --font-size-s: calc(var(--main-font-size) * 1);
+  --font-size-m: calc(var(--main-font-size) * 1.25);
+  --font-size-l: calc(var(--main-font-size) * 1.5);
+  --font-size-xl: calc(var(--main-font-size) * 2);
+  --font-size-xxl: calc(var(--main-font-size) * 4);
   /* Space sizes */
   --space-size-xxs: calc(var(--gutter) * 0.5);
   --space-size-xs: calc(var(--gutter) * 1);
@@ -56,4 +63,13 @@
   --sticky-header-height: 70px;
   /* mover para component anchor */
   --anchor-position: calc(var(--sticky-header-height) + var(--gutter));
+}
+
+@media only screen and (max-width: 425px) {
+  :root {
+    /* Font sizes scaled down for mobile */
+    --font-size-l: calc((var(--main-font-size) * 1.5) * 0.9);
+    --font-size-xl: calc((var(--main-font-size) * 2) * 0.8);
+    --font-size-xxl: calc((var(--main-font-size) * 4) * 0.75);
+  }
 }

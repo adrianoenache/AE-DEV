@@ -100,7 +100,7 @@ html {
   background-color: var(--main-background-color);
   background-image: var(--main-background-texture-vertical);
   display: flex;
-  font-size: var(--main-font-size);
+  font-size: var(--font-size-s);
   justify-content: center;
   padding: 0 10px;
   position: relative;
