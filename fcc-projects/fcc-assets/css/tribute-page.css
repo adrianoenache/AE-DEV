@@ -1,5 +1,6 @@
 @import "design-tokens.css";
 @import "base-rules.css";
+@import "components/spacer.css";
 @import "components/loading.css";
 @import "components/photo-card.css";
 @import "components/wrapper-list.css";
