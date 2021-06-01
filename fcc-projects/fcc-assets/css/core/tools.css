@@ -23,27 +23,3 @@
   list-style: none;
   padding: 0;
 }
-
-.aspect-ratio {
-  box-sizing: border-box;
-  height: 0;
-  overflow: hidden;
-  padding-top: var(--slider-photos-image-ratio);
-}
-
-.aspect-ratio {
-  box-sizing: border-box;
-  display: block;
-  height: 0;
-  overflow: hidden;
-  padding-top: var(--aspect-ratio);
-}
-
-.aspect-ratio img {
-  height: 100%;
-  left: 0;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
