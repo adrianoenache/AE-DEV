@@ -35,6 +35,14 @@
   --main-font-size: 16px;
   --gutter: 10px;
   --column: 70px;
+  /* Space sizes */
+  --space-size-xxs: calc(var(--gutter) * 0.5);
+  --space-size-xs: calc(var(--gutter) * 1);
+  --space-size-s: calc(var(--gutter) * 2);
+  --space-size-m: calc(var(--gutter) * 4);
+  --space-size-l: calc(var(--gutter) * 6);
+  --space-size-xl: calc(var(--gutter) * 8);
+  --space-size-xxl: calc(var(--gutter) * 10);
 	/* Aspect ratio */
 	--ratio-3-4-portrait: calc((4 / 3) * 100%);
 	--ratio-16-9-landscape: calc((9 / 16) * 100%);
