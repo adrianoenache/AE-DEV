@@ -59,6 +59,7 @@
 	/* Transition type and timing */
 	--transition-1: 0.3s ease-in-out;
 	--transition-2: 0.25s ease-in;
+  --transition-3: 0.15s ease-in;
   /* Component global vars */
   --sticky-header-height: 70px;
   /* mover para component anchor */

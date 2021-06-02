@@ -1,0 +1,48 @@
+.fields-radio-checkbox {
+  --radio-checkbox-background: var(--input-background);
+  --radio-checkbox-checked: var(--brand-color-4-hex);
+  --radio-checkbox-focus-hover: var(--brand-color-1-hex);
+  --radio-checkbox-size: 1.1em;
+  /* Rules */
+  appearance: none;
+  background: var(--radio-checkbox-background);
+  border: 0;
+  box-shadow: var(--shadow);
+  font-size: var(--form-font-size);
+  height: var(--radio-checkbox-size);
+  padding: 0;
+  text-align: center;
+  transition: border-color var(--transition-1), box-shadow var(--transition-1);
+  width: var(--radio-checkbox-size);
+}
+
+.field-radio {
+  border-radius: 50%;
+}
+
+.field-checkbox {
+  border-radius: 0;
+}
+
+.fields-radio-checkbox:focus,
+.fields-radio-checkbox:hover {
+  box-shadow: var(--shadow-hover);
+  outline: 0;
+}
+
+.fields-radio-checkbox:focus:after,
+.fields-radio-checkbox:hover:after {
+  color: var(--radio-checkbox-focus-hover);
+}
+
+.fields-radio-checkbox:after {
+  color: var(--radio-checkbox-background);
+  content: var(--valid-icon);
+  display: inline-block;
+  line-height: var(--radio-checkbox-size);
+  transition: color var(--transition-2);
+}
+
+.fields-radio-checkbox:checked:after {
+  color: var(--radio-checkbox-checked);
+}

@@ -1,8 +1,14 @@
 @import "design-tokens.css";
 @import "base-rules.css";
-@import "core/fieldset.css";
+@import "core/form.css";
 @import "components/custom-form.css";
+@import "components/custom-form-layout.css";
+@import "components/custom-form-validation-mechanics.css";
 @import "components/custom-form-fieldset.css";
+@import "components/custom-form-fields.css";
+@import "components/custom-form-fields-radio-checkbox.css";
+@import "components/custom-form-buttons.css";
+@import "components/custom-form-keyboard-indicator.css";
 @import "components/spacer.css";
 @import "components/icons-font.css";
 @import "components/contact-links.css";

@@ -1,0 +1,99 @@
+.form-buttons {
+  font-size: 0;
+  text-align: right;
+}
+
+.holder-validate-submit {
+  display: inline-block;
+  font-size: var(--form-font-size);
+  margin-left: 0.5em;
+  position: relative;
+}
+
+.list-of-fields {
+  display: grid;
+  grid-column-gap: var(--space-size-xs);
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+}
+
+.list-of-fields .group {
+  white-space: nowrap;
+}
+
+.grid-area-name {
+  grid-area: gan;
+}
+
+.grid-area-email {
+  grid-area: gae;
+}
+
+.grid-area-age {
+  grid-area: gaa;
+}
+
+.grid-area-select {
+  grid-area: gas;
+}
+
+.grid-area-comment {
+  grid-area: gac;
+}
+
+.grid-area-list-1 {
+  grid-area: gal1;
+}
+
+.grid-area-list-2 {
+  grid-area: gal2;
+}
+
+.form-layout {
+  --form-template-columns-mobile: 1fr 1fr;
+  --form-layout-mobile:
+    "gan gan"
+    "gae gae"
+    "gas gaa"
+    "gac gac"
+    "gal1 gal1"
+    "gal2 gal2";
+
+  --form-template-columns-tablet: 1fr 1fr 1fr;
+  --form-layout-tablet:
+    "gan gan gan"
+    "gae gas gaa"
+    "gac gac gac"
+    "gal1 gal2 gal2";
+
+  --form-template-columns-notebook: 1fr 1fr 1fr 1fr;
+  --form-layout-notebook:
+    "gan gan gas gaa"
+    "gae gae gal1 gal1 "
+    "gac gac gal1 gal1"
+    "gac gac gal2 gal2"
+    "gac gac gal2 gal2";
+
+  --form-template-columns: var(--form-template-columns-mobile);
+  --form-layout: var(--form-layout-mobile);
+  /* Rules */
+  display: grid;
+  column-gap: var(--space-size-xs);
+  row-gap: var(--space-size-xs);
+  grid-template-columns: var(--form-template-columns);
+  grid-template-rows: auto;
+  grid-template-areas: var(--form-layout);
+}
+
+@media only screen and (min-width: 426px) {
+  .form-layout {
+    --form-template-columns: var(--form-template-columns-tablet);
+    --form-layout: var(--form-layout-tablet);
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .form-layout {
+    --form-layout: var(--form-layout-notebook);
+    --form-template-columns: var(--form-template-columns-notebook);
+  }
+}

@@ -1,0 +1,46 @@
+form {
+  --fix-autofill: 0 0 0 1000px var(--input-background, purple) inset;
+}
+
+form,
+input,
+button,
+select,
+textarea {
+  font: 400 var(--font-size-s) / 1.25em var(--font-family-text);
+}
+
+::placeholder {
+  color: var(--placeholder-color);
+  opacity: 1; /* Fix for Firefox */
+}
+
+legend {
+  font-family: var(--font-family-titles);
+  font-weight: 700;
+  line-height: 1em;
+  padding: 0 0.5em;
+}
+
+input {
+  box-shadow: var(--shadow), var(--fix-autofill);
+  transition: box-shadow var(--transition-1);
+  outline: 0;
+}
+
+input:hover,
+input:focus {
+  box-shadow: var(--shadow-hover), var(--fix-autofill);
+  outline: 0;
+}
+
+/* Fix for webkit autofill */
+input:-webkit-autofill {
+  box-shadow: var(--shadow), var(--fix-autofill);
+  transition: box-shadow var(--transition-1);
+}
+
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  box-shadow: var(--shadow-hover), var(--fix-autofill);
+}

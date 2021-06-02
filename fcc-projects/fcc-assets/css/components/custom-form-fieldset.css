@@ -5,14 +5,11 @@
 
 .custom-form legend {
   font-size: var(--font-size-l);
+  line-height: 1em;
 }
 
 .custom-form legend .required:after {
   content: var(--required-icon);
   font-size: var(--font-size-m);
   margin-left: 0.25em;
-}
-
-.custom-form fieldset:valid > legend .required:after {
-  content: var(--valid-icon);
 }

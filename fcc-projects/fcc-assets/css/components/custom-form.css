@@ -1,20 +1,13 @@
 .custom-form {
-  --font-size-form: 1rem;
-  --line-height-form: 1.25em;
-  --text-area-row-size: 3;
-  --radio-checkbox-size: 1.1em;
-  --text-area-height-mobile: calc(
-    var(--line-height-form) * var(--text-area-row-size) + 1em
-  );
-  --text-area-height-notebook: 100%;
-  --text-area-height: var(--text-area-height-mobile);
-
+  --form-font-size: var(--font-size-s);
+  --form-line-height: 1.25em;
+  --input-background: var(--brand-color-2-hex);
+  --input-color: var(--brand-color-1-hex);
+  --success-color: var(--brand-color-4-hex);
+  --placeholder-color: var(--brand-color-7-hex);
   /* HTML icon http://htmlarrows.com/ */
   --required-icon: "\2731";
   --valid-icon: "\2714";
   --submit-icon: "\27A4";
   --recycling-icon: "\267B";
-
-  /* Icon from https://icomoon.io/ converted to base64 with https://www.base64-image.de/ */
-  --dropdown-arrow: url("data:image/svg+xml;base64,PCEtLSBHZW5lcmF0ZWQgYnkgSWNvTW9vbi5pbyAtLT4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiB2aWV3Qm94PSIwIDAgMzIgMzIiPgo8dGl0bGU+Y2lyY2xlLWRvd248L3RpdGxlPgo8cGF0aCBkPSJNMzIgMTZjMC04LjgzNy03LjE2My0xNi0xNi0xNnMtMTYgNy4xNjMtMTYgMTYgNy4xNjMgMTYgMTYgMTYgMTYtNy4xNjMgMTYtMTZ6TTMgMTZjMC03LjE4IDUuODItMTMgMTMtMTNzMTMgNS44MiAxMyAxMy01LjgyIDEzLTEzIDEzLTEzLTUuODItMTMtMTN6Ij48L3BhdGg+CjxwYXRoIGQ9Ik05LjkxNCAxMS4wODZsLTIuODI5IDIuODI5IDguOTE0IDguOTE0IDguOTE0LTguOTE0LTIuODI4LTIuODI4LTYuMDg2IDYuMDg2eiI+PC9wYXRoPgo8L3N2Zz4K");
 }
