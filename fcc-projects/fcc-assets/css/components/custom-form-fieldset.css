@@ -1,0 +1,18 @@
+.custom-form fieldset {
+  border: solid 5px;
+  margin-bottom: var(--space-size-m);
+}
+
+.custom-form legend {
+  font-size: var(--font-size-l);
+}
+
+.custom-form legend .required:after {
+  content: var(--required-icon);
+  font-size: var(--font-size-m);
+  margin-left: 0.25em;
+}
+
+.custom-form fieldset:valid > legend .required:after {
+  content: var(--valid-icon);
+}

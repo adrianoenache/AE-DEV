@@ -1,0 +1,6 @@
+fieldset legend {
+  font-family: var(--font-family-titles);
+  font-weight: 700;
+  line-height: 1em;
+  padding: 0 0.5em;
+}
