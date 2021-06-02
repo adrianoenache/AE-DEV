@@ -1,0 +1,51 @@
+.custom-form:invalid .submit-form,
+.custom-form:valid .validate-form {
+  box-shadow: none;
+  pointer-events: none;
+}
+
+.custom-form:valid .holder-validate-submit {
+  transition: transform var(--transition-1);
+  transform: rotateX(180deg);
+}
+
+.custom-form:valid .holder-validate-submit .submit-form {
+  transform: rotateX(-180deg);
+  z-index: var(--content);
+}
+
+.custom-form:valid .holder-validate-submit .validate-form {
+  opacity: 0;
+}
+
+.custom-form:invalid .holder-validate-submit {
+  transition: transform var(--transition-1);
+  transform: rotateX(0deg);
+}
+
+.custom-form:invalid .holder-validate-submit .submit-form {
+  opacity: 0;
+  z-index: var(--behind);
+}
+
+.custom-form fieldset:valid > legend .required:after {
+  content: var(--valid-icon);
+}
+
+.fields:valid {
+  border-right-color: var(--success-color);
+  transition: border-color var(--transition-1);
+}
+
+select.fields:valid {
+  --select-background-position: var(--select-background-position-valid);
+}
+
+:required + label:after {
+  content: var(--required-icon);
+  margin-left: 0.25em;
+}
+
+.fields:valid + label:after {
+  content: var(--valid-icon);
+}

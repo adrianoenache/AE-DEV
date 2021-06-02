@@ -1,0 +1,20 @@
+.aspect-ratio {
+  box-sizing: border-box;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  padding-top: var(--aspect-ratio, 100%); /* 100% define default value for ratio 1:1 */
+  position: relative;
+}
+
+.aspect-ratio .target {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.aspect-ratio img.target {
+  object-fit: cover;
+}

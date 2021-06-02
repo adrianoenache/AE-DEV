@@ -1,0 +1,4 @@
+:required:hover + label:first-letter,
+:required:focus + label:first-letter {
+  text-decoration: overline underline double;
+}

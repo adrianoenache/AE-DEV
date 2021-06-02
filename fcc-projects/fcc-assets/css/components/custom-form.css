@@ -1,0 +1,13 @@
+.custom-form {
+  --form-font-size: var(--font-size-s);
+  --form-line-height: 1.25em;
+  --input-background: var(--brand-color-2-hex);
+  --input-color: var(--brand-color-1-hex);
+  --success-color: var(--brand-color-4-hex);
+  --placeholder-color: var(--brand-color-7-hex);
+  /* HTML icon http://htmlarrows.com/ */
+  --required-icon: "\2731";
+  --valid-icon: "\2714";
+  --submit-icon: "\27A4";
+  --recycling-icon: "\267B";
+}

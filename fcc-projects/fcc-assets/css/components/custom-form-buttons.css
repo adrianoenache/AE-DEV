@@ -1,0 +1,57 @@
+.custom-form button {
+  appearance: none;
+  background: var(--input-background);
+  border: 0;
+  border-radius: 0.5em;
+  box-shadow: var(--shadow);
+  font-size: var(--form-font-size);
+  line-height: 1.35em;
+  padding: 0 0.75em;
+}
+
+.custom-form button:focus,
+.custom-form button:hover {
+  box-shadow: var(--shadow-hover);
+  transition: box-shadow var(--transition-1);
+  outline: 0;
+}
+
+.submit-form:after,
+.reset-form:before,
+.validate-form > span {
+  display: inline-block;
+}
+
+.submit-form,
+.validate-form {
+  width: 100px;
+}
+
+.reset-form:before,
+.validate-form > span {
+  margin-right: 0.25em;
+}
+
+.submit-form {
+  left: 0;
+  position: absolute;
+  top: 2px;
+}
+
+.submit-form:after {
+  content: var(--submit-icon);
+  margin-left: 0.25em;
+}
+
+.reset-form:before {
+  content: var(--recycling-icon);
+}
+
+.validate-form {
+  position: relative;
+  z-index: var(--content);
+}
+
+.validate-form > span:before {
+  content: var(--valid-icon);
+}

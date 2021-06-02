@@ -6,5 +6,24 @@ h5,
 h6 {
   font-family: var(--font-family-titles);
   font-weight: 700;
+  line-height: 1em;
   margin-top: 0;
+}
+
+h1 {
+  font-size: var(--font-size-xxl);
+}
+
+h2 {
+  font-size: var(--font-size-xl);
+}
+
+h3 {
+  font-size: var(--font-size-l);
+}
+
+h4,
+h5,
+h6 {
+  font-size: var(--font-size-m);
 }

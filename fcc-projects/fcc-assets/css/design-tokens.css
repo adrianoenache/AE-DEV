@@ -35,6 +35,21 @@
   --main-font-size: 16px;
   --gutter: 10px;
   --column: 70px;
+  /* Font sizes */
+  --font-size-xs: calc(var(--main-font-size) * 0.75);
+  --font-size-s: calc(var(--main-font-size) * 1);
+  --font-size-m: calc(var(--main-font-size) * 1.25);
+  --font-size-l: calc(var(--main-font-size) * 1.5);
+  --font-size-xl: calc(var(--main-font-size) * 2);
+  --font-size-xxl: calc(var(--main-font-size) * 4);
+  /* Space sizes */
+  --space-size-xxs: calc(var(--gutter) * 0.5);
+  --space-size-xs: calc(var(--gutter) * 1);
+  --space-size-s: calc(var(--gutter) * 2);
+  --space-size-m: calc(var(--gutter) * 4);
+  --space-size-l: calc(var(--gutter) * 6);
+  --space-size-xl: calc(var(--gutter) * 8);
+  --space-size-xxl: calc(var(--gutter) * 10);
 	/* Aspect ratio */
 	--ratio-3-4-portrait: calc((4 / 3) * 100%);
 	--ratio-16-9-landscape: calc((9 / 16) * 100%);
@@ -44,8 +59,18 @@
 	/* Transition type and timing */
 	--transition-1: 0.3s ease-in-out;
 	--transition-2: 0.25s ease-in;
+  --transition-3: 0.15s ease-in;
   /* Component global vars */
   --sticky-header-height: 70px;
   /* mover para component anchor */
   --anchor-position: calc(var(--sticky-header-height) + var(--gutter));
+}
+
+@media only screen and (max-width: 425px) {
+  :root {
+    /* Font sizes scaled down for mobile */
+    --font-size-l: calc((var(--main-font-size) * 1.5) * 0.9);
+    --font-size-xl: calc((var(--main-font-size) * 2) * 0.8);
+    --font-size-xxl: calc((var(--main-font-size) * 4) * 0.75);
+  }
 }

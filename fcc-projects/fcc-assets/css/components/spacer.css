@@ -1,0 +1,14 @@
+hr {
+  border: 0;
+  border-top: 10px solid;
+  color: var(--main-text-color); /* Fix for Firefox */
+  margin: var(--space-size-m) auto;
+}
+
+hr.top {
+  margin-top: var(--space-size-s);
+}
+
+hr.bottom {
+  margin-bottom: var(--space-size-s);
+}
