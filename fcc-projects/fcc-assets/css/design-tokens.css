@@ -62,8 +62,6 @@
   --transition-3: 0.15s ease-in;
   /* Component global vars */
   --sticky-header-height: 70px;
-  /* mover para component anchor */
-  --anchor-position: calc(var(--sticky-header-height) + var(--gutter));
 }
 
 @media only screen and (max-width: 425px) {

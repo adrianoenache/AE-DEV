@@ -1,0 +1,30 @@
+.go-to-top {
+  --size: 20px;
+  /* Rules */
+  align-items: center;
+  background: var(--main-background-color);
+  border-bottom-left-radius: var(--size);
+  border-right: 0;
+  border-top-left-radius: var(--size);
+  border: solid 1px;
+  bottom: calc(var(--size) * 0.5);
+  box-shadow: var(--shadow);
+  display: flex;
+  font-size: 0;
+  height: calc(var(--size) * 1.5);
+  justify-content: center;
+  position: fixed;
+  right: 0;
+  text-decoration: none;
+  transition: box-shadow 0.3s ease;
+  width: calc(var(--size) * 1.5);
+  z-index: var(--above);
+}
+
+.go-to-top:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.go-to-top span {
+  font-size: var(--size);
+}

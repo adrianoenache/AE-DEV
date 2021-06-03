@@ -1,0 +1,21 @@
+.anchor {
+  --offset-of-header: calc((var(--sticky-header-height) + var(--gutter)) * -1);
+  /* Rules */
+  display: inline-block;
+  font-size: 0;
+  left: 0;
+}
+
+.anchor.offset-of-header {
+  top: var(--offset-of-header);
+}
+
+.anchor.position {
+  top: 0;
+}
+.anchor.absolute {
+  position: absolute;
+}
+.anchor.fixed {
+  position: fixed;
+}
