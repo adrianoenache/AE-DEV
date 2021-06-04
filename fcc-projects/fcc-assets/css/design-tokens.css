@@ -76,13 +76,11 @@
 
 /*
   Media querys
-
   These values were chosen after analyzing the data from this source https://gs.statcounter.com/
-
-  >=425 Mobile
+  <=425 Mobile
   426..1024 Tablet
   1025..1440 Notebooks
-  1441<= Desktops and Notebooks FullHD
+  >=1441 Desktops and Notebooks FullHD
 */
 
 @media only screen and (max-width: 425px) {
