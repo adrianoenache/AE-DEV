@@ -1,5 +1,7 @@
 @import "design-tokens.css";
 @import "base-rules.css";
+@import "components/header.css";
+@import "components/header-nav-link-product-landing-page.css";
 @import "components/anchor.css";
 @import "components/bleed.css";
 @import "components/spacer.css";

@@ -23,3 +23,7 @@
   list-style: none;
   padding: 0;
 }
+
+.show-notebook-plus {
+  display: var(--show-notebook-plus);
+}
