@@ -12,12 +12,10 @@ label {
 textarea.fields {
   --text-area-row-size: 3;
   --text-area-height-notebook: 100%;
-  --text-area-height-mobile: calc(
-    var(--form-line-height) * var(--text-area-row-size) + 1em
-  );
+  --text-area-height-mobile: calc(var(--form-line-height) * var(--text-area-row-size) + 1em);
   --text-area-height: var(--text-area-height-mobile);
   /* Rules */
-  box-sizing: content-box;
+  box-sizing: border-box;
   height: var(--text-area-height);
   resize: none;
 }
