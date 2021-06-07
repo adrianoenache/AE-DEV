@@ -67,6 +67,7 @@
   --transition-3: 0.15s ease-in;
   --transition-4: 0.5s ease-in-out;
   --transition-5: 0.25s ease-in-out;
+  --transition-6: 0.5s ease;
   /* Component global vars */
   --sticky-header-height: 70px;
   --show-notebook-plus-notebook: block;

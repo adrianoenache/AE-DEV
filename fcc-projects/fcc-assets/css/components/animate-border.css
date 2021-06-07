@@ -1,0 +1,20 @@
+.animate-border {
+  --dash-size: 10px;
+  --dash-gap: 5px;
+  /* Rules */
+  pointer-events: none;
+}
+
+.animate-border rect {
+  animation: animate-border 1s infinite linear;
+  fill: none;
+  stroke: var(--main-text-color);
+  stroke-dasharray: var(--dash-size) var(--dash-gap);
+  stroke-width: 4px;
+}
+
+@keyframes animate-border {
+  to {
+    stroke-dashoffset: calc((var(--dash-size) + var(--dash-gap)) * -1);
+  }
+}

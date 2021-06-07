@@ -1,0 +1,126 @@
+.holder-cards-list-features {
+  display: flex;
+  flex-direction: column;
+}
+
+.holder-cards-list-features > p {
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+.holder-cards-list-features > p:first-child {
+  margin-top: var(--space-size-s);
+}
+
+.html-css:hover ~ .cards.features:before {
+  opacity: 1;
+}
+
+.html-css:hover ~ .cards.features .card .holder-icon.red:after {
+  box-shadow: 0 0 0 0 rgba(var(--brand-color-3-rgb), 1) inset;
+}
+
+.html-css:hover ~ .cards.features .card .holder-icon.green:after {
+  box-shadow: 0 0 0 0 rgba(var(--brand-color-4-rgb), 1) inset;
+}
+
+.html-css-javascript:hover ~ .cards.features:after {
+  opacity: 1;
+}
+
+.html-css-javascript:hover ~ .cards.features .card .holder-icon.red:after {
+  box-shadow: 0 0 0 0 rgba(var(--brand-color-3-rgb), 1) inset;
+}
+
+.html-css-javascript:hover ~ .cards.features .card .holder-icon.green:after {
+  box-shadow: 0 0 0 0 rgba(var(--brand-color-4-rgb), 1) inset;
+}
+
+.html-css-javascript:hover ~ .cards.features .card .holder-icon.blue:after {
+  box-shadow: 0 0 0 0 rgba(var(--brand-color-5-rgb), 1) inset;
+}
+
+.cards.features {
+  --card-icon-size: 64px;
+  --card-icon-top-gap: calc((var(--card-icon-size) / 2) + var(--space-size-xs));
+  /* Rules */
+  grid-row-gap: var(--card-icon-top-gap);
+  order: -1;
+  padding: var(--card-icon-top-gap) 0 0;
+  position: relative;
+}
+
+.cards.features:before,
+.cards.features:after {
+  box-sizing: border-box;
+  content: "";
+  display: block;
+  height: calc(100% + var(--space-size-xs));
+  left: calc(var(--space-size-xs) * -0.5);
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+  top: 0;
+  transition: opacity var(--transition-1);
+}
+
+.cards.features:after {
+  background: url("../../images/animate-border-rgb.svg");
+  width: calc(100% + var(--space-size-xs));
+}
+
+.cards.features:before {
+  background: url("../../images/animate-border-rg.svg");
+  width: calc((100% / 3) * 2 + var(--space-size-xs) * 0.75);
+}
+
+.cards.features .card .animate-border {
+  height: calc(100% + var(--card-icon-top-gap));
+  top: calc((var(--card-icon-top-gap) - var(--space-size-xs) * 0.5) * -1);
+}
+
+.cards.features .holder-icon {
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+  font-size: 0;
+  height: var(--card-icon-size);
+  margin: calc(var(--card-icon-top-gap) * -1) auto 0;
+  position: relative;
+  width: var(--card-icon-size);
+}
+
+.cards.features .holder-icon:after {
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: box-shadow var(--transition-6);
+  width: 100%;
+}
+
+.cards.features .holder-icon.red:after {
+  box-shadow: 0 0 0 64px rgba(var(--brand-color-3-rgb), 1) inset;
+}
+
+.cards.features .card:hover .holder-icon.red:after {
+  box-shadow: 0 0 0 0 rgba(var(--brand-color-3-rgb), 1) inset;
+}
+
+.cards.features .holder-icon.green:after {
+  box-shadow: 0 0 0 64px rgba(var(--brand-color-4-rgb), 1) inset;
+}
+
+.cards.features .card:hover .holder-icon.green:after {
+  box-shadow: 0 0 0 0 rgba(var(--brand-color-4-rgb), 1) inset;
+}
+
+.cards.features .holder-icon.blue:after {
+  box-shadow: 0 0 0 64px rgba(var(--brand-color-5-rgb), 1) inset;
+}
+
+.cards.features .card:hover .holder-icon.blue:after {
+  box-shadow: 0 0 0 0 rgba(var(--brand-color-5-rgb), 1) inset;
+}

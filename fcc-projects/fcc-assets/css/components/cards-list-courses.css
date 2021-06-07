@@ -1,0 +1,48 @@
+.cards.courses {
+  --cards-courses-grid-template-columns-notebook: repeat(auto-fit, minmax(320px, 1fr));
+  --cards-courses-grid-template-columns-tablet: repeat(auto-fit, minmax(260px, 1fr));
+  --cards-courses-grid-template-columns-mobile: repeat(auto-fit, minmax(200px, 1fr)); /* :( Variables don't work inside minmax() */
+  --cards-courses-grid-template-columns: var(--cards-courses-grid-template-columns-mobile);
+  --course-card-h3-line-height: 1.25em;
+  --course-card-h3-min-height-tablet: calc(var(--course-card-h3-line-height) * 2);
+  --course-card-h3-min-height-mobile: auto;
+  --course-card-h3-min-height: var(--course-card-h3-min-height-mobile);
+  /* Rules */
+  grid-template-columns: var(--cards-courses-grid-template-columns);
+}
+
+.cards.courses.bleed {
+  box-sizing: border-box;
+  padding-left: var(--space-size-s);
+  padding-right: var(--space-size-s);
+}
+
+.cards.courses .card {
+  padding-bottom: calc(var(--space-size-xs) * 6);
+}
+
+.cards.courses .card p:last-child {
+  bottom: var(--space-size-xs);
+  left: var(--space-size-xs);
+  margin-top: 0;
+  position: absolute;
+  right: var(--space-size-xs);
+}
+
+.cards.courses .card h3 {
+  line-height: var(--course-card-h3-line-height);
+  min-height: var(--course-card-h3-min-height);
+}
+
+@media only screen and (min-width: 426px) {
+  .cards.courses {
+    --cards-courses-grid-template-columns: var(--cards-courses-grid-template-columns-tablet);
+    --course-card-h3-min-height: var(--course-card-h3-min-height-tablet);
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .cards.courses {
+    --cards-courses-grid-template-columns: var(--cards-courses-grid-template-columns-notebook);
+  }
+}
