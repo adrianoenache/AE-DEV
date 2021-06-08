@@ -1,0 +1,90 @@
+#close-modal {
+  position: fixed;
+  top: 0;
+}
+
+.modal {
+  --modal-background-tablet: var(--brand-color-9-hex);
+  --modal-background-mobile: var(--brand-color-6-hex);
+  --modal-background: var(--modal-background-mobile);
+  --modal-max-width-notebook: 640px;
+  --modal-max-width-tablet: 450px;
+  --modal-max-width-mobile: 320px;
+  --modal-max-width: var(--modal-max-width-mobile);
+  --size-of-close-modal-button: 30px;
+  /* Rules */
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  background: rgba(var(--brand-color-1-rgb), 0);
+  box-sizing: border-box;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  transition: background var(--transition-1), opacity var(--transition-1);
+  width: 100%;
+  z-index: var(--modal);
+}
+
+.modal:target {
+  background: rgba(var(--brand-color-1-rgb), 0.25);
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-content {
+  background: var(--modal-background);
+  border-radius: var(--space-size-xs);
+  box-shadow: var(--shadow);
+  box-sizing: border-box;
+  height: 90vh;
+  left: 50%;
+  line-height: 1.5em;
+  max-width: var(--modal-max-width);
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: var(--space-size-xs) var(--size-of-close-modal-button) var(--space-size-xs) var(--space-size-xs);
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.close-modal {
+  align-items: center;
+  display: flex;
+  height: var(--size-of-close-modal-button);
+  justify-content: center;
+  line-height: 1em;
+  position: absolute;
+  right: calc((100vw - var(--modal-max-width)) / 2);
+  text-decoration: none;
+  top: 5vh;
+  width: var(--size-of-close-modal-button);
+  z-index: 1;
+}
+
+.modal-overlay {
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+@media only screen and (min-width: 426px) {
+  .modal {
+    --modal-background: var(--modal-background-tablet);
+    --modal-max-width: var(--modal-max-width-tablet);
+  }
+}
+
+/* 1025-1440 Notebooks */
+@media only screen and (min-width: 1025px) {
+  .modal {
+    --modal-max-width: var(--modal-max-width-notebook);
+  }
+}
