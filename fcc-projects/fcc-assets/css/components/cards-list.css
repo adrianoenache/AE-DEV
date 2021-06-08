@@ -1,0 +1,77 @@
+.cards {
+  display: grid;
+  grid-column-gap: var(--space-size-xs);
+  grid-row-gap: var(--space-size-xs);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* :( Variables don't work inside minmax() */
+  list-style: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+
+.card {
+  background: var(--brand-color-2-hex);
+  border-radius: var(--space-size-xs);
+  box-shadow: var(--shadow);
+  color: var(--brand-color-1-hex);
+  padding: var(--space-size-xs) var(--space-size-xs);
+  position: relative;
+}
+
+.card:hover .animate-border {
+  opacity: 1;
+}
+
+.card .animate-border {
+  box-sizing: border-box;
+  display: block;
+  height: calc(100% + var(--space-size-xs));
+  left: calc(var(--space-size-xs) * -0.5);
+  opacity: 0;
+  position: absolute;
+  top: calc(var(--space-size-xs) * -0.5);
+  width: calc(100% + var(--space-size-xs));
+  transition: opacity var(--transition-1);
+}
+
+.card h3 {
+  font-size: var(--font-size-xl);
+  text-align: center;
+  margin: 0.5em 0;
+}
+
+.card p.highlight {
+  color: var(--brand-color-3-hex);
+  font-weight: 700;
+  text-align: center;
+}
+
+.card p.description,
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+.card .call-to-action {
+  background: var(--brand-color-3-hex);
+  border-radius: var(--space-size-xs);
+  box-shadow: var(--shadow);
+  box-sizing: border-box;
+  color: var(--brand-color-2-hex);
+  display: block;
+  margin: 0 auto;
+  max-width: 300px;
+  padding: 0.5em 1em;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow var(--transition-1);
+  width: 100%;
+}
+
+.card .call-to-action:focus,
+.card .call-to-action:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.card .call-to-action:visited {
+  color: var(--brand-color-2-hex);
+}

@@ -1,0 +1,48 @@
+.disclaimer-and-terms {
+  --disclaimer-and-terms-flex-direction-tablet: row;
+  --disclaimer-and-terms-flex-direction-mobile: column;
+  --disclaimer-and-terms-flex-direction: var(--disclaimer-and-terms-flex-direction-mobile);
+  --links-to-terms-line-height-tablet: 1.5em;
+  --links-to-terms-line-height-mobile: 2em;
+  --links-to-terms-line-height: var(--links-to-terms-line-height-mobile);
+  --links-to-terms-text-align-tablet: left;
+  --links-to-terms-text-align-mobile: center;
+  --links-to-terms-text-align: var(--links-to-terms-text-align-mobile);
+  --disclaimer-margin-tablet: 0;
+  --disclaimer-margin-mobile: var(--space-size-m) 0 0;
+  --disclaimer-margin: var(--disclaimer-margin-mobile);
+  /* Rules */
+  align-items: center;
+  display: flex;
+  flex-direction: var(--disclaimer-and-terms-flex-direction);
+}
+
+.links-to-terms {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  line-height: var(--links-to-terms-line-height);
+  margin: 0;
+  text-align: var(--links-to-terms-text-align);
+}
+
+.disclaimer {
+  margin: var(--disclaimer-margin);
+  text-align: center;
+}
+
+.disclaimer svg {
+  display: inline-block;
+  height: var(--logo-size);
+  vertical-align: middle;
+  width: var(--logo-size);
+}
+
+@media only screen and (min-width: 426px) {
+  .disclaimer-and-terms {
+    --disclaimer-and-terms-flex-direction: var(--disclaimer-and-terms-flex-direction-tablet);
+    --links-to-terms-line-height: var(--links-to-terms-line-height-tablet);
+    --links-to-terms-text-align: var(--links-to-terms-text-align-tablet);
+    --disclaimer-margin: var(--disclaimer-margin-tablet);
+  }
+}

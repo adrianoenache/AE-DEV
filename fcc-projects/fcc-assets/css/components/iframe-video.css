@@ -1,0 +1,7 @@
+.holder-video.aspect-ratio {
+  --aspect-ratio: var(--ratio-16-9-landscape);
+}
+
+.holder-video .video {
+  border: 0;
+}

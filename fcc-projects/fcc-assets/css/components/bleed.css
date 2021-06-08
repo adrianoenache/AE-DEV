@@ -1,0 +1,29 @@
+.bleed {
+  --make-it-bleed: calc((100vw - 100%) / 2);
+  --stop-bleeding: var(--make-it-bleed);
+  --bleed: calc(var(--make-it-bleed) * -1);
+  /* Rules */
+  margin-left: var(--bleed);
+  margin-right: var(--bleed);
+}
+
+.bleed.left {
+  margin-right: 0;
+}
+
+.bleed.right {
+  margin-left: 0;
+}
+
+.bleed.less-the-content {
+  padding-left: var(--stop-bleeding);
+  padding-right: var(--stop-bleeding);
+}
+
+.bleed.left.less-the-content {
+  padding-right: 0;
+}
+
+.bleed.right.less-the-content {
+  padding-left: 0;
+}

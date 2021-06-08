@@ -32,11 +32,6 @@
   content: var(--valid-icon);
 }
 
-.fields:valid {
-  border-right-color: var(--success-color);
-  transition: border-color var(--transition-1);
-}
-
 select.fields:valid {
   --select-background-position: var(--select-background-position-valid);
 }

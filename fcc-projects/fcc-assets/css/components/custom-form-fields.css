@@ -1,11 +1,3 @@
-.custom-form label,
-.custom-form button,
-.field-radio,
-.field-checkbox,
-select.fields {
-  cursor: pointer;
-}
-
 .holder-field {
   display: flex;
   flex-direction: column;
@@ -19,10 +11,6 @@ select.fields {
   order: 0;
 }
 
-label {
-  margin-bottom: 0.25em;
-}
-
 .fields {
   border: 0.5em solid var(--input-background);
   border-right-color: inherit;
@@ -31,6 +19,7 @@ label {
   box-shadow: var(--shadow);
   padding: 0 0.25em;
   transition: border-color var(--transition-1), box-shadow var(--transition-1);
+  width: 100%;
 }
 
 .fields:hover,
@@ -40,41 +29,7 @@ label {
   outline: 0;
 }
 
-textarea.fields {
-  --text-area-row-size: 3;
-  --text-area-height-notebook: 100%;
-  --text-area-height-mobile: calc(
-    var(--form-line-height) * var(--text-area-row-size) + 1em
-  );
-  --text-area-height: var(--text-area-height-mobile);
-  /* Rules */
-  box-sizing: content-box;
-  height: var(--text-area-height);
-  resize: none;
-}
-
-select.fields {
-  --select-background-position-valid: right 3px top 2px;
-  --select-background-position-hide: right -16px top 2px;
-  --select-background-position: var(--select-background-position-hide);
-  /* Icon from https://icomoon.io/ converted to base64 with https://www.base64-image.de/ */
-  --dropdown-arrow: url("data:image/svg+xml;base64,PCEtLSBHZW5lcmF0ZWQgYnkgSWNvTW9vbi5pbyAtLT4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiB2aWV3Qm94PSIwIDAgMzIgMzIiPgo8dGl0bGU+Y2lyY2xlLWRvd248L3RpdGxlPgo8cGF0aCBkPSJNMzIgMTZjMC04LjgzNy03LjE2My0xNi0xNi0xNnMtMTYgNy4xNjMtMTYgMTYgNy4xNjMgMTYgMTYgMTYgMTYtNy4xNjMgMTYtMTZ6TTMgMTZjMC03LjE4IDUuODItMTMgMTMtMTNzMTMgNS44MiAxMyAxMy01LjgyIDEzLTEzIDEzLTEzLTUuODItMTMtMTN6Ij48L3BhdGg+CjxwYXRoIGQ9Ik05LjkxNCAxMS4wODZsLTIuODI5IDIuODI5IDguOTE0IDguOTE0IDguOTE0LTguOTE0LTIuODI4LTIuODI4LTYuMDg2IDYuMDg2eiI+PC9wYXRoPgo8L3N2Zz4K");
-  /* Rules */
-  appearance: none;
-  background-image: var(--dropdown-arrow);
-  background-repeat: no-repeat;
-  background-size: 16px 16px;
-  background-position: var(--select-background-position);
-  transition: background-position var(--transition-3);
-}
-
-select.fields:hover,
-select.fields:focus {
-  --select-background-position: var(--select-background-position-valid);
-}
-
-@media only screen and (min-width: 1025px) {
-  textarea.fields {
-    --text-area-height: var(--text-area-height-notebook);
-  }
+.fields:valid {
+  border-right-color: var(--success-color);
+  transition: border-color var(--transition-1);
 }

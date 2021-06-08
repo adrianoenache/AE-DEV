@@ -28,7 +28,7 @@
   --above: 10;
   --modal: 15;
   /* Fonts */
-  --font-family-text: 'Raleway', sans-serif; /* 500, 500i, 700, 700i */
+  --font-family-text: "Raleway", sans-serif; /* 500, 500i, 700, 700i */
   --font-family-titles: "Darker Grotesque", sans-serif; /* 500, 700 */
   --font-family-detail: "Darker Grotesque", sans-serif; /* 500, 700 */
   /* Base units */
@@ -36,41 +36,66 @@
   --gutter: 10px;
   --column: 70px;
   /* Font sizes */
-  --font-size-xs: calc(var(--main-font-size) * 0.75);
-  --font-size-s: calc(var(--main-font-size) * 1);
-  --font-size-m: calc(var(--main-font-size) * 1.25);
-  --font-size-l: calc(var(--main-font-size) * 1.5);
-  --font-size-xl: calc(var(--main-font-size) * 2);
-  --font-size-xxl: calc(var(--main-font-size) * 4);
+  --font-size-xxs: calc(var(--main-font-size) * 0.75); /* 12px */
+  --font-size-xs: calc(var(--main-font-size) * 0.875); /* 14px */
+  --font-size-s: calc(var(--main-font-size) * 1); /* 16px */
+  --font-size-m: calc(var(--main-font-size) * 1.25); /* 20px */
+  --font-size-l: calc(var(--main-font-size) * 1.5); /* 24px */
+  --font-size-xl: calc(var(--main-font-size) * 2); /* 32px */
+  --font-size-xxl: calc(var(--main-font-size) * 4); /* 64px */
   /* Space sizes */
-  --space-size-xxs: calc(var(--gutter) * 0.5);
-  --space-size-xs: calc(var(--gutter) * 1);
-  --space-size-s: calc(var(--gutter) * 2);
-  --space-size-m: calc(var(--gutter) * 4);
-  --space-size-l: calc(var(--gutter) * 6);
-  --space-size-xl: calc(var(--gutter) * 8);
-  --space-size-xxl: calc(var(--gutter) * 10);
-	/* Aspect ratio */
-	--ratio-3-4-portrait: calc((4 / 3) * 100%);
-	--ratio-16-9-landscape: calc((9 / 16) * 100%);
-	/* Shadows */
-	--shadow: 2px 2px 2px 1px rgba(var(--brand-color-1-rgb), 0.5);
-	--shadow-hover: 3px 3px 2px 2px rgba(var(--brand-color-1-rgb), 0.2);
-	/* Transition type and timing */
-	--transition-1: 0.3s ease-in-out;
-	--transition-2: 0.25s ease-in;
+  --space-size-xxs: calc(var(--gutter) * 0.5); /* 5px */
+  --space-size-xs: calc(var(--gutter) * 1); /* 10px */
+  --space-size-s: calc(var(--gutter) * 2); /* 20px */
+  --space-size-m: calc(var(--gutter) * 4); /* 40px */
+  --space-size-l: calc(var(--gutter) * 6); /* 60px */
+  --space-size-xl: calc(var(--gutter) * 8); /* 80px */
+  --space-size-xxl: calc(var(--gutter) * 10); /* 100px */
+  /* Aspect ratio */
+  --ratio-3-4-portrait: calc((4 / 3) * 100%);
+  --ratio-16-9-landscape: calc((9 / 16) * 100%);
+  /* Shadows */
+  --shadow: 2px 2px 2px 1px rgba(var(--brand-color-1-rgb), 0.5);
+  --shadow-hover: 3px 3px 2px 2px rgba(var(--brand-color-1-rgb), 0.2);
+  --shadow-inset: inset 0 0 2px 2px rgba(var(--brand-color-1-rgb), 0.25);
+  --shadow-opacity: 2px 2px 2px 1px rgba(var(--brand-color-1-rgb), 0);
+  --shadow-inset-top-left: inset 2px 2px 2px 1px
+    rgba(var(--brand-color-1-rgb), 0.25);
+  /* Transition type and timing */
+  --transition-1: 0.3s ease-in-out;
+  --transition-2: 0.25s ease-in;
   --transition-3: 0.15s ease-in;
+  --transition-4: 0.5s ease-in-out;
+  --transition-5: 0.25s ease-in-out;
+  --transition-6: 0.5s ease;
   /* Component global vars */
+  --logo-size: 40px;
   --sticky-header-height: 70px;
-  /* mover para component anchor */
-  --anchor-position: calc(var(--sticky-header-height) + var(--gutter));
+  --show-notebook-plus-notebook: block;
+  --show-notebook-plus-mobile: none;
+  --show-notebook-plus: var(--show-notebook-plus-mobile);
 }
+
+/*
+  Media querys
+  These values were chosen after analyzing the data from this source https://gs.statcounter.com/
+  <=425 Mobile
+  426..1024 Tablet
+  1025..1440 Notebooks
+  >=1441 Desktops and Notebooks FullHD
+*/
 
 @media only screen and (max-width: 425px) {
   :root {
     /* Font sizes scaled down for mobile */
-    --font-size-l: calc((var(--main-font-size) * 1.5) * 0.9);
-    --font-size-xl: calc((var(--main-font-size) * 2) * 0.8);
-    --font-size-xxl: calc((var(--main-font-size) * 4) * 0.75);
+    --font-size-l: calc((var(--main-font-size) * 1.5) * 0.875); /* 21px */
+    --font-size-xl: calc((var(--main-font-size) * 2) * 0.875); /* 28px */
+    --font-size-xxl: calc((var(--main-font-size) * 4) * 0.75); /* 48px */
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  :root {
+    --show-notebook-plus: var(--show-notebook-plus-notebook);
   }
 }
