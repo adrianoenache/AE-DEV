@@ -1,6 +1,7 @@
 @import "design-tokens.css";
 @import "base-rules.css";
 @import "core/form.css";
+@import "components/modal.css";
 @import "components/header.css";
 @import "components/header-nav-link-product-landing-page.css";
 @import "components/anchor.css";
@@ -19,4 +20,3 @@
 @import "components/icons-font.css";
 @import "components/contact-links.css";
 @import "components/disclaimer-and-terms.css";
-@import "components/modal.css";
