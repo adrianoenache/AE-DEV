@@ -69,6 +69,7 @@
   --transition-5: 0.25s ease-in-out;
   --transition-6: 0.5s ease;
   /* Component global vars */
+  --logo-size: 40px;
   --sticky-header-height: 70px;
   --show-notebook-plus-notebook: block;
   --show-notebook-plus-mobile: none;

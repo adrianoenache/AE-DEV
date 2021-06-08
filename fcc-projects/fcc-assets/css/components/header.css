@@ -1,7 +1,4 @@
-/* sticky header */
 .wrapper-sticky-header {
-  --logo-size: 40px;
-  /* Rules */
   box-sizing: border-box;
   left: 0;
   padding: 0 var(--space-size-xs);
