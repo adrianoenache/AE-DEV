@@ -41,9 +41,10 @@
 }
 
 .card p.highlight {
-  color: var(--brand-color-3-hex);
+  color: var(--brand-color-1-hex);
   font-weight: 700;
   text-align: center;
+  text-decoration: underline 3px var(--brand-color-3-hex);
 }
 
 .card p.description,
@@ -58,6 +59,8 @@
   box-sizing: border-box;
   color: var(--brand-color-2-hex);
   display: block;
+  font-size: var(--font-size-m);
+  font-weight: 700;
   margin: 0 auto;
   max-width: 300px;
   padding: 0.5em 1em;
