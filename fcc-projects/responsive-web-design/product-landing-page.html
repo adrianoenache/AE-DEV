@@ -56,6 +56,211 @@
 
 	<!-- Critical CSS -->
 	<style>
+		:root {
+			/* Colors */
+			--brand-color-1-hex: #000;
+			--brand-color-1-rgb: 0, 0, 0;
+			--brand-color-2-hex: #fff;
+			--brand-color-2-rgb: 255, 255, 255;
+			--brand-color-3-hex: #f00;
+			--brand-color-3-rgb: 255, 0, 0;
+			--brand-color-4-hex: #0f0;
+			--brand-color-4-rgb: 0, 255, 0;
+			--brand-color-5-hex: #00f;
+			--brand-color-5-rgb: 0, 0, 255;
+			--brand-color-6-hex: #444;
+			--brand-color-6-rgb: 68, 68, 68;
+			--brand-color-7-hex: #666;
+			--brand-color-7-rgb: 102, 102, 102;
+			--brand-color-8-hex: #ccc;
+			--brand-color-8-rgb: 204, 204, 204;
+			--brand-color-9-hex: #eee;
+			--brand-color-9-rgb: 238, 238, 238;
+			--brand-color-10-hex: #808;
+			--brand-color-10-rgb: 136, 0, 136;
+			--brand-color-11-hex: #ff0;
+			--brand-color-11-rgb: 255, 255, 0;
+			/* Z-index */
+			--behind: 1;
+			--content: 5;
+			--above: 10;
+			--modal: 15;
+			/* Fonts */
+			--font-family-text: "Raleway", sans-serif;
+			/* 500, 500i, 700, 700i */
+			--font-family-titles: "Darker Grotesque", sans-serif;
+			/* 500, 700 */
+			--font-family-detail: "Darker Grotesque", sans-serif;
+			/* 500, 700 */
+			/* Base units */
+			--main-font-size: 16px;
+			--gutter: 10px;
+			--column: 70px;
+			/* Font sizes */
+			--font-size-xxs: calc(var(--main-font-size) * 0.75);
+			/* 12px */
+			--font-size-xs: calc(var(--main-font-size) * 0.875);
+			/* 14px */
+			--font-size-s: calc(var(--main-font-size) * 1);
+			/* 16px */
+			--font-size-m: calc(var(--main-font-size) * 1.25);
+			/* 20px */
+			--font-size-l: calc(var(--main-font-size) * 1.5);
+			/* 24px */
+			--font-size-xl: calc(var(--main-font-size) * 2);
+			/* 32px */
+			--font-size-xxl: calc(var(--main-font-size) * 4);
+			/* 64px */
+			/* Space sizes */
+			--space-size-xxs: calc(var(--gutter) * 0.5);
+			/* 5px */
+			--space-size-xs: calc(var(--gutter) * 1);
+			/* 10px */
+			--space-size-s: calc(var(--gutter) * 2);
+			/* 20px */
+			--space-size-m: calc(var(--gutter) * 4);
+			/* 40px */
+			--space-size-l: calc(var(--gutter) * 6);
+			/* 60px */
+			--space-size-xl: calc(var(--gutter) * 8);
+			/* 80px */
+			--space-size-xxl: calc(var(--gutter) * 10);
+			/* 100px */
+			/* Aspect ratio */
+			--ratio-3-4-portrait: calc((4 / 3) * 100%);
+			--ratio-16-9-landscape: calc((9 / 16) * 100%);
+			/* Shadows */
+			--shadow: 2px 2px 2px 1px rgba(var(--brand-color-1-rgb), 0.5);
+			--shadow-hover: 3px 3px 2px 2px rgba(var(--brand-color-1-rgb), 0.2);
+			--shadow-inset: inset 0 0 2px 2px rgba(var(--brand-color-1-rgb), 0.25);
+			--shadow-opacity: 2px 2px 2px 1px rgba(var(--brand-color-1-rgb), 0);
+			--shadow-inset-top-left: inset 2px 2px 2px 1px rgba(var(--brand-color-1-rgb), 0.25);
+			/* Transition type and timing */
+			--transition-1: 0.3s ease-in-out;
+			--transition-2: 0.25s ease-in;
+			--transition-3: 0.15s ease-in;
+			--transition-4: 0.5s ease-in-out;
+			--transition-5: 0.25s ease-in-out;
+			--transition-6: 0.5s ease;
+			/* Component global vars */
+			--logo-size: 40px;
+			--sticky-header-height: 70px;
+			--show-notebook-plus-notebook: block;
+			--show-notebook-plus-mobile: none;
+			--show-notebook-plus: var(--show-notebook-plus-mobile);
+		}
+
+		.modal {
+			--modal-background-tablet: var(--brand-color-9-hex);
+			--modal-background-mobile: var(--brand-color-6-hex);
+			--modal-background: var(--modal-background-mobile);
+			--modal-max-width-notebook: 640px;
+			--modal-max-width-tablet: 450px;
+			--modal-max-width-mobile: 320px;
+			--modal-max-width: var(--modal-max-width-mobile);
+			--size-of-close-modal-button: 30px;
+			/* Rules */
+			-webkit-backdrop-filter: blur(20px);
+			backdrop-filter: blur(20px);
+			background: rgba(var(--brand-color-1-rgb), 0);
+			box-sizing: border-box;
+			height: 100%;
+			left: 0;
+			opacity: 0;
+			pointer-events: none;
+			position: fixed;
+			top: 0;
+			transition: background var(--transition-1), opacity var(--transition-1);
+			width: 100%;
+			z-index: var(--modal);
+		}
+
+		.modal:target {
+			background: rgba(var(--brand-color-1-rgb), 0.25);
+			opacity: 1;
+			pointer-events: all;
+		}
+
+		.modal-content {
+			background: var(--modal-background);
+			border-radius: var(--space-size-xs);
+			box-shadow: var(--shadow);
+			box-sizing: border-box;
+			height: 90vh;
+			left: 50%;
+			line-height: 1.5em;
+			max-width: var(--modal-max-width);
+			overflow-x: hidden;
+			overflow-y: auto;
+			padding: var(--space-size-xs) var(--size-of-close-modal-button) var(--space-size-xs) var(--space-size-xs);
+			position: absolute;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			width: 100%;
+		}
+
+		.close-modal {
+			align-items: center;
+			display: flex;
+			height: var(--size-of-close-modal-button);
+			justify-content: center;
+			line-height: 1em;
+			position: absolute;
+			right: calc((100vw - var(--modal-max-width)) / 2);
+			text-decoration: none;
+			top: 5vh;
+			width: var(--size-of-close-modal-button);
+			z-index: 1;
+		}
+
+		.modal-overlay {
+			display: block;
+			font-size: 0;
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+
+		/*
+			Media querys
+			These values were chosen after analyzing the data from this source https://gs.statcounter.com/
+			<=425 Mobile
+			426..1024 Tablet
+			1025..1440 Notebooks
+			>=1441 Desktops and Notebooks FullHD
+		*/
+
+		@media only screen and (max-width: 425px) {
+			:root {
+				/* Font sizes scaled down for mobile */
+				--font-size-l: calc((var(--main-font-size) * 1.5) * 0.875);
+				/* 21px */
+				--font-size-xl: calc((var(--main-font-size) * 2) * 0.875);
+				/* 28px */
+				--font-size-xxl: calc((var(--main-font-size) * 4) * 0.75);
+				/* 48px */
+			}
+		}
+
+		@media only screen and (min-width: 426px) {
+			.modal {
+				--modal-background: var(--modal-background-tablet);
+				--modal-max-width: var(--modal-max-width-tablet);
+			}
+		}
+
+		@media only screen and (min-width: 1025px) {
+			:root {
+				--show-notebook-plus: var(--show-notebook-plus-notebook);
+			}
+
+			.modal {
+				--modal-max-width: var(--modal-max-width-notebook);
+			}
+		}
+
 		/*
 					Fonts
 
@@ -121,8 +326,8 @@
 	<div class="wrapper-sticky-header">
 		<header class="sticky-header" id="header">
 			<a class="logo-link" href="#anchor-go-to-top" tabindex="1">
-				<img class="header-img" id="header-img" width="40" height="40" src='https://adrianoenache.dev.br/logo-ae-adrianoenache.svg'
-					alt="Logo - Adriano Enache">
+				<img class="header-img" id="header-img" width="40" height="40"
+					src='https://adrianoenache.dev.br/logo-ae-adrianoenache.svg' alt="Logo - Adriano Enache">
 				<img class="avatar" width="40" height="40" src="https://adrianoenache.dev.br/avatar-adrianoenache-67x50.jpg"
 					alt="Photo - Adriano Enache">
 			</a>
