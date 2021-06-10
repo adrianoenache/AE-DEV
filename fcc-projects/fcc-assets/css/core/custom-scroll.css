@@ -5,9 +5,9 @@ html,
   --scroll-thumb-background-tablet: var(--brand-color-5-hex);
   --scroll-thumb-background-mobile: var(--brand-color-2-hex);
   --scroll-thumb-background: var(--scroll-thumb-background-mobile);
-  --scroll-thumb-background-hover-desktop: #cc0000;
-  --scroll-thumb-background-hover-notebook: #00cc00;
-  --scroll-thumb-background-hover-tablet: #0000cc;
+  --scroll-thumb-background-hover-desktop: var(--brand-color-12-hex);
+  --scroll-thumb-background-hover-notebook: var(--brand-color-13-hex);
+  --scroll-thumb-background-hover-tablet: var(--brand-color-12-hex);
   --scroll-thumb-background-hover-mobile: var(--brand-color-8-hex);
   --scroll-thumb-background-hover: var(--scroll-thumb-background-hover-mobile);
   --scroll-bar-background: var(--brand-color-1-hex);
@@ -21,20 +21,20 @@ html,
 
 /* -webkit- Edge, Chrome, Opera, Safari custom scroll */
 html::-webkit-scrollbar,
-.custom-scroll {
+.custom-scroll::-webkit-scrollbar {
   background: var(--scroll-bar-background);
   width: var(--scroll-bar-width-chromium);
   height: var(--scroll-bar-width-chromium);
 }
 
 html::-webkit-scrollbar-thumb,
-.custom-scroll {
+.custom-scroll::-webkit-scrollbar-thumb {
   background: var(--scroll-thumb-background);
   border: solid 1px var(--scroll-bar-background);
 }
 
 html::-webkit-scrollbar-thumb:hover,
-.custom-scroll {
+.custom-scroll::-webkit-scrollbar-thumb:hover {
   background: var(--scroll-thumb-background-hover);
 }
 
