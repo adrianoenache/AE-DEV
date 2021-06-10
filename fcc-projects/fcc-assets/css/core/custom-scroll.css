@@ -38,7 +38,7 @@ html::-webkit-scrollbar-thumb:hover,
   background: var(--scroll-thumb-background-hover);
 }
 
-@media only screen and (min-width: 415px) {
+@media only screen and (min-width: 426px) {
   html,
   .custom-scroll {
     --scroll-thumb-background: var(--scroll-thumb-background-tablet);

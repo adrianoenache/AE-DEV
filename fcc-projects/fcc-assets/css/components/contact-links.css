@@ -46,7 +46,7 @@
   color: var(--brand-color-3-hex);
 }
 
-@media only screen and (min-width: 415px) {
+@media only screen and (min-width: 426px) {
   .contact-links {
     --size-of-contact-buttons: var(--size-of-contact-buttons-tablet);
     --margin-of-contact-buttons: var(--margin-of-contact-buttons-tablet);
