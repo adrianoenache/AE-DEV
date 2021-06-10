@@ -38,7 +38,7 @@ a:active:focus {
   color: var(--link-hover-color);
 }
 
-@media only screen and (min-width: 415px) {
+@media only screen and (min-width: 426px) {
   a {
     --link-visited: var(--link-visited-tablet);
     --text-decoration-color: var(--text-decoration-color-tablet);

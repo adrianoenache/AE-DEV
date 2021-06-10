@@ -22,6 +22,14 @@
   --brand-color-10-rgb: 136, 0, 136;
   --brand-color-11-hex: #ff0;
   --brand-color-11-rgb: 255, 255, 0;
+  --brand-color-12-hex: #c00;
+  --brand-color-12-rgb: 204, 0, 0;
+  --brand-color-13-hex: #0c0;
+  --brand-color-13-rgb: 0, 204, 0;
+  --brand-color-14-hex: #00c;
+  --brand-color-14-rgb: 0, 0, 204;
+  --brand-color-15-hex: #aaa;
+  --brand-color-15-rgb: 170, 170, 170;
   /* Z-index */
   --behind: 1;
   --content: 5;

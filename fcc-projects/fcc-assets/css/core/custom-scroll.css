@@ -1,0 +1,63 @@
+html,
+.custom-scroll {
+  --scroll-thumb-background-desktop: var(--brand-color-3-hex);
+  --scroll-thumb-background-notebook: var(--brand-color-4-hex);
+  --scroll-thumb-background-tablet: var(--brand-color-5-hex);
+  --scroll-thumb-background-mobile: var(--brand-color-2-hex);
+  --scroll-thumb-background: var(--scroll-thumb-background-mobile);
+  --scroll-thumb-background-hover-desktop: var(--brand-color-12-hex);
+  --scroll-thumb-background-hover-notebook: var(--brand-color-13-hex);
+  --scroll-thumb-background-hover-tablet: var(--brand-color-12-hex);
+  --scroll-thumb-background-hover-mobile: var(--brand-color-8-hex);
+  --scroll-thumb-background-hover: var(--scroll-thumb-background-hover-mobile);
+  --scroll-bar-background: var(--brand-color-1-hex);
+  --scroll-bar-width-firefox: thin;
+  --scroll-bar-width-chromium: 8px;
+  /* Rules */
+  /* -moz- Firefox custom scroll */
+  scrollbar-color: var(--scroll-thumb-background) var(--scroll-bar-background);
+  scrollbar-width: var(--scroll-bar-width-firefox);
+}
+
+/* -webkit- Edge, Chrome, Opera, Safari custom scroll */
+html::-webkit-scrollbar,
+.custom-scroll::-webkit-scrollbar {
+  background: var(--scroll-bar-background);
+  width: var(--scroll-bar-width-chromium);
+  height: var(--scroll-bar-width-chromium);
+}
+
+html::-webkit-scrollbar-thumb,
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: var(--scroll-thumb-background);
+  border: solid 1px var(--scroll-bar-background);
+}
+
+html::-webkit-scrollbar-thumb:hover,
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--scroll-thumb-background-hover);
+}
+
+@media only screen and (min-width: 426px) {
+  html,
+  .custom-scroll {
+    --scroll-thumb-background: var(--scroll-thumb-background-tablet);
+    --scroll-thumb-background-hover: var(--scroll-thumb-background-hover-tablet);
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  html,
+  .custom-scroll {
+    --scroll-thumb-background: var(--scroll-thumb-background-notebook);
+    --scroll-thumb-background-hover: var(--scroll-thumb-background-hover-notebook);
+  }
+}
+
+@media only screen and (min-width: 1441px) {
+  html,
+  .custom-scroll {
+    --scroll-thumb-background: var(--scroll-thumb-background-desktop);
+    --scroll-thumb-background-hover: var(--scroll-thumb-background-hover-desktop);
+  }
+}

@@ -37,6 +37,8 @@
 .modal-content {
   background: var(--modal-background);
   border-radius: var(--space-size-xs);
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
   box-shadow: var(--shadow);
   box-sizing: border-box;
   height: 90vh;
@@ -50,6 +52,16 @@
   top: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
+}
+
+.modal-content.custom-scroll {
+  --scroll-thumb-background-tablet: var(--brand-color-15-hex);
+  --scroll-thumb-background-mobile: var(--brand-color-2-hex);
+  --scroll-thumb-background: var(--scroll-thumb-background-mobile);
+  --scroll-thumb-background-hover-tablet: var(--brand-color-7-hex);
+  --scroll-thumb-background-hover-mobile: var(--brand-color-2-hex);
+  --scroll-thumb-background-hover: var(--scroll-thumb-background-hover-mobile);
+  --scroll-bar-background: var(--modal-background);
 }
 
 .close-modal {
@@ -81,9 +93,12 @@
     --modal-background: var(--modal-background-tablet);
     --modal-max-width: var(--modal-max-width-tablet);
   }
+  .modal-content.custom-scroll {
+    --scroll-thumb-background: var(--scroll-thumb-background-tablet);
+    --scroll-thumb-background-hover: var(--scroll-thumb-background-hover-tablet);
+  }
 }
 
-/* 1025-1440 Notebooks */
 @media only screen and (min-width: 1025px) {
   .modal {
     --modal-max-width: var(--modal-max-width-notebook);
