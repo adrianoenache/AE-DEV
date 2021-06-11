@@ -36,9 +36,9 @@
   --above: 10;
   --modal: 15;
   /* Fonts */
-  --font-family-text: "Raleway", sans-serif; /* 500, 500i, 700, 700i */
-  --font-family-titles: "Darker Grotesque", sans-serif; /* 500, 700 */
-  --font-family-detail: "Darker Grotesque", sans-serif; /* 500, 700 */
+  --font-family-text: "Kufam", cursive; /* 400, 400i, 700, 700i */
+  --font-family-titles: "Sansita Swashed", cursive; /* 500 */
+  --font-family-detail: "Raleway", sans-serif; /* 300 */
   /* Base units */
   --main-font-size: 16px;
   --gutter: 10px;

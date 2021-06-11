@@ -139,7 +139,7 @@ body {
   /* Rules */
   color: var(--main-text-color);
   font-family: var(--font-family-text);
-  font-weight: 500;
+  font-weight: 400;
   margin: 0 0 var(--space-size-l);
   max-width: var(--grid);
   overflow-x: hidden;
