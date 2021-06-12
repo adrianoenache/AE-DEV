@@ -1,4 +1,5 @@
 .custom-form button {
+  -webkit-appearance: none; /* Fix bug on Edge mobile */
   appearance: none;
   background: var(--input-background);
   border: 0;

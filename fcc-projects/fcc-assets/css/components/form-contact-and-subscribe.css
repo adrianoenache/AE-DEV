@@ -60,6 +60,7 @@
 
 .contact .submit,
 .subscribe .submit {
+  -webkit-appearance: none; /* Fix bug on Edge mobile */
   appearance: none;
   background: rgba(var(--brand-color-2-rgb), 0.25);
   border-radius: var(--space-size-xs);

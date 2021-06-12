@@ -29,6 +29,7 @@
 }
 
 .open-mobile-menu {
+  -webkit-appearance: none; /* Fix bug on Edge mobile */
   appearance: none;
   background: var(--brand-color-2-hex);
   border-bottom-right-radius: var(--space-size-xs);
