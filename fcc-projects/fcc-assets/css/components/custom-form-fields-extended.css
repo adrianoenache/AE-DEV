@@ -29,6 +29,7 @@ select.fields {
   /* Rules */
   -webkit-appearance: none; /* Fix bug on Edge mobile */
   appearance: none;
+  background-color: var(--input-background); /* Fix bug on Edge mobile */
   background-image: var(--dropdown-arrow);
   background-repeat: no-repeat;
   background-size: 16px 16px;
