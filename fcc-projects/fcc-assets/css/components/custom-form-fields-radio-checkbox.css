@@ -4,6 +4,7 @@
   --radio-checkbox-focus-hover: var(--brand-color-1-hex);
   --radio-checkbox-size: 1.1em;
   /* Rules */
+  -webkit-appearance: none; /* Fix bug on Edge mobile */
   appearance: none;
   background: var(--radio-checkbox-background);
   border: 0;
