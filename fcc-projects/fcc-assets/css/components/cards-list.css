@@ -44,7 +44,7 @@
   color: var(--brand-color-1-hex);
   font-weight: 700;
   text-align: center;
-  text-decoration: underline 3px var(--brand-color-3-hex);
+  text-decoration: underline var(--brand-color-3-hex);
 }
 
 .card p.description,
