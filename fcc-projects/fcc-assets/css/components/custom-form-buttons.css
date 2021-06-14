@@ -8,7 +8,7 @@
   cursor: pointer;
   font-size: var(--form-font-size);
   line-height: 1.35em;
-  padding: 0 0.75em;
+  padding: 0.15em 0.75em 0;
 }
 
 .custom-form button:focus,
@@ -37,7 +37,7 @@
 .submit-form {
   left: 0;
   position: absolute;
-  top: 2px;
+  top: -1px;
 }
 
 .submit-form:after {
