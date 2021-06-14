@@ -30,8 +30,8 @@
   opacity: 0;
   position: absolute;
   top: calc(var(--space-size-xs) * -0.5);
-  width: calc(100% + var(--space-size-xs));
   transition: opacity var(--transition-1);
+  width: calc(100% + var(--space-size-xs));
 }
 
 .card h3 {
