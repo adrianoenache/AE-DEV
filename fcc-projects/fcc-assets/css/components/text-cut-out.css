@@ -1,0 +1,26 @@
+.text-cut-out {
+  --text-cut-out-background-tablet: black;
+  --text-cut-out-background-mobile: white;
+  --text-cut-out-background: var(--text-cut-out-background-mobile);
+  --text-cut-out-color-tablet: white;
+  --text-cut-out-color-mobile: black;
+  --text-cut-out-color: var(--text-cut-out-color-mobile);
+  --text-cut-out-mix-blend-mode-tablet: multiply;
+  --text-cut-out-mix-blend-mode-mobile: screen;
+  --text-cut-out-mix-blend-mode: var(--text-cut-out-mix-blend-mode-mobile);
+  /* Rules */
+  background: var(--text-cut-out-background);
+  color: var(--text-cut-out-color);
+  display: inline;
+  line-height: 1.5em;
+  mix-blend-mode: var(--text-cut-out-mix-blend-mode);
+  padding: 0.25em;
+}
+
+@media only screen and (min-width: 426px) {
+  .text-cut-out {
+    --text-cut-out-background: var(--text-cut-out-background-tablet);
+    --text-cut-out-color: var(--text-cut-out-color-tablet);
+    --text-cut-out-mix-blend-mode: var(--text-cut-out-mix-blend-mode-tablet);
+  }
+}
