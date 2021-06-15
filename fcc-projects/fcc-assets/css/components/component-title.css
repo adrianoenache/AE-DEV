@@ -1,7 +1,6 @@
 .component-title {
-  --component-title-font-size-notebook: var(--font-size-xxl);
-  --component-title-font-size-tablet: var(--font-size-xl);
-  --component-title-font-size-mobile: var(--font-size-l);
+  --component-title-font-size-tablet: var(--font-size-xxl);
+  --component-title-font-size-mobile: var(--font-size-xl);
   --component-title-font-size: var(--component-title-font-size-mobile);
   /* Rules */
   font-size: var(--component-title-font-size);
@@ -15,11 +14,5 @@
 @media only screen and (min-width: 426px) {
   .component-title {
     --component-title-font-size: var(--component-title-font-size-tablet);
-  }
-}
-
-@media only screen and (min-width: 1025px) {
-  .component-title {
-    --component-title-font-size: var(--component-title-font-size-notebook);
   }
 }
