@@ -17,3 +17,14 @@
   width: var(--size);
   z-index: var(--behind);
 }
+
+.loading img,
+.loading iframe {
+  opacity: 0;
+  transition: opacity var(--transition-3);
+}
+
+.loading img.loaded,
+.loading iframe.loaded {
+  opacity: 1;
+}
