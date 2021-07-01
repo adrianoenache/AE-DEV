@@ -1,0 +1,32 @@
+.slider {
+  --aspect-ratio: var(--ratio-3-4-portrait);
+  /* Rules */
+  margin-top: var(--space-size-m);
+}
+
+.slides-wrapper {
+  font-size: 0;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  scroll-snap-type: x mandatory;
+}
+
+.slide {
+  display: inline-block;
+  font-size: 1rem;
+  margin-bottom: var(--space-size-xs);
+  position: relative;
+  scroll-snap-align: start;
+  width: 100%;
+}
+
+.slide figure {
+  margin: 0;
+}
+
+@media only screen and (min-width: 1025px) {
+  .slider {
+    --aspect-ratio: var(--ratio-16-9-landscape);
+  }
+}
