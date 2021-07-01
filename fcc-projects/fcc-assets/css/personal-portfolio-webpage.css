@@ -10,6 +10,9 @@
 @import "components/text-cut-out.css";
 @import "components/component-title.css";
 @import "components/hero.css";
+@import "components/slider.css";
+@import "components/slider-responsive-pagination.css";
+@import "components/slide-photo-mask.css";
 @import "components/go-to-top.css";
 @import "components/icons-font.css";
 @import "components/contact-links.css";
