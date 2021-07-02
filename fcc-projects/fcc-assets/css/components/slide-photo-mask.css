@@ -1,0 +1,36 @@
+.slide-photo-mask {
+  clip-path: polygon(
+    30px 0%,
+    100% 0%,
+    100% 25%,
+    calc(100% - 30px) 25%,
+    calc(100% - 30px) 100%,
+    0% 100%,
+    0% calc(25% + 10px),
+    30px calc(25% + 10px)
+  );
+  margin-left: -20px;
+}
+
+.slide-photo-mask:first-of-type {
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 25%,
+    calc(100% - 30px) 25%,
+    calc(100% - 30px) 100%,
+    0% 100%
+  );
+  margin-left: 0;
+}
+
+.slide-photo-mask:last-of-type {
+  clip-path: polygon(
+    30px 0%,
+    100% 0%,
+    100% 100%,
+    0% 100%,
+    0% calc(25% + 10px),
+    30px calc(25% + 10px)
+  );
+}

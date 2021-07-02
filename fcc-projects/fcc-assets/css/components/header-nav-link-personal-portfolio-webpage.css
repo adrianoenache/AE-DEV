@@ -1,0 +1,11 @@
+.nav-link:nth-child(1):hover ~ .menu-label:before,
+.nav-link:nth-child(1):focus ~ .menu-label:before {
+  bottom: 43px;
+  color: inherit;
+}
+
+.nav-link:nth-child(2):hover ~ .menu-label:before,
+.nav-link:nth-child(2):focus ~ .menu-label:before {
+  bottom: 23px;
+  color: inherit;
+}
