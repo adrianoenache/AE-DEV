@@ -1,6 +1,4 @@
-.slider {
-  --aspect-ratio: var(--ratio-3-4-portrait);
-  /* Rules */
+.title + .slider {
   margin-top: var(--space-size-m);
 }
 
@@ -23,10 +21,4 @@
 
 .slide figure {
   margin: 0;
-}
-
-@media only screen and (min-width: 1025px) {
-  .slider {
-    --aspect-ratio: var(--ratio-16-9-landscape);
-  }
 }
