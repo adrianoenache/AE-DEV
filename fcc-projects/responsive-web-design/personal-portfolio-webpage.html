@@ -64,9 +64,9 @@
 	<div class="wrapper-sticky-header">
 		<header class="sticky-header" id="header">
 			<a class="logo-link" href="#anchor-go-to-top" tabindex="1">
-				<img class="header-img" id="header-img" src='https://adrianoenache.dev.br/logo-ae-adrianoenache.svg'
-					alt="Logo - Adriano Enache">
-				<img class="avatar" src="https://adrianoenache.dev.br/avatar-adrianoenache-67x50.jpg"
+				<img class="header-img" id="header-img" width="40" height="40"
+					src='https://adrianoenache.dev.br/logo-ae-adrianoenache.svg' alt="Logo - Adriano Enache">
+				<img class="avatar" width="40" height="40" src="https://adrianoenache.dev.br/avatar-adrianoenache-67x50.jpg"
 					alt="Photo - Adriano Enache">
 			</a>
 			<span class="name"><span class="first">Adriano</span><span class="last">Enache</span></span>
@@ -107,25 +107,131 @@
 				&nbsp;Projects&nbsp;
 			</span>
 		</h2>
-		<div class="slider">
+		<div class="slider slider-projects">
 			<div class="slides-wrapper custom-scroll">
 				<div class="slide">
-					1
+					<figure class="project-card relative">
+						<picture class="loading aspect-ratio">
+							<source media="(min-width: 415px)" srcset="../fcc-assets/images/personal-portfolio-webpage/personal-portfolio-webpage-624x428.jpg">
+							<source media="(min-width: 280px)"
+								srcset="../fcc-assets/images/personal-portfolio-webpage/personal-portfolio-webpage-284x195.jpg, ../fcc-assets/images/personal-portfolio-webpage/personal-portfolio-webpage-284x195-2x.jpg 2x">
+							<img id="image" class="block target" height="195" width="284"
+								src="../fcc-assets/images/personal-portfolio-webpage/personal-portfolio-webpage-284x195.jpg"
+								alt="freeCodeCamp Responsive Web Design project Build a Product Landing Page"
+								loading="lazy" onload="this.classList.add('loaded');">
+						</picture>
+						<figcaption class="project-card-wrapper-content">
+							<a class="project-card-links icon-github" href="https://github.com/adrianoenache/fcc-projects" target="_blank" rel="noopener">Link to source code on GitHub</a>
+							<a class="project-card-links icon-codepen" href="https://codepen.io/adrianoenache/full/rNyNEZq" target="_blank" rel="noopener">Link to this example on Codepen</a>
+							<a class="project-card-links icon-link" href="https://adrianoenache.dev.br/fcc-projects/responsive-web-design/personal-portfolio-webpage.html" target="_blank" rel="noopener">Link to this example hosted on GitHub under my site</a>
+							<button type="button" class="project-card-links"><span class="icon">&#8505;</span>Show more info</button>
+							<div class="project-card-content">
+								<h3 class="project-tile">Build a Personal Portfolio Webpage</h3>
+								<p>I'm using scroll snap to create a slider with a customized scroll, mix blend mode to create a text cutout effect, and clip path to draw the hero background and the mask in the photos.</p>
+							</div>
+						</figcaption>
+					</figure>
 				</div>
 				<div class="slide">
-					2
+					<figure class="project-card relative">
+						<picture class="loading aspect-ratio">
+							<source media="(min-width: 415px)" srcset="../fcc-assets/images/personal-portfolio-webpage/personal-portfolio-webpage-624x428.jpg">
+							<source media="(min-width: 280px)"
+								srcset="../fcc-assets/images/personal-portfolio-webpage/personal-portfolio-webpage-284x195.jpg, ../fcc-assets/images/personal-portfolio-webpage/personal-portfolio-webpage-284x195-2x.jpg 2x">
+							<img id="image" class="block target" height="195" width="284"
+								src="../fcc-assets/images/personal-portfolio-webpage/personal-portfolio-webpage-284x195.jpg"
+								alt="freeCodeCamp Responsive Web Design project Build a Product Landing Page"
+								loading="lazy" onload="this.classList.add('loaded');">
+						</picture>
+						<figcaption class="project-card-wrapper-content">
+							<a class="project-card-links icon-github" href="https://github.com/adrianoenache/fcc-projects" target="_blank" rel="noopener">Link to source code on GitHub</a>
+							<a class="project-card-links icon-codepen" href="https://codepen.io/adrianoenache/full/rNyNEZq" target="_blank" rel="noopener">Link to this example on Codepen</a>
+							<a class="project-card-links icon-link" href="https://adrianoenache.dev.br/fcc-projects/responsive-web-design/personal-portfolio-webpage.html" target="_blank" rel="noopener">Link to this example hosted on GitHub under my site</a>
+							<button type="button" class="project-card-links"><span class="icon">&#8505;</span>Show more info</button>
+							<div class="project-card-content">
+								<h3 class="project-tile">Build a Personal Portfolio Webpage</h3>
+								<p>I'm using scroll snap to create a slider with a customized scroll, mix blend mode to create a text cutout effect, and clip path to draw the hero background and the mask in the photos.</p>
+							</div>
+						</figcaption>
+					</figure>
 				</div>
 				<div class="slide">
-					3
+					<figure class="project-card relative">
+						<picture class="loading aspect-ratio">
+							<source media="(min-width: 415px)" srcset="../fcc-assets/images/personal-portfolio-webpage/product-landing-page-624x428.jpg">
+							<source media="(min-width: 280px)"
+								srcset="../fcc-assets/images/personal-portfolio-webpage/product-landing-page-284x195.jpg, ../fcc-assets/images/personal-portfolio-webpage/product-landing-page-284x195-2x.jpg 2x">
+							<img id="image" class="block target" height="195" width="284"
+								src="../fcc-assets/images/personal-portfolio-webpage/product-landing-page-284x195.jpg"
+								alt="freeCodeCamp Responsive Web Design project Build a Product Landing Page"
+								loading="lazy" onload="this.classList.add('loaded');">
+						</picture>
+						<figcaption class="project-card-wrapper-content">
+							<a class="project-card-links icon-github" href="https://github.com/adrianoenache/fcc-projects" target="_blank" rel="noopener">Link to source code on GitHub</a>
+							<a class="project-card-links icon-codepen" href="https://codepen.io/adrianoenache/full/QWdMzQe" target="_blank" rel="noopener">Link to this example on Codepen</a>
+							<a class="project-card-links icon-link" href="https://adrianoenache.dev.br/fcc-projects/responsive-web-design/product-landing-page.html" target="_blank" rel="noopener">Link to this example hosted on GitHub under my site</a>
+							<button type="button" class="project-card-links"><span class="icon">&#8505;</span>Show more info</button>
+							<div class="project-card-content">
+								<h3 class="project-tile">Build a Product Landing Page</h3>
+								<p>Here I made animations using CSS and SVG,  also made a modal mechanic based on the anchor element and CSS, and a header with a menu accessible by the TAB key with CSS and HTML only.</p>
+							</div>
+						</figcaption>
+					</figure>
+				</div>
+				<div class="slide">
+					<figure class="project-card relative">
+						<picture class="loading aspect-ratio">
+							<source media="(min-width: 415px)" srcset="../fcc-assets/images/personal-portfolio-webpage/survey-form-624x428.jpg">
+							<source media="(min-width: 280px)"
+								srcset="../fcc-assets/images/personal-portfolio-webpage/survey-form-284x195.jpg, ../fcc-assets/images/personal-portfolio-webpage/survey-form-284x195-2x.jpg 2x">
+							<img id="image" class="block target" height="195" width="284"
+								src="../fcc-assets/images/personal-portfolio-webpage/survey-form-284x195.jpg"
+								alt="freeCodeCamp Responsive Web Design project Build a Survey Form"
+								loading="lazy" onload="this.classList.add('loaded');">
+						</picture>
+						<figcaption class="project-card-wrapper-content">
+							<a class="project-card-links icon-github" href="https://github.com/adrianoenache/fcc-projects" target="_blank" rel="noopener">Link to source code on GitHub</a>
+							<a class="project-card-links icon-codepen" href="https://codepen.io/adrianoenache/full/rNMxEOX" target="_blank" rel="noopener">Link to this example on Codepen</a>
+							<a class="project-card-links icon-link" href="https://adrianoenache.dev.br/fcc-projects/responsive-web-design/survey-form.html" target="_blank" rel="noopener">Link to this example hosted on GitHub under my site</a>
+							<button type="button" class="project-card-links"><span class="icon">&#8505;</span>Show more info</button>
+							<div class="project-card-content">
+								<h3 class="project-tile">Build a Survey form</h3>
+								<p>Here I explored some HTML5 form validations allied with CSS pseudo-classes to make some interactions and used the custom properties to change the layout of the form between the responsive breakpoints.</p>
+							</div>
+						</figcaption>
+					</figure>
+				</div>
+				<div class="slide">
+					<figure class="project-card relative">
+						<picture class="loading aspect-ratio">
+							<source media="(min-width: 415px)" srcset="../fcc-assets/images/personal-portfolio-webpage/pillars-of-programming-web-624x428.jpg">
+							<source media="(min-width: 280px)"
+								srcset="../fcc-assets/images/personal-portfolio-webpage/pillars-of-programming-web-284x195.jpg, ../fcc-assets/images/personal-portfolio-webpage/pillars-of-programming-web-284x195-2x.jpg 2x">
+							<img id="image" class="block target" height="195" width="284"
+								src="../fcc-assets/images/personal-portfolio-webpage/pillars-of-programming-web-284x195.jpg"
+								alt="freeCodeCamp Responsive Web Design project Build a Tribute Page"
+								loading="lazy" onload="this.classList.add('loaded');">
+						</picture>
+						<figcaption class="project-card-wrapper-content">
+							<a class="project-card-links icon-github" href="https://github.com/adrianoenache/fcc-projects" target="_blank" rel="noopener">Link to source code on GitHub</a>
+							<a class="project-card-links icon-codepen" href="https://codepen.io/adrianoenache/full/JjRdwGm" target="_blank" rel="noopener">Link to this example on Codepen</a>
+							<a class="project-card-links icon-link" href="https://adrianoenache.dev.br/fcc-projects/responsive-web-design/tribute-page.html" target="_blank" rel="noopener">Link to this example hosted on GitHub under my site</a>
+							<button type="button" class="project-card-links"><span class="icon">&#8505;</span>Show more info</button>
+							<div class="project-card-content">
+								<h3 class="project-tile">Build a Tribute Page</h3>
+								<p>In this exercise is set the base concepts for all next exercises. Here I started to use the power of the custom properties and allied to my previous experience I develop a better and cleaner responsive code.</p>
+							</div>
+						</figcaption>
+					</figure>
 				</div>
 			</div>
 		</div>
 	</section>
 	<section>
-		<h2>
+		<h2 class="title">
 			So many me
 		</h2>
-		<div class="slider slider-responsive-pagination bleed">
+		<div class="slider slider-photo slider-responsive-pagination bleed">
 			<div class="slides-wrapper custom-scroll">
 				<div class="slide slide-photo-mask">
 					<figure class="aspect-ratio loading">

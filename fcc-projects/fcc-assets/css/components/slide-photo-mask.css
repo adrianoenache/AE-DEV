@@ -1,3 +1,7 @@
+.slider-photo {
+  --aspect-ratio: var(--ratio-2-3-portrait);
+}
+
 .slide-photo-mask {
   clip-path: polygon(
     30px 0%,
@@ -33,4 +37,10 @@
     0% calc(25% + 10px),
     30px calc(25% + 10px)
   );
+}
+
+@media only screen and (min-width: 1025px) {
+  .slider-photo {
+    --aspect-ratio: var(--ratio-16-9-landscape);
+  }
 }
