@@ -2,8 +2,8 @@ const staticApp = "calc-imc";
 const assets = [
   "/imc/",
   "/imc/index.html",
-  "/imc/static/css/main.7c3a0466.css",
-  "/imc/static/js/main.321b268d.js",
+  "/imc/static/css/main.63114c7c.css",
+  "/imc/static/js/main.b232f8b9.js",
   "/imc/static/media/pexels-photo-235990-pixabay-w1920.4e54070853fde6497765.jpeg",
   "/imc/static/media/pexels-photo-235990-pixabay-h1024.802e65284a64b857610c.jpeg",
   "/imc/static/media/pexels-photo-235990-pixabay-w1366.7b440125d48a884269ec.jpeg",
