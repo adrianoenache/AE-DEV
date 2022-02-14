@@ -1,0 +1,74 @@
+.column-content {
+  --column-quantity-desktop: var(--column-quantity-custom-desktop, var(--column-quantity-custom, 4));
+  --column-quantity-notebook: var(--column-quantity-custom-notebook, var(--column-quantity-custom, 3));
+  --column-quantity-tablet: var(--column-quantity-custom-tablet, var(--column-quantity-custom, 2));
+  --column-quantity-mobile: var(--column-quantity-custom-mobile, var(--column-quantity-custom, 1));
+  --column-quantity: var(--column-quantity-mobile);
+  --column-gap-desktop: var(--column-gap-custom-desktop, var(--column-gap-default));
+  --column-gap-notebook: var(--column-gap-custom-notebook, var(--column-gap-default));
+  --column-gap-tablet: var(--column-gap-custom-tablet, var(--column-gap-default));
+  --column-gap-mobile: var(--column-gap-custom-mobile, var(--column-gap-default));
+  --column-gap: var(--column-gap-mobile);
+  --column-gap-default: 2em;
+  --rule-style-desktop: var(--rule-style-custom-desktop, var(--rule-style-default));
+  --rule-style-notebook: var(--rule-style-custom-notebook, var(--rule-style-default));
+  --rule-style-tablet: var(--rule-style-custom-tablet, var(--rule-style-default));
+  --rule-style-mobile: var(--rule-style-custom-mobile, var(--rule-style-default));
+  --rule-style: var(--rule-style-mobile);
+  --rule-style-default: solid;
+  --rule-width-desktop: var(--rule-width-custom-desktop, var(--rule-width-default));
+  --rule-width-notebook: var(--rule-width-custom-notebook, var(--rule-width-default));
+  --rule-width-tablet: var(--rule-width-custom-tablet, var(--rule-width-default));
+  --rule-width-mobile: var(--rule-width-custom-mobile, var(--rule-width-default));
+  --rule-width: var(--rule-width-mobile);
+  --rule-width-default: 1px;
+  --rule-color-desktop: var(--rule-color-custom-desktop, var(--rule-color-default));
+  --rule-color-notebook: var(--rule-color-custom-notebook, var(--rule-color-default));
+  --rule-color-tablet: var(--rule-color-custom-tablet, var(--rule-color-default));
+  --rule-color-mobile: var(--rule-color-custom-mobile, var(--rule-color-default));
+  --rule-color: var(--rule-color-mobile);
+  --rule-color-default: currentColor;
+  /* Rules */
+  column-count: var(--column-quantity);
+  column-gap: var(--column-gap);
+  column-rule-style: var(--rule-style);
+	column-rule-width: var(--rule-width);
+	column-rule-color: var(--rule-color);
+  column-width: auto;
+}
+
+/* Tablet rules */
+/* Rule to work from tablet and above resolutions */
+@media only screen and (min-width: 426px) {
+  .column-content {
+    --column-gap: var(--column-gap-tablet);
+    --rule-style: var(--rule-style-tablet);
+		--rule-width: var(--rule-width-tablet);
+    --rule-color: var(--rule-color-tablet);
+    --column-quantity: var(--column-quantity-tablet);
+  }
+}
+
+/* Notebook rules */
+/* Rule to work from notebook and above resolutions */
+@media only screen and (min-width: 1025px) {
+  .column-content {
+    --column-gap: var(--column-gap-notebook);
+    --rule-style: var(--rule-style-notebook);
+		--rule-width: var(--rule-width-notebook);
+    --rule-color: var(--rule-color-notebook);
+    --column-quantity: var(--column-quantity-notebook);
+  }
+}
+
+/* Desktop rules */
+/* Rule to work from desktop and above resolutions */
+@media only screen and (min-width: 1441px) {
+  .column-content {
+    --column-gap: var(--column-gap-desktop);
+    --rule-style: var(--rule-style-desktop);
+		--rule-width: var(--rule-width-desktop);
+    --rule-color: var(--rule-color-desktop);
+    --column-quantity: var(--column-quantity-desktop);
+  }
+}

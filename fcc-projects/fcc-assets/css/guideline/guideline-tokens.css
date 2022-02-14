@@ -1,0 +1,96 @@
+.gl {
+  /* Primitive color token values */
+  --gl-colors-01: black;
+  --gl-colors-02: white;
+  --gl-colors-03: lightgray;
+  --gl-colors-04: gray;
+  --gl-colors-05: mediumorchid;
+  --gl-colors-06: darkgoldenrod;
+  --gl-colors-07: darkorange;
+  --gl-colors-08: lightsalmon;
+  --gl-colors-09: yellow;
+  --gl-colors-10: lemonchiffon;
+  --gl-colors-11: chartreuse;
+  --gl-colors-12: lightgreen;
+  --gl-colors-13: darkseagreen;
+  --gl-colors-14: cornflowerblue;
+  --gl-colors-15: cyan;
+  --gl-colors-16: 255, 0, 0;
+  /* Component code theme tokens */
+  --gl-color-code-bg: var(--gl-colors-01);
+  --gl-color-code-tab-border: var(--gl-color-code-bg);
+  --gl-color-code-tab-bg: var(--gl-colors-02);
+  --gl-color-code-tab-text: var(--gl-color-code-bg);
+  --gl-color-code-tab-bg-active: var(--gl-color-code-tab-text);
+  --gl-color-code-tab-text-active: var(--gl-color-code-tab-bg);
+  --gl-color-line-number-text: var(--gl-colors-04);
+  --gl-color-line-number-bg-highlight: var(--gl-colors-16);
+  --gl-color-line-number-text-highlight: var(--gl-colors-02);
+  --gl-color-line-number-bg-pin-count: var(--gl-colors-16);
+  --gl-color-line-number-text-pin-count: var(--gl-colors-02);
+  /* Code theme HTML */
+  --gl-color-html-tag: var(--gl-colors-06);
+  --gl-color-html-property: var(--gl-colors-03);
+  --gl-color-html-property-value: var(--gl-colors-12);
+  --gl-color-html-comment: var(--gl-colors-04);
+  --gl-color-html-content: var(--gl-colors-02);
+  /* Code theme CSS */
+  --gl-color-css: var(--gl-colors-03);
+  --gl-color-css-class-selector: var(--gl-colors-06);
+  --gl-color-css-property: var(--gl-colors-05);
+  --gl-color-css-property-value: var(--gl-colors-07);
+  --gl-color-css-string: var(--gl-colors-10);
+  --gl-color-css-function: var(--gl-colors-14);
+  --gl-color-css-math: var(--gl-colors-11);
+  --gl-color-css-custom-property: var(--gl-colors-15);
+  --gl-color-css-comment: var(--gl-colors-04);
+  --gl-color-css-behavior: var(--gl-colors-09);
+  --gl-color-css-pseudo-class: var(--gl-colors-08);
+  --gl-color-css-prefix: var(--gl-colors-08);
+  /* Code theme Javascript */
+  --gl-color-javascript: var(--gl-colors-14);
+  /* General configuration tokens */
+  --gl-color-text: var(--gl-colors-01);
+  --gl-color-text-decoration: var(--gl-colors-05);
+  --gl-background: var(--gl-colors-02);
+  --gl-background-stage: var(--gl-colors-03);
+  --gl-background-stage-texture: linear-gradient(
+      45deg,
+      var(--gl-background-stage) 25%,
+      transparent 25%,
+      transparent 75%,
+      var(--gl-background-stage) 75%,
+      var(--gl-background-stage)
+    ),
+    linear-gradient(
+      45deg,
+      var(--gl-background-stage) 25%,
+      transparent 25%,
+      transparent 75%,
+      var(--gl-background-stage) 75%,
+      var(--gl-background-stage)
+    );
+  --gl-background-mark: var(--gl-colors-03);
+  --gl-text-font: Verdana, Geneva, Tahoma, sans-serif;
+  --gl-code-font: 'Courier New', Courier, monospace;
+  --gl-title-base-font-size: 18px;
+  --gl-border: solid var(--gl-border-size) var(--gl-colors-01);
+  --gl-border-size: 5px;
+  --gl-menu-width: 300px;
+  --gl-gutter: 10px;
+  --gl-shadow: 1px 1px 0 1px rgba(0, 0, 0, 0.75);
+  --gl-transition: 0.3s ease;
+  --gl-menu-title-font-size: 20px;
+  --gl-menu-title-box-size: calc((var(--gl-menu-title-font-size) * 3) + var(--gl-border-size) + (var(--gl-gutter) * 2));
+  /* Custom scroll */
+  --gl-scroll-thumb-background: var(--gl-colors-03);
+  --gl-scroll-thumb-background-hover: var(--gl-colors-04);
+  --gl-scroll-bar-background: var(--gl-colors-01);
+  --gl-scroll-bar-width-firefox: thin;
+  --gl-scroll-bar-width-chromium: 8px;
+  /* Z-index */
+  --gl-behind: 1;
+  --gl-content: 5;
+  --gl-above: 10;
+  --gl-modal: 15;
+}

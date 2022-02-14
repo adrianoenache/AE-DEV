@@ -1,0 +1,100 @@
+.gl-html {
+  color: var(--gl-color-html-tag);
+}
+
+.gl-html .gl-property {
+  color: var(--gl-color-html-property);
+}
+
+.gl-html .gl-value {
+  color: var(--gl-color-html-property-value);
+}
+
+.gl-html .gl-comment {
+  color: var(--gl-color-html-comment);
+}
+
+.gl-html .gl-content {
+  color: var(--gl-color-html-content);
+  cursor: pointer;
+  font-size: 0;
+  white-space: normal;
+}
+
+.gl-html .gl-content:hover {
+  font-size: 1em;
+}
+
+.gl-html .gl-content:after {
+  content: "...";
+  font-size: 1rem;
+}
+
+.gl-html .gl-content:hover:after {
+  font-size: 0;
+}
+
+.gl-css {
+  color: var(--gl-color-css);
+}
+
+.gl-css .gl-selector {
+  color: var(--gl-color-css-class-selector);
+}
+
+.gl-css .gl-property {
+  color: var(--gl-color-css-property);
+}
+
+.gl-css .gl-value {
+  color: var(--gl-color-css-property-value);
+}
+
+.gl-css .gl-value.gl-color::before {
+  background-color: var(--gl-color-value);
+  border-radius: 25%;
+  border: solid 1px var(--gl-color-css);
+  box-sizing: border-box;
+  content: "";
+  display: inline-block;
+  height: 1em;
+  margin-right: 0.75em;
+  vertical-align: text-bottom;
+  width: 1em;
+}
+
+.gl-css .gl-string {
+  color: var(--gl-color-css-string);
+}
+
+.gl-css .gl-function {
+  color: var(--gl-color-css-function);
+}
+
+.gl-css .gl-math {
+  color: var(--gl-color-css-math);
+}
+
+.gl-css .gl-var {
+  color: var(--gl-color-css-custom-property);
+}
+
+.gl-css .gl-comment {
+  color: var(--gl-color-css-comment);
+}
+
+.gl-css .gl-state {
+  color: var(--gl-color-css-behavior);
+}
+
+.gl-css .gl-pseudo {
+  color: var(--gl-color-css-pseudo-class);
+}
+
+.gl-css .gl-prefix {
+  color: var(--gl-color-css-prefix);
+}
+
+.gl-javascript {
+  color: var(--gl-color-javascript);
+}

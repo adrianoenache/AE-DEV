@@ -1,0 +1,27 @@
+/* Mobile rules */
+/* Rule to work only in the mobile resolutions */
+/* @media only screen and (max-width: 425px) {} */
+
+/* Tablet rules */
+/* Rule to work from tablet and above resolutions */
+/* @media only screen and (min-width: 426px) {} */
+
+/* Rule to work from tablet and resolutions below */
+/* @media only screen and (max-width: 1024px) {} */
+
+/* Rule to work only in the tablet resolutions */
+/* @media only screen and (min-width: 426px) and (max-width: 1024px) {} */
+
+/* Notebook rules */
+/* Rule to work from notebook and above resolutions */
+/* @media only screen and (min-width: 1025px) {} */
+
+/* Rule to work from notebook and resolutions below */
+/* @media only screen and (max-width: 1440px) {} */
+
+/* Rule to work only in the notebook resolutions */
+/* @media only screen and (min-width: 1025px) and (max-width: 1440px) {} */
+
+/* Desktop rules */
+/* Rule to work from desktop and above resolutions */
+/* @media only screen and (min-width: 1441px) {} */
