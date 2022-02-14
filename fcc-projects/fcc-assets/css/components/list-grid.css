@@ -1,0 +1,55 @@
+.list-grid {
+  --column-gap-size-desktop: var(--column-gap-size-custom-desktop, var(--column-gap-default));
+  --column-gap-size-notebook: var(--column-gap-size-custom-notebook, var(--column-gap-default));
+  --column-gap-size-tablet: var(--column-gap-size-custom-tablet, var(--column-gap-default));
+  --column-gap-size-mobile: var(--column-gap-size-custom-mobile, var(--column-gap-default));
+  --column-gap-size: var(--column-gap-size-mobile);
+  --column-gap-default: 10px;
+  --row-gap-size-desktop: var(--row-gap-size-custom-desktop, var(--row-gap-default));
+  --row-gap-size-notebook: var(--row-gap-size-custom-notebook, var(--row-gap-default));
+  --row-gap-size-tablet: var(--row-gap-size-custom-tablet, var(--row-gap-default));
+  --row-gap-size-mobile: var(--row-gap-size-custom-mobile, var(--row-gap-default));
+  --row-gap-size: var(--row-gap-size-mobile);
+  --row-gap-default: 10px;
+  --min-template-column-size-desktop: var(--min-template-column-size-custom-desktop, var(--min-template-column-size-default));
+  --min-template-column-size-notebook: var(--min-template-column-size-custom-notebook, var(--min-template-column-size-default));
+  --min-template-column-size-tablet: var(--min-template-column-size-custom-tablet, var(--min-template-column-size-default));
+  --min-template-column-size-mobile: var(--min-template-column-size-custom-mobile, var(--min-template-column-size-default));
+  --min-template-column-size: var(--min-template-column-size-mobile);
+  --min-template-column-size-default: 300px;
+  /* Rules */
+  display: grid;
+  grid-column-gap: var(--column-gap-size);
+  grid-row-gap: var(--row-gap-default);
+  grid-template-columns: repeat(auto-fit, minmax(var(--min-template-column-size, 1fr), 1fr));
+}
+
+/* Tablet rules */
+/* Rule to work from tablet and above resolutions */
+@media only screen and (min-width: 426px) {
+  .list-grid {
+    --column-gap-size: var(--column-gap-size-tablet);
+    --row-gap-size: var(--row-gap-size-tablet);
+    --min-template-column-size: var(--min-template-column-size-tablet);
+  }
+}
+
+/* Notebook rules */
+/* Rule to work from notebook and above resolutions */
+@media only screen and (min-width: 1025px) {
+  .list-grid {
+    --column-gap-size: var(--column-gap-size-notebook);
+    --row-gap-size: var(--row-gap-size-notebook);
+    --min-template-column-size: var(--min-template-column-size-notebook);
+  }
+}
+
+/* Desktop rules */
+/* Rule to work from desktop and above resolutions */
+@media only screen and (min-width: 1441px) {
+  .list-grid {
+    --column-gap-size: var(--column-gap-size-desktop);
+    --row-gap-size: var(--row-gap-size-desktop);
+    --min-template-column-size: var(--min-template-column-size-desktop);
+  }
+}

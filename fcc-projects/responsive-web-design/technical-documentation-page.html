@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html class="fcc" lang="en">
+<html class="gl gl-stage" lang="en">
 
 <head prefix="og: https://ogp.me/ns#">
 	<meta charset="UTF-8">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="robots" content="INDEX, FOLLOW">
 
 	<meta name="description"
-		content="Personal website to publish articles related to Front-End development and stuff that I like.">
+		content="This is a project exercise from freeCodeCamp to get the certification to Responsive Web Design, Build a Technical Documentation Page.">
 	<meta name="keywords"
-		content="Front-End, HTML, CSS, Javascript, UI, UX, DEV, Development, Website, Guideline, Frameworks, Web tools">
-	<meta name="author" content="Adriano Enache - adrianoenache@hotmail.com">
+		content="freeCodeCamp, HTML, HTML5, CSS, CSS3, Front-End, Responsive Web Design, Responsive, Web Design" />
+	<meta name="author" content="Adriano Enache - adrianoenache@hotmail.com" />
 
-	<title>Adriano Enache</title>
+	<title>freeCodeCamp Build a Technical Documentation Page</title>
 
 	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
@@ -25,1926 +28,131 @@
 	<meta name="msapplication-config" content="/favicon/browserconfig.xml">
 	<meta name="theme-color" content="#000000">
 
-	<meta property="og:title" content="&AElig; (Adriano Enache) =P">
+	<meta property="og:title" content="freeCodeCamp Build a Technical Documentation Page" />
 	<meta property="og:description"
-		content="Personal website to publish articles related to Front-End development and stuff that I like.">
-	<meta property="og:type" content="blog">
+		content="This is a project exercise from freeCodeCamp to get the certification to Responsive Web Design, Build a Technical Documentation Page." />
+	<meta property="og:type" content="blog" />
 	<meta property="og:locale" content="en" />
-	<meta property="og:url" content="https://adrianoenache.dev.br/">
+	<meta property="og:url" content="https://adrianoenache.dev.br/fcc-projects/responsive-web-design/technical-documentation-page.html" />
 
 	<meta property="og:site_name" content="adrianoenache.dev.br" />
 	<meta property="article:published_time" content="2021-04-19T00:00:00+00:00" />
 	<meta property="article:author" content="Adriano Enache" />
 
-	<meta property="og:image" content="https://adrianoenache.dev.br/openGraph/og-image-fb-1200x630.jpg">
-	<meta property="og:image:width" content="1200">
-	<meta property="og:image:height" content="630">
+	<meta property="og:image"
+		content="https://adrianoenache.dev.br/fcc-projects/fcc-assets/images/og-images/og-image-fb-1200x630-fcc-build-a-technical-documentation-page.jpg" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
 
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:site" content="@AdrianoEnache" />
 	<meta name="twitter:creator" content="@AdrianoEnache" />
-	<meta name="twitter:title" content="&AElig; (Adriano Enache) =P" />
+	<meta name="twitter:title" content="freeCodeCamp Build a Technical Documentation Page" />
 	<meta name="twitter:description"
-		content="Personal website to publish articles related to Front-End development and stuff that I like." />
-	<meta name="twitter:image" content="https://adrianoenache.dev.br/openGraph/og-image-twitter-300x150.jpg" />
-	<meta name="twitter:url" content="https://adrianoenache.dev.br/" />
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link
-		href="https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:wght@300&family=Sansita+Swashed:wght@500&display=swap"
-		rel="stylesheet">
+		content="This is a project exercise from freeCodeCamp to get the certification to Responsive Web Design, Build a Technical Documentation Page." />
+	<meta name="twitter:image"
+		content="https://adrianoenache.dev.br/fcc-projects/fcc-assets/images/og-images/og-image-twitter-300x150-fcc-build-a-technical-documentation-page.jpg" />
+	<meta name="twitter:url" content="https://adrianoenache.dev.br/fcc-projects/responsive-web-design/technical-documentation-page.html" />
+
+	<!-- Critical CSS -->
 	<style>
-		/* CSS variables */
-
-		:root {
-			/* Colors */
-			--main-background-color-tablet: #fff;
-			--main-background-color-mobile: #000;
-			--main-background-color: var(--main-background-color-mobile);
-			--main-text-color-tablet: #000;
-			--main-text-color-mobile: #fff;
-			--main-text-color: var(--main-text-color-mobile);
-			--figure-color-background: #fff;
-			--figcaption-color: #666;
-			--link-hover-color-desktop: blue;
-			--link-hover-color-mobile: red;
-			--link-hover-color: var(--link-hover-color-mobile);
-			--success-color: green;
-			--placeholder-color: gray;
-			--background-radio-checkbox: white;
-			--checked-radio-checkbox: green;
-			--focus-hover-radio-checkbox: black;
-
-			/* Logo */
-			--logo-size: 40px;
-
-			/* Sticky header */
-			--offset-of-sticky-header: 70px;
-			--anchor-position: calc(var(--offset-of-sticky-header) + (var(--gutter) * 1));
-
-			/* Sizes */
-			--max-width-wrapper-tablet: 640px;
-			--max-width-wrapper-mobile: 300px;
-			--max-width-wrapper: var(--max-width-wrapper-mobile);
-			--size-of-contact-buttons-notebook: 25px;
-			--size-of-contact-buttons-tablet: 20px;
-			--size-of-contact-buttons-mobile: 16px;
-			--size-of-contact-buttons: var(--size-of-contact-buttons-mobile);
-			--font-size-form: 1rem;
-			--line-height-form: 1.25em;
-			--font-size-legend-form: 1.25rem;
-			--text-area-row-size: 3;
-			--radio-checkbox-size: 1.1em;
-			--text-area-height-mobile: calc(var(--line-height-form) * var(--text-area-row-size) + 1em);
-			--text-area-height-notebook: 100%;
-			--text-area-height: var(--text-area-height-mobile);
-			--gutter: 10px;
-			--size-of-close-modal-button: calc(var(--gutter) * 3);
-			--dash-size: 10px;
-			--dash-gap: 5px;
-
-			/* Icon from https://icomoon.io/ converted to base64 with https://www.base64-image.de/ */
-			--dropdown-arrow: url('data:image/svg+xml;base64,PCEtLSBHZW5lcmF0ZWQgYnkgSWNvTW9vbi5pbyAtLT4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiB2aWV3Qm94PSIwIDAgMzIgMzIiPgo8dGl0bGU+Y2lyY2xlLWRvd248L3RpdGxlPgo8cGF0aCBkPSJNMzIgMTZjMC04LjgzNy03LjE2My0xNi0xNi0xNnMtMTYgNy4xNjMtMTYgMTYgNy4xNjMgMTYgMTYgMTYgMTYtNy4xNjMgMTYtMTZ6TTMgMTZjMC03LjE4IDUuODItMTMgMTMtMTNzMTMgNS44MiAxMyAxMy01LjgyIDEzLTEzIDEzLTEzLTUuODItMTMtMTN6Ij48L3BhdGg+CjxwYXRoIGQ9Ik05LjkxNCAxMS4wODZsLTIuODI5IDIuODI5IDguOTE0IDguOTE0IDguOTE0LTguOTE0LTIuODI4LTIuODI4LTYuMDg2IDYuMDg2eiI+PC9wYXRoPgo8L3N2Zz4K');
-
-			/* Behaviours */
-			--shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
-			--shadow-opacity: 2px 2px 2px 1px rgba(0, 0, 0, 0);
-			--shadow-hover: 3px 3px 2px 2px rgba(0, 0, 0, 0.2);
-			--shadow-inset: inset 0 0 2px 2px rgba(0, 0, 0, 0.25);
-			--shadow-inset-top-left: inset 2px 2px 2px 1px rgba(0, 0, 0, 0.25);
-			--fix-autofill: 0 0 0 1000px #fff inset;
-			--margin-of-contact-buttons-tablet: 10px 5px;
-			--margin-of-contact-buttons-mobile: 10px;
-			--margin-of-contact-buttons: var(--margin-of-contact-buttons-mobile);
-			--background-contact-buttons: 10px;
-			--color-contact-buttons: black;
-			--color-hover-contact-buttons: red;
-			--color-visited-contact-buttons: purple;
-			--show-notebook-plus-notebook: block;
-			--show-notebook-plus-mobile: none;
-			--show-notebook-plus: var(--show-notebook-plus-mobile);
-
-			/*
-    Google Fonts
-      Sansita Swashed - 500
-      Raleway - 300
-      Kufam - 400, 400i, 700, 700i
-  */
-			--font-family-text: "Kufam", cursive;
-			--font-family-titles: "Sansita Swashed", cursive;
-			--font-family-detail: "Raleway", sans-serif;
-
-			/* z-index   */
-			--behind: 1;
-			--content: 5;
-			--above: 10;
-			--modal: 15;
-
-			/* Layout */
-			--make-it-bleed: calc((100vw - 100%) / 2);
-			--stop-bleeding: var(--make-it-bleed);
-			--bleed: calc(var(--make-it-bleed) * -1);
-
-			--disclaimer-and-terms-flex-direction-mobile: column;
-			--disclaimer-and-terms-flex-direction-tablet: row;
-			--disclaimer-and-terms-flex-direction: var(--disclaimer-and-terms-flex-direction-mobile);
-
-			--links-to-terms-line-height-mobile: 2em;
-			--links-to-terms-line-height-tablet: 1.5em;
-			--links-to-terms-line-height: var(--links-to-terms-line-height-mobile);
-			--links-to-terms-text-align-mobile: center;
-			--links-to-terms-text-align-tablet: left;
-			--links-to-terms-text-align: var(--links-to-terms-text-align-mobile);
-
-			--disclaimer-margin-mobile: calc(var(--gutter) * 4) 0 0;
-			--disclaimer-margin-tablet: 0;
-			--disclaimer-margin: var(--disclaimer-margin-mobile);
-
-			--modal-background-mobile: #444;
-			--modal-background-tablet: #eee;
-			--modal-background: var(--modal-background-mobile);
-			--modal-max-width-mobile: 320px;
-			--modal-max-width-tablet: 450px;
-			--modal-max-width-notebook: 640px;
-			--modal-max-width: var(--modal-max-width-mobile);
-
-			--forms-contact-and-submit-flex-direction-tablet: row;
-			--forms-contact-and-submit-flex-direction-mobile: column;
-			--forms-contact-and-submit-flex-direction: var(--forms-contact-and-submit-flex-direction-mobile);
-			--forms-contact-and-submit-button-margin-tablet: 0 0 0 calc(var(--gutter) * 2);
-			--forms-contact-and-submit-button-margin-mobile: calc(var(--gutter) * 2) 0 0;
-			--forms-contact-and-submit-button-margin: var(--forms-contact-and-submit-button-margin-mobile);
-			--forms-contact-and-submit-button-width-tablet: auto;
-			--forms-contact-and-submit-button-width-mobile: 100%;
-			--forms-contact-and-submit-button-width: var(--forms-contact-and-submit-button-width-mobile);
-
-			--scroll-thumb-background-desktop: #ff0000;
-			--scroll-thumb-background-hover-desktop: #cc0000;
-			--scroll-thumb-background-notebook: #00ff00;
-			--scroll-thumb-background-hover-notebook: #00cc00;
-			--scroll-thumb-background-tablet: #0000ff;
-			--scroll-thumb-background-hover-tablet: #0000cc;
-			--scroll-thumb-background-mobile: #ffffff;
-			--scroll-thumb-background-hover-mobile: #cccccc;
-			--scroll-thumb-background: var(--scroll-thumb-background-mobile);
-			--scroll-thumb-background-hover: var(--scroll-thumb-background-hover-mobile);
-
-			--cards-courses-grid-template-columns-notebook: repeat(auto-fit, minmax(320px, 1fr));
-			--cards-courses-grid-template-columns-tablet: repeat(auto-fit, minmax(260px, 1fr));
-			--cards-courses-grid-template-columns-mobile: repeat(auto-fit, minmax(200px, 1fr));
-			/* :( Variables don't work inside minmax() */
-			--cards-courses-grid-template-columns: var(--cards-courses-grid-template-columns-mobile);
-			--card-icon-size: 64px;
-			--card-icon-top-gap: calc((var(--card-icon-size) / 2) + var(--gutter));
-			--course-card-h3-line-height: 1.25em;
-			--course-card-h3-min-height-tablet: calc(var(--course-card-h3-line-height) * 2);
-			--course-card-h3-min-height-mobile: auto;
-			--course-card-h3-min-height: var(--course-card-h3-min-height-mobile);
-
-			/* Main background configs*/
-			--config-background-texture-color-desktop: 255, 0, 0;
-			--config-background-texture-color-notebook: 0, 255, 0;
-			--config-background-texture-color-tablet: 0, 0, 255;
-			--config-background-texture-color-mobile: 255, 255, 255;
-			--config-background-texture-color: var(--config-background-texture-color-mobile);
-			--config-background-texture-line-opacity: 0.05;
-			--config-background-texture-cell-opacity: 0.1;
-			--config-background-texture-size-start: 0px;
-			--config-background-texture-size-conection: 2px;
-			--config-background-texture-size-end: 10px;
-			/* ** */
-			--config-background-linear-rotation: -45deg;
-			--config-background-linear-opacity-external-tablet: 0.3;
-			--config-background-linear-opacity-external-mobile: 0.15;
-			--config-background-linear-opacity-external: var(--config-background-linear-opacity-external-mobile);
-			--config-background-linear-opacity-internal: 0;
-			--config-background-linear-size-start: 0%;
-			--config-background-linear-size-start-end: 40%;
-			--config-background-linear-size-end-start: 60%;
-			--config-background-linear-size-end: 100%;
-			/* ** */
-			--main-background-texture-vertical: repeating-linear-gradient(to right,
-					rgba(var(--config-background-texture-color), var(--config-background-texture-line-opacity)) var(--config-background-texture-size-start),
-					rgba(var(--config-background-texture-color), var(--config-background-texture-line-opacity)) var(--config-background-texture-size-conection),
-					rgba(var(--config-background-texture-color), var(--config-background-texture-cell-opacity)) var(--config-background-texture-size-conection),
-					rgba(var(--config-background-texture-color), var(--config-background-texture-cell-opacity)) var(--config-background-texture-size-end));
-			--main-background-texture-horizontal: repeating-linear-gradient(0deg,
-					rgba(var(--config-background-texture-color), var(--config-background-texture-line-opacity)) var(--config-background-texture-size-start),
-					rgba(var(--config-background-texture-color), var(--config-background-texture-line-opacity)) var(--config-background-texture-size-conection),
-					rgba(var(--config-background-texture-color), var(--config-background-texture-cell-opacity)) var(--config-background-texture-size-conection),
-					rgba(var(--config-background-texture-color), var(--config-background-texture-cell-opacity)) var(--config-background-texture-size-end));
-			/* ** */
-			--main-background-linear-gradient: linear-gradient(var(--config-background-linear-rotation),
-					rgba(var(--config-background-texture-color), var(--config-background-linear-opacity-external)) var(--config-background-linear-size-start),
-					rgba(var(--config-background-texture-color), var(--config-background-linear-opacity-internal)) var(--config-background-linear-size-start-end),
-					rgba(var(--config-background-texture-color), var(--config-background-linear-opacity-internal)) var(--config-background-linear-size-end-start),
-					rgba(var(--config-background-texture-color), var(--config-background-linear-opacity-external)) var(--config-background-linear-size-end));
-		}
-
-		/*
-  Media querys
-
-  These values were chosen after analyzing the data from this source https://gs.statcounter.com/
-
-  All CSS is mobile first
-
-  320-425 Mobile
-  426-1024 Tablet
-  1025-1440 Notebooks
-  1441 Desktops and Notebooks FullHD
-*/
-
-		/* 426-1024 Tablet */
-		@media only screen and (min-width: 426px) {
-			:root {
-				--main-background-color: var(--main-background-color-tablet);
-				--main-text-color: var(--main-text-color-tablet);
-				--max-width-wrapper: var(--max-width-wrapper-tablet);
-				--config-background-texture-color: var(--config-background-texture-color-tablet);
-				--config-background-linear-opacity-external: var(--config-background-linear-opacity-external-tablet);
-				--size-of-contact-buttons: var(--size-of-contact-buttons-tablet);
-				--margin-of-contact-buttons: var(--margin-of-contact-buttons-tablet);
-				--disclaimer-and-terms-flex-direction: var(--disclaimer-and-terms-flex-direction-tablet);
-				--links-to-terms-line-height: var(--links-to-terms-line-height-tablet);
-				--links-to-terms-text-align: var(--links-to-terms-text-align-tablet);
-				--disclaimer-margin: var(--disclaimer-margin-tablet);
-				--modal-background: var(--modal-background-tablet);
-				--modal-max-width: var(--modal-max-width-tablet);
-				--forms-contact-and-submit-flex-direction: var(--forms-contact-and-submit-flex-direction-tablet);
-				--forms-contact-and-submit-button-margin: var(--forms-contact-and-submit-button-margin-tablet);
-				--forms-contact-and-submit-button-width: var(--forms-contact-and-submit-button-width-tablet);
-				--scroll-thumb-background: var(--scroll-thumb-background-tablet);
-				--scroll-thumb-background-hover: var(--scroll-thumb-background-hover-tablet);
-				--card-width: var(--card-width--tablet);
-				--cards-courses-grid-template-columns: var(--cards-courses-grid-template-columns-tablet);
-				--course-card-h3-min-height: var(--course-card-h3-min-height-tablet);
-			}
-		}
-
-		/* 1025-1440 Notebooks */
-		@media only screen and (min-width: 1025px) {
-			:root {
-				--config-background-texture-color: var(--config-background-texture-color-notebook);
-				--size-of-contact-buttons: var(--size-of-contact-buttons-notebook);
-				--show-notebook-plus: var(--show-notebook-plus-notebook);
-				--modal-max-width: var(--modal-max-width-notebook);
-				--scroll-thumb-background: var(--scroll-thumb-background-notebook);
-				--scroll-thumb-background-hover: var(--scroll-thumb-background-hover-notebook);
-				--cards-courses-grid-template-columns: var(--cards-courses-grid-template-columns-notebook);
-			}
-		}
-
-		/* 1441 Desktops and Notebooks FullHD */
-		@media only screen and (min-width: 1441px) {
-			:root {
-				--config-background-texture-color: var(--config-background-texture-color-desktop);
-				--link-hover-color: var(--link-hover-color-desktop);
-				--scroll-thumb-background: var(--scroll-thumb-background-desktop);
-				--scroll-thumb-background-hover: var(--scroll-thumb-background-hover-desktop);
-			}
-		}
-
-		/* Rules */
-		html {
-			overflow-x: hidden;
-		}
-
-		html,
-		.custom-scroll {
-			/* -moz- Firefox custom scroll */
-			scrollbar-color: var(--scroll-thumb-background) black;
-			scrollbar-width: thin;
-		}
-
-		/* -webkit- Edge, Chrome, Opera, Safari custom scroll */
-		html::-webkit-scrollbar,
-		.custom-scroll::-webkit-scrollbar {
-			background: black;
-			width: 8px;
-			height: 8px;
-		}
-
-		html::-webkit-scrollbar-thumb,
-		.custom-scroll::-webkit-scrollbar-thumb {
-			background: var(--scroll-thumb-background);
-			border: solid 1px black;
-		}
-
-		html::-webkit-scrollbar-thumb:hover,
-		.custom-scroll::-webkit-scrollbar-thumb:hover {
-			background: var(--scroll-thumb-background-hover);
-		}
-
-		body {
-			color: var(--main-text-color);
-			font-family: var(--font-family-text);
-			font-weight: 400;
-			margin: 0 0 50px;
-			max-width: var(--max-width-wrapper);
-			position: relative;
-			padding-top: var(--anchor-position);
-			width: 100%;
-			z-index: var(--content);
-		}
-
-		section {
-			position: relative;
-		}
-
-		h1,
-		h2,
-		h3,
-		h4,
-		h5,
-		h6,
-		legend {
-			font-family: var(--font-family-titles);
-			font-weight: 500;
-		}
-
-		h1,
-		h2,
-		h3,
-		h4,
-		h5,
-		h6 {
-			margin-top: 0;
-		}
-
-		a {
-			color: inherit;
-			font-family: var(--font-family-text);
-			font-weight: 400;
-			transition: color 0.25s ease-in;
-		}
-
-		a:hover,
-		a:focus {
-			color: var(--link-hover-color);
-		}
-
-		a:focus {
-			outline: 0;
-		}
-
-		abbr {
-			text-decoration: underline double gray;
-		}
-
-		abbr:hover {
-			text-decoration: underline double black;
-		}
-
-		mark {
-			background: var(--main-background-color);
-			color: var(--main-text-color);
-		}
-
-		hr {
-			border: 0;
-			border-top: 10px solid;
-			color: var(--main-text-color);
-			/* Fix for Firefox */
-			margin: calc(var(--gutter) * 5) auto;
-		}
-
-		hr.top {
-			margin-top: calc(var(--gutter) * 3);
-		}
-
-		hr.bottom {
-			margin-bottom: calc(var(--gutter) * 3);
-		}
-
-		.show-notebook-plus {
-			display: var(--show-notebook-plus);
-		}
-
-		.animate-border {
-			pointer-events: none;
-		}
-
-		.animate-border rect {
-			animation: animate-border 1s infinite linear;
-			fill: none;
-			stroke: var(--main-text-color);
-			stroke-dasharray: var(--dash-size) var(--dash-gap);
-			stroke-width: 4px;
-		}
-
-		@keyframes animate-border {
-			to {
-				stroke-dashoffset: calc((var(--dash-size) + var(--dash-gap)) * -1);
-			}
-		}
-
-		.bleed {
-			margin-left: var(--bleed);
-			margin-right: var(--bleed);
-		}
-
-		.bleed.left {
-			margin-right: 0;
-		}
-
-		.bleed.right {
-			margin-left: 0;
-		}
-
-		.bleed.less-the-content {
-			padding-left: var(--stop-bleeding);
-			padding-right: var(--stop-bleeding);
-		}
-
-		.bleed.left.less-the-content {
-			padding-right: 0;
-		}
-
-		.bleed.right.less-the-content {
-			padding-left: 0;
-		}
-
-		/* Go to top */
-		.go-to-top {
-			--size: 20px;
-			align-items: center;
-			background: var(--main-background-color);
-			border: solid 1px;
-			border-right: 0;
-			border-bottom-left-radius: var(--size);
-			border-top-left-radius: var(--size);
-			bottom: calc(var(--size) * 0.5);
-			box-shadow: var(--shadow);
-			display: flex;
-			font-size: var(--size);
-			height: calc(var(--size) * 1.5);
-			justify-content: center;
-			position: fixed;
-			right: 0;
-			text-decoration: none;
-			transition: box-shadow 0.3s ease;
-			width: calc(var(--size) * 1.5);
-			z-index: var(--above);
-		}
-
-		.go-to-top:hover {
-			box-shadow: var(--shadow-hover);
-		}
-
-		/* Logo */
-		.logo-link {
-			border-radius: 50%;
-			box-shadow: var(--shadow-inset);
-			display: block;
-			height: var(--logo-size);
-			overflow: hidden;
-			padding: 5px;
-			position: relative;
-			margin-right: var(--gutter);
-			width: var(--logo-size);
-		}
-
-		.logo-link:hover .header-img,
-		.logo-link:focus .header-img {
-			transform: rotateY(180deg);
-		}
-
-		.logo-link:hover .avatar,
-		.logo-link:focus .avatar {
-			transform: rotateY(0deg);
-		}
-
-		.header-img {
-			backface-visibility: hidden;
-			transform: rotateY(0deg);
-			transition: transform 0.5s ease;
-		}
-
-		.avatar {
-			backface-visibility: hidden;
-			border-radius: 50%;
-			height: var(--logo-size);
-			position: absolute;
-			left: 5px;
-			top: 5px;
-			object-fit: cover;
-			transform: rotateY(180deg);
-			transition: transform 0.5s ease;
-			width: var(--logo-size);
-		}
-
-		.logo-link~.name span {
-			display: inline-flex;
-			overflow: hidden;
-		}
-
-		.logo-link~.name .first {
-			transition: width 0.25s ease;
-			width: 75px;
-		}
-
-		.logo-link~.name .last {
-			margin-left: 5px;
-			transition: margin-left 0.25s ease, width 0.25s ease;
-			width: 71px;
-		}
-
-		.logo-link:hover~.name .first,
-		.logo-link:focus~.name .first {
-			width: 11px;
-		}
-
-		.logo-link:hover~.name .last,
-		.logo-link:focus~.name .last {
-			margin-left: -3px;
-			width: 11px;
-		}
-
-		/* sticky header */
-		.wrapper-sticky-header {
-			box-sizing: border-box;
-			left: 0;
-			padding: 0 var(--gutter);
-			position: fixed;
-			top: 0;
-			width: 100%;
-			z-index: var(--above);
-		}
-
-		.sticky-header {
-			color: black;
-			align-items: center;
-			background: white;
-			box-sizing: border-box;
-			box-shadow: var(--shadow);
-			border-bottom-left-radius: calc(var(--offset-of-sticky-header) / 2);
-			border-bottom-right-radius: var(--gutter);
-			display: flex;
-			margin: 0 auto;
-			max-width: var(--max-width-wrapper);
-			padding: var(--gutter);
-			position: relative;
-			width: 100%;
-		}
-
-		.sticky-header .name {
-			font-size: 20px;
-		}
-
-		.open-mobile-menu {
-			appearance: none;
-			background: white;
-			border: 0;
-			border-bottom-right-radius: var(--gutter);
-			border-top-left-radius: var(--gutter);
-			bottom: 0;
-			box-sizing: border-box;
-			box-shadow: var(--shadow-inset-top-left);
-			cursor: pointer;
-			font-family: var(--font-family-text);
-			font-size: 14px;
-			padding: calc(var(--gutter) / 2) var(--gutter) calc(var(--gutter) / 4);
-			position: absolute;
-			right: 0;
-		}
-
-		.open-mobile-menu:focus {
-			outline: none;
-			pointer-events: none;
-		}
-
-		.open-mobile-menu:focus::after {
-			border-bottom: solid calc(var(--gutter) + 5px) white;
-		}
-
-		.open-mobile-menu:focus::before {
-			opacity: 1;
-		}
-
-		.open-mobile-menu:focus~.main-navigation,
-		.main-navigation:focus,
-		.main-navigation:focus-within {
-			transform: translateY(100%);
-			box-shadow: var(--shadow);
-		}
-
-		.open-mobile-menu:focus span {
-			opacity: 0;
-		}
-
-		.open-mobile-menu span {
-			display: block;
-			position: relative;
-			opacity: 1;
-			transition: opacity 0.3s ease;
-			z-index: 1;
-		}
-
-		.open-mobile-menu::before {
-			content: attr(data-label);
-			display: block;
-			position: absolute;
-			left: 50%;
-			opacity: 0;
-			top: 50%;
-			transform: translate(-50%, -50%);
-			transition: opacity 0.3s ease;
-			z-index: 1;
-		}
-
-		.open-mobile-menu::after {
-			border-bottom: solid 0 white;
-			content: "";
-			display: block;
-			height: 0;
-			position: absolute;
-			right: 0;
-			top: calc(100% - var(--gutter));
-			transition: border-bottom 0.1s ease;
-			transition-delay: 0.15s;
-			width: calc(100% - 3px);
-		}
-
-		.main-navigation {
-			background: white;
-			box-shadow: var(--shadow-opacity);
-			border-bottom-left-radius: var(--gutter);
-			border-bottom-right-radius: var(--gutter);
-			bottom: 0;
-			display: flex;
-			flex-direction: column;
-			font-size: 14px;
-			line-height: calc(var(--gutter) * 2);
-			padding: calc(var(--gutter) * 2) var(--gutter) calc(var(--gutter) / 4) calc(var(--gutter) * 2);
-			pointer-events: none;
-			position: absolute;
-			right: 0;
-			transform: translateY(0);
-			transition: transform 0.3s ease, box-shadow 0.15s ease;
-			transition-delay: 0.15s;
-			z-index: -1;
-		}
-
-		.main-navigation:focus {
-			outline: none;
-		}
-
-		.menu-label {
-			text-align: right;
-		}
-
-		.menu-label:before {
-			bottom: 0;
-			color: white;
-			content: "\261B";
-			font-size: 20px;
-			left: 1px;
-			position: absolute;
-			transition: color 0.3s ease, bottom 0.3s ease;
-		}
-
-		.nav-link {
-			color: gray;
-			pointer-events: all;
-			text-decoration: none;
-			transition: color 0.3s ease;
-		}
-
-		.nav-link:hover,
-		.nav-link:focus,
-		.nav-link:active {
-			color: black;
-		}
-
-		.nav-link:nth-child(1):hover~.menu-label:before,
-		.nav-link:nth-child(1):focus~.menu-label:before,
-		.nav-link:nth-child(1):active~.menu-label:before {
-			bottom: 83px;
-			color: inherit;
-		}
-
-		.nav-link:nth-child(2):hover~.menu-label:before,
-		.nav-link:nth-child(2):focus~.menu-label:before,
-		.nav-link:nth-child(2):active~.menu-label:before {
-			bottom: 63px;
-			color: inherit;
-		}
-
-		.nav-link:nth-child(3):hover~.menu-label:before,
-		.nav-link:nth-child(3):focus~.menu-label:before,
-		.nav-link:nth-child(3):active~.menu-label:before {
-			bottom: 43px;
-			color: inherit;
-		}
-
-		.nav-link:nth-child(4):hover~.menu-label:before,
-		.nav-link:nth-child(4):focus~.menu-label:before,
-		.nav-link:nth-child(4):active~.menu-label:before {
-			bottom: 23px;
-			color: inherit;
-		}
-
-		/* Anchor positions */
-		#anchor-go-to-top,
-		#form-contact {
-			left: 0;
-			position: absolute;
-			top: 0;
-		}
-
-		.section-anchor {
-			left: 0;
-			position: absolute;
-			top: calc(var(--anchor-position) * -1);
-		}
-
-		/*
-  Video
-  (height / width) * 100% =  height% (landscape)
-  (width / height) * 100% =  height% (portrait)
-  Ratio 16:9
-*/
-		.holder-video {
-			height: 0;
-			overflow: hidden;
-			padding-top: calc((9 / 16) * 100%);
-			position: relative;
-			width: 100%;
-		}
-
-		.video {
-			border: 0;
-			height: 100%;
-			left: 0;
-			position: absolute;
-			top: 0;
-			width: 100%;
-		}
-
-		/* Disclaimer and terms */
-
-		.disclaimer-and-terms {
-			align-items: center;
-			display: flex;
-			flex-direction: var(--disclaimer-and-terms-flex-direction);
-		}
-
-		.links-to-terms {
-			display: flex;
-			flex-direction: column;
-			flex-grow: 1;
-			line-height: var(--links-to-terms-line-height);
-			margin: 0;
-			text-align: var(--links-to-terms-text-align);
-		}
-
-		.disclaimer {
-			margin: var(--disclaimer-margin);
-			text-align: center;
-		}
-
-		.disclaimer svg {
-			display: inline-block;
-			height: var(--logo-size);
-			vertical-align: middle;
-			width: var(--logo-size);
-		}
-
-		/* Modal */
-
-		#close-modal {
-			position: fixed;
-			top: 0;
-		}
-
-		.modal {
-			background: rgba(0, 0, 0, 0);
-			-webkit-backdrop-filter: blur(20px);
-			backdrop-filter: blur(20px);
-			box-sizing: border-box;
-			height: 100%;
-			left: 0;
-			opacity: 0;
-			pointer-events: none;
-			position: fixed;
-			top: 0;
-			width: 100%;
-			transition: background .3s ease, opacity .3s ease;
-			z-index: var(--modal);
-		}
-
-		.modal:target {
-			background: rgba(0, 0, 0, 0.25);
-			opacity: 1;
-			pointer-events: all;
-		}
-
-		.modal-content {
-			background: var(--modal-background);
-			border-top-left-radius: var(--gutter);
-			border-bottom-left-radius: var(--gutter);
-			box-shadow: var(--shadow);
-			box-sizing: border-box;
-			height: 90vh;
-			left: 50%;
-			line-height: 1.5em;
-			max-width: var(--modal-max-width);
-			padding: var(--gutter) var(--size-of-close-modal-button) var(--gutter) var(--gutter);
-			position: absolute;
-			top: 50%;
-			transform: translate(-50%, -50%);
-			overflow-x: hidden;
-			overflow-y: auto;
-			width: 100%;
-			/* -moz- Firefox custom scroll */
-			scrollbar-color: #cccccc var(--modal-background);
-			scrollbar-width: thin;
-		}
-
-		/* -webkit- Edge, Chrome, Opera, Safari custom scroll */
-		.modal-content::-webkit-scrollbar {
-			background: var(--modal-background);
-			width: 8px;
-			height: 8px;
-		}
-
-		.modal-content::-webkit-scrollbar-thumb {
-			background: #cccccc;
-			border: solid 1px var(--modal-background);
-		}
-
-		.modal-content::-webkit-scrollbar-thumb:hover {
-			background: #aaaaaa;
-		}
-
-		.close-modal {
-			align-items: center;
-			display: flex;
-			height: var(--size-of-close-modal-button);
-			justify-content: center;
-			line-height: 1em;
-			position: absolute;
-			right: calc((100vw - var(--modal-max-width)) / 2);
-			text-decoration: none;
-			top: 5vh;
-			width: var(--size-of-close-modal-button);
-			z-index: 1;
-		}
-
-		.modal-overlay {
-			display: block;
-			height: 100%;
-			left: 0;
-			position: absolute;
-			top: 0;
-			width: 100%;
-		}
-
-		/* Forms subscribe and contact */
-
-		#form-contact:target~.main .wrapper-forms {
-			transform: rotateX(180deg);
-		}
-
-		#form-contact:target~.main .wrapper-forms .form.contact {
-			backface-visibility: visible;
-			pointer-events: all;
-			transform: rotateX(-180deg);
-		}
-
-		#form-contact:target~.main .wrapper-forms .form.subcribe {
-			pointer-events: none;
-			transform: rotateX(-180deg);
-		}
-
-		.wrapper-forms {
-			background: rgba(var(--config-background-texture-color), 0.3);
-			transform: rotateX(0deg);
-			transition: transform 0.5s ease;
-		}
-
-		.holder-forms {
-			position: relative;
-		}
-
-		.form {
-			align-items: center;
-			box-sizing: border-box;
-			display: flex;
-			flex-direction: var(--forms-contact-and-submit-flex-direction);
-			font-size: 0;
-			padding: calc(var(--gutter) * 5) calc(var(--gutter) * 2);
-			width: 100%;
-		}
-
-		.form.contact {
-			backface-visibility: hidden;
-			left: 0;
-			position: absolute;
-			pointer-events: none;
-			transform: rotateX(180deg);
-			top: 0;
-		}
-
-		.form.subcribe {
-			backface-visibility: hidden;
-			transform: rotateX(0deg);
-		}
-
-		.fields {
-			border: 0.5em solid white;
-			border-right-color: inherit;
-			border-radius: 0;
-			box-sizing: border-box;
-			box-shadow: var(--shadow), var(--fix-autofill);
-			padding: 0 0.25em;
-			transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-			width: 100%;
-		}
-
-		.fields:hover,
-		.fields:focus {
-			border-left-color: inherit;
-			box-shadow: var(--shadow-hover), var(--fix-autofill);
-			outline: 0;
-		}
-
-		.fields:valid {
-			border-right-color: var(--success-color);
-			transition: border-color 0.3s ease-in-out;
-		}
-
-		::placeholder,
-		.fields {
-			font-size: var(--font-size-form);
-			line-height: var(--line-height-form);
-		}
-
-		::placeholder {
-			color: var(--placeholder-color);
-			opacity: 1;
-			/* Fix for Firefox */
-		}
-
-		.contact .email,
-		.subcribe .email {
-			flex-grow: 1;
-		}
-
-		.contact .submit,
-		.subcribe .submit {
-			appearance: none;
-			background: rgba(255, 255, 255, 0.25);
-			border: 0;
-			border-radius: var(--gutter);
-			box-shadow: var(--shadow);
-			cursor: pointer;
-			font-family: Arial, sans-serif;
-			font-size: var(--font-size-form);
-			font-weight: 700;
-			line-height: var(--line-height-form);
-			padding: 0.5em;
-			margin: var(--forms-contact-and-submit-button-margin);
-			transition: background 0.3s ease, box-shadow 0.3s ease;
-			white-space: nowrap;
-			width: var(--forms-contact-and-submit-button-width);
-		}
-
-		.contact .submit:focus,
-		.subcribe .submit:focus {
-			outline: none;
-		}
-
-		.subcribe .submit span {
-			display: inline-flex;
-			overflow: hidden;
-			transition: width 0.3s ease;
-			width: 0;
-		}
-
-		.subcribe:valid .submit span {
-			width: 75px;
-		}
-
-		.contact:valid .submit {
-			background: rgba(255, 255, 0, 1);
-		}
-
-		.subcribe:valid .submit {
-			background: rgba(0, 255, 0, 1);
-		}
-
-		.contact:valid .submit,
-		.subcribe:valid .submit {
-			animation-name: pulse-outline;
-			animation-duration: 0.7s;
-			animation-iteration-count: 3;
-			animation-timing-function: cubic-bezier(0.46, 0.09, 0.55, 1.51);
-		}
-
-		.contact:valid .submit:hover,
-		.contact:valid .submit:focus,
-		.subcribe:valid .submit:hover,
-		.subcribe:valid .submit:focus {
-			background: white;
-			box-shadow: var(--shadow-hover);
-		}
-
-		@keyframes pulse-outline {
-			0% {
-				outline: 1px solid rgba(255, 255, 255, 1);
-				outline-offset: 0;
-			}
-
-			100% {
-				outline: 1px solid rgba(255, 255, 255, 0);
-				outline-offset: calc(var(--gutter) * 1.5);
-			}
-		}
-
-		/* Cards Languages */
-
-		.holder-cards-list {
-			display: flex;
-			flex-direction: column;
-		}
-
-		.holder-cards-list>p {
-			cursor: pointer;
-			margin-bottom: 0;
-		}
-
-		.holder-cards-list>p:first-child {
-			margin-top: calc(var(--gutter) * 2);
-		}
-
-		.html-css:hover~.cards.features:before {
-			opacity: 1;
-		}
-
-		.html-css:hover~.cards.features .card .holder-icon.red:after {
-			box-shadow: 0 0 0 0 rgba(255, 0, 0, 1) inset;
-		}
-
-		.html-css:hover~.cards.features .card .holder-icon.green:after {
-			box-shadow: 0 0 0 0 rgba(0, 255, 0, 1) inset;
-		}
-
-		.html-css-javascript:hover~.cards.features:after {
-			opacity: 1;
-		}
-
-		.html-css-javascript:hover~.cards.features .card .holder-icon.red:after {
-			box-shadow: 0 0 0 0 rgba(255, 0, 0, 1) inset;
-		}
-
-		.html-css-javascript:hover~.cards.features .card .holder-icon.green:after {
-			box-shadow: 0 0 0 0 rgba(0, 255, 0, 1) inset;
-		}
-
-		.html-css-javascript:hover~.cards.features .card .holder-icon.blue:after {
-			box-shadow: 0 0 0 0 rgba(0, 0, 255, 1) inset;
-		}
-
-		.cards {
-			display: grid;
-			grid-column-gap: var(--gutter);
-			grid-row-gap: var(--gutter);
-			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-			/* :( Variables don't work inside minmax() */
-			list-style: none;
-			margin-bottom: 0;
-			margin-top: 0;
-			padding: 0;
-		}
-
-		.cards.bleed {
-			box-sizing: border-box;
-			padding-left: calc(var(--gutter) * 2);
-			padding-right: calc(var(--gutter) * 2);
-		}
-
-		.cards.courses {
-			grid-template-columns: var(--cards-courses-grid-template-columns);
-		}
-
-		.cards.features {
-			grid-row-gap: var(--card-icon-top-gap);
-			order: -1;
-			padding: var(--card-icon-top-gap) 0 0;
-			position: relative;
-		}
-
-		.cards.features:before,
-		.cards.features:after {
-			box-sizing: border-box;
-			content: "";
-			display: block;
-			height: calc(100% + var(--gutter));
-			left: calc(var(--gutter) * -0.5);
-			position: absolute;
-			pointer-events: none;
-			opacity: 0;
-			top: 0;
-			transition: opacity 0.3s ease;
-		}
-
-		.cards.features:after {
-			background: url('https://adrianoenache.dev.br/fcc-assets/animate-border-rgb.svg');
-			width: calc(100% + var(--gutter));
-		}
-
-		.cards.features:before {
-			background: url('https://adrianoenache.dev.br/fcc-assets/animate-border-rg.svg');
-			width: calc((100% / 3) * 2 + var(--gutter) * 0.75);
-		}
-
-		.card {
-			background: white;
-			border-radius: var(--gutter);
-			box-shadow: var(--shadow);
-			color: var(--main-text-color-tablet);
-			padding: var(--gutter) var(--gutter);
-			position: relative;
-		}
-
-		.card:hover .animate-border {
-			opacity: 1;
-		}
-
-		.card .animate-border {
-			box-sizing: border-box;
-			display: block;
-			height: calc(100% + var(--gutter));
-			left: calc(var(--gutter) * -0.5);
-			opacity: 0;
-			position: absolute;
-			top: calc(var(--gutter) * -0.5);
-			width: calc(100% + var(--gutter));
-			transition: opacity 0.3s ease;
-		}
-
-		.features .card .animate-border {
-			height: calc(100% + var(--card-icon-top-gap));
-			top: calc((var(--card-icon-top-gap) - var(--gutter) * 0.5) * -1);
-		}
-
-		.courses .card {
-			padding-bottom: calc(var(--gutter) * 6);
-		}
-
-		.courses .card p:last-child {
-			bottom: var(--gutter);
-			left: var(--gutter);
-			margin-top: 0;
-			position: absolute;
-			right: var(--gutter);
-		}
-
-		.card h3 {
-			font-size: 30px;
-			text-align: center;
-			margin: 0.5em 0;
-		}
-
-		.courses .card h3 {
-			line-height: var(--course-card-h3-line-height);
-			min-height: var(--course-card-h3-min-height);
-		}
-
-		.card p.highlight {
-			color: red;
-			font-weight: 700;
-			text-align: center;
-		}
-
-		.card p.description,
-		.card p:last-child {
-			margin-bottom: 0;
-		}
-
-		.card .call-to-action {
-			background: red;
-			border-radius: var(--gutter);
-			box-shadow: var(--shadow);
-			box-sizing: border-box;
-			color: white;
-			display: block;
-			margin: 0 auto;
-			max-width: 300px;
-			padding: 0.5em 1em;
-			text-align: center;
-			text-decoration: none;
-			transition: box-shadow 0.3s ease;
-			width: 100%;
-		}
-
-		.card .call-to-action:hover {
-			box-shadow: var(--shadow-hover);
-		}
-
-		.holder-icon {
-			border-radius: 50%;
-			box-shadow: var(--shadow);
-			font-size: 0;
-			height: var(--card-icon-size);
-			margin: calc(var(--card-icon-top-gap) * -1) auto 0;
-			position: relative;
-			width: var(--card-icon-size);
-		}
-
-		.holder-icon:after {
-			border-radius: 50%;
-			content: "";
-			display: block;
-			height: 100%;
-			left: 0;
-			position: absolute;
-			top: 0;
-			transition: box-shadow 0.5s ease;
-			width: 100%;
-		}
-
-		.holder-icon.red:after {
-			box-shadow: 0 0 0 64px rgba(255, 0, 0, 1) inset;
-		}
-
-		.card:hover .holder-icon.red:after {
-			box-shadow: 0 0 0 0 rgba(255, 0, 0, 1) inset;
-		}
-
-		.holder-icon.green:after {
-			box-shadow: 0 0 0 64px rgba(0, 255, 0, 1) inset;
-		}
-
-		.card:hover .holder-icon.green:after {
-			box-shadow: 0 0 0 0 rgba(0, 255, 0, 1) inset;
-		}
-
-		.holder-icon.blue:after {
-			box-shadow: 0 0 0 64px rgba(0, 0, 255, 1) inset;
-		}
-
-		.card:hover .holder-icon.blue:after {
-			box-shadow: 0 0 0 0 rgba(0, 0, 255, 1) inset;
-		}
-
-		/*  */
-
-		.fcc {
-			background-color: var(--main-background-color);
-			background-image: var(--main-background-texture-vertical);
-			display: flex;
-			justify-content: center;
-			min-width: 320px;
-			padding: 0 10px;
-			position: relative;
-			scroll-behavior: smooth;
-		}
-
-		.fcc::before,
-		.fcc::after {
-			content: "";
-			display: block;
-			height: 100vh;
-			left: 0;
-			position: fixed;
-			pointer-events: none;
-			top: 0;
-			width: 100vw;
-			z-index: var(--behind);
-		}
-
-		.fcc::before {
-			background-image: var(--main-background-texture-horizontal);
-		}
-
-		.fcc::after {
-			background-image: var(--main-background-linear-gradient);
-		}
-
-		.shadown {
-			box-shadow: var(--shadow);
-			transition: box-shadow 0.3s ease-in-out;
-		}
-
-		.reset-list {
-			list-style: none;
-			padding: 0;
-		}
-
-		.shadown:hover {
-			box-shadow: var(--shadow-hover);
-		}
-
-		.wrapper-lists {
-			display: flex;
-			flex-direction: var(--list-wrapper-direction);
-			justify-content: space-between;
-		}
-
-		.contact-links {
-			display: flex;
-			justify-content: space-around;
-			flex-wrap: wrap;
-			margin: calc(var(--gutter) * 2) auto 0;
-		}
-
-		.contact-links li {
-			font-size: var(--size-of-contact-buttons);
-			margin: var(--margin-of-contact-buttons);
-		}
-
-		.contact-links li a {
-			align-items: center;
-			border-radius: 0.25em;
-			background: white;
-			color: black;
-			display: flex;
-			justify-content: center;
-			height: 2em;
-			width: 2em;
-			text-decoration: none;
-			transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-		}
-
-		.contact-links li a:visited {
-			color: purple;
-		}
-
-		.contact-links li a:hover,
-		.contact-links li a:focus {
-			color: red;
-		}
-
-		/* Font from icomoon.io the CSS have some little of customizations */
-
-		/* Using font woff converted to base64 */
-		@font-face {
-			font-family: 'fcc-icons';
-			src: url('data:font/woff;charset=utf-8;base64,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') format('woff');
-			font-weight: normal;
-			font-style: normal;
-			font-display: block;
-		}
-
-		/* It was added ::before */
-		[class^="icon-"]::before,
-		[class*=" icon-"]::before {
-			/* use !important to prevent issues with browser extensions that change fonts */
-			font-family: 'fcc-icons' !important;
-			speak: never;
-			font-style: normal;
-			font-weight: normal;
-			font-variant: normal;
-			text-transform: none;
-			line-height: 1;
-
-			/* Better Font Rendering =========== */
-			-webkit-font-smoothing: antialiased;
-			-moz-osx-font-smoothing: grayscale;
-		}
-
-		.icon-camera::before {
-			content: "\e90f";
-			margin-right: 0.25em;
-			/* This is custom */
-		}
-
-		.icon-link::before {
-			content: "\e9cb";
-		}
-
-		.icon-facebook::before {
-			content: "\ea90";
-		}
-
-		.icon-instagram::before {
-			content: "\ea92";
-		}
-
-		.icon-twitter::before {
-			content: "\ea96";
-		}
-
-		.icon-youtube::before {
-			content: "\ea9d";
-		}
-
-		.icon-github::before {
-			content: "\eab0";
-		}
-
-		.icon-reddit::before {
-			content: "\eac6";
-		}
-
-		.icon-linkedin2::before {
-			content: "\eaca";
-		}
-
-		.icon-codepen::before {
-			content: "\eae8";
-		}
-
-		/* Guideline */
-
-		.gl {
-			/* */
-			--gl-gutter: 10px;
-
-			/* */
-			--gl-text-color: black;
-			--gl-background: white;
-			--gl-background-stage-color: #eee;
-			--gl-background-stage: linear-gradient(45deg, var(--gl-background-stage-color) 25%, transparent 25%, transparent 75%, var(--gl-background-stage-color) 75%, var(--gl-background-stage-color)), linear-gradient(45deg, var(--gl-background-stage-color) 25%, transparent 25%, transparent 75%, var(--gl-background-stage-color) 75%, var(--gl-background-stage-color));
-			--gl-border: solid var(--gl-border-size) black;
-			--gl-border-size: 5px;
-			--gl-menu-width: 300px;
-
-			/* */
-			box-sizing: border-box;
-		}
-
-		.html code.gl,
-		code.gl.html {
-			color: darkgoldenrod;
-		}
-
-		.html code.gl .property,
-		code.gl.html .property {
-			color: lightgray;
-		}
-
-		.html code.gl .value,
-		code.gl.html .value {
-			color: lightgreen;
-		}
-
-		.html code.gl .comment,
-		code.gl.html .comment {
-			color: gray;
-		}
-
-		.html code.gl .content,
-		code.gl.html .content {
-			color: white;
-			cursor: pointer;
-			font-size: 0;
-			white-space: normal;
-		}
-
-		.html code.gl .content:hover,
-		code.gl.html .content:hover {
-			font-size: 1em;
-		}
-
-		.html code.gl .content:after,
-		code.gl.html .content:after {
-			content: "...";
-			font-size: 1rem;
-		}
-
-		.html code.gl .content:hover:after,
-		code.gl.html .content:hover:after {
-			font-size: 0;
-		}
-
-		.css code.gl,
-		code.gl.css {
-			color: lightgray;
-		}
-
-		.css code.gl .selector,
-		code.gl.css .selector {
-			color: darkgoldenrod;
-		}
-
-		.css code.gl .property,
-		code.gl.css .property {
-			color: mediumorchid;
-		}
-
-		.css code.gl .value,
-		code.gl.css .value {
-			color: darkorange;
-		}
-
-		.css code.gl .string,
-		code.gl.css .string {
-			color: lemonchiffon;
-		}
-
-		.css code.gl .function,
-		code.gl.css .function {
-			color: cornflowerblue;
-		}
-
-		.css code.gl .math,
-		code.gl.css .math {
-			color: chartreuse;
-		}
-
-		.css code.gl .var,
-		code.gl.css .var {
-			color: cyan;
-		}
-
-		.css code.gl .comment,
-		code.gl.css .comment {
-			color: gray;
-		}
-
-		.css code.gl .state,
-		code.gl.css .state {
-			color: yellow;
-		}
-
-		.css code.gl .pseudo,
-		code.gl.css .pseudo {
-			color: lightsalmon;
-		}
-
-		.css code.gl .prefix,
-		code.gl.css .prefix {
-			color: darkseagreen;
-		}
-
-		a.gl,
-		button.gl,
-		.gl[contenteditable] {
-			outline: 0;
-		}
-
-		.gl.menu {
-			background-color: var(--gl-background);
-			background-image: var(--gl-background-stage);
-			background-size: 10px 10px;
-			background-position: 0 0, 5px 5px;
-			border-right: var(--gl-border);
-			height: 100%;
-			left: calc(var(--gl-menu-width) * -1);
-			max-width: var(--gl-menu-width);
-			position: fixed;
-			top: 0;
-			transition: left 0.3s ease;
-			z-index: var(--modal);
-		}
-
-		.gl.menu:target {
-			left: 0;
-		}
-
-		.gl.menu:target~.gl.toggle-menu .gl.close-menu {
-			display: block;
-		}
-
-		.gl.menu:target~.gl.overlay-close-menu {
-			background: rgba(0, 0, 0, 0.7);
-			pointer-events: all;
-		}
-
-		.gl.menu:target .gl.menu-scroll {
-			display: flex;
-		}
-
-		.gl.holder-content {
-			height: 0;
-			overflow: hidden;
-			pointer-events: none;
-		}
-
-		.gl.main-section:target .holder-content {
-			height: auto;
-			overflow: initial;
-			pointer-events: all;
-		}
-
-		.gl.main-section:target header.gl {
-			padding: calc(var(--gl-gutter) * 3) 0;
-		}
-
-		.gl.main-section:target header a.gl {
-			text-decoration: none;
-		}
-
-		.gl.main-section header h2.gl {
-			margin: 0;
-		}
-
-		p.gl {
-			margin-top: 0;
-		}
-
-		.gl.main-title {
-			background-color: var(--gl-background);
-			color: var(--gl-text-color);
-			border-bottom: var(--gl-border);
-			padding: calc(var(--gl-gutter) * 5) var(--gl-gutter) var(--gl-gutter);
-			margin: 0;
-		}
-
-		.gl.toggle-menu {
-			font-size: 0;
-			position: fixed;
-			right: 0;
-			top: var(--gl-gutter);
-			z-index: var(--modal);
-		}
-
-		.gl.button-menu {
-			background-color: var(--gl-background);
-			border: var(--gl-border);
-			border-bottom-left-radius: 2em;
-			border-top-left-radius: 2em;
-			border-right: 0;
-			color: var(--gl-text-color);
-			display: inline-block;
-			font-size: 1rem;
-			line-height: 2em;
-			padding: 0 var(--gl-gutter);
-			text-decoration: none;
-			transition: color 0.3s ease;
-		}
-
-		.gl.close-menu {
-			background: transparent;
-			display: none;
-			height: 100%;
-			left: 0;
-			position: absolute;
-			top: 0;
-			width: 100%;
-			z-index: 1;
-		}
-
-		.gl.overlay-close-menu {
-			background: rgba(0, 0, 0, 0);
-			font-size: 0;
-			height: 100%;
-			position: fixed;
-			pointer-events: none;
-			right: 0;
-			top: 0;
-			transition: background 0.3s ease;
-			width: 100%;
-			z-index: calc(var(--modal) - 1);
-		}
-
-		.gl.menu-scroll {
-			display: none;
-			flex-direction: column;
-			height: calc(100% - 155px);
-			overflow-x: hidden;
-			overflow-y: auto;
-		}
-
-		.gl.nav-link {
-			background-color: var(--gl-background);
-			color: var(--gl-text-color);
-			padding: calc(var(--gl-gutter) * 0.5) var(--gl-gutter);
-		}
-
-		.gl.button-menu:focus,
-		.gl.button-menu:hover,
-		.gl.close-menu:focus+a,
-		.gl.close-menu:hover+a,
-		.gl.nav-link:focus,
-		.gl.nav-link:hover {
-			color: red;
-		}
-
-		.gl.code-details {
-			display: grid;
-			grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-			grid-template-rows: 2rem 1fr;
-			gap: 0px 0px;
-			grid-template-areas:
-				"h c e . . ."
-				"hd hd hd hd hd hd";
-		}
-
-		.gl.hd {
-			grid-area: hd;
-		}
-
-		.gl.h {
-			grid-area: h;
-		}
-
-		.gl.c {
-			grid-area: c;
-		}
-
-		.gl.e {
-			grid-area: e;
-		}
-
-		.gl.code-details button {
-			--gl-border: solid 2px black;
-			appearance: none;
-			background: white;
-			border: var(--gl-border);
-			border-radius: 0;
-			border-bottom: 0;
-			border-left: 0;
-			cursor: pointer;
-			font-weight: 700;
-			transition: background 0.3s ease, color 0.3s ease;
-		}
-
-		.gl.code-details button:focus {
-			background: black;
-			color: white;
-		}
-
-		.gl.code-details button.html:focus~.holder-details .html,
-		.gl.holder-details .html:focus {
-			height: auto;
-		}
-
-		.gl.code-details button.css:focus~.holder-details .css,
-		.gl.holder-details .css:focus {
-			height: auto;
-		}
-
-		.gl.code-details button:hover {
-			background: #bbb;
-		}
-
-		.gl.code-details button:first-of-type {
-			border-left: var(--gl-border);
-			border-top-left-radius: 1em;
-		}
-
-		.gl.code-details button:last-of-type {
-			border-top-right-radius: 1em;
-		}
-
-		.gl.holder-details {
-			border-top: var(--gl-border);
-		}
-
-		.gl.holder-details pre {
-			height: 0;
-			margin: 0;
-			overflow-y: hidden;
-		}
-
-		.gl.line-number {
-			color: gray;
-			display: inline-block;
-			text-align: right;
-			width: 38px;
-		}
-
-		pre .gl.line-number {
-			margin-left: -38px;
-		}
-
-		.gl.line-number.highlight {
-			background: rgba(255, 0, 0, 0.4);
-			color: white;
-		}
-
-		.gl.line-number::after {
-			counter-increment: line-number;
-			content: counter(line-number) ".";
-		}
-
-		.gl.line-number.custom::after {
-			content: ".";
-		}
-
-		pre.gl {
-			counter-reset: line-number;
-			tab-size: 2;
-			max-width: var(--max-width-wrapper);
-			/* Fix bug in Firefox */
-		}
-
-		pre.gl code {
-			display: block;
-			overflow-x: auto;
-			padding-left: 38px;
-			padding-right: var(--gl-gutter);
-		}
-
-		code.gl {
-			background: black;
-			font-weight: 700;
-		}
-
-		ol.gl,
-		code.gl {
-			counter-reset: pin-count;
-		}
-
-		ol.gl {
-			list-style: none;
-			margin: var(--gl-gutter) 0;
-			padding: 0;
-		}
-
-		ol.gl li::before,
-		code.gl .pin-count {
-			background: red;
-			border-radius: 0.25em;
-			color: white;
-			display: inline-block;
-			padding: 0 0.25em;
-			text-align: center;
-		}
-
-		code.gl .pin-count {
-			line-height: 1.25em;
-		}
-
-		ol.gl li::before {
-			line-height: 1.5em;
-			margin-right: var(--gl-gutter)
-		}
-
-		ol.gl li {
-			line-height: 1.5em;
-			margin-bottom: var(--gl-gutter)
-		}
-
-		ol.gl li:last-of-type {
-			line-height: 1.5em;
-			margin-bottom: 0;
-		}
-
-		ol.gl li::before,
-		code.gl .pin-count::before {
-			counter-increment: pin-count;
-			content: counter(pin-count);
-		}
-
-		code.gl .pin-count.custom::before {
-			display: none;
-		}
-
-		code.gl.inline {
-			padding: calc(var(--gl-gutter) * 0.5) var(--gl-gutter) calc(var(--gl-gutter) * 0.5) 0;
-		}
-
-		.gl.holder-details .example {
-			margin: var(--gl-gutter) 0;
-			position: relative;
-		}
+/* Tablet rules */
+/* Rule to work from tablet and above resolutions */
+@media only screen and (min-width: 426px) {
+  .gl-column-content {
+    --column-quantity: var(--column-quantity-tablet);
+  }
+  .gl-list-grid {
+    --min-template-column-size: var(--min-template-column-size-tablet);
+  }
+}
+
+/* Notebook rules */
+/* Rule to work from notebook and above resolutions */
+@media only screen and (min-width: 1025px) {
+  .gl-column-content {
+    --column-quantity: var(--column-quantity-notebook);
+  }
+  .gl-list-grid {
+    --min-template-column-size: var(--min-template-column-size-notebook);
+  }
+}
 	</style>
-
+	<link rel="stylesheet" type="text/css" href="../fcc-assets/css/technical-documentation-page.css" />
+	<link rel="stylesheet" type="text/css" href="../fcc-assets/css/guideline.css" />
 </head>
 
 <body>
 	<!-- Guideline -->
-	<nav class="gl menu" id="navbar">
+	<nav class="gl gl-menu gl-stage" id="navbar">
 		<header>
-			<h1 class="gl main-title">
+			<h1 class="gl-main-title">
 				Technical<br>
 				Documentation<br>
 				Page (Guideline)
 			</h1>
 		</header>
-		<div class="gl menu-scroll">
-			<a class="gl nav-link" tabindex="1" href="#A">A</a>
-			<a class="gl nav-link" tabindex="2" href="#B">B</a>
-			<a class="gl nav-link" tabindex="3" href="#C">C</a>
-			<a class="gl nav-link" tabindex="4" href="#D">D</a>
-			<a class="gl nav-link" tabindex="5" href="#E">E</a>
+		<div class="gl-menu-scroll gl-custom-scroll">
+			<a class="gl gl-nav-link nav-link" tabindex="1" href="#A">A</a>
+			<a class="gl gl-nav-link nav-link" tabindex="5" href="#design_tokens_of_tdp">Design tokens of TDP</a>
+			<a class="gl gl-nav-link nav-link" tabindex="5" href="#components_of_tdp">Components of TDP</a>
+			<a class="gl gl-nav-link nav-link" tabindex="5" href="#design_tokens_of_fcc_projects">Design tokens of FCC projects</a>
+			<a class="gl gl-nav-link nav-link" tabindex="5" href="#tribute_page">Tribute Page</a>
+			<a class="gl gl-nav-link nav-link" tabindex="5" href="#survey_form">Survey form</a>
+			<a class="gl gl-nav-link nav-link" tabindex="5" href="#product_landing_page">Product landing page</a>
+			<a class="gl gl-nav-link nav-link" tabindex="5" href="#personal_portifolio_webpage">Personal portifolio webpage</a>
 		</div>
 	</nav>
-	<div class="gl toggle-menu">
-		<a class="gl close-menu" href="#close-menu">Close menu</a>
-		<a class="gl button-menu" href="#navbar">Menu</a>
+	<div class="gl-toggle-menu">
+		<a class="gl gl-close-menu" href="#close-menu">Close menu</a>
+		<a class="gl gl-button-menu" href="#navbar">Menu</a>
 	</div>
-	<a class="gl overlay-close-menu" href="#close-menu">Overlay close menu</a>
-	<main class="gl main" id="main-doc">
-		<h1 class="gl">Technical Documentation Page (Guideline)</h1>
-		<p class="gl">
-			Opening text here ...
-		</p>
-		<section class="gl main-section" id="A">
+	<a class="gl-overlay-close-menu" href="#close-menu">Overlay close menu</a>
+	<main class="gl" id="main-doc">
+		<div class="gl-wrapper-content">
+			<h1 class="gl">Technical Documentation Page (Guideline)</h1>
+			<div class="gl-column-content" style="--column-quantity-custom: auto; --column-width-custom: 30ch;">
+				<p class="gl">
+					This is a project exercise from <a class="gl" href="https://www.freecodecamp.org" target="_blank"
+					rel="noopener">freeCodeCamp</a> to get the certification to <a
+					href="https://www.freecodecamp.org/learn/responsive-web-design/" target="_blank" rel="noopener">Responsive Web
+					Design</a>, <a class="gl" id="tribute-link"
+					href="https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-technical-documentation-page"
+					target="_blank" rel="noopener">Build a Technical Documentation Page</a>.
+				</p>
+			</div>
+		</div>
+		<hr class="gl">
+		<section class="gl-main-section main-section" id="A">
 			<header class="gl">
-				<h2 class="gl">
+				<h2 class="gl-wrapper-content">
 					<a class="gl" href="#A">A</a>
 				</h2>
 			</header>
-			<div class="gl holder-content">
-				<p class="gl">
-					<code
-						class="gl html inline"><span class="gl line-number custom highlight">999</span> <span class="pin-count custom">999</span>&lt;!DOCTYPE <span class="property">html</span>&gt</code>
-					sdsdsgdgsdgsugau
+			<div class="gl-holder-content">
+				<p class="gl-wrapper-content">
+					<code class="gl gl-html gl-inline"><span class="gl gl-line-number gl-custom gl-highlight">999</span> <span class="gl-pin-count gl-custom">999</span>&lt;!DOCTYPE <span class="gl-property">html</span>&gt</code>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, cupiditate illum? Esse nesciunt corrupti illo totam consequatur incidunt dolorem blanditiis et est recusandae, impedit beatae eius facilis at cumque perspiciatis?
 				</p>
 				<!-- -->
-				<pre class="gl html custom-scroll" contenteditable="true"><code class="gl custom-scroll" contenteditable="false">
-  <span class="gl line-number"></span><span class="comment">&lt;!-- Comment --&gt;</span>
-  <span class="gl line-number"></span>&lt;pre <span class="property">class=</span><span class="value">"<span class="pin-count"></span>gl <span class="pin-count"></span>html"</span> <span class="property">contenteditable=</span><span class="value">"true"</span>&gt;&lt;code <span class="property">class=</span><span class="value">"gl"</span> <span class="property">contenteditable=</span><span class="value">"false"</span>&gt;
-  <span class="gl line-number"></span>	&lt;span <span class="property">class=</span><span class="value">"gl <span class="pin-count"></span>line-number"</span>&gt;&lt;/span&gt;&lt;p&gt;<span class="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil porro error est ipsa deserunt id veniam. Amet odit repellat tempora laborum! Doloribus repudiandae optio quibusdam illum voluptates aliquam inventore eveniet!</span>&lt;/p&gt;
-  <span class="gl line-number"></span>	&lt;span <span class="property">class=</span><span class="value">"gl line-number <span class="pin-count"></span>highlight"</span>&gt;&lt;/span&gt;&lt;p&gt;<span class="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil porro error est ipsa deserunt id veniam. Amet odit repellat tempora laborum! Doloribus repudiandae optio quibusdam illum voluptates aliquam inventore eveniet!</span>&lt;/p&gt;
-  <span class="gl line-number"></span>&lt;/code&gt;&lt;/pre&gt;
+				<pre class="gl gl-html gl-custom-scroll" contenteditable="true"><code class="gl gl-custom-scroll" contenteditable="false">
+<span class="gl gl-line-number"></span><span class="gl-comment">&lt;!-- Comment --&gt;</span>
+<span class="gl gl-line-number"></span>&lt;pre <span class="gl-property">class=</span><span class="gl-value">"<span class="gl-pin-count"></span>gl <span class="gl-pin-count"></span>html"</span> <span class="gl-property">contenteditable=</span><span class="gl-value">"true"</span>&gt;&lt;code <span class="gl-property">class=</span><span class="gl-value">"gl"</span> <span class="gl-property">contenteditable=</span><span class="gl-value">"false"</span>&gt;
+<span class="gl gl-line-number"></span>	&lt;span <span class="gl-property">class=</span><span class="gl-value">"gl <span class="gl-pin-count"></span>line-number"</span>&gt;&lt;/span&gt;&lt;p&gt;<span class="gl-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil porro error est ipsa deserunt id veniam. Amet odit repellat tempora laborum! Doloribus repudiandae optio quibusdam illum voluptates aliquam inventore eveniet!</span>&lt;/p&gt;
+<span class="gl gl-line-number"></span>	&lt;span <span class="gl-property">class=</span><span class="gl-value">"gl gl-line-number <span class="gl-pin-count"></span>gl-highlight"</span>&gt;&lt;/span&gt;&lt;p&gt;<span class="gl-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil porro error est ipsa deserunt id veniam. Amet odit repellat tempora laborum! Doloribus repudiandae optio quibusdam illum voluptates aliquam inventore eveniet!</span>&lt;/p&gt;
+<span class="gl gl-line-number"></span>&lt;/code&gt;&lt;/pre&gt;
 
-  </code></pre>
+</code></pre>
+<p>Lorem</p>
+<p>Lorem</p>
+<p>Lorem</p>
+<p>Lorem</p>
+<p>Lorem</p>
+<p>Lorem</p>
+<p>Lorem</p>
+<p>Lorem</p>
+<p>Lorem</p>
+<p>Lorem</p>
 				<ol class="gl">
 					<li>A</li>
 					<li>B</li>
@@ -1952,90 +160,395 @@
 					<li>D</li>
 				</ol>
 				<!-- -->
-				<pre class="gl css" contenteditable="true"><code class="gl custom-scroll" contenteditable="false">
-  <span class="gl line-number"></span><span class="comment">/* Comment */</span>
-  <span class="gl line-number"></span><span class="selector">.gl.menu</span><span class="pseudo">::before</span><span class="state">:hover</span> {
-  <span class="gl line-number"></span>  <span class="property">background-color</span>: <span class="function">var</span>(<span class="var">--gl-background</span>);
-  <span class="gl line-number"></span>  <span class="property">background-image</span>: <span class="function">var</span>(<span class="var">--gl-background-stage</span>);
-  <span class="gl line-number"></span>  <span class="property">background-size</span>: <span class="value">10px 10px</span>;
-  <span class="gl line-number"></span>  <span class="property">background-position</span>: <span class="value">0 0, 5px 5px</span>;
-  <span class="gl line-number"></span>  <span class="property">border-right</span>: <span class="function">var</span>(<span class="var">--gl-border</span>);
-  <span class="gl line-number"></span>  <span class="property">content</span>: <span class="string">"\eae8"</span>;
-  <span class="gl line-number"></span>  <span class="property">height</span>: <span class="value">100%</span>;
-  <span class="gl line-number"></span>  <span class="property">left</span>: <span class="function">calc</span>(<span class="function">var</span>(<span class="var">--gl-menu-width</span>) <span class="math">* -1</span>);
-  <span class="gl line-number"></span>  <span class="property">max-width</span>: <span class="function">var</span>(<span class="var">--gl-menu-width</span>);
-  <span class="gl line-number"></span>  <span class="property">position</span>: <span class="value">fixed</span>;
-  <span class="gl line-number"></span>  <span class="property">top</span>: <span class="value">0</span>;
-  <span class="gl line-number"></span>  <span class="property">transition</span>: <span class="property">left</span> <span class="value">0.3s</span> <span class="function">ease</span>;
-  <span class="gl line-number"></span>  <span class="pin-count"></span><span class="prefix">-moz-</span><span class="property">z-index</span>: <span class="function">var</span>(<span class="var">--modal</span>);
-  <span class="gl line-number"></span>  <span class="pin-count"></span><span class="property">z-index</span>: <span class="function">var</span>(<span class="var">--modal</span>);
-  <span class="gl line-number"></span>}
+				<pre class="gl gl-css" contenteditable="true"><code class="gl gl-custom-scroll" contenteditable="false">
+<span class="gl gl-line-number"></span><span class="gl-comment">/* Comment */</span>
+<span class="gl gl-line-number"></span><span class="gl-selector">.gl.menu</span><span class="gl-pseudo">::before</span><span class="gl-state">:hover</span> {
+<span class="gl gl-line-number"></span>  <span class="gl-property">background-color</span>: <span class="gl-function">var</span>(<span class="gl-var">--gl-background</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-property">background-image</span>: <span class="gl-function">var</span>(<span class="gl-var">--gl-background-stage</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-property">background-size</span>: <span class="gl-value">10px 10px</span>;
+<span class="gl gl-line-number"></span>  <span class="gl-property">background-position</span>: <span class="gl-value">0 0, 5px 5px</span>;
+<span class="gl gl-line-number"></span>  <span class="gl-property">border-right</span>: <span class="gl-function">var</span>(<span class="gl-var">--gl-border</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-property">content</span>: <span class="gl-string">"\eae8"</span>;
+<span class="gl gl-line-number"></span>  <span class="gl-property">height</span>: <span class="gl-value">100%</span>;
+<span class="gl gl-line-number"></span>  <span class="gl-property">left</span>: <span class="gl-function">calc</span>(<span class="gl-function">var</span>(<span class="gl-var">--gl-menu-width</span>) <span class="gl-math">* -1</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-property">max-width</span>: <span class="gl-function">var</span>(<span class="gl-var">--gl-menu-width</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-property">position</span>: <span class="gl-value">fixed</span>;
+<span class="gl gl-line-number"></span>  <span class="gl-property">top</span>: <span class="gl-value">0</span>;
+<span class="gl gl-line-number"></span>  <span class="gl-property">transition</span>: <span class="gl-property">left</span> <span class="gl-value">0.3s</span> <span class="gl-function">ease</span>;
+<span class="gl gl-line-number"></span>  <span class="gl-pin-count"></span><span class="gl-prefix">-moz-</span><span class="gl-property">z-index</span>: <span class="gl-function">var</span>(<span class="gl-var">--modal</span>);
+<span class="gl gl-line-number gl-highlight"></span>  <span class="gl-pin-count"></span><span class="gl-property">z-index</span>: <span class="gl-function">var</span>(<span class="gl-var">--modal</span>);
+<span class="gl gl-line-number"></span>}
 
-  </code></pre>
+</code></pre>
 				<!-- -->
-				<div class="gl code-details">
-					<button class="gl h html" type="button">HTML</button>
-					<button class="gl c css" type="button">CSS</button>
-					<div class="gl hd holder-details">
-						<pre class="gl html" contenteditable="true"><code class="gl custom-scroll" contenteditable="false">
-  <span class="gl line-number"></span>  html
-  <span class="gl line-number highlight"></span>  nkn mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+				<div class="gl gl-code-details">
+					<button class="gl h gl-html" type="button">HTML</button>
+					<button class="gl c gl-css" type="button">CSS</button>
+					<button class="gl j gl-javascript" type="button">javascript</button>
+					<div class="gl hd gl-holder-details">
+<pre class="gl gl-html" contenteditable="true"><code class="gl gl-custom-scroll" contenteditable="false">
+<span class="gl gl-line-number"></span>  html
+<span class="gl gl-line-number gl-highlight"></span>  nkn mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 
-  </code></pre>
-						<pre class="gl css" contenteditable="true"><code class="gl custom-scroll" contenteditable="false">
-  <span class="gl line-number"></span>	.css
+</code></pre>
+<pre class="gl gl-css" contenteditable="true"><code class="gl gl-custom-scroll" contenteditable="false">
+<span class="gl gl-line-number"></span>	.css
 
-  </code></pre>
-						<div class="gl example">
+</code></pre>
+<pre class="gl gl-javascript" contenteditable="true"><code class="gl gl-custom-scroll" contenteditable="false">
+<span class="gl gl-line-number highlight gl-custom">999</span>	javascript();
+
+</code></pre>
+						<div class="gl gl-example">
 							Example
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		<section class="gl main-section" id="B">
+		<section class="gl-main-section main-section" id="design_tokens_of_tdp">
 			<header class="gl">
-				<h2 class="gl">
-					<a class="gl" href="#B">B</a>
+				<h2 class="gl-wrapper-content">
+					<a class="gl" href="#design_tokens_of_tdp">Design tokens of <abbr class="gl" title="Technical Documentation Page">TDP</abbr></a>
 				</h2>
 			</header>
-			<div class="gl holder-content">
-				content
+			<div class="gl-holder-content">
+				<div class="gl-wrapper-content">
+					<h3 class="gl">Design Tokens for colors and themes</h3>
+					<p class="gl">This values can be configured in the file <mark class="gl">fcc-projects/fcc-assets/css/guideline/guideline-tokens.css</mark></p>
+					<h4 class="gl">Primitive token values</h4>
+					<div class="gl-column-content" style="--column-quantity-custom: auto; --column-width-custom: 40ch;">
+						<p class="gl">The numerical nomenclature was chosen to facilitate the maintenance if was necessary add new values. Thinking in the premise that the primitive values are not allowed to be used directly in the compoments. And because of this the color values will receive a generic number name.</p>
+					</div>
+					<ul class="gl gl-margin-bottom">
+						<li>
+							<code class="gl gl-css gl-inline" style="--gl-color-value: black;">
+								<span class="gl-var">--gl-colors-01</span>: <span class="gl-value gl-color">black</span>;
+							</code>
+						</li>
+						<li>
+							<code class="gl gl-css gl-inline" style="--gl-color-value: white;">
+								<span class="gl-var">--gl-colors-02</span>: <span class="gl-value gl-color">white</span>;
+							</code>
+						</li>
+						<li>
+							<code class="gl gl-css gl-inline" style="--gl-color-value: lightgray;">
+								<span class="gl-var">--gl-colors-03</span>: <span class="gl-value gl-color">lightgray</span>;
+							</code>
+						</li>
+						<li>
+							<code class="gl gl-css gl-inline" style="--gl-color-value: gray;">
+								<span class="gl-var">--gl-colors-04</span>: <span class="gl-value gl-color">gray</span>;
+							</code>
+						</li>
+						<li>
+							<code class="gl gl-css gl-inline" style="--gl-color-value: mediumorchid;">
+								<span class="gl-var">--gl-colors-05</span>: <span class="gl-value gl-color">mediumorchid</span>;
+							</code>
+						</li>
+						<li>
+							<code class="gl gl-css gl-inline" style="--gl-color-value: darkgoldenrod;">
+								<span class="gl-var">--gl-colors-06</span>: <span class="gl-value gl-color">darkgoldenrod</span>;
+							</code>
+						</li>
+						<li>
+							<code class="gl gl-css gl-inline" style="--gl-color-value: darkorange;">
+								<span class="gl-var">--gl-colors-07</span>: <span class="gl-value gl-color">darkorange</span>;
+							</code>
+						</li>
+						<li>
+							<code class="gl gl-css gl-inline" style="--gl-color-value: lightsalmon;">
+								<span class="gl-var">--gl-colors-08</span>: <span class="gl-value gl-color">lightsalmon</span>;
+							</code>
+						</li>
+						<li>
+							<code class="gl gl-css gl-inline" style="--gl-color-value: yellow;">
+								<span class="gl-var">--gl-colors-09</span>: <span class="gl-value gl-color">yellow</span>;
+							</code>
+						</li>
+						<li>
+							<code class="gl gl-css gl-inline" style="--gl-color-value: lemonchiffon;">
+								<span class="gl-var">--gl-colors-10</span>: <span class="gl-value gl-color">lemonchiffon</span>;
+							</code>
+						</li>
+						<li>
+							<code class="gl gl-css gl-inline" style="--gl-color-value: chartreuse;">
+								<span class="gl-var">--gl-colors-11</span>: <span class="gl-value gl-color">chartreuse</span>;
+							</code>
+						</li>
+						<li>
+							<code class="gl gl-css gl-inline" style="--gl-color-value: lightgreen;">
+								<span class="gl-var">--gl-colors-12</span>: <span class="gl-value gl-color">lightgreen</span>;
+							</code>
+						</li>
+						<li>
+							<code class="gl gl-css gl-inline" style="--gl-color-value: darkseagreen;">
+								<span class="gl-var">--gl-colors-13</span>: <span class="gl-value gl-color">darkseagreen</span>;
+							</code>
+						</li>
+						<li>
+							<code class="gl gl-css gl-inline" style="--gl-color-value: cornflowerblue;">
+								<span class="gl-var">--gl-colors-14</span>: <span class="gl-value gl-color">cornflowerblue</span>;
+							</code>
+						</li>
+						<li>
+							<code class="gl gl-css gl-inline" style="--gl-color-value: cyan;">
+								<span class="gl-var">--gl-colors-15</span>: <span class="gl-value gl-color">cyan</span>;
+							</code>
+						</li>
+						<li>
+							<code class="gl gl-css gl-inline" style="--gl-color-value: rgb(255, 0, 0);">
+								<span class="gl-var">--gl-color-16</span>: <span class="gl-value gl-color">255, 0, 0;</span> <span class="gl-pin-count"></span>
+							</code>
+						</li>
+					</ul>
+					<h5 class="gl">Attention</h5>
+					<ol class="gl gl-column-content gl-margin-bottom" style="--column-quantity-custom: auto; --column-width-custom: 40ch;">
+						<li>
+							In case of change the values respect the type. Hexadecimal code colors and color names are compatible in the place where is used but not for the other cases. For the example tokens with RBG values require other RGB values to substitution other wise your code will broke.
+						</li>
+					</ol>
+					<h5 class="gl">Color samples</h5>
+					<div class="gl-list-grid gl-margin-bottom">
+						<span class="gl-colors" style="--gl-color-value: black;">
+							<span class="gl-color-sample gl-stage"></span>
+						</span>
+						<span class="gl-colors" style="--gl-color-value: white;">
+							<span class="gl-color-sample gl-stage"></span>
+						</span>
+						<span class="gl-colors" style="--gl-color-value: lightgray;">
+							<span class="gl-color-sample gl-stage"></span>
+						</span>
+						<span class="gl-colors" style="--gl-color-value: gray;">
+							<span class="gl-color-sample gl-stage"></span>
+						</span>
+						<span class="gl-colors" style="--gl-color-value: mediumorchid;">
+							<span class="gl-color-sample gl-stage"></span>
+						</span>
+						<span class="gl-colors" style="--gl-color-value: darkgoldenrod;">
+							<span class="gl-color-sample gl-stage"></span>
+						</span>
+						<span class="gl-colors" style="--gl-color-value: darkorange;">
+							<span class="gl-color-sample gl-stage"></span>
+						</span>
+						<span class="gl-colors" style="--gl-color-value: lightsalmon;">
+							<span class="gl-color-sample gl-stage"></span>
+						</span>
+						<span class="gl-colors" style="--gl-color-value: yellow;">
+							<span class="gl-color-sample gl-stage"></span>
+						</span>
+						<span class="gl-colors" style="--gl-color-value: lemonchiffon;">
+							<span class="gl-color-sample gl-stage"></span>
+						</span>
+						<span class="gl-colors" style="--gl-color-value: chartreuse;">
+							<span class="gl-color-sample gl-stage"></span>
+						</span>
+						<span class="gl-colors" style="--gl-color-value: lightgreen;">
+							<span class="gl-color-sample gl-stage"></span>
+						</span>
+						<span class="gl-colors" style="--gl-color-value: darkseagreen;">
+							<span class="gl-color-sample gl-stage"></span>
+						</span>
+						<span class="gl-colors" style="--gl-color-value: cornflowerblue;">
+							<span class="gl-color-sample gl-stage"></span>
+						</span>
+						<span class="gl-colors" style="--gl-color-value: cyan;">
+							<span class="gl-color-sample gl-stage"></span>
+						</span>
+						<span class="gl-colors" style="--gl-color-value: rgb(255, 0, 0);">
+							<span class="gl-color-sample gl-stage"></span>
+						</span>
+					</div>
+					<hr class="gl">
+					<h4 class="gl">Component code theme tokens</h4>
+					<p class="gl">These are the base theme color tokens of the component "code" for the modes inline and block.</p>
+					<!-- -->
+					<pre class="gl gl-css gl-margin-bottom" style="--gl-start-line-at: 19;"><code class="gl gl-custom-scroll">
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-color-code-bg</span>: <span class="gl-value gl-color" style="--gl-color-value: var(--gl-colors-01);"></span><span class="gl-function">var</span>(<span class="gl-var">--gl-colors-01</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-color-code-tab-border</span>: <span class="gl-value gl-color" style="--gl-color-value: var(--gl-color-code-bg);"></span><span class="gl-function">var</span>(<span class="gl-var">--gl-color-code-bg</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-color-code-tab-bg</span>: <span class="gl-value gl-color" style="--gl-color-value: var(--gl-colors-02);"></span><span class="gl-function">var</span>(<span class="gl-var">--gl-colors-02</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-color-code-tab-text</span>: <span class="gl-value gl-color" style="--gl-color-value: var(--gl-color-code-bg);"></span><span class="gl-function">var</span>(<span class="gl-var">--gl-color-code-bg</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-color-code-tab-bg-active</span>: <span class="gl-value gl-color" style="--gl-color-value: var(--gl-color-code-tab-text);"></span><span class="gl-function">var</span>(<span class="gl-var">--gl-color-code-tab-text</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-color-code-tab-text-active</span>: <span class="gl-value gl-color" style="--gl-color-value: var(--gl-color-code-tab-bg);"></span><span class="gl-function">var</span>(<span class="gl-var">--gl-color-code-tab-bg</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-color-line-number-text</span>: <span class="gl-value gl-color" style="--gl-color-value: var(--gl-colors-04);"></span><span class="gl-function">var</span>(<span class="gl-var">--gl-colors-04</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-color-line-number-bg-highlight</span>: <span class="gl-value gl-color" style="--gl-color-value: rgb(var(--gl-colors-16));"></span><span class="gl-function">var</span>(<span class="gl-var">--gl-colors-16</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-color-line-number-text-highlight</span>: <span class="gl-value gl-color" style="--gl-color-value: var(--gl-colors-02);"></span><span class="gl-function">var</span>(<span class="gl-var">--gl-colors-02</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-color-line-number-bg-pin-count</span>: <span class="gl-value gl-color" style="--gl-color-value: rgb(var(--gl-colors-16));"></span><span class="gl-function">var</span>(<span class="gl-var">--gl-colors-16</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-color-line-number-text-pin-count</span>: <span class="gl-value gl-color" style="--gl-color-value: var(--gl-colors-02);"></span><span class="gl-function">var</span>(<span class="gl-var">--gl-colors-02</span>);
+
+</code></pre>
+<!-- -->
+					<hr class="gl">
+					<h4 class="gl">Component code theme tokens for HTML</h4>
+					<p class="gl">This are the color theme tokens for HTML code.</p>
+					<!-- -->
+					<pre class="gl gl-css gl-margin-bottom" style="--gl-start-line-at: 31;"><code class="gl gl-custom-scroll">
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-color-html-tag</span>: <span class="gl-value gl-color" style="--gl-color-value: var(--gl-colors-06);"></span><span class="gl-function">var</span>(<span class="gl-var">--gl-colors-06</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-color-html-property</span>: <span class="gl-value gl-color" style="--gl-color-value: var(--gl-colors-03);"></span><span class="gl-function">var</span>(<span class="gl-var">--gl-colors-03</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-color-html-property-value</span>: <span class="gl-value gl-color" style="--gl-color-value: var(--gl-colors-12);"></span><span class="gl-function">var</span>(<span class="gl-var">--gl-colors-12</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-color-html-comment</span>: <span class="gl-value gl-color" style="--gl-color-value: var(--gl-colors-04);"></span><span class="gl-function">var</span>(<span class="gl-var">--gl-colors-04</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-color-html-content</span>: <span class="gl-value gl-color" style="--gl-color-value: var(--gl-colors-02);"></span><span class="gl-function">var</span>(<span class="gl-var">--gl-colors-02</span>);
+
+</code></pre>
+<!-- -->
+					<hr class="gl">
+					<h4 class="gl">Component code theme tokens for CSS</h4>
+					<p class="gl">This are the color theme tokens for CSS code.</p>
+<!-- -->
+<pre class="gl gl-css gl-margin-bottom" style="--gl-start-line-at: 37;"><code class="gl gl-custom-scroll">
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-color-css</span>: <span class="gl-value gl-color" style="--gl-color-value: var(--gl-colors-03);"></span><span class="gl-function">var</span>(<span class="gl-var">--gl-colors-03</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-color-css-class-selector</span>: <span class="gl-value gl-color" style="--gl-color-value: var(--gl-colors-06);"></span><span class="gl-function">var</span>(<span class="gl-var">--gl-colors-06</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-color-css-property</span>: <span class="gl-value gl-color" style="--gl-color-value: var(--gl-colors-05);"></span><span class="gl-function">var</span>(<span class="gl-var">--gl-colors-05</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-color-css-property-value</span>: <span class="gl-value gl-color" style="--gl-color-value: var(--gl-colors-07);"></span><span class="gl-function">var</span>(<span class="gl-var">--gl-colors-07</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-color-css-string</span>: <span class="gl-value gl-color" style="--gl-color-value: var(--gl-colors-10);"></span><span class="gl-function">var</span>(<span class="gl-var">--gl-colors-10</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-color-css-function</span>: <span class="gl-value gl-color" style="--gl-color-value: var(--gl-colors-14);"></span><span class="gl-function">var</span>(<span class="gl-var">--gl-colors-14</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-color-css-math</span>: <span class="gl-value gl-color" style="--gl-color-value: var(--gl-colors-11);"></span><span class="gl-function">var</span>(<span class="gl-var">--gl-colors-11</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-color-css-custom-property</span>: <span class="gl-value gl-color" style="--gl-color-value: var(--gl-colors-15);"></span><span class="gl-function">var</span>(<span class="gl-var">--gl-colors-15</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-color-css-comment</span>: <span class="gl-value gl-color" style="--gl-color-value: var(--gl-colors-04);"></span><span class="gl-function">var</span>(<span class="gl-var">--gl-colors-04</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-color-css-behavior</span>: <span class="gl-value gl-color" style="--gl-color-value: var(--gl-colors-09);"></span><span class="gl-function">var</span>(<span class="gl-var">--gl-colors-09</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-color-css-pseudo-class</span>: <span class="gl-value gl-color" style="--gl-color-value: var(--gl-colors-08);"></span><span class="gl-function">var</span>(<span class="gl-var">--gl-colors-08</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-color-css-prefix</span>: <span class="gl-value gl-color" style="--gl-color-value: var(--gl-colors-08);"></span><span class="gl-function">var</span>(<span class="gl-var">--gl-colors-08</span>);
+
+</code></pre>
+<!-- -->
+					<hr class="gl">
+					<h4 class="gl">Component code theme tokens for Javascript</h4>
+					<p class="gl">This will be done with more details in the future.</p>
+<!-- -->
+<pre class="gl gl-css gl-margin-bottom" style="--gl-start-line-at: 50;"><code class="gl gl-custom-scroll">
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-color-javascript</span>: <span class="gl-value gl-color" style="--gl-color-value: var(--gl-colors-14);"></span><span class="gl-function">var</span>(<span class="gl-var">--gl-colors-14</span>);
+
+</code></pre>
+<!-- -->
+					<hr class="gl">
+					<h3 class="gl">General Design Tokens</h3>
+					<p class="gl">This tokens control general aspects of <abbr title="Technical Documentation Page">TDP</abbr> components.</p>
+					<!-- -->
+					<pre class="gl gl-css" contenteditable="true" style="--gl-start-line-at: 52;"><code class="gl gl-custom-scroll" contenteditable="false">
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-color-text</span>: <span class="gl-function">var</span>(<span class="gl-var">--gl-colors-01</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-color-text-decoration</span>: <span class="gl-function">var</span>(<span class="gl-var">--gl-colors-05</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-background</span>: <span class="gl-function">var</span>(<span class="gl-var">--gl-colors-02</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-background-stage</span>: var(<span class="gl-var">--gl-colors-03</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-background-stage-texture</span>: <span class="gl-function">linear-gradient</span>(
+<span class="gl gl-line-number"></span>    <span class="gl-value">45deg</span>,
+<span class="gl gl-line-number"></span>    <span class="gl-function">var</span>(<span class="gl-var">--gl-background-stage</span>) <span class="gl-value">25%</span>,
+<span class="gl gl-line-number"></span>    <span class="gl-value">transparent</span> <span class="gl-value">25%</span>,
+<span class="gl gl-line-number"></span>    <span class="gl-value">transparent</span> <span class="gl-value">75%</span>,
+<span class="gl gl-line-number"></span>    <span class="gl-function">var</span>(<span class="gl-var">--gl-background-stage</span>) <span class="gl-value">75%</span>,
+<span class="gl gl-line-number"></span>    <span class="gl-function">var</span>(<span class="gl-var">--gl-background-stage</span>)
+<span class="gl gl-line-number"></span>   ),
+<span class="gl gl-line-number"></span>   <span class="gl-function">linear-gradient</span>(
+<span class="gl gl-line-number"></span>    <span class="gl-value">45deg</span>,
+<span class="gl gl-line-number"></span>    <span class="gl-function">var</span>(<span class="gl-var">--gl-background-stage</span>) <span class="gl-value">25%</span>,
+<span class="gl gl-line-number"></span>    <span class="gl-value">transparent</span> <span class="gl-value">25%</span>,
+<span class="gl gl-line-number"></span>    <span class="gl-value">transparent</span> <span class="gl-value">75%</span>,
+<span class="gl gl-line-number"></span>    <span class="gl-function">var</span>(<span class="gl-var">--gl-background-stage</span>) <span class="gl-value">75%</span>,
+<span class="gl gl-line-number"></span>    <span class="gl-function">var</span>(<span class="gl-var">--gl-background-stage</span>)
+<span class="gl gl-line-number"></span>   );
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-background-mark</span>: <span class="gl-function">var</span>(<span class="gl-var">--gl-colors-03</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-text-font</span>: <span class="gl-value">Verdana</span>, <span class="gl-value">Geneva</span>, <span class="gl-value">Tahoma</span>, <span class="gl-value">sans-serif</span>;
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-code-font</span>: <span class="gl-string">'Courier New'</span>, <span class="gl-value">Courier</span>, <span class="gl-value">monospace</span>;
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-title-base-font-size</span>: <span class="gl-value">18px</span>;
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-border</span>: <span class="gl-value">solid</span> <span class="gl-function">var</span>(<span class="gl-var">--gl-border-size</span>) <span class="gl-function">var</span>(<span class="gl-var">--gl-colors-01</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-border-size</span>: <span class="gl-value">5px</span>;
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-menu-width</span>: <span class="gl-value">300px</span>;
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-gutter</span>: <span class="gl-value">10px</span>;
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-shadow</span>: <span class="gl-value">1px</span> <span class="gl-value">1px</span> <span class="gl-value">0</span> <span class="gl-value">1px</span> <span class="gl-function">rgba</span>(<span class="gl-value">0</span>, <span class="gl-value">0</span>, <span class="gl-value">0</span>, <span class="gl-value">0.75</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-transition</span>: <span class="gl-value">0.3s</span> <span class="gl-value">ease</span>;
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-menu-title-font-size</span>: <span class="gl-value">20px</span>;
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-menu-title-box-size</span>: <span class="gl-function">calc</span>((<span class="gl-function">var</span>(<span class="gl-var">--gl-menu-title-font-size</span>) <span class="gl-math">*</span> <span class="gl-value">3</span>) <span class="gl-math">+</span> <span class="gl-function">var</span>(<span class="gl-var">--gl-border-size</span>) <span class="gl-math">+</span> (<span class="gl-function">var</span>(<span class="gl-var">--gl-gutter</span>) <span class="gl-math">*</span> <span class="gl-value">2</span>));
+<span class="gl gl-line-number"></span>  <span class="gl-comment">/* Custom scroll */</span>
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-scroll-thumb-background</span>: <span class="gl-function">var</span>(<span class="gl-var">--gl-colors-03</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-scroll-thumb-background-hover</span>: <span class="gl-function">var</span>(<span class="gl-var">--gl-colors-04</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-scroll-bar-background</span>: <span class="gl-function">var</span>(<span class="gl-var">--gl-colors-01</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-scroll-bar-width-firefox</span>: <span class="gl-value">thin</span>;
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-scroll-bar-width-chromium</span>: <span class="gl-value">8px</span>;
+<span class="gl gl-line-number"></span>  <span class="gl-comment">/* Z-index */</span>
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-behind</span>: <span class="gl-value">1</span>;
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-content</span>: <span class="gl-value">5</span>;
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-above</span>: <span class="gl-value">10</span>;
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-modal</span>: <span class="gl-value">15</span>;
+
+</code></pre>
+<!-- -->
+				</div>
 			</div>
 		</section>
-		<section class="gl main-section" id="C">
+		<section class="gl-main-section main-section" id="components_of_tdp">
 			<header class="gl">
-				<h2 class="gl">
-					<a class="gl" href="#C">C</a>
+				<h2 class="gl-wrapper-content">
+					<a class="gl" href="#components_of_tdp">Components of <abbr class="gl" title="Technical Documentation Page">TDP</abbr></a>
 				</h2>
 			</header>
-			<div class="gl holder-content">
-				content
+			<div class="gl-holder-content">
+				<div class="gl-wrapper-content">
+					...
+				</div>
 			</div>
 		</section>
-		<section class="gl main-section" id="D">
+		<section class="gl-main-section main-section" id="design_tokens_of_fcc_projects">
 			<header class="gl">
-				<h2 class="gl">
-					<a class="gl" href="#D">D</a>
+				<h2 class="gl-wrapper-content">
+					<a class="gl" href="#design_tokens_of_fcc_projects">Design tokens of <abbr title="freeCodeCamp" class="gl">FCC</abbr> projects</a>
 				</h2>
 			</header>
-			<div class="gl holder-content">
-				content
+			<div class="gl-holder-content">
+				<div class="gl-wrapper-content">
+					...
+				</div>
 			</div>
 		</section>
-		<section class="gl main-section" id="E">
+		<section class="gl-main-section main-section" id="tribute_page">
 			<header class="gl">
-				<h2 class="gl">
-					<a class="gl" href="#E">E</a>
+				<h2 class="gl-wrapper-content">
+					<a class="gl" href="#tribute_page">Tribute Page</a>
 				</h2>
 			</header>
-			<div class="gl holder-content">
-				content
+			<div class="gl-holder-content">
+				<div class="gl-wrapper-content">
+					...
+				</div>
+			</div>
+		</section>
+		<section class="gl-main-section main-section" id="survey_form">
+			<header class="gl">
+				<h2 class="gl-wrapper-content">
+					<a class="gl" href="#survey_form">Survey form</a>
+				</h2>
+			</header>
+			<div class="gl-holder-content">
+				<div class="gl-wrapper-content">
+					...
+				</div>
+			</div>
+		</section>
+		<section class="gl-main-section main-section" id="product_landing_page">
+			<header class="gl">
+				<h2 class="gl-wrapper-content">
+					<a class="gl" href="#product_landing_page">Product landing page</a>
+				</h2>
+			</header>
+			<div class="gl-holder-content">
+				<div class="gl-wrapper-content">
+					...
+				</div>
+			</div>
+		</section>
+		<section class="gl-main-section main-section" id="personal_portifolio_webpage">
+			<header class="gl">
+				<h2 class="gl-wrapper-content">
+					<a class="gl" href="#personal_portifolio_webpage">Personal portifolio webpage</a>
+				</h2>
+			</header>
+			<div class="gl-holder-content">
+				<div class="gl-wrapper-content">
+					...
+				</div>
 			</div>
 		</section>
 	</main>
 	<!-- Scripts -->
-	<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+	<!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
 </body>
 
 </html>

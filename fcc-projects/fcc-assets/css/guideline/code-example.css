@@ -1,0 +1,203 @@
+.gl-colors .gl-color-sample {
+  box-shadow: var(--gl-shadow);
+  display: block;
+  height: 5em;
+  margin-bottom: var(--gl-gutter);
+  position: relative;
+  width: 100%;
+}
+
+.gl-colors .gl-color-sample::before {
+  background: var(--gl-color-value);
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.gl-code-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 2rem 1fr;
+  gap: 0 0;
+  grid-template-areas:
+    "h c j . . ."
+    "hd hd hd hd hd hd";
+}
+
+.gl.hd {
+  grid-area: hd;
+}
+
+.gl.h {
+  grid-area: h;
+}
+
+.gl.c {
+  grid-area: c;
+}
+
+.gl.j {
+  grid-area: j;
+}
+
+.gl-code-details button {
+  --gl-border: solid 1px var(--gl-color-code-tab-border);
+  /* Rules */
+  appearance: none;
+  background: var(--gl-color-code-tab-bg);
+  border-bottom: 0;
+  border-left: 0;
+  border-radius: 0;
+  border: var(--gl-border);
+  color: var(--gl-color-code-tab-text);
+  cursor: pointer;
+  font-weight: 700;
+  transition: background var(--gl-transition), color var(--gl-transition);
+}
+
+.gl-code-details button:hover,
+.gl-code-details button:focus {
+  background: var(--gl-color-code-tab-bg-active);
+  color: var(--gl-color-code-tab-text-active);
+}
+
+.gl-code-details button.gl-html:focus ~ .gl-holder-details .gl-html,
+.gl-holder-details .gl-html:focus {
+  height: auto;
+}
+
+.gl-code-details button.gl-css:focus ~ .gl-holder-details .gl-css,
+.gl-holder-details .gl-css:focus {
+  height: auto;
+}
+
+.gl-code-details button.gl-javascript:focus ~ .gl-holder-details .gl-javascript,
+.gl-holder-details .gl-javascript:focus {
+  height: auto;
+}
+
+.gl-code-details button:first-of-type {
+  border-left: var(--gl-border);
+  border-top-left-radius: 1em;
+}
+
+.gl-code-details button:last-of-type {
+  border-top-right-radius: 1em;
+}
+
+.gl-holder-details {
+  --gl-border: solid 2px var(--gl-color-code-tab-border);
+  /* Rules */
+  border-top: var(--gl-border);
+  width: 100%; /* fix bug firefox */
+}
+
+.gl-holder-details .gl-example {
+  margin: var(--gl-gutter) 0;
+  position: relative;
+}
+
+.gl-holder-details pre {
+  height: 0;
+  margin: 0;
+  overflow-y: hidden;
+}
+
+.gl-line-number {
+  --gl-line-number-width: 46px;
+  /* Rules */
+  color: var(--gl-color-line-number-text);
+  display: inline-block;
+  text-align: right;
+  width: var(--gl-line-number-width);
+}
+
+.gl-line-number.gl-highlight {
+  background: rgba(var(--gl-color-line-number-bg-highlight), 0.4);
+  color: var(--gl-color-line-number-text-highlight);
+}
+
+.gl-line-number::after {
+  counter-increment: line-number;
+  content: counter(line-number) ".";
+}
+
+.gl-line-number.gl-custom::after {
+  content: ".";
+}
+
+pre.gl {
+  counter-reset: line-number;
+  counter-set: line-number var(--gl-start-line-at, 0);
+  tab-size: 2;
+}
+
+pre.gl code {
+  display: block;
+  overflow-x: auto;
+  padding-left: 2px;
+  padding-right: var(--gl-gutter);
+}
+
+code.gl {
+  background: var(--gl-color-code-bg);
+  font-family: var(--gl-code-font);
+  font-weight: 700;
+}
+
+ol.gl,
+code.gl {
+  counter-reset: pin-count;
+  counter-set: pin-count var(--gl-start-pin-at, 0);
+}
+
+ol.gl {
+  list-style: none;
+  padding: 0;
+}
+
+ol.gl li::before,
+code .gl-pin-count {
+  background: rgb(var(--gl-color-line-number-bg-pin-count));
+  border-radius: 0.25em;
+  color: var(--gl-color-line-number-text-pin-count);
+  display: inline-block;
+  padding: 0 0.25em;
+  text-align: center;
+}
+
+code .gl-pin-count {
+  line-height: 1.25em;
+}
+
+ol.gl li::before {
+  line-height: 1.5em;
+  margin-right: var(--gl-gutter);
+}
+
+ol.gl li {
+  line-height: 1.5em;
+  margin-bottom: var(--gl-gutter);
+}
+
+ol.gl li:last-of-type {
+  line-height: 1.5em;
+  margin-bottom: 0;
+}
+
+ol.gl li::before,
+code .gl-pin-count::before {
+  counter-increment: pin-count;
+  content: counter(pin-count);
+}
+
+code .gl-pin-count.gl-custom::before {
+  display: none;
+}
+
+code.gl-inline {
+  padding: calc(var(--gl-gutter) * 0.5) var(--gl-gutter)
+    calc(var(--gl-gutter) * 0.5) 0;
+}

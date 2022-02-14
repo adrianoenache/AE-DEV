@@ -1,0 +1,74 @@
+.column-content {
+  --cq-d: var(--cqc-d, var(--cqc, 4));
+  --cq-n: var(--cqc-n, var(--cqc, 3));
+  --cq-t: var(--cqc-t, var(--cqc, 2));
+  --cq-m: var(--cqc-m, var(--cqc, 1));
+  --cq: var(--cq-m);
+  --cg-d: var(--cgc-d, var(--cgd));
+  --cg-n: var(--cgc-n, var(--cgd));
+  --cg-t: var(--cgc-t, var(--cgd));
+  --cg-m: var(--cgc-m, var(--cgd));
+  --cg: var(--cg-m);
+  --cgd: 2em;
+  --rs-d: var(--rsc-d, var(--rsd));
+  --rs-n: var(--rsc-n, var(--rsd));
+  --rs-t: var(--rsc-t, var(--rsd));
+  --rs-m: var(--rsc-m, var(--rsd));
+  --rs: var(--rs-m);
+  --rsd: solid;
+  --rw-d: var(--rwc-d, var(--rwd));
+  --rw-n: var(--rwc-n, var(--rwd));
+  --rw-t: var(--rwc-t, var(--rwd));
+  --rw-m: var(--rwc-m, var(--rwd));
+  --rw: var(--rw-m);
+  --rwd: 1px;
+  --rc-d: var(--rcc-d, var(--rcd));
+  --rc-n: var(--rcc-n, var(--rcd));
+  --rc-t: var(--rcc-t, var(--rcd));
+  --rc-m: var(--rcc-m, var(--rcd));
+  --rc: var(--rc-m);
+  --rcd: currentColor;
+  /* Rules */
+  column-count: var(--cq);
+  column-gap: var(--cg);
+  column-rule-style: var(--rs);
+	column-rule-width: var(--rw);
+	column-rule-color: var(--rc);
+  column-width: auto;
+}
+
+/* Tablet rules */
+/* Rule to work from tablet and above resolutions */
+@media only screen and (min-width: 426px) {
+  .column-content {
+    --cg: var(--cg-t);
+    --rs: var(--rs-t);
+		--rw: var(--rw-t);
+    --rc: var(--rc-t);
+    --cq: var(--cq-t);
+  }
+}
+
+/* Notebook rules */
+/* Rule to work from notebook and above resolutions */
+@media only screen and (min-width: 1025px) {
+  .column-content {
+    --cg: var(--cg-n);
+    --rs: var(--rs-n);
+		--rw: var(--rw-n);
+    --rc: var(--rc-n);
+    --cq: var(--cq-n);
+  }
+}
+
+/* Desktop rules */
+/* Rule to work from desktop and above resolutions */
+@media only screen and (min-width: 1441px) {
+  .column-content {
+    --cg: var(--cg-d);
+    --rs: var(--rs-d);
+		--rw: var(--rw-d);
+    --rc: var(--rc-d);
+    --cq: var(--cq-d);
+  }
+}
