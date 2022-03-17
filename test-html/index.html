@@ -1,93 +1,664 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
+	<meta charset="UTF-8">
 
-  <meta http-equiv="X-UA-Compatible"
-        content="IE=edge">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+	<!-- Basic -->
+	<meta http-equiv="X-UA-Compatible"
+				content="IE=edge">
+	<meta name="viewport"
+				content="width=device-width, initial-scale=1.0">
 	<meta name="robots"
-        content="INDEX, FOLLOW">
+				content="INDEX, FOLLOW">
 
+	<!-- SEO -->
 	<meta name="description"
-		    content="Página de teste de scrita de HTML semântico.">
+				content="Página de teste de scrita de HTML semântico.">
 	<meta name="keywords"
-        content="HTML, Semântico, HTML semântico">
+				content="HTML, Semântico, HTML semântico">
 	<meta name="author"
-        content="Adriano Enache - adrianoenache@hotmail.com">
+				content="Adriano Enache - adrianoenache@hotmail.com">
 
-  <meta name="theme-color"
-        content="#000000">
+	<!-- Browser theme color (mobile) -->
+	<meta name="theme-color"
+				content="#000000">
 
-  <link rel="shortcut icon"
-        type="image/x-icon"
-        sizes="48x48 32x32 16x16"
-        href="assets/img/favicon/logo.ico">
-  <link rel="icon"
-        type="image/png"
-        sizes="16x16"
-        href="assets/img/favicon/logo16.png">
-  <link rel="icon"
-        type="image/png"
-        sizes="32x32"
-        href="assets/img/favicon/logo32.png">
-  <link rel="apple-touch-icon"
-        type="image/png"
-        sizes="192x192"
-        href="assets/img/favicon/logo192.png">
+	<!-- Favicons -->
+	<link rel="shortcut icon"
+				type="image/x-icon"
+				sizes="48x48 32x32 16x16"
+				href="assets/img/favicon/logo.ico">
+	<link rel="icon"
+				type="image/png"
+				sizes="16x16"
+				href="assets/img/favicon/logo16.png">
+	<link rel="icon"
+				type="image/png"
+				sizes="32x32"
+				href="assets/img/favicon/logo32.png">
+	<link rel="apple-touch-icon"
+				type="image/png"
+				sizes="192x192"
+				href="assets/img/favicon/logo192.png">
 
-  <meta property="og:title"
-        content="Teste de HTML Front-end Pleno Sapient AG2">
-  <meta property="og:description"
-        content="Página de teste de scrita de HTML semântico.">
-  <meta property="og:type"
-        content="website">
-  <meta property="og:locale"
-        content="pt-BR">
-  <meta property="og:url"
-        content="https://adrianoenache.dev.br/test-html/">
+	<!-- Opengraph general configs -->
+	<meta property="og:title"
+				content="Teste de HTML Front-end Pleno Sapient AG2">
+	<meta property="og:description"
+				content="Página de teste de scrita de HTML semântico.">
+	<meta property="og:type"
+				content="website">
+	<meta property="og:locale"
+				content="pt-BR">
+	<meta property="og:url"
+				content="https://adrianoenache.dev.br/test-html/">
 
-  <meta property="og:site_name"
-        content="adrianoenache.dev.br">
-  <meta property="article:published_time"
-        content="2022-03-14T00:00:00+00:00">
-  <meta property="article:author"
-        content="Adriano Enache">
+	<!-- Opengraph Pinterest configs -->
+	<meta property="og:site_name"
+				content="adrianoenache.dev.br">
+	<meta property="article:published_time"
+				content="2022-03-14T00:00:00+00:00">
+	<meta property="article:author"
+				content="Adriano Enache">
 
-  <meta property="og:image"
-        content="https://adrianoenache.dev.br/test-html/assets/img/opengraph/fb-1200x630.png">
-  <meta property="og:image:width"
-        content="1200">
-  <meta property="og:image:height"
-        content="630">
+	<!-- Opengraph Facebook, linkedin and Pinterest configs -->
+	<meta property="og:image"
+				content="https://adrianoenache.dev.br/test-html/assets/img/opengraph/fb-1200x630.png">
+	<meta property="og:image:alt"
+				content="A imagem contém um círculo cinza contendo uma representação gráfica simples de duas montanhas, uma mais alta que a outra com uma lua cheia sobre as montanhas.">
+	<meta property="og:image:width"
+				content="1200">
+	<meta property="og:image:height"
+		content="630">
 
-  <meta name="twitter:card"
-        content="summary">
-  <meta name="twitter:site"
-        content="@AdrianoEnache">
-  <meta name="twitter:creator"
-        content="@AdrianoEnache">
-  <meta name="twitter:title"
-        content="Teste de HTML Front-end Pleno Sapient AG2">
-  <meta name="twitter:description"
-        content="Página de teste de scrita de HTML semântico.">
-  <meta name="twitter:image"
-        content="https://adrianoenache.dev.br/test-html/img/opengraph/tw-300.png">
-  <meta name="twitter:url"
-        content="https://adrianoenache.dev.br/test-html/">
+	<!-- Opengraph Twitter configs -->
+	<meta name="twitter:card"
+				content="summary">
+	<meta name="twitter:site"
+				content="@AdrianoEnache">
+	<meta name="twitter:creator"
+				content="@AdrianoEnache">
+	<meta name="twitter:title"
+				content="Teste de HTML Front-end Pleno Sapient AG2">
+	<meta name="twitter:description"
+				content="Página de teste de scrita de HTML semântico.">
+	<meta name="twitter:image"
+				content="https://adrianoenache.dev.br/test-html/assets/img/opengraph/tw-300.png">
+	<meta property="twitter:image:alt"
+				content="A imagem contém um círculo cinza contendo uma representação gráfica simples de duas montanhas, uma mais alta que a outra com uma lua cheia sobre as montanhas.">
+	<meta name="twitter:url"
+				content="https://adrianoenache.dev.br/test-html/">
 
-  <title>Teste de HTML Front-end Pleno Sapient AG2</title>
+	<!-- Page title -->
+	<title>Teste de HTML Front-end Pleno Sapient AG2</title>
 </head>
 <body>
-  <header class="main header">
-    <h1>Teste de HTML Front-end Pleno Sapient AG2</h1>
-  </header>
-  <main class="main content">
-    Main
-  </main>
-  <footer class="main footer">
-    Footer
-  </footer>
+	<!--
+		Componente do header, no wireframe faltou um label
+		para o campo de input, o Axe deve tools apontou a
+		falta dele e outra ferramenta WCAG2 apontou a falta
+		do submit.
+
+		Obs.: Se você olhar os commits eu construí a página
+		de baixo para cima nos comentários abaixo existem outros
+		pontos a se conversar com os times de UX/UI e Content.
+	-->
+	<header class="main header">
+		<div class="wrapper">
+			<button class="button open-menu" title="Abrir menu principal" type="button">
+				<span class="screen-reader-only">
+					Abrir menu principal
+				</span>
+				<img src="assets/img/ui/menu.svg" height="32" width="32" alt="Ícone de três barras na horizontal sobrepostas com um pequeno espaço vazio entre elas.">
+			</button>
+			<h1>
+				<a href="/">
+					<span class="screen-reader-only">
+						Teste de HTML Front-end Pleno Sapient AG2
+					</span>
+					<img src="assets/img/logo.svg" height="64" width="64" alt="Imagem de logo marca, contém um círculo cinza contendo uma representação gráfica simples de duas montanhas, uma mais alta que a outra com uma lua cheia sobre as montanhas.">
+				</a>
+			</h1>
+			<button class="button open-search" title="Abrir menu de busca" type="button">
+				<span class="screen-reader-only">
+					Abrir menu de busca
+				</span>
+				<img src="assets/img/ui/search.svg" height="32" width="32" alt="Ícone de uma lente de aumento.">
+			</button>
+		</div>
+		<div class="main menu">
+			<button class="button close" title="Fechar menu principal" type="button">
+				<span class="screen-reader-only">
+					Fechar menu principal
+				</span>
+				<img src="assets/img/ui/cross.svg" height="32" width="32" alt="Ícone de duas barras cruzadas formando um X">
+			</button>
+			<nav class="main-navigation" title="Menu principal">
+				<ul>
+					<li>
+						<a href="/quem-somos/">
+							Quem Somos
+						</a>
+					</li>
+					<li>
+						<a href="/trabalhe-conosco/">
+							Trabalhe conosco
+						</a>
+					</li>
+					<li>
+						<a href="/pessoas/">
+							Pessoas
+						</a>
+					</li>
+					<li>
+						<a href="/cases/">
+							Cases
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="social-navigation" title="Nossas redes sociais">
+				<ul>
+					<li>
+						<a href="https://www.instagram.com/" target="_blank" rel="noreferrer noopener">
+							<span class="screen-reader-only">
+								Ir para o Instagram
+							</span>
+							<img src="assets/img/social-media/instagram.svg" height="32" width="32" alt="Ícone da marca Instagram">
+						</a>
+					</li>
+					<li>
+						<a href="https://www.facebook.com/" target="_blank" rel="noreferrer noopener">
+							<span class="screen-reader-only">
+								Ir para o Facebook
+							</span>
+							<img src="assets/img/social-media/facebook.svg" height="32" width="32" alt="Ícone da marca Facebook">
+						</a>
+					</li>
+					<li>
+						<a href="https://www.facebook.com/" target="_blank" rel="noreferrer noopener">
+							<span class="screen-reader-only">
+								Ir para o LinkediIn
+							</span>
+							<img src="assets/img/social-media/linkedin.svg" height="32" width="32" alt="Ícone da marca LinkediIn">
+						</a>
+					</li>
+					<li>
+						<a href="https://www.facebook.com/" target="_blank" rel="noreferrer noopener">
+							<span class="screen-reader-only">
+								Ir para o Medium
+							</span>
+							<img src="assets/img/social-media/medium.svg" height="32" width="32" alt="Ícone da marca Medium">
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div class="search menu">
+			<button class="button close" title="Fechar menu de busca" type="button">
+				<span class="screen-reader-only">
+					Fechar menu de busca
+				</span>
+				<img src="assets/img/ui/cross.svg" height="32" width="32" alt="Ícone de duas barras cruzadas formando um X">
+			</button>
+			<form class="search-form" action="/#search" method="post">
+				<label for="search">
+					O que deseja procurar?
+				</label>
+				<input list="search-tips"
+					id="search"
+					name="search"
+					type="search"
+					placeholder="O que deseja procurar?"
+					title="O que deseja procurar?"
+					maxlength="140" required>
+				<datalist id="search-tips">
+					<option value="Potato">
+					<option value="Tomato">
+					<option value="Apple">
+					<option value="Pineapple">
+				</datalist>
+				<div class="form-actions">
+					<button type="submit">
+						Buscar
+					</button>
+				</div>
+			</form>
+		</div>
+	</header>
+	<main class="main content">
+		<!--
+			Componente de hero content.
+		-->
+		<section class="hero content">
+			<h1 class="title component">
+				Olá mundo!
+			</h1>
+			<p>
+				Lorem ipsum dolor sit amet consectetur <a href="/page-adipisicing-elit/">adipisicing elit</a>. Rerum recusandae deserunt, ipsum quod incidunt culpa, qui nesciunt pariatur ratione ea obcaecati minus beatae debitis amet dolor sapiente placeat, earum modi?
+			</p>
+		</section>
+		<!--
+			Componente de vídeo.
+		-->
+		<section class="video">
+			<video controls height="360" width="640" preload="metadata" poster="assets/img/contents/video-poster.jpg">
+				<source src="assets/video/video.mp4" type="video/mp4">
+				<track kind="captions" src="assets/video/video.vtt" srclang="pt-BR">
+				<p>
+					Desculpe, seu navegador não suporta vídeos incorporados. Você pode fazer o <a href="assets/video/video.mp4" download>download</a> e assistir no seu dispositivo.
+				</p>
+			</video>
+		</section>
+		<!--
+			Componente de destaque para blocos de citação. Não tem
+			no wireframe, mas deveria ter o autor da citação.
+		-->
+		<section class="citation-block">
+			<figure>
+				<blockquote cite="https://pt.wikipedia.org/wiki/Lorem_ipsum">
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					</p>
+				</blockquote>
+			</figure>
+		</section>
+		<!--
+			Os componentes "images/partners gallery carousel" são muito
+			parecidos.
+
+			No "images", como o asset imagem-1.png tinha um tamanho grande
+			o bastante para poder gerar assets melhores para o mobile e tablets,
+			partindo do princípio de mobile first o src da imagem está
+			configurado com a imagem mobile e as tags source se encarregam
+			de carregar as imagens corretas para os breakpoints definidos.
+
+			O componente "partners gallery carousel" tem mais informações.
+		-->
+		<section class="images gallery carousel">
+			<h2 class="title component">
+				Galeria de imagens
+			</h2>
+			<div class="mask">
+				<ul class="itens">
+					<li class="item">
+						<figure>
+							<picture>
+								<source media="(min-width: 1025px)"
+									srcset="assets/img/contents/imagem-1.png">
+								<source media="(min-width: 541px)"
+									srcset="assets/img/contents/imagem-1-tablet.png, assets/img/contents/imagem-1.png 2x">
+								<source media="(min-width: 280px)"
+									srcset="assets/img/contents/imagem-1-mobile.png, assets/img/contents/imagem-1-mobile-2x.png 2x">
+								<img src="assets/img/contents/imagem-1-mobile.png"
+									height="133"
+									width="224"
+									alt="A imagem 1 retangular de fundo cinza contendo uma representação gráfica simples de duas montanhas, uma mais alta que a outra com uma lua cheia sobre as montanhas." 
+									loading="lazy">
+							</picture>
+						</figure>
+					</li>
+					<li class="item">
+						<figure>
+							<picture>
+								<source media="(min-width: 1025px)"
+									srcset="assets/img/contents/imagem-1.png">
+								<source media="(min-width: 541px)"
+									srcset="assets/img/contents/imagem-1-tablet.png, assets/img/contents/imagem-1.png 2x">
+								<source media="(min-width: 280px)"
+									srcset="assets/img/contents/imagem-1-mobile.png, assets/img/contents/imagem-1-mobile-2x.png 2x">
+								<img src="assets/img/contents/imagem-1-mobile.png"
+									height="133"
+									width="224"
+									alt="A imagem 2 retangular de fundo cinza contendo uma representação gráfica simples de duas montanhas, uma mais alta que a outra com uma lua cheia sobre as montanhas." 
+									loading="lazy">
+							</picture>
+						</figure>
+					</li>
+					<li class="item">
+						<figure>
+							<picture>
+								<source media="(min-width: 1025px)"
+									srcset="assets/img/contents/imagem-1.png">
+								<source media="(min-width: 541px)"
+									srcset="assets/img/contents/imagem-1-tablet.png, assets/img/contents/imagem-1.png 2x">
+								<source media="(min-width: 280px)"
+									srcset="assets/img/contents/imagem-1-mobile.png, assets/img/contents/imagem-1-mobile-2x.png 2x">
+								<img src="assets/img/contents/imagem-1-mobile.png"
+									height="133"
+									width="224"
+									alt="A imagem 3 retangular de fundo cinza contendo uma representação gráfica simples de duas montanhas, uma mais alta que a outra com uma lua cheia sobre as montanhas." 
+									loading="lazy">
+							</picture>
+						</figure>
+					</li>
+				</ul>
+			</div>
+			<ul class="navigation">
+				<li>
+					<button class="button prev" title="Ir para o item anterior" type="button">
+						<span class="screen-reader-only">
+							Ir para o item anterior
+						</span>
+					</button>
+				</li>
+				<li>
+					<button class="button bullet active" data-item-index-position="1" title="Ir para o item 1" type="button">
+						<span class="screen-reader-only">
+							Ir para o item 1
+						</span>
+					</button>
+				</li>
+				<li>
+					<button class="button bullet" data-item-index-position="2" title="Ir para o item 2" type="button">
+						<span class="screen-reader-only">
+							Ir para o item 2
+						</span>
+					</button>
+				</li>
+				<li>
+					<button class="button bullet" data-item-index-position="3" title="Ir para o item 3" type="button">
+						<span class="screen-reader-only">
+							Ir para o item 3
+						</span>
+					</button>
+				</li>
+				<li>
+					<button class="button next"  title="Ir para o para o próximo item" type="button">
+						<span class="screen-reader-only">
+							Ir para o para o próximo item
+						</span>
+					</button>
+				</li>
+			</ul>
+		</section>
+		<!--
+			O Axe dev tools reclama dos details que estão fechados, acho que
+			isso deve ser algum bug da ferramenta por não entender como a tag
+			funciona.
+
+			Sobre o h2 estou considerando que o conteúdo deste componente independente,
+			mas se o conteúdo fosse relacionado com o módulo anterior seria melhor
+			usar um h3 ao invés para indicar a hierarquia no SEO.
+		-->
+		<section class="accordion">
+			<details open>
+				<summary>
+					<h2 class="title component">
+						Lorem ipsum dolor sit 1
+					</h2>
+				</summary>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra nec nulla vitae mollis.
+				</p>
+			</details>
+			<details>
+				<summary>
+					<h2 class="title component">
+						Lorem ipsum dolor sit 2
+					</h2>
+				</summary>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra nec nulla vitae mollis.
+				</p>
+			</details>
+			<details>
+				<summary>
+					<h2 class="title component">
+						Lorem ipsum dolor sit 3
+					</h2>
+				</summary>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra nec nulla vitae mollis.
+				</p>
+			</details>
+			<details>
+				<summary>
+					<h2 class="title component">
+						Lorem ipsum dolor sit 4
+					</h2>
+				</summary>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra nec nulla vitae mollis.
+				</p>
+			</details>
+			<details>
+				<summary>
+					<h2 class="title component">
+						Lorem ipsum dolor sit 5
+					</h2>
+				</summary>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra nec nulla vitae mollis.
+				</p>
+			</details>
+		</section>
+		<!--
+			Ponto a se conversar com o time de UX, UI e Content, textos
+			e links pouco descritivos causam perda de pontos no score
+			de SEO. Por isso está potato, tomato, apple e pineapple.
+
+			O componente "images gallery carousel" tem mais informações.
+		-->
+		<section class="partners gallery carousel">
+			<h2 class="title component">
+				Parceiros
+			</h2>
+			<div class="mask">
+				<ul class="itens">
+					<li class="item">
+						<figure>
+							<img src="assets/img/contents/imagem-2.png"
+								height="94"
+								width="94"
+								alt="A imagem 1 quadrada de fundo cinza contendo uma representação gráfica simples de duas montanhas, uma mais alta que a outra com uma lua cheia sobre as montanhas." 
+								loading="lazy">
+							<figcaption>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+								</p>
+								<p class="learn-more">
+									<a href="/page-learn-more-about-potato/">
+										Learn more about potato
+									</a>
+								</p>
+							</figcaption>
+						</figure>
+					</li>
+					<li class="item">
+						<figure>
+							<img src="assets/img/contents/imagem-2.png"
+								height="94"
+								width="94"
+								alt="A imagem 2 quadrada de fundo cinza contendo uma representação gráfica simples de duas montanhas, uma mais alta que a outra com uma lua cheia sobre as montanhas." 
+								loading="lazy">
+							<figcaption>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+								</p>
+								<p class="learn-more">
+									<a href="/page-learn-more-about-tomato/">
+										Learn more about tomato
+									</a>
+								</p>
+							</figcaption>
+						</figure>
+					</li>
+					<li class="item">
+						<figure>
+							<img src="assets/img/contents/imagem-2.png"
+								height="94"
+								width="94"
+								alt="A imagem 3 quadrada de fundo cinza contendo uma representação gráfica simples de duas montanhas, uma mais alta que a outra com uma lua cheia sobre as montanhas." 
+								loading="lazy">
+							<figcaption>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+								</p>
+								<p class="learn-more">
+									<a href="/page-learn-more-about-apple/">
+										Learn morea about apple
+									</a>
+								</p>
+							</figcaption>
+						</figure>
+					</li>
+					<li class="item">
+						<figure>
+							<img src="assets/img/contents/imagem-2.png"
+								height="94"
+								width="94"
+								alt="A imagem 4 quadrada de fundo cinza contendo uma representação gráfica simples de duas montanhas, uma mais alta que a outra com uma lua cheia sobre as montanhas." 
+								loading="lazy">
+							<figcaption>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+								</p>
+								<p class="learn-more">
+									<a href="/page-learn-more-about-pineapple/">
+										Learn more about pineapple
+									</a>
+								</p>
+							</figcaption>
+						</figure>
+					</li>
+				</ul>
+			</div>
+			<ul class="navigation">
+				<li>
+					<button class="button prev" title="Ir para o item anterior" type="button">
+						<span class="screen-reader-only">
+							Ir para o item anterior
+						</span>
+					</button>
+				</li>
+				<li>
+					<button class="button bullet active" data-item-index-position="1" title="Ir para o item 1" type="button">
+						<span class="screen-reader-only">
+							Ir para o item 1
+						</span>
+					</button>
+				</li>
+				<li>
+					<button class="button bullet" data-item-index-position="2" title="Ir para o item 2" type="button">
+						<span class="screen-reader-only">
+							Ir para o item 2
+						</span>
+					</button>
+				</li>
+				<li>
+					<button class="button bullet" data-item-index-position="3" title="Ir para o item 3" type="button">
+						<span class="screen-reader-only">
+							Ir para o item 3
+						</span>
+					</button>
+				</li>
+				<li>
+					<button class="button bullet" data-item-index-position="4" title="Ir para o item 4" type="button">
+						<span class="screen-reader-only">
+							Ir para o item 4
+						</span>
+					</button>
+				</li>
+				<li>
+					<button class="button next"  title="Ir para o para o próximo item" type="button">
+						<span class="screen-reader-only">
+							Ir para o para o próximo item
+						</span>
+					</button>
+				</li>
+			</ul>
+		</section>
+		<!--
+			No wireframe não tinha indicativo de campos obrigatórios. Então
+			considerei todos como obrigatórios e adicionei uma mensagem
+			e placeholders. O formulário também deveria ter um botão do
+			tipo reset para limpar os campos, mais questões a se conversar
+			com o time de UX.
+
+			Estou usando o testando com o Lighthouse e o Axe dev tools, mas
+			nenhum dos dois pegou esses bugs de acessibilidade.
+
+			1 - Todo fieldset deve ter um legend.
+			2 - Eu tinha certeza que era type="phone" só que não é type="tel"
+
+			A ferramente super bacana que testa WCAG2 A, AA, AAA e Section 508
+			é essa aqui http://squizlabs.github.io/HTML_CodeSniffer/
+		-->
+		<form class="contact-form" action="/#" method="post">
+			<fieldset>
+				<legend>
+					<h2 class="title component">
+						Entre em contato
+					</h2>
+				</legend>
+				<div class="group">
+					<label class="label" for="name">
+						Nome:
+					</label>
+					<input class="field" id="name" name="text" type="text" spellcheck="true" minlength="3" maxlength="140" placeholder="Insira seu nome" required>
+				</div>
+				<div class="group">
+					<label class="label" for="email">
+						E-mail:
+					</label>
+					<input class="field" id="email" name="email" type="email" minlength="5" maxlength="140" placeholder="nome@dominio.local" required>
+				</div>
+				<div class="group">
+					<label class="label" for="tel">
+						Telefone:
+					</label>
+					<input class="field" id="tel" name="tel" type="tel" minlength="14" maxlength="15" pattern="[(]([0-9]{2})[)]\s([0-9]{4,5})[-][0-9]{4}$" placeholder="(53) 93030-3030" required>
+				</div>
+				<div class="group">
+					<label class="label" for="message">
+						Mensagem:
+					</label>
+					<textarea class="field" name="message" id="message" spellcheck="true" minlength="2" maxlength="280" placeholder="Insira sua mensagem" required></textarea>
+				</div>
+			</fieldset>
+			<div class="form-actions">
+				<button type="submit">
+					Enviar
+				</button>
+			</div>
+			<p class="observation">
+				Atenção! Todos os campos são obrigatórios.
+			</p>
+		</form>
+	</main>
+	<!--
+		No wireframe não tinha indicativo de link no telefone, mas
+		acho que faz todo sentido ter. E apontaria isso para o time de UX.
+		O endereço também poderia ter um link direto para um mapa, mas
+		não vou colocar. =P
+	-->
+	<footer class="main footer">
+		<address>
+			<abbr title="Avenida">Av.</abbr> <abbr title="Doutor">Dr.</abbr> Figueiredo Mascarenhas, 94<br>
+			Tres Vendas, Pelotas - <abbr title="Rio Grande do Sul">RS</abbr><br>
+			<span title="CEP - Código de Endereçamento Postal">96055-510</span><br>
+			<a href="tel:+555330303030" target="_blank" rel="noreferrer noopener">(53) 3030-3030</a>
+		</address>
+		<nav class="footer-navigation">
+			<ul>
+				<li>
+					<a href="/vagas/">
+						Vagas
+					</a>
+				</li>
+				<li>
+					<a href="/cases/">
+						Cases
+					</a>
+				</li>
+				<li>
+					<a href="/sitemap/">
+						Sitemap
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</footer>
 </body>
 </html>
